@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 permalink: /assets/search-index.json
 ---
 [{% assign first = true %}{% for page in site.pages %}{% if page.title and page.layout == 'sketchbook' and page.url != '/tags/' %}{% unless first %},{% endunless %}{% assign first = false %}
