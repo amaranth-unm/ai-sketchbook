@@ -4,5 +4,7 @@ url: https://amaranth-unm.github.io/ai-sketchbook
 baseurl: /ai-sketchbook
 repository: amaranth-unm/ai-sketchbook
 
+search: true
+
 sass:
   encoding: utf-8

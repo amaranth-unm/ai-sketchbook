@@ -1,9 +1,12 @@
 {% comment %}
-  Pullquote — editorial callout highlighting a key passage
+  Pullquote — floats a key passage as a visual aside.
+
+  Usage:
+    {% include typography/pullquote.html text="The striking thing you said." %}
+
   Parameters:
-    - text:  quote content (required, markdown supported)
-    - width: CSS width override (default: 70%)
+    text: quote content, markdown supported (required)
 {% endcomment %}
-<aside class="pullquote"{% if include.width %} style="width: {{ include.width }}"{% endif %}>
+<aside class="pullquote">
   {{ include.text | markdownify }}
 </aside>

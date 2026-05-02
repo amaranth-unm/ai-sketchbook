@@ -5,7 +5,7 @@
 
   <body class="sketchbook-shell{% if page.body-class %} {{ page.body-class }}{% endif %}">
 
-    {% include nav/nav-top-sketchbook.html %}
+    {% include nav/nav-top.html %}
 
     {% assign headerimage = page.header-image %}
     {% assign headertitle = page.header-title %}
@@ -35,10 +35,11 @@
       {{ content }}
     </div>
 
+    {% include nav/search.html %}
     {% include html/html-js.html %}
 
     {% unless page.hide-footer %}
-      {% include layout/footer-sketchbook.html %}
+      {% include layout/footer.html %}
     {% endunless %}
 
   </body>
