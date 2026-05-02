@@ -4,7 +4,7 @@
 {% endif %}
 
 {% for item in items %}
-{% assign card_href = item.link | default: item.url %}
+{% assign card_href = item.link | default: item.url | relative_url %}
 {% assign card_thumbnail = item.thumbnail | default: item.image | default: item.header-image %}
 {% assign card_summary = item.summary | default: item.description %}
 {% assign card_classes = "card card-horizontal mb-3" %}
@@ -12,11 +12,20 @@
   {% assign card_classes = card_classes | append: " sketch-tag-card" %}
 {% endif %}
 {% assign joined_tags = item.tags | join: '|' | downcase %}
+{% if item.url contains '/teaching/' %}{% assign card_section = "teach" %}
+{% elsif item.url contains '/research/' %}{% assign card_section = "research" %}
+{% else %}{% assign card_section = nil %}{% endif %}
 <div class="{{ card_classes }}"{% if include.tag-data and item.tags %} data-tags="{{ joined_tags }}"{% endif %}>
-  <div class="row g-0 align-items-center">
+  <div class="row g-0 align-items-stretch">
+    <div class="card-meta-col">
+      {% if item.date %}<span class="card-meta-year">{{ item.date | date: "%Y" }}</span>{% endif %}
+      {% if item.status %}<span class="card-meta-status {{ item.status }}">{{ item.status }}</span>{% endif %}
+      {% if card_section %}<span class="card-meta-section {{ card_section }}">{{ card_section }}</span>{% endif %}
+    </div>
     {% if card_thumbnail %}
-    <div class="col-sm-4">                
-      <img src="{{site.baseurl}}{{ card_thumbnail }}" class="img-fluid rounded-start card-image" alt="{{ item.title | escape }}" style="object-fit: cover; height: 200px; width: 100%;">
+    {% capture card_img_url %}{% include images/image-path.html image-path=card_thumbnail page-dir=item.dir %}{% endcapture %}
+    <div class="col-sm-4">
+      <img src="{{ card_img_url | strip }}" class="img-fluid card-image" alt="{{ item.title | escape }}" style="object-fit: cover; height: 200px; width: 100%;">
     </div>
     <div class="col-sm-8 d-flex align-items-center">
     {% else %}
@@ -24,11 +33,15 @@
     {% endif %}
       <div class="card-body">
           <h3 class="card-title"><a class="card-main-link stretched-link" href="{{ card_href }}">{{ item.title }}</a></h3>
-          {% if item.status or item.tags %}
+          {% if item.tags %}
           <p class="sketch-card-meta">
-            {% if item.status %}<span class="sketch-tag {{ item.status }}">{{ item.status }}</span>{% endif %}
             {% for tag in item.tags limit: 3 %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
           </p>
+          {% endif %}
+          {% if item.skills %}
+          <ul class="sketch-card-skills">
+            {% for skill in item.skills %}<li>{{ skill }}</li>{% endfor %}
+          </ul>
           {% endif %}
           <p class="card-text"> {{ card_summary }} </p>
       </div>

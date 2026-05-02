@@ -11,20 +11,16 @@ tags:
   - 3D printing
   - material culture
   - tactile
+skills:
+  - generating 3D-printable files from 2D historical images
+  - reconstructing material culture objects for research
+  - incorporating tactile elements into research presentations
 card_order: 10
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header sketchbook-post">
-  <h1>Generate 3D Prints from 2D Drawings</h1>
-  <p>AI can transform an image into a 3D printable file, adding another perspective for understanding the experiences of historical subjects.</p>
-  <span class="section-accent teach"></span>
-  <div class="sketchbook-post-meta">
-    <span class="sketch-tag {{ page.status }}">{{ page.status }}</span>
-{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
-  </div>
-</div>
-{:/nomarkdown}
+# Generate 3D Prints from 2D Drawings
+
+<span class="section-accent research"></span>
 
 History Doctoral Candidate Edrea Mendoza researches public health sex education initiatives in Mexico in the 1970s. She found a drawing of IUDs manufactured in Mexico in a four year period during that decade. These IUDs represented a larger push by the government for population control. Edrea approached me with the idea that if she could get 3D replicas of the IUDs then she would be able to get another view of the history of these devices and women's experience with them. It's one thing to see a line drawing but an entirely different kind of experience to hold a replica in your palm and imagine its use. 
 

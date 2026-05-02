@@ -11,21 +11,16 @@ tags:
   - source evaluation
   - fabrication
   - research skills
+skills:
+  - verifying sources in library databases
+  - distinguishing real from fabricated citations
+  - questioning authority of polished prose
 card_order: 20
-
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header sketchbook-post">
-  <h1>Citation Test</h1>
-  <p>A verification exercise that turns AI's polished but unreliable bibliographies into a concrete lesson about what counts as evidence.</p>
-  <span class="section-accent teach"></span>
-  <div class="sketchbook-post-meta">
-    <span class="sketch-tag {{ page.status }}">{{ page.status }}</span>
-{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
-  </div>
-</div>
-{:/nomarkdown}
+# Citation Test
+
+<span class="section-accent teach"></span>
 
 Ask AI for a reading list on a focused scholarly topic. Then verify every citation in public. Some will be real. Some will be distorted. Some will be entirely fabricated while sounding perfectly plausible.
 

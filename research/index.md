@@ -1,32 +1,22 @@
 ---
 layout: sketchbook
 title: Research Sketches
-description: "Workflow experiments and methodological notes for using AI in humanities research."
+description: "Workflow experiments, analysis techniques, and methodological notes — ways AI has proven useful (and useless) in actual humanities scholarship."
 css: sketchbook.css
 date: 2026-04-01
 ---
 
-{% assign research_posts = site.pages
+{% assign section_pages = site.pages
   | where_exp: "item", "item.dir == page.dir"
   | where_exp: "item", "item.name != 'index.md'"
   | sort: "card_order" %}
 
-{::nomarkdown}
-<div class="sketchbook-page-header">
-  <h1>Research Sketches</h1>
-  <p>Workflow experiments, analysis techniques, and methodological notes — ways AI has proven useful (and useless) in actual humanities scholarship.</p>
-  <span class="section-accent research"></span>
-</div>
-{:/nomarkdown}
+# Research Sketches
 
-Each research sketch now lives in its own file with metadata for title, summary, thumbnail, tags, status, and card order. This page gathers those pages and renders them as cards.
+Workflow experiments, analysis techniques, and methodological notes — ways AI has proven useful (and useless) in actual humanities scholarship.
 
-[Browse all sketchbook tags →](/tags/)
+<span class="section-accent research"></span>
 
-{::nomarkdown}
-<div class="sketchbook-intro-cards">
-{% include nav/card-list.html pages=research_posts %}
-</div>
-{:/nomarkdown}
+{% include nav/sketchbook-card-list.html pages=section_pages %}
 
-
+[Browse all sketchbook tags →]({{site.baseurl}}/tags/)

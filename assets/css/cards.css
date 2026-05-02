@@ -330,38 +330,7 @@ CARDS
 }
 
 
-/* Legacy Bootstrap-style classes for backwards compatibility */
-.row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
-}
-
-.row.row-cols-md-2 {
-  grid-template-columns: 1fr;
-}
-
-.row.row-cols-md-3 {
-  grid-template-columns: 1fr;
-}
-
-.row.row-cols-md-4 {
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-  .row.row-cols-md-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .row.row-cols-md-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .row.row-cols-md-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+/* Bootstrap is loaded globally — no .row shim needed */
 
 /* Responsive: horizontal cards become vertical on small screens */
 @media (max-width: 768px) {

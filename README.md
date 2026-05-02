@@ -1,109 +1,57 @@
-# Class Project Template
+# AI Sketchbook
 
-A collaborative, multi-author website template for course-based digital projects — built on the [Xanthan](https://github.com/xanthan-web/xanthan) framework, hosted on GitHub Pages.
+A shared space for thinking out loud about AI in humanities teaching and research — not a guide, not a verdict, just colleagues comparing notes.
 
-**[Live demo](https://xanthan-web.github.io/class-project-template)** · **[Xanthan docs](https://xanthan-web.github.io/xanthan/docs/)**
+**[View the site](https://amaranth.unm.edu/ai-sketchbook/)**
 
 ---
 
 ## What This Is
 
-This template is designed for instructors running collaborative digital humanities, public history, or research projects where students each contribute an essay or artifact to a shared, public-facing site.
+The AI Sketchbook collects concrete experiments: things that worked, things that flopped, and the more interesting cases in between. Each entry is a sketch — a focused account of one assignment, one workflow, or one tool, with enough detail to be actually useful.
 
-The model: one repository, one instructor-managed homepage, many student-authored essay subfolders. The homepage auto-generates a card grid from whatever essay pages exist — no manual linking required as students add their work throughout the semester.
+The organizing idea is that AI is most interesting when critical thinking is the point, not an afterthought. That means assignments where students learn something about how knowledge works, not just how to prompt better — and research workflows where the friction reveals something worth knowing.
 
-A finished example: [UNM Campus History](https://amaranth.unm.edu/campus-history/)
-
----
-
-## Structure
-
-```
-essays/
-  student-project-name/
-    index.md        ← student's essay (any layout)
-    images/         ← essay-specific images
-index.md            ← auto-generated card grid from essays/
-about.md            ← course/project description
-instructions.md     ← onboarding guide for student contributors
-docs/               ← full Xanthan documentation (synced from framework)
-```
-
-The homepage card grid is driven by a Liquid query over all pages under `essays/` — no config changes needed as projects are added:
-
-```liquid
-{% assign cards = site.pages | where_exp: "p", "p.path contains 'essays/'" %}
-{% include nav/card-grid.html cards=cards %}
-```
-
-Card content (title, thumbnail, summary) comes from each essay's front matter.
+Everything here comes from actual classroom use or actual research projects.
 
 ---
 
-## Included Sample Essays
+## Teaching Sketches
 
-Three AI-generated placeholder essays on Southwest food history demonstrate the full range of Xanthan components:
+**Argument Audit** — Students generate AI objections to their own thesis and argue back. The exercise forces them to make their claims more precise, and the AI's pushback is often more pointed than peer review.
 
-- Standard essay layout with images and pullquotes
-- ScrollStory layout with fixed background images and scroll-driven text boxes
-- Figures, carousels, and caption formatting
+**Columbus Day** — Students compare AI responses to an 1892 proclamation across different prompt framings, then map the gaps using Sam Wineburg's historical thinking framework. The exercise turns filter bubbles from an abstraction into something you can observe in real time.
 
-These are meant to be replaced by real student work. They're useful as structural references while you're setting up.
+**Citation Test** — Ask AI for a scholarly reading list on a focused topic, then verify every citation in public. Some will be real. Some will be distorted. Some will be entirely fabricated while sounding perfectly plausible. The exercise makes verification feel like an intellectual necessity rather than a library ritual.
 
----
-
-## Student Onboarding
-
-`instructions.md` is a step-by-step guide for students who have never used GitHub or edited Markdown. It covers:
-
-- Opening the GitHub web editor (`.` key shortcut)
-- Creating their essay subfolder under `essays/`
-- Front matter requirements for the card grid to pick up their work
-- Adding images
-
-Once students are oriented, the instructions page can be removed from the nav or deleted.
+**Remixing Plato** — Students translate a Platonic dialogue into a new form, audience, or style using AI, then analyze what the AI captured, what it flattened, and what that gap reveals about both the text and the tool. Prompting turns out to be a rhetorical skill, not just a technical one.
 
 ---
 
-## Getting Started
+## Research Sketches
 
-1. Click **"Use this template"** on GitHub to create your own repository
-2. Enable GitHub Pages in your repo settings (source: GitHub Actions)
-3. Edit `index.md` and `about.md` for your course
-4. Update `_data/nav-top.yml` if you want to adjust navigation
-5. Update `_config.yml` (at minimum, set `title` and `baseurl`)
-6. Direct students to `instructions.md` for their setup steps
+**Reading Fourteenth-Century Manuscripts** — An agentic AI pipeline combining Gemini and Claude to bulk-process 300 images of archival documents from the Archive of the Crown of Aragon. The result is usable handwritten text recognition for documents that previously had no automated transcription path — at a cost of about $75 per 300-page register.
 
----
+**Photos to Map Pins** — Converting 200 geolocated photos of Marrakech street cats into a clickable map website in under an hour, using an AI coding agent to extract GPS metadata and generate the display code.
 
-## Relationship to Xanthan
-
-This template is one of three maintained distributions of the Xanthan framework:
-
-| Template | Purpose |
-|---|---|
-| [Portfolio](https://github.com/xanthan-web/portfolio-template) | Single-author personal/academic site |
-| **Class Project** | Multi-author collaborative course site |
-| [ScrollStory](https://github.com/xanthan-web/scrollstory-template) | Single immersive scrolling narrative |
-
-Framework updates (components, layouts, CSS, docs) are synced from the main [xanthan](https://github.com/xanthan-web/xanthan) repository via GitHub Actions. `XANTHAN_CHANGELOG.md` tracks what changed with each sync. Template-specific files (`_config.yml`, nav data, content pages) are not overwritten by syncs.
-
-All Xanthan components are available in this template — the full component library is documented in `docs/reference/component-library`.
+**3D Prints from 2D Drawings** — Using Meshy.ai to generate 3D-printable files from a line drawing of 1970s Mexican IUDs, for a dissertation project on public health history. One thing to see a drawing; another to hold a replica and imagine its use.
 
 ---
 
-## Local Development
+## How Sketches Are Organized
 
-```bash
-bundle install
-bundle exec jekyll serve
-```
+Each sketch includes:
+- What the assignment or workflow actually involves
+- A sample prompt where applicable
+- What worked and what didn't
+- Honest caveats
 
-Or with Docker:
+Sketches are tagged by status: **rough** (early notes), **tested** (tried once, promising), or **refined** (iterated, classroom-ready).
 
-```bash
-docker-compose up
-```
+---
 
-Site serves at `http://localhost:4000`.
+## Who Made This
 
+The AI Sketchbook is a project of [Amaranth](https://amaranth.unm.edu/), the digital humanities center at the University of New Mexico. Contributions come from faculty, graduate students, and instructors across UNM departments.
+
+If you have an experiment worth sharing, reach out at [amaranth@unm.edu](mailto:amaranth@unm.edu).

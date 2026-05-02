@@ -12,21 +12,16 @@ tags:
   - remix
   - prompting
   - interpretation
+skills:
+  - close reading through transformation
+  - analyzing how meaning shifts across forms
+  - prompting as a rhetorical skill
 card_order: 10
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header sketchbook-post">
-  <h1>Remixing Plato</h1>
-  <p>Students remix a Platonic dialogue using AI—translating it into a new form, audience, or style—then step back to analyze what the AI captured, what it flattened, and what that gap reveals about both the text and the tool.</p>
-  <span class="section-accent teach"></span>
-  <div class="sketchbook-post-meta">
-    <span class="sketch-tag {{ page.status }}">{{ page.status }}</span>
-{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
-  </div>
-</div>
-{:/nomarkdown}
+# Remixing Plato
 
+<span class="section-accent teach"></span>
 
 ### Dialogue Remix: Rewriting Plato with AI
 

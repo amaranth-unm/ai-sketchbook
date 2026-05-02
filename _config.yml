@@ -3,3 +3,6 @@ description: "A working collection of ideas for using AI in humanities teaching 
 url: https://amaranth-unm.github.io/ai-sketchbook
 baseurl: /ai-sketchbook
 repository: amaranth-unm/ai-sketchbook
+
+sass:
+  encoding: utf-8

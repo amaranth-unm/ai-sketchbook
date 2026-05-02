@@ -1,30 +1,30 @@
-<nav class="navbar navbar-sketchbook" aria-label="AI Sketchbook breadcrumb navigation">
+<nav class="navbar navbar-sketchbook" aria-label="AI Sketchbook navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{site.baseurl}}/"><span>AI Sketchbook</span></a>
-    <div class="navbar-sketchbook-breadcrumb" aria-label="Breadcrumb">
-
-      {% if page.url contains '/teaching/' %}
-        <span class="breadcrumb-sep">/</span>
-        {% if page.url == '/teaching/' %}
-          <span class="current">Teaching</span>
-        {% else %}
-          <a href="{{site.baseurl}}/teaching/">Teaching</a>
-          <span class="breadcrumb-sep">/</span>
-          <span class="current">{{ page.title }}</span>
-        {% endif %}
-      {% elsif page.url contains '/research/' %}
-        <span class="breadcrumb-sep">/</span>
-        {% if page.url == '/research/' %}
-          <span class="current">Research</span>
-        {% else %}
-          <a href="{{site.baseurl}}/research/">Research</a>
-          <span class="breadcrumb-sep">/</span>
-          <span class="current">{{ page.title }}</span>
-        {% endif %}
-      {% elsif page.url == '/tags/' %}
-        <span class="breadcrumb-sep">/</span>
-        <span class="current">Tags</span>
-      {% endif %}
-    </div>
+    <ul class="navbar-nav">
+      {% for item in site.data.nav-top %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </nav>
+
+{% if page.dir == '/teaching/' %}
+  {% unless page.name == 'index.md' %}
+  <div class="sketchbook-breadcrumb-bar">
+    <div class="sketchbook-breadcrumb-inner">
+      <a href="{{site.baseurl}}/teaching/">Teaching</a><span class="breadcrumb-sep"> / </span><span class="current">{{ page.title }}</span>
+    </div>
+  </div>
+  {% endunless %}
+{% elsif page.dir == '/research/' %}
+  {% unless page.name == 'index.md' %}
+  <div class="sketchbook-breadcrumb-bar">
+    <div class="sketchbook-breadcrumb-inner">
+      <a href="{{site.baseurl}}/research/">Research</a><span class="breadcrumb-sep"> / </span><span class="current">{{ page.title }}</span>
+    </div>
+  </div>
+  {% endunless %}
+{% endif %}

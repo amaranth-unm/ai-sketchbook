@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
-title: Use LLMs to Read Fourteenth-Century Gothic Secretarial Hand
-description: "A workflow experiment in creating an agentic AI pipeline to create transcripts of digitized images from the Archive of the Crown of Aragon."
+title: Medieval handwriting recognition workflow
+description: "A workflow experiment in creating an agentic AI pipeline to create transcripts of digitized images and audit its accuracy."
 summary: "An AI agent worked with Gemini and Claude to bulk process 300 images of archival documents."
 thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 css: sketchbook.css
@@ -11,20 +11,16 @@ tags:
   - big data
   - paleography
   - agentic AI
+skills:
+  - building an agentic pipeline for bulk document processing
+  - combining multiple LLMs to improve transcription accuracy
+  - enabling full-text search of handwritten archival sources
 card_order: 10
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header sketchbook-post">
-  <h1>Use LLMs to Read Fourteenth-Century Gothic Secretarial Hand</h1>
-  <p>A workflow experiment in creating an agentic AI pipeline to create transcripts of digitized images from the Archive of the Crown of Aragon.</p>
-  <span class="section-accent teach"></span>
-  <div class="sketchbook-post-meta">
-    <span class="sketch-tag {{ page.status }}">{{ page.status }}</span>
-{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
-  </div>
-</div>
-{:/nomarkdown}
+# {{ page.title }} 
+
+<span class="section-accent research"></span>
 
 The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) which contains over a million digitized images of archival documents. This includes much of the material in the Archive of the Crown of Aragon. During the centuries of Muslim rule, papermaking technology spread to southern Iberia. The paper-making towns continued production throughout the following centuries. By the fourteenth century the state could count on an abundant availability for record-keeping. In the 1380s and 1390s, the chancery produced thousands of pages of documentation every year.
 

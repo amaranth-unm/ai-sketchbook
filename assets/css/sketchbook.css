@@ -1,54 +1,87 @@
-/* AI Sketchbook — warm, light, paper-like aesthetic
-   Overrides amaranth-unm.css for the sketchbook subsite.
-   Load via front matter: css: sketchbook.css
-*/
+/* AI Sketchbook — Modern UNM Theme
+ *
+ * Palette: largely black & white, UNM brand accent hits
+ *   Sandia Sunset  #ed8b00  — amber-orange, hover / highlight
+ *   Terra          #c05131  — rust-red, teaching / primary accent
+ *   Mesa           #d6a461  — warm tan, secondary / muted accent
+ *   Turquoise      #007a86  — cool, research accent
+ *
+ * Aesthetic: modern digital sketchbook — clean dot-grid ground,
+ * high contrast, Caveat for handwritten notes, Inter for UI clarity,
+ * Fira Mono for labels and tags.
+ *
+ * Load order: after base.css, cards.css, typography.css, nav.css.
+ * Loaded via front matter: css: sketchbook.css
+ */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap');
 
-/* ─── Palette ─────────────────────────────────────────────────────────────── */
+/* ─── Custom Properties ───────────────────────────────────────────────────── */
 :root {
-  --paper:          #f7f4ee;
-  --paper-warm:     #f0ebe0;
-  --paper-dark:     #e3dbd0;
-  --ink:            #2d2926;
-  --ink-mid:        #5c5349;
-  --ink-light:      #7a7060;
-  --ink-faint:      #aaa090;
-  --rule:           #d4ccc0;
+  /* UNM Brand */
+  --sunset:     #ed8b00;
+  --terra:      #c05131;
+  --mesa:       #d6a461;
+  --cherry:     #ba0c2f;
+  --turquoise:  #007a86;
+  --unm-cherry: var(--cherry);   /* used in footer heart icon */
 
-  --teach:          #b85c40;    /* terracotta */
-  --teach-soft:     #f8eee9;
-  --teach-mid:      #e8bfb0;
+  /* Neutrals */
+  --black:      #111111;
+  --near-black: #1c1c1c;
+  --dark-gray:  #3a3a3a;
+  --mid-gray:   #666666;
+  --muted-gray: #999999;
+  --rule-gray:  #d4d4d4;
+  --light-gray: #efefef;
+  --off-white:  #f8f8f8;
+  --white:      #ffffff;
 
-  --research:       #3d6e7e;    /* slate */
-  --research-soft:  #e4eef1;
-  --research-mid:   #a8c8d0;
+  /* Semantic aliases — teaching / research section coloring */
+  --teach:          var(--terra);
+  --teach-soft:     rgba(192, 81, 49, 0.07);
+  --teach-mid:      rgba(192, 81, 49, 0.20);
+  --research:       var(--turquoise);
+  --research-soft:  rgba(0, 122, 134, 0.07);
+  --research-mid:   rgba(0, 122, 134, 0.20);
+  --gold:           var(--mesa);
 
-  --gold:           #8a7030;    /* warm amber — general accent */
-  --sage:           #73886d;
-  --sage-soft:      #e6ece3;
-  --sage-mid:       #b7c5b1;
-  --clay-rose:      #b67d72;
-  --clay-soft:      #f2e6e2;
-  --wash-gold:      rgba(199, 170, 92, 0.14);
-  --wash-teach:     rgba(184, 92, 64, 0.10);
-  --wash-research:  rgba(61, 110, 126, 0.10);
-  --wash-sage:      rgba(115, 136, 109, 0.12);
-  --pencil:         rgba(92, 83, 73, 0.09);
+  /* Ink/paper aliases — map to black/white scheme */
+  --ink:        var(--black);
+  --ink-mid:    var(--dark-gray);
+  --ink-light:  var(--mid-gray);
+  --ink-faint:  var(--muted-gray);
+  --paper:      var(--white);
+  --paper-warm: var(--off-white);
+  --paper-dark: var(--light-gray);
+  --rule:       var(--rule-gray);
 
-  /* Override Amaranth dark semantics */
-  --primary:        var(--research);
-  --surface:        var(--paper-warm);
-  --surface-hover:  var(--paper-dark);
-  --text-primary:   var(--ink);
-  --text-secondary: var(--ink-mid);
-  --text-muted:     var(--ink-light);
-  --border-color:   var(--rule);
+  /* Compatibility aliases used across template HTML */
+  --sage:           #5f8476;
+  --sage-mid:       #8fb0a5;
+  --sage-soft:      rgba(95, 132, 118, 0.10);
+  --clay-rose:      var(--terra);
+  --clay-soft:      rgba(192, 81, 49, 0.08);
+  --wash-gold:      rgba(237, 139, 0, 0.07);
+  --wash-teach:     rgba(192, 81, 49, 0.07);
+  --wash-research:  rgba(0, 122, 134, 0.07);
+  --wash-sage:      rgba(95, 132, 118, 0.08);
 
-  --shadow-sm:  0 1px 3px rgba(45, 41, 38, 0.06);
-  --shadow-md:  0 4px 12px rgba(45, 41, 38, 0.10);
-  --shadow-lg:  0 8px 24px rgba(45, 41, 38, 0.14);
+  /* Bootstrap / base variable overrides */
+  --primary:        var(--terra);
+  --surface:        var(--white);
+  --surface-hover:  var(--light-gray);
+  --text-primary:   var(--black);
+  --text-secondary: var(--dark-gray);
+  --text-muted:     var(--mid-gray);
+  --border-color:   var(--rule-gray);
 
+  /* Shadows — clean and minimal */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* Caveat size scale */
   --caveat-display: clamp(1.7rem, 2.4vw, 2.15rem);
   --caveat-label:   clamp(1.25rem, 1.8vw, 1.55rem);
 }
@@ -56,75 +89,77 @@
 
 /* ─── Base ────────────────────────────────────────────────────────────────── */
 body {
-  background-color: var(--paper) !important;
-  background-image:
-    radial-gradient(circle at 12% 10%, var(--wash-gold) 0, rgba(199, 170, 92, 0) 26%),
-    radial-gradient(circle at 86% 18%, var(--wash-research) 0, rgba(61, 110, 126, 0) 24%),
-    radial-gradient(circle at 28% 72%, var(--wash-sage) 0, rgba(115, 136, 109, 0) 22%),
-    radial-gradient(circle at 72% 78%, var(--wash-teach) 0, rgba(184, 92, 64, 0) 22%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22)),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(122, 112, 96, 0.028) 0,
-      rgba(122, 112, 96, 0.028) 1px,
-      transparent 1px,
-      transparent 29px
-    );
-  color: var(--ink);
-  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--white);
+  /* Subtle dot grid — digital graph-paper texture */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1.5px, transparent 0);
+  background-size: 22px 22px;
   background-attachment: fixed;
+  color: var(--black);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 p, li {
-  color: var(--ink);
+  color: var(--dark-gray);
 }
 
 a {
-  color: var(--research);
+  color: var(--terra);
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(192, 81, 49, 0.35);
 }
 
 a:hover {
-  color: var(--gold);
+  color: var(--sunset);
+  text-decoration-color: var(--sunset);
 }
 
 hr {
-  border-color: var(--rule);
+  border: none;
+  border-top: 1px solid var(--rule-gray);
   opacity: 1;
 }
 
 
 /* ─── Typography ──────────────────────────────────────────────────────────── */
-/* IM Fell English is already loaded by the Amaranth header — use it for h1/h2 */
-h1, h2 {
-  font-family: 'IM Fell English', 'Crimson Pro', Georgia, serif;
+h1 {
+  font-family: 'IM Fell English', Georgia, serif;
   font-weight: 400;
-  color: var(--ink);
+  color: var(--black);
   letter-spacing: 0;
-  line-height: 1.25;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
 h3, h4 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
-  color: var(--ink-mid);
+  color: var(--dark-gray);
+  letter-spacing: -0.01em;
 }
 
 h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
-  color: var(--ink-light);
+  color: var(--mid-gray);
 }
 
 strong {
-  color: var(--ink);
+  color: var(--black);
   font-weight: 600;
 }
 
 
 /* ─── Navbar ──────────────────────────────────────────────────────────────── */
 .navbar {
-  background-color: var(--paper-warm) !important;
-  border-bottom: 1px solid var(--rule);
+  background-color: var(--terra) !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15) !important;
   box-shadow: none !important;
 }
 
@@ -136,121 +171,192 @@ strong {
 
 .navbar-sketchbook .container-fluid {
   justify-content: flex-start !important;
-  gap: 1.15rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .sketchbook-container {
+  grid-template-columns:
+    [full-start] minmax(2rem, 1fr)
+    [content-start] min(968px, 100% - 3rem)
+    [content-end] minmax(0.5rem, 1fr)
+    [full-end];
   padding-top: 1.5rem;
 }
 
 .navbar-brand {
-  color: var(--ink) !important;
-  letter-spacing: 0.04em !important;
-  line-height: 1.05 !important;
+  color: var(--white) !important;
+  font-family: 'Fira Mono', monospace !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
 }
 
 .navbar-brand:hover {
-  color: var(--teach) !important;
+  color: var(--sunset) !important;
 }
 
-.navbar-sketchbook-breadcrumb {
+.navbar-nav {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  height: 52px;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-left: 0.15rem;
-  min-width: 0;
+  gap: 0.1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 auto;
 }
 
-.navbar-sketchbook-breadcrumb a,
-.navbar-sketchbook-breadcrumb .current,
-.navbar-sketchbook-breadcrumb .breadcrumb-sep {
-  font-family: 'Caveat', cursive;
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-.navbar-sketchbook-breadcrumb a {
-  color: var(--ink-faint) !important;
-  text-decoration: none;
-}
-
-.navbar-sketchbook-breadcrumb a:hover {
-  color: var(--sage) !important;
-}
-
-.navbar-sketchbook-breadcrumb .breadcrumb-sep {
-  color: var(--rule);
-  opacity: 0.9;
-}
-
-.navbar-sketchbook-breadcrumb .current {
-  color: var(--ink-mid);
+.navbar a,
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 .nav-link {
-  color: var(--ink-mid) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: 'Fira Mono', monospace !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 0.25rem 0.6rem !important;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--teach) !important;
+  color: var(--sunset) !important;
 }
 
-.navbar-toggler-icon {
-  filter: invert(0.4);
+/* ─── Breadcrumb bar (below navbar) ──────────────────────────────────────── */
+.sketchbook-breadcrumb-bar {
+  background: rgba(237, 139, 0, 0.07);
+  border-bottom: 1px solid rgba(237, 139, 0, 0.18);
+  padding: 0.35rem 0;
+}
+
+.sketchbook-breadcrumb-inner {
+  max-width: 968px;
+  padding-left: 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.sketchbook-breadcrumb-bar a,
+.sketchbook-breadcrumb-bar .current,
+.sketchbook-breadcrumb-bar .breadcrumb-sep {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  line-height: 1;
+}
+
+.sketchbook-breadcrumb-bar a {
+  color: var(--sunset);
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.sketchbook-breadcrumb-bar a:hover {
+  opacity: 1;
+}
+
+.sketchbook-breadcrumb-bar .breadcrumb-sep {
+  color: rgba(237, 139, 0, 0.35);
+  margin: 0 0.35rem;
+}
+
+.sketchbook-breadcrumb-bar .current {
+  color: rgba(237, 139, 0, 0.55);
 }
 
 
 /* ─── Footer ──────────────────────────────────────────────────────────────── */
 footer,
 .site-footer {
-  background-color: var(--paper-warm) !important;
-  color: var(--ink-light) !important;
-  border-top: 1px solid var(--rule);
+  background-color: var(--black) !important;
+  color: var(--muted-gray) !important;
+  border-top: 2px solid var(--terra) !important;
 }
 
 footer a,
 .site-footer a {
-  color: var(--ink-mid) !important;
+  color: var(--mesa) !important;
+  text-decoration: none;
 }
 
 footer a:hover,
 .site-footer a:hover {
-  color: var(--gold) !important;
+  color: var(--sunset) !important;
 }
 
 footer h4,
 footer h5,
 .site-footer h4,
 .site-footer h5 {
-  color: var(--ink-mid) !important;
+  color: var(--rule-gray) !important;
+}
+
+.site-footer-sketchbook {
+  border-top: 2px solid var(--sunset) !important;
+  background: var(--near-black) !important;
+}
+
+.site-footer-sketchbook .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.5rem 1rem;
+  background-color: transparent;
+}
+
+.site-footer-sketchbook .footer-bottom-brand,
+.site-footer-sketchbook .footer-bottom-contact {
+  color: var(--muted-gray);
+  font-size: 0.8rem;
+}
+
+.site-footer-sketchbook .footer-brand {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--terra);
+}
+
+.site-footer-sketchbook .footer-sep {
+  color: var(--dark-gray);
+}
+
+.site-footer-sketchbook .footer-bottom-contact a {
+  color: var(--mesa);
+  text-decoration: none;
+}
+
+.site-footer-sketchbook .footer-bottom-contact a:hover {
+  color: var(--sunset);
 }
 
 
 /* ─── Sketchbook page header ──────────────────────────────────────────────── */
 .sketchbook-page-header {
-  padding: 2.5rem 0 1.5rem;
+  padding: 2.5rem 0 1.75rem;
   margin-bottom: 2rem;
+  border-bottom: 1px solid var(--rule-gray);
   position: relative;
 }
 
+/* Remove warm gradient decoration — clean digital look */
 .sketchbook-page-header::before {
-  content: "";
-  position: absolute;
-  top: 0.45rem;
-  left: -0.4rem;
-  width: min(360px, 62vw);
-  height: 118px;
-  background:
-    radial-gradient(circle at 22% 35%, rgba(199, 170, 92, 0.18) 0, rgba(199, 170, 92, 0.06) 36%, rgba(199, 170, 92, 0) 72%),
-    radial-gradient(circle at 78% 34%, rgba(115, 136, 109, 0.12) 0, rgba(115, 136, 109, 0.04) 30%, rgba(115, 136, 109, 0) 70%),
-    radial-gradient(circle at 62% 56%, rgba(184, 92, 64, 0.11) 0, rgba(184, 92, 64, 0.05) 28%, rgba(184, 92, 64, 0) 66%);
-  filter: blur(10px);
-  transform: rotate(-2.2deg);
-  pointer-events: none;
-  opacity: 0.9;
+  display: none;
 }
 
 .sketchbook-page-header > * {
@@ -259,28 +365,36 @@ footer h5,
 }
 
 .sketchbook-page-header .eyebrow {
-  font-family: 'Caveat', cursive;
-  font-size: var(--caveat-display);
-  color: var(--ink-faint);
-  letter-spacing: 0.04em;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted-gray);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
-.sketchbook-page-header h1 {
+.sketchbook-page-header h1,
+.sketchbook-container > h1:first-child {
   margin-top: 0;
+  padding-top: 2.5rem;
   margin-bottom: 0.25rem;
-  display: inline-block;
-  transform: rotate(-0.45deg);
-  transform-origin: left center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+  transform: none;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  letter-spacing: 0;
+  color: var(--black);
+  text-shadow: none;
+  line-height: 1.15;
 }
 
-.sketchbook-page-header p {
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
-  line-height: 1.55;
-  color: var(--ink-mid);
+.sketchbook-page-header p,
+.sketchbook-container > h1:first-child + p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--mid-gray);
   max-width: 640px;
   margin: 0.75rem 0 0;
 }
@@ -293,131 +407,113 @@ footer h5,
   padding-bottom: 3rem;
 }
 
-.sketchbook-page-header .section-accent {
-  display: inline-block;
+/* Color bar accent */
+.section-accent {
+  display: block;
   width: 100%;
-  max-width: 100%;
-  height: 10px;
-  border-radius: 999px;
-  margin-top: 0.75rem;
-  opacity: 0.85;
-  filter: blur(0.15px);
+  height: 3px;
+  border-radius: 0;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 1;
+  filter: none;
 }
 
-.sketchbook-page-header .section-accent.teach  { background: linear-gradient(90deg, rgba(184, 92, 64, 0.95), rgba(232, 191, 176, 0.8)); }
-.sketchbook-page-header .section-accent.research { background: linear-gradient(90deg, rgba(61, 110, 126, 0.95), rgba(168, 200, 208, 0.8)); }
-.sketchbook-page-header .section-accent.default { background: linear-gradient(90deg, rgba(138, 112, 48, 0.95), rgba(199, 170, 92, 0.78)); }
+.section-accent.teach    { background: var(--terra); }
+.section-accent.research { background: var(--turquoise); }
+.section-accent.default  { background: linear-gradient(90deg, var(--terra) 0%, var(--mesa) 50%, var(--sunset) 100%); }
 
 
 /* ─── Landing nav cards ───────────────────────────────────────────────────── */
 .sketchbook-nav-card {
   display: block;
-  background: linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.28));
-  border: 1px solid rgba(212, 204, 192, 0.85);
-  border-radius: 10px 3px 8px 4px;
+  background: var(--white);
+  border: 1px solid var(--rule-gray);
+  border-radius: 2px;
   padding: 1.75rem;
   text-decoration: none !important;
-  color: var(--ink) !important;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  color: var(--black) !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
   position: relative;
   overflow: hidden;
 }
 
 .sketchbook-nav-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(45, 41, 38, 0.11);
+  border-color: var(--dark-gray);
+  box-shadow: var(--shadow-md);
   text-decoration: none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.34));
+  transform: none;
+  background: var(--white);
 }
 
-.sketchbook-nav-card.teach {
-  background-image:
-    linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3)),
-    linear-gradient(135deg, rgba(184, 92, 64, 0.08), rgba(199, 170, 92, 0.05) 42%, rgba(255,255,255,0) 70%);
-}
+.sketchbook-nav-card.teach    { border-top: 3px solid var(--terra); }
+.sketchbook-nav-card.research { border-top: 3px solid var(--turquoise); }
 
-.sketchbook-nav-card.research {
-  background-image:
-    linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3)),
-    linear-gradient(135deg, rgba(115, 136, 109, 0.10), rgba(61, 110, 126, 0.05) 44%, rgba(255,255,255,0) 72%);
-}
-
-.sketchbook-nav-card::after {
-  content: "";
-  position: absolute;
-  top: 0.85rem;
-  right: 0.9rem;
-  width: 64px;
-  height: 64px;
-  background: radial-gradient(circle, rgba(255,255,255,0.34) 0, rgba(255,255,255,0) 68%);
-  pointer-events: none;
-}
-
-.sketchbook-nav-card.teach    { border-top: 4px solid var(--teach); }
-.sketchbook-nav-card.research { border-top: 4px solid var(--research); }
+/* No glow pseudo-element needed */
+.sketchbook-nav-card::after { display: none; }
 
 .sketchbook-nav-card .card-eyebrow {
   font-family: 'Caveat', cursive;
   font-size: var(--caveat-display);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   display: block;
   margin-bottom: 0.4rem;
   line-height: 1;
-  transform: rotate(-1.4deg);
+  transform: rotate(-1deg);
   transform-origin: left center;
 }
 
-.sketchbook-nav-card.teach .card-eyebrow    { color: var(--teach); }
-.sketchbook-nav-card.research .card-eyebrow { color: var(--sage); }
+.sketchbook-nav-card.teach    .card-eyebrow { color: var(--terra); }
+.sketchbook-nav-card.research .card-eyebrow { color: var(--turquoise); }
 
 .sketchbook-nav-card h3 {
-  font-family: 'IM Fell English', 'Crimson Pro', serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--black);
   margin-top: 0;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
 .sketchbook-nav-card p {
-  color: var(--ink-mid);
+  color: var(--mid-gray);
   font-size: 0.95rem;
   margin-bottom: 0;
+  line-height: 1.55;
 }
 
 .sketchbook-nav-card .card-link {
   display: inline-block;
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.72rem;
   font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.15s;
 }
 
-.sketchbook-nav-card.teach .card-link    { color: var(--teach); }
-.sketchbook-nav-card.research .card-link { color: var(--sage); }
+.sketchbook-nav-card.teach    .card-link { color: var(--terra); }
+.sketchbook-nav-card.research .card-link { color: var(--turquoise); }
+
+.sketchbook-nav-card:hover .card-link { color: var(--sunset); }
 
 
 /* ─── Sketch entries (open, no card box) ──────────────────────────────────── */
-/*
-  Entries are open — no border box, no shadow. Visual rhythm comes from the
-  top-rule divider, generous whitespace, and typography. The craft feel lives
-  in the fonts and prompt callouts, not in a container.
-*/
-
 .sketch-entry {
   padding: 1.75rem 0 0.5rem;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--rule-gray);
   margin-bottom: 0.25rem;
 }
 
-/* First entry in a group sits right under the section label — tighten spacing */
 .sketch-entries > .sketch-entry:first-child {
   border-top-color: transparent;
   padding-top: 0.25rem;
 }
 
-/* Section-colored top rule — apply to parent container */
-.sketch-entries.teach   .sketch-entry { border-top-color: var(--rule); }
-.sketch-entries.research .sketch-entry { border-top-color: var(--rule); }
+.sketch-entries.teach    .sketch-entry { border-top-color: var(--rule-gray); }
+.sketch-entries.research .sketch-entry { border-top-color: var(--rule-gray); }
 
 /* ── Entry header: title left, tags right ── */
 .sketch-entry-header {
@@ -432,11 +528,11 @@ footer h5,
   font-family: 'Caveat', cursive;
   font-weight: 400;
   font-size: clamp(2.2rem, 3vw, 2.9rem);
-  color: var(--ink);
+  color: var(--black);
   margin: 0;
   line-height: 0.95;
   flex: 1;
-  transform: rotate(-0.65deg);
+  transform: rotate(-0.5deg);
   transform-origin: left center;
 }
 
@@ -447,48 +543,48 @@ footer h5,
   gap: 0.35rem;
   justify-content: flex-end;
   flex-shrink: 0;
-  padding-top: 0.2rem;   /* align visually with title cap-height */
+  padding-top: 0.25rem;
 }
 
 .sketch-tag {
   display: inline-block;
-  font-family: 'Caveat', cursive;
-  font-size: 1.1rem;
-  padding: 1px 9px;
-  border-radius: 2px;
-  letter-spacing: 0.02em;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
 /* Status variants */
 .sketch-tag.rough {
-  background: rgba(240, 235, 224, 0.72);
-  color: var(--ink-light);
-  border: 1px dashed var(--ink-faint);
+  background: transparent;
+  color: var(--muted-gray);
+  border: 1px solid var(--rule-gray);
 }
 
 .sketch-tag.tested {
   background: var(--research-soft);
-  color: var(--research);
-  border: 1px solid var(--research-mid);
+  color: var(--turquoise);
+  border: 1px solid rgba(0, 122, 134, 0.3);
 }
 
 .sketch-tag.refined {
-  background: linear-gradient(180deg, var(--clay-soft), rgba(255,255,255,0.6));
-  color: var(--clay-rose);
-  border: 1px solid rgba(182, 125, 114, 0.45);
+  background: var(--teach-soft);
+  color: var(--terra);
+  border: 1px solid rgba(192, 81, 49, 0.3);
 }
 
-/* Topic tags — neutral */
 .sketch-tag.topic {
-  background: rgba(230, 236, 227, 0.55);
-  color: var(--sage);
-  border: 1px solid rgba(115, 136, 109, 0.24);
+  background: transparent;
+  color: var(--mid-gray);
+  border: 1px solid var(--rule-gray);
 }
 
 /* ── Entry body ── */
 .sketch-entry p {
-  color: var(--ink-mid);
+  color: var(--mid-gray);
   font-size: 0.97rem;
   margin-bottom: 0.6rem;
 }
@@ -499,29 +595,28 @@ footer h5,
 
 /* ── Prompt callout ── */
 .sketch-prompt {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.12)),
-    linear-gradient(90deg, rgba(199, 170, 92, 0.06), rgba(199, 170, 92, 0));
-  border-left: 3px solid var(--gold);
-  border-top: 1px solid rgba(199, 170, 92, 0.15);
-  padding: 0.7rem 1rem;
+  background: var(--light-gray);
+  border-left: 3px solid var(--mesa);
+  border-top: none;
+  border-radius: 0;
+  padding: 0.9rem 1.1rem;
   margin-top: 1rem;
-  border-radius: 0 6px 6px 2px;
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
   font-style: italic;
-  color: var(--ink-mid);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+  color: var(--mid-gray);
+  box-shadow: none;
 }
 
 .sketch-prompt-label {
   display: block;
-  font-family: 'Caveat', cursive;
+  font-family: 'Fira Mono', monospace;
   font-style: normal;
-  font-size: var(--caveat-label);
-  color: var(--sage);
-  margin-bottom: 0.25rem;
-  letter-spacing: 0.03em;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mesa);
+  margin-bottom: 0.4rem;
 }
 
 /* ── Entry footer: read more right-aligned ── */
@@ -531,57 +626,57 @@ footer h5,
 }
 
 .sketch-read-more {
-  font-family: 'Caveat', cursive;
-  font-size: var(--caveat-label);
-  color: var(--ink-faint);
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-gray);
   text-decoration: none;
-  letter-spacing: 0.02em;
   transition: color 0.15s;
 }
 
 .sketch-read-more:hover {
-  color: var(--gold);
+  color: var(--sunset);
   text-decoration: none;
 }
 
-.sketch-entries.teach .sketch-read-more:hover    { color: var(--teach); }
-.sketch-entries.research .sketch-read-more:hover { color: var(--research); }
+.sketch-entries.teach    .sketch-read-more:hover { color: var(--terra); }
+.sketch-entries.research .sketch-read-more:hover { color: var(--turquoise); }
 
 
 /* ─── Section label ───────────────────────────────────────────────────────── */
 .sketch-section-label {
-  font-family: 'Caveat', cursive;
-  font-size: var(--caveat-display);
-  color: var(--ink-faint);
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted-gray);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
   margin-bottom: 0.5rem;
   padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule-gray);
 }
 
 
 /* ─── Home page lede & pull quote ────────────────────────────────────────── */
 .sketchbook-lede {
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: clamp(1.15rem, 2vw, 1.35rem);
-  color: var(--ink);
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--mid-gray);
+  line-height: 1.65;
   max-width: 680px;
   margin: 0 0 1.5rem;
 }
 
 .sketchbook-pull {
   font-family: 'Caveat', cursive;
-  font-size: clamp(1.6rem, 2.8vw, 2.1rem) !important;
-  color: var(--ink-mid);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem) !important;
+  color: var(--dark-gray);
   line-height: 1.25;
   padding: 1rem 1.5rem;
   margin: 2rem 0;
-  border-left: 4px solid var(--teach);
+  border-left: 3px solid var(--terra);
   width: 100%;
-  transform: rotate(-0.4deg);
-  transform-origin: left center;
+  transform: none;
 }
 
 
@@ -607,9 +702,9 @@ footer h5,
 
 .sketchbook-post-meta a.sketch-tag:hover,
 .sketchbook-intro-cards a.sketch-tag:hover {
-  color: var(--teach);
-  border-color: rgba(184, 92, 64, 0.32);
-  background: rgba(184, 92, 64, 0.08);
+  color: var(--terra);
+  border-color: rgba(192, 81, 49, 0.4);
+  background: var(--teach-soft);
 }
 
 .sketchbook-post h2 {
@@ -625,6 +720,8 @@ footer h5,
   margin-bottom: 0.5rem;
 }
 
+
+/* ─── Intro cards (listing pages) ────────────────────────────────────────── */
 .sketchbook-intro-cards {
   margin: 2rem 0 2.5rem;
 }
@@ -637,40 +734,115 @@ footer h5,
   margin-bottom: 0;
   padding: 1.6rem 0;
   position: relative;
-  transition: background-color 0.18s ease;
+  transition: background-color 0.15s ease;
 }
 
 .sketchbook-intro-cards .card:hover {
   box-shadow: none;
   transform: none;
-  background: linear-gradient(90deg, rgba(240, 235, 224, 0.55) 0%, rgba(230, 236, 227, 0.22) 40%, rgba(240, 235, 224, 0.16) 64%, rgba(240, 235, 224, 0) 100%);
+  background: transparent;
 }
 
+/* Three-column row: meta | image | content */
+.sketchbook-intro-cards .card .row {
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.card-meta-col {
+  flex: none;
+  width: 68px;
+  min-width: 68px;
+  padding: 1.4rem 1rem 1.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  border-right: 1px solid var(--rule-gray);
+  margin-right: 1.1rem;
+}
+
+.card-meta-year {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  letter-spacing: 0.03em;
+  display: block;
+  line-height: 1;
+}
+
+.card-meta-status,
+.card-meta-section {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  line-height: 1;
+}
+
+.card-meta-status.rough   { color: var(--muted-gray); }
+.card-meta-status.tested  { color: var(--turquoise); }
+.card-meta-status.refined { color: var(--terra); }
+
+.card-meta-section.teach    { color: var(--terra); }
+.card-meta-section.research { color: var(--turquoise); }
+
+/* Adjust image and content columns to flex within remaining space */
+.sketchbook-intro-cards .card-horizontal .col-sm-4 {
+  flex: 0 0 28%;
+  max-width: 28%;
+}
+
+.sketchbook-intro-cards .card-horizontal .col-sm-8,
+.sketchbook-intro-cards .card-horizontal .col-sm-12 {
+  flex: 1;
+  max-width: none;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .sketchbook-intro-cards .card .row { flex-wrap: wrap; }
+
+  .card-meta-col {
+    width: 100%;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    border-right: none;
+    border-bottom: 1px solid var(--rule-gray);
+    padding: 0.5rem 0 0.6rem;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .sketchbook-intro-cards .card-horizontal .col-sm-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+
+/* Top rule divider */
 .sketchbook-intro-cards .card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold) 0, var(--rule) 120px, transparent 100%);
-  transition: background 0.18s ease, height 0.18s ease;
+  height: 1px;
+  background: var(--rule-gray);
+  transition: background 0.15s ease, height 0.15s ease;
 }
 
 .sketchbook-intro-cards .card:hover::before {
-  height: 3px;
-  background: linear-gradient(90deg, var(--sage) 0, var(--teach) 56px, var(--gold) 128px, var(--rule) 220px, transparent 100%);
+  height: 2px;
+  background: var(--terra);
 }
 
+/* Bottom rule on last card */
 .sketchbook-intro-cards .card::after {
-  content: "";
-  position: absolute;
-  top: 1.2rem;
-  right: 0.8rem;
-  width: 72px;
-  height: 72px;
-  background: radial-gradient(circle, rgba(115, 136, 109, 0.08) 0, rgba(115, 136, 109, 0) 72%);
-  pointer-events: none;
+  display: none;
 }
 
 .sketchbook-intro-cards .card:last-child::after {
@@ -680,7 +852,8 @@ footer h5,
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--rule);
+  background: var(--rule-gray);
+  display: block;
 }
 
 .sketchbook-intro-cards .card .card-main-link {
@@ -701,27 +874,26 @@ footer h5,
 
 .sketchbook-intro-cards .card .row {
   align-items: stretch !important;
-  transition: transform 0.18s ease;
+  transition: transform 0.15s ease;
 }
 
 .sketchbook-intro-cards .card:hover .row {
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
 .sketchbook-intro-cards .card-image,
 .sketchbook-intro-cards .card-img-top {
-  border-radius: 2px !important;
+  border-radius: 0 !important;
   height: 100% !important;
   min-height: 220px;
   margin: 0;
-  filter: saturate(0.88) contrast(0.96);
-  transition: filter 0.18s ease, transform 0.18s ease;
+  filter: saturate(0.85) contrast(0.95);
+  transition: filter 0.18s ease;
 }
 
 .sketchbook-intro-cards .card:hover .card-image,
 .sketchbook-intro-cards .card:hover .card-img-top {
-  filter: saturate(0.96) contrast(1);
-  transform: translateY(-1px);
+  filter: saturate(1) contrast(1);
 }
 
 .sketchbook-intro-cards .card .col-sm-4 {
@@ -733,16 +905,17 @@ footer h5,
   font-family: 'Caveat', cursive;
   font-size: clamp(2rem, 2.8vw, 2.6rem);
   font-weight: 400;
-  color: var(--ink) !important;
+  color: var(--black) !important;
   letter-spacing: 0;
   text-transform: none;
   line-height: 0.95;
-  transform: rotate(-0.6deg);
+  transform: rotate(-0.5deg);
   transform-origin: left center;
 }
 
 .sketchbook-intro-cards .card-text {
-  color: var(--ink-mid) !important;
+  color: var(--mid-gray) !important;
+  font-family: 'Inter', sans-serif;
 }
 
 .sketchbook-intro-cards .sketch-card-meta {
@@ -755,7 +928,7 @@ footer h5,
 }
 
 .sketchbook-intro-cards .card-body {
-  padding: 0.2rem 0 0.2rem 0;
+  padding: 0.2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -763,9 +936,32 @@ footer h5,
 }
 
 .sketchbook-intro-cards .card-text {
-  font-size: 1.02rem;
+  font-size: 0.97rem;
   line-height: 1.55;
-  max-width: 52ch;
+}
+
+.sketch-card-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.5rem;
+}
+
+.sketch-card-skills li {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  color: var(--black);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.sketch-card-skills li::before {
+  content: "✓ ";
+  color: var(--terra);
+  font-size: 0.6rem;
 }
 
 .sketchbook-intro-cards .sketch-tag {
@@ -777,100 +973,118 @@ footer h5,
   align-items: center;
 }
 
-.sketchbook-intro-cards .card:hover .card-title {
-  color: var(--sage) !important;
-}
-
-.sketchbook-intro-cards .card:hover .card-text {
-  color: var(--ink) !important;
-}
+.sketchbook-intro-cards .card:hover .card-title { color: var(--black) !important; }
+.sketchbook-intro-cards .card:hover .card-text  { color: var(--dark-gray) !important; }
 
 
-/* ─── Sketchbook tags page ──────────────────────────────────────────────── */
+/* ─── Tags page ──────────────────────────────────────────────────────────── */
 .sketchbook-tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.5rem;
   margin: 1.5rem 0 1rem;
 }
 
 .sketchbook-tag-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.8rem 0.25rem;
-  border-radius: 999px;
-  border: 1px solid rgba(115, 136, 109, 0.26);
-  background: linear-gradient(180deg, rgba(230, 236, 227, 0.74), rgba(255,255,255,0.38));
-  color: var(--sage) !important;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem 0.25rem;
+  border-radius: 0;
+  border: 1px solid var(--rule-gray);
+  background: transparent;
+  color: var(--mid-gray) !important;
   text-decoration: none;
-  font-family: 'Caveat', cursive;
-  font-size: 1.35rem;
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   line-height: 1;
-  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .sketchbook-tag-badge:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(180deg, rgba(242, 230, 226, 0.76), rgba(255,255,255,0.42));
-  color: var(--teach) !important;
+  transform: none;
+  border-color: var(--terra);
+  color: var(--terra) !important;
+  background: transparent;
 }
 
 .sketchbook-tag-badge.active {
-  background: linear-gradient(180deg, rgba(184, 92, 64, 0.16), rgba(199, 170, 92, 0.12));
-  border-color: rgba(184, 92, 64, 0.34);
-  color: var(--teach) !important;
+  background: var(--teach-soft);
+  border-color: var(--terra);
+  color: var(--terra) !important;
 }
 
 .sketchbook-tag-badge .tag-count {
-  font-size: 0.95rem;
-  color: var(--ink-faint);
+  font-size: 0.65rem;
+  color: var(--muted-gray);
 }
 
 .sketchbook-tag-summary,
 .sketchbook-tag-empty {
-  color: var(--ink-mid);
+  color: var(--mid-gray);
   margin-bottom: 1rem;
 }
 
-.site-footer-sketchbook {
-  border-top: 1px solid rgba(199, 170, 92, 0.18);
-  background: rgba(240, 235, 224, 0.92) !important;
+
+/* ─── Bootstrap-free shim ────────────────────────────────────────────────── */
+/*
+ * Minimal replacements for the Bootstrap classes used in this site's
+ * templates (card-list.html, nav-top-sketchbook.html, index.md).
+ * No other Bootstrap CSS or JS is loaded.
+ */
+
+/* Nav */
+.navbar          { display: flex; flex-wrap: wrap; align-items: center; }
+.container-fluid { display: flex; align-items: center; width: 100%; padding: 0 1rem; flex-wrap: wrap; }
+.navbar-brand    { /* styled above */ }
+.nav-item        { list-style: none; }
+
+/* Flex utilities */
+.d-flex              { display: flex !important; }
+.align-items-center  { align-items: center !important; }
+.align-items-stretch { align-items: stretch !important; }
+
+/* Grid row */
+.row  { display: flex; flex-wrap: wrap; }
+.g-0  { gap: 0; margin-left: 0; margin-right: 0; }
+
+/* Column widths — sm breakpoint (576px+) */
+.col-sm-4  { flex: 0 0 33.333%; max-width: 33.333%; }
+.col-sm-8  { flex: 0 0 66.667%; max-width: 66.667%; }
+.col-sm-12 { flex: 0 0 100%;    max-width: 100%; }
+
+/* col-md-6: stacked on mobile, side-by-side at 768px+ */
+.col-md-6 { flex: 0 0 100%; max-width: 100%; }
+@media (min-width: 768px) {
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
 }
 
-.site-footer-sketchbook .footer-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+/* Image */
+.img-fluid     { max-width: 100%; height: auto; }
+.rounded-start { /* omitted — new design uses square corners */ }
+
+/* Stretched link — makes entire card clickable via absolute overlay */
+.stretched-link::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
 }
 
-.site-footer-sketchbook .footer-bottom-brand,
-.site-footer-sketchbook .footer-bottom-contact {
-  color: var(--ink-mid);
-}
+/* Spacing utilities */
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+.py-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
 
-.site-footer-sketchbook .footer-brand {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  color: var(--unm-cherry);
-}
+/* Also ensure .card has position: relative so stretched-link overlay works */
+.card { position: relative; }
 
-.site-footer-sketchbook .footer-sep {
-  color: var(--ink);
-}
 
-.site-footer-sketchbook .footer-bottom-contact a {
-  color: var(--teach);
-  text-decoration: none;
-}
-
-.site-footer-sketchbook .footer-bottom-contact a:hover {
-  color: var(--sage);
-}
-
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .navbar-sketchbook .container-fluid {
     min-height: auto;
@@ -882,7 +1096,7 @@ footer h5,
   .navbar-sketchbook-breadcrumb a,
   .navbar-sketchbook-breadcrumb .current,
   .navbar-sketchbook-breadcrumb .breadcrumb-sep {
-    font-size: 1.1rem;
+    font-size: 0.72rem;
   }
 
   .sketchbook-intro-cards .card {
@@ -899,9 +1113,7 @@ footer h5,
   .sketchbook-intro-cards .card-body {
     min-height: 0;
   }
-}
 
-@media (max-width: 768px) {
   .sketch-entry-header {
     flex-direction: column;
     gap: 0.5rem;

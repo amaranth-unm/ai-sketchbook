@@ -11,20 +11,16 @@ tags:
   - writing
   - argument
   - seminar
+skills:
+  - revising thesis claims
+  - anticipating counterarguments
+  - recognizing vague reasoning
 card_order: 10
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header sketchbook-post">
-  <h1>Argument Audit</h1>
-  <p>A classroom exercise for making students defend an argument more precisely by asking AI to generate objections they then have to sort, test, and answer.</p>
-  <span class="section-accent teach"></span>
-  <div class="sketchbook-post-meta">
-    <span class="sketch-tag {{ page.status }}">{{ page.status }}</span>
-{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
-  </div>
-</div>
-{:/nomarkdown}
+# Argument Audit
+
+<span class="section-accent teach"></span>
 
 Students often treat critique as something that happens after a draft is mostly finished. This exercise moves critique earlier. The AI becomes a machine for producing objections on demand, and the students' job is to decide which of those objections are generic noise and which ones expose a real weakness in the argument.
 

@@ -11,20 +11,16 @@ tags:
   - vibe coding
   - maps
   - agentic AI
+skills:
+  - extracting GPS metadata from image files
+  - building a map visualization with AI-assisted coding
+  - presenting geolocated data in a public-facing format
 card_order: 10
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header sketchbook-post">
-  <h1>Photos to Map Pins</h1>
-  <p>A workflow experiment in vibe coding a website to display 200 geolocated photos of street cats.</p>
-  <span class="section-accent teach"></span>
-  <div class="sketchbook-post-meta">
-    <span class="sketch-tag {{ page.status }}">{{ page.status }}</span>
-{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
-  </div>
-</div>
-{:/nomarkdown}
+# Photos to Map Pins
+
+<span class="section-accent research"></span>
 
 The process described in this sketchbook entry resulted in the website [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/). It took less than an hour from the time of downloading the images to my laptop to the creation of a map with clickable pins.
 
