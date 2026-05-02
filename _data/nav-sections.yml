@@ -1,0 +1,5 @@
+sections:
+  - name: teaching
+    display: Teaching
+  - name: research
+    display: Research

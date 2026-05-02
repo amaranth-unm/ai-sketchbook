@@ -1,0 +1,514 @@
+/* === Social History Theme === */
+/*
+  Mirrors the visual language of the "A Social History of Truth" slide deck.
+
+  Palette:
+    bg          #0d1412   deep charcoal green
+    text        #e6ece4   warm cream
+    text-muted  #9fb1a3   dusty sage
+    border      #22302b   near-black green
+    heading-1   #a8c686   sage green  (main-point)
+    heading-2   #6fb3a0   teal        (secondary)
+    heading-3   #d9b26a   gold/amber  (accent / eyebrows)
+
+  Typography:
+    Fraunces       serif display (headings, pull-quotes)  — italic by default
+    Inter          UI / body
+    JetBrains Mono mono (eyebrows, labels, code)
+*/
+
+/* Theme-specific fonts — mirrors the slide deck exactly */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+
+/*****************************************************
+CSS VARIABLE OVERRIDES
+*****************************************************/
+:root {
+  /* ===== Social History Color Palette ===== */
+  --sh-bg:          #0d1412;
+  --sh-bg-card:     #141d1a;
+  --sh-bg-soft:     #182320;
+  --sh-text:        #e6ece4;
+  --sh-text-muted:  #9fb1a3;
+  --sh-border:      #22302b;
+  --sh-border-soft: #1b2522;
+  --sh-sage:        #a8c686;   /* heading-1 / main-point */
+  --sh-teal:        #6fb3a0;   /* heading-2 / argument rail */
+  --sh-gold:        #d9b26a;   /* heading-3 / accent / eyebrow */
+
+  /* ===== Override Base Theme Variables ===== */
+
+  /* Backgrounds */
+  --bg-page: var(--sh-bg);
+  --bg-card: var(--sh-bg-card);
+  --bg-accent: var(--sh-bg-soft);
+  --bg-code: var(--sh-bg-soft);
+  --bg-nav: var(--sh-bg-card);
+
+  /* Text */
+  --text-body: var(--sh-text);
+  --text-on-dark: var(--sh-text);
+  --text-muted: var(--sh-text-muted);
+
+  /* Accents & Interactive */
+  --accent-primary: var(--sh-teal);
+  --accent-border: var(--sh-gold);
+  --interactive-hover: var(--sh-gold);
+  --accent-primary-dark: #4f8a7a;
+
+  /* Heading color hierarchy — matches slides */
+  --text-h1: var(--sh-sage);
+  --text-h2: var(--sh-teal);
+  --text-h3: var(--sh-gold);
+  --text-h4: var(--sh-sage);
+  --text-h5: var(--sh-gold);
+
+  /* Borders / dividers */
+  --border-light: var(--sh-border);
+  --border-on-dark: var(--sh-border);
+
+  /* Shadows — softer on a dark base */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 6px 18px rgba(0, 0, 0, 0.55);
+
+  /* Fonts */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-serif:   'Fraunces', Georgia, serif;
+  --font-mono:    'JetBrains Mono', 'Fira Mono', monospace;
+
+  /* Footer */
+  --bg-footer: var(--sh-bg-card);
+  --bg-footer-bottom: #0a100e;
+  --text-footer-link: var(--sh-text);
+  --text-footer-bottom: var(--sh-text-muted);
+}
+
+
+/*****************************************************
+PAGE BACKDROP
+*****************************************************/
+html, body {
+  background-color: var(--sh-bg);
+  color: var(--sh-text);
+}
+
+
+/*****************************************************
+TYPOGRAPHY — serif display, italic main points
+*****************************************************/
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Main points on slides are serif italic sage — mirror for h1/h2 */
+h1, h2 {
+  font-style: italic;
+  font-weight: 600;
+}
+
+h1 { color: var(--text-h1); }
+h2 { color: var(--text-h2); }
+
+h3, h4 {
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3 { color: var(--text-h3); font-style: italic; }
+
+/* Small uppercase mono labels — the slide-deck "eyebrow" look */
+h5 {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sh-gold);
+}
+
+/* Gradient rule beneath hero titles, mirrors slide .rule */
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 0;
+  background: linear-gradient(90deg, var(--sh-teal) 0%, var(--sh-gold) 60%, transparent 100%);
+  width: 140px;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Body paragraphs — Inter, relaxed line height, left-aligned (not justified) */
+p {
+  font-family: var(--font-body);
+  color: var(--sh-text);
+  text-align: left;
+}
+
+/* Strong / emphasis mirrors the slide treatment */
+strong { color: var(--sh-text); font-weight: 600; }
+em     { color: var(--sh-gold); font-style: italic; }
+
+
+/*****************************************************
+LINKS
+*****************************************************/
+
+a,
+a:visited {
+  color: var(--sh-teal);
+  border-bottom: 1px dotted var(--sh-teal);
+}
+
+a:hover {
+  color: var(--sh-gold);
+  border-bottom-color: var(--sh-gold);
+}
+
+
+/*****************************************************
+BLOCKQUOTE — matches slide .pull-quote
+*****************************************************/
+
+blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--sh-gold);
+  border-left: 2px solid var(--sh-gold);
+  padding: 0.2rem 0 0.2rem 1rem;
+  margin: 1.25rem 0;
+  max-width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+
+/*****************************************************
+PULLQUOTE
+*****************************************************/
+
+.pullquote {
+  color: var(--sh-gold);
+}
+
+.pullquote::before {
+  color: var(--sh-gold);
+  opacity: 0.15;
+}
+
+.pullquote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--sh-gold);
+}
+
+
+/*****************************************************
+CARDS — slide-deck "card" look (border-top accent)
+*****************************************************/
+
+.card {
+  background: var(--sh-bg-card);
+  border: 1px solid var(--sh-border);
+  border-top: 2px solid var(--sh-teal);
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.card:hover {
+  border-color: var(--sh-border);
+  border-top-color: var(--sh-gold);
+  box-shadow: var(--shadow-lg);
+  opacity: 1;
+}
+
+.card h3,
+.card a h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--sh-sage);
+}
+
+.card-text,
+.card a p {
+  color: var(--sh-text-muted);
+}
+
+/* Horizontal card refinements for the homepage stack */
+.h-card:hover {
+  transform: translateX(4px);
+}
+
+.h-card .card-img-left {
+  flex: 0 0 260px;
+  width: 260px;
+  height: auto;
+  min-height: 14rem;
+  border-right: 1px solid var(--sh-border);
+}
+
+.h-card .card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+
+/*****************************************************
+NAVIGATION
+*****************************************************/
+
+.top-nav {
+  background-color: var(--sh-bg-card);
+  border-bottom: 1px solid var(--sh-border);
+}
+
+.top-nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.top-nav-link:hover,
+.top-nav-link:focus {
+  color: var(--sh-gold);
+}
+
+
+/*****************************************************
+PAGE HEADER — echo the slide title layout
+*****************************************************/
+
+.page-header {
+  --header-bg: var(--sh-bg);
+  --header-subtitle: var(--sh-text-muted);
+  --header-divider-line: var(--sh-border);
+  --header-divider-text: var(--sh-gold);
+}
+
+.page-header-bar {
+  background: var(--sh-gold);
+}
+
+.page-header h1 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--sh-sage);
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.page-header p {
+  font-family: var(--font-body);
+  color: var(--sh-text);
+}
+
+.page-header-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--sh-gold);
+  letter-spacing: 0.25em;
+}
+
+
+/*****************************************************
+BUTTONS
+*****************************************************/
+
+.btn-primary,
+.btn-primary:visited {
+  background: var(--sh-teal);
+  color: var(--sh-bg);
+  border: 1px solid var(--sh-teal);
+}
+
+.btn-primary:hover,
+.btn-primary:visited:hover {
+  background: var(--sh-gold);
+  border-color: var(--sh-gold);
+  color: var(--sh-bg);
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+  background: transparent;
+  color: var(--sh-text);
+  border: 1px solid var(--sh-border);
+}
+
+.btn-secondary:hover,
+.btn-secondary:visited:hover {
+  border-color: var(--sh-gold);
+  color: var(--sh-gold);
+  background: transparent;
+}
+
+
+/*****************************************************
+TAG PILLS
+*****************************************************/
+
+.tag-pill {
+  background: transparent;
+  color: var(--sh-gold);
+  border: 1px solid var(--sh-border);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.tag-pill:visited {
+  color: var(--sh-gold);
+}
+
+.tag-pill:hover {
+  background: transparent;
+  color: var(--sh-bg);
+  background-color: var(--sh-gold);
+  border-color: var(--sh-gold);
+}
+
+
+/*****************************************************
+TOC ROWS
+*****************************************************/
+
+.toc-row,
+.toc-row-compact {
+  background: var(--sh-bg-card);
+  border: 1px solid var(--sh-border);
+  border-left: 3px solid var(--sh-gold);
+}
+
+.toc-row:hover,
+.toc-row-compact:hover {
+  border-left-color: var(--sh-sage);
+  box-shadow: var(--shadow-md);
+}
+
+.toc-row h3,
+.toc-row-compact h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--sh-sage);
+  text-transform: none;
+}
+
+.toc-row p,
+.toc-row-compact p {
+  color: var(--sh-text-muted);
+}
+
+
+/*****************************************************
+FOOTER
+*****************************************************/
+
+footer {
+  background-color: var(--sh-bg-card);
+  border-top: 1px solid var(--sh-border);
+  color: var(--sh-text);
+}
+
+.footer-bottom {
+  background-color: #0a100e;
+  border-top: 1px solid var(--sh-border);
+}
+
+.footer-column h3 {
+  font-family: var(--font-mono);
+  font-style: normal;
+  color: var(--sh-gold);
+  letter-spacing: 0.18em;
+}
+
+.footer-column ul li a,
+.footer-bottom a {
+  color: var(--sh-text);
+  border-bottom: none;
+}
+
+.footer-column ul li a:hover,
+.footer-bottom a:hover {
+  color: var(--sh-gold);
+}
+
+
+/*****************************************************
+CODE
+*****************************************************/
+
+code {
+  color: var(--sh-gold);
+  background: var(--sh-bg-soft);
+  border: 1px solid var(--sh-border);
+}
+
+.highlight {
+  background: var(--sh-bg-soft);
+  border: 1px solid var(--sh-border);
+  box-shadow: inset 3px 0 0 var(--sh-gold);
+}
+
+.highlight pre {
+  color: var(--sh-text);
+  background: transparent;
+}
+
+
+/*****************************************************
+TABLES
+*****************************************************/
+
+table {
+  background: transparent;
+  color: var(--sh-text);
+}
+
+th {
+  color: var(--sh-gold);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--sh-border);
+}
+
+td {
+  border-bottom: 1px solid var(--sh-border-soft);
+}
+
+
+/*****************************************************
+ALERTS — keep semantic color, use dark surfaces
+*****************************************************/
+
+.alert {
+  background: var(--sh-bg-soft);
+  border: 1px solid var(--sh-border);
+  border-left: 4px solid var(--sh-gold);
+  color: var(--sh-text);
+}
+
+.alert-info    { border-left-color: var(--sh-teal); }
+.alert-warning { border-left-color: var(--sh-gold); }
+.alert-success { border-left-color: var(--sh-sage); }
+.alert-danger  { border-left-color: #c97a6a; }
+
+
+/*****************************************************
+DIVIDERS INSIDE CONTENT
+*****************************************************/
+
+.container hr {
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--sh-teal) 0%, var(--sh-gold) 60%, transparent 100%);
+  margin: 2rem 0;
+}
