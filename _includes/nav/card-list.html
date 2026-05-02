@@ -20,7 +20,9 @@
     <div class="card-meta-col">
       {% if item.date %}<span class="card-meta-year">{{ item.date | date: "%Y" }}</span>{% endif %}
       {% if item.status %}<span class="card-meta-status {{ item.status }}">{{ item.status }}</span>{% endif %}
-      {% if card_section %}<span class="card-meta-section {{ card_section }}">{{ card_section }}</span>{% endif %}
+      {% if item.effort %}<span class="card-meta-effort">{{ item.effort }}</span>{% endif %}
+      {% if item.level %}<span class="card-meta-level">{{ item.level }}</span>{% endif %}
+      {% if item.tools %}<span class="card-meta-tools">{{ item.tools | join: ", " }}</span>{% endif %}
     </div>
     {% if card_thumbnail %}
     {% capture card_img_url %}{% include images/image-path.html image-path=card_thumbnail page-dir=item.dir %}{% endcapture %}

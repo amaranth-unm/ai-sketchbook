@@ -890,6 +890,20 @@ p:has(> .section-accent) {
 .card-meta-section.teach    { color: var(--terra); }
 .card-meta-section.research { color: var(--turquoise); }
 
+.card-meta-effort,
+.card-meta-level,
+.card-meta-tools {
+  font-family: 'Fira Mono', monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  line-height: 1;
+  color: var(--muted-gray);
+}
+
+.card-meta-effort { color: var(--dark-gray); }
+
 /* Adjust image and content columns to flex within remaining space */
 .sketchbook-intro-cards .card-horizontal .col-sm-4 {
   flex: 0 0 28%;
