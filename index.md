@@ -2,17 +2,15 @@
 layout: sketchbook
 title: AI Sketchbook
 description: "A working collection of ideas for using AI in humanities teaching and research. Rough, experimental, honest about what's been tested."
-css: sketchbook.css
 date: 2026-04-01
+wide: true
 ---
 
-{::nomarkdown}
-<div class="sketchbook-page-header">
-  <h1>AI Sketchbook</h1>
-  <p>A shared space for thinking out loud about AI in humanities teaching and research — not a guide, not a verdict, just colleagues comparing notes.</p>
-  <span class="section-accent default"></span>
-</div>
-{:/nomarkdown}
+# AI Sketchbook
+
+A shared space for thinking out loud about AI in humanities teaching and research — not a guide, not a verdict, just colleagues comparing notes.
+
+<span class="section-accent default"></span>
 
 There is no shortage of AI advice. What is harder to find is something local — people who share students, classrooms, campus culture (and constraints and opportunities), and disciplinary habits. That is what this is trying to be. A place to build a community of practice.
 
@@ -45,7 +43,9 @@ Nothing here is authoritative. The sketches are rough, the experiments are ongoi
 
 ALSO: [Browse the sketchbook by tag →](/tags/)
 
+## Add a sketch!
+If you have tried something with AI and had an opinion about it---whether favorable or not---please share!  
 
-**Something to add?** If you have tried something that belongs here, [let us know](mailto:amaranth@unm.edu). This only grows if people share what they have actually done. We'd love hear about your motivation, experience, and what you learned.
+Whether you tried an exercise in class that was insightful, or helped speed up research work, or expanded what you can produce through AI's coding skill, share it. If you have something in mind, [draft and submit it](contribute), and of course [get in touch](mailto:amaranth@unm.edu) if you want to discuss further or need help writing it up. 
 
-
+We'd love hear about your motivation, experience, and what you learned.

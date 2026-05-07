@@ -3,10 +3,10 @@ layout: sketchbook
 title: Citation Test
 description: "A teaching sketch that uses AI-generated bibliographies to teach verification, source checking, and skepticism about polished prose."
 summary: "Students verify AI-generated citations one by one and turn fabricated sources into a lesson about evidence and authority."
-thumbnail: "/assets/images/headers/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_828_at_the_Ballistic_Research_Laboratory.jpg"
-css: sketchbook.css
+thumbnail: "/assets/images/headers/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
 date: 2026-04-09
 status: refined
+type: activity
 effort: "30–40 min in class"
 tools:
   - ChatGPT
@@ -20,12 +20,18 @@ skills:
   - verifying sources in library databases
   - distinguishing real from fabricated citations
   - questioning authority of polished prose
+teaches:
+  - why polished prose is not evidence of accuracy
+  - how hallucination happens and why it's convincing
+  - verification as a scholarly habit, not a library ritual
 card_order: 20
 ---
 
 # Citation Test
 
 <span class="section-accent teach"></span>
+
+{% include typography/sketch-info.html %}
 
 Ask AI for a reading list on a focused scholarly topic. Then verify every citation in public. Some will be real. Some will be distorted. Some will be entirely fabricated while sounding perfectly plausible.
 

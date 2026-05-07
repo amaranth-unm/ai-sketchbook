@@ -12,17 +12,17 @@
   {% assign card_classes = card_classes | append: " sketch-tag-card" %}
 {% endif %}
 {% assign joined_tags = item.tags | join: '|' | downcase %}
-{% if item.url contains '/teaching/' %}{% assign card_section = "teach" %}
-{% elsif item.url contains '/research/' %}{% assign card_section = "research" %}
+{% if item.url contains '/research/' %}{% assign card_section = "research" %}
 {% else %}{% assign card_section = nil %}{% endif %}
 <div class="{{ card_classes }}"{% if include.tag-data and item.tags %} data-tags="{{ joined_tags }}"{% endif %}>
   <div class="row g-0 align-items-stretch">
     <div class="card-meta-col">
-      {% if item.date %}<span class="card-meta-year">{{ item.date | date: "%Y" }}</span>{% endif %}
+      {% if item.date %}<span class="card-meta-year">{{ item.date | date: "%b %Y" }}</span>{% endif %}
       {% if item.status %}<span class="card-meta-status {{ item.status }}">{{ item.status }}</span>{% endif %}
+      {% if item.type %}<span class="card-meta-type {{ item.type | replace: ' ', '-' | replace: '/', '-' }}">{{ item.type }}</span>
+      {% elsif card_section %}<span class="card-meta-type {{ card_section }}">{{ card_section }}</span>{% endif %}
       {% if item.effort %}<span class="card-meta-effort">{{ item.effort }}</span>{% endif %}
       {% if item.level %}<span class="card-meta-level">{{ item.level }}</span>{% endif %}
-      {% if item.tools %}<span class="card-meta-tools">{{ item.tools | join: ", " }}</span>{% endif %}
     </div>
     {% if card_thumbnail %}
     {% capture card_img_url %}{% include images/image-path.html image-path=card_thumbnail page-dir=item.dir %}{% endcapture %}

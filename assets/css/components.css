@@ -1,0 +1,192 @@
+/* ─── Sketch info box ────────────────────────────────────────────────────── */
+.sketch-info {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  row-gap: 0.5rem;
+  column-gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  margin: 0 0 2.25rem 0;
+  background: var(--off-white);
+  border-left: 3px solid var(--rule-gray);
+}
+
+.sketch-info--teach    { border-left-color: var(--terra);     background: var(--teach-soft); }
+.sketch-info--research { border-left-color: var(--turquoise); background: var(--research-soft); }
+
+.sketch-info dt {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-gray);
+  margin: 0;
+  padding-top: 0.1rem;
+  line-height: 1.5;
+}
+
+.sketch-info dd {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--dark-gray);
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* ─── Pullquote ───────────────────────────────────────────────────────────── */
+.pullquote {
+  position: relative;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--dark-gray);
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.pullquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.05em;
+  left: -0.05em;
+  z-index: 0;
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 14rem;
+  line-height: 0.8;
+  color: var(--terra);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.pullquote p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: inherit;
+}
+
+
+/* ─── Callouts ────────────────────────────────────────────────────────────── */
+.callout {
+  border-left: 3px solid var(--sunset);
+  background: rgba(237, 139, 0, 0.05);
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.callout-warning {
+  border-left-color: var(--terra);
+  background: rgba(192, 81, 49, 0.05);
+}
+
+.callout-tip {
+  border-left-color: var(--turquoise);
+  background: rgba(0, 122, 134, 0.05);
+}
+
+.callout-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-gray);
+  margin: 0 0 0.5rem 0;
+}
+
+.callout p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+}
+
+.callout p + p {
+  margin-top: 0.5rem;
+}
+
+
+/* ─── Blockquote ──────────────────────────────────────────────────────────── */
+.sketchbook-blockquote {
+  border-left: 3px solid var(--rule-gray);
+  margin: 1.75rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  color: var(--mid-gray);
+  font-style: italic;
+}
+
+.sketchbook-blockquote p {
+  margin: 0;
+  color: inherit;
+}
+
+.sketchbook-blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-gray);
+}
+
+
+/* ─── Code blocks ────────────────────────────────────────────────────────── */
+code {
+  color: var(--terra);
+  background-color: rgba(214, 164, 97, 0.12);
+  border-color: rgba(214, 164, 97, 0.35);
+  border-radius: 2px;
+}
+
+.highlight {
+  background: var(--off-white);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+div.highlight {
+  border-left: 3px solid var(--mesa);
+}
+
+pre.highlight {
+  border: none;
+}
+
+.highlight pre {
+  color: var(--dark-gray);
+}
+
+.highlight code {
+  border: none;
+  background: transparent;
+}
+
+
+/* ─── Figures ────────────────────────────────────────────────────────────── */
+figure figcaption,
+figure figcaption p {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--muted-gray);
+  line-height: 1.4;
+}
+
+figure.right {
+  float: right;
+  margin: 0 0 1rem 1.75rem;
+  clear: right;
+}
+
+figure.left {
+  float: left;
+  margin: 0 1.75rem 1rem 0;
+  clear: left;
+}
+
+figure.right img,
+figure.left img {
+  border-radius: 10px;
+  box-shadow: 3px 4px 14px rgba(0, 0, 0, 0.18);
+}

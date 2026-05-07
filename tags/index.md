@@ -2,7 +2,6 @@
 layout: sketchbook
 title: Sketchbook Tags
 description: "Browse AI Sketchbook posts by tag."
-css: sketchbook.css
 date: 2026-04-09
 permalink: /tags/
 ---
@@ -20,13 +19,11 @@ permalink: /tags/
 {% endfor %}
 {% assign all_tags = all_tags | uniq | sort %}
 
-{::nomarkdown}
-<div class="sketchbook-page-header">
-  <h1>Sketchbook Tags</h1>
-  <p>A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, fabrication, archives, or source evaluation rather than whether a sketch started in teaching or research.</p>
-  <span class="section-accent default"></span>
-</div>
-{:/nomarkdown}
+# Sketchbook Tags
+
+A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, fabrication, archives, or source evaluation rather than whether a sketch started in teaching or research.
+
+<span class="section-accent default"></span>
 
 Below are the tags currently in use across sketchbook post pages. As the sketchbook grows, this should become a more useful way to move across related ideas.
 

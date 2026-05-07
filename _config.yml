@@ -1,10 +1,10 @@
+# ── Change these when you fork ────────────────────────────────────────────────
+# baseurl: your repo name with leading slash, e.g. /my-sketchbook
+#          set to "" for a custom domain or username.github.io root repo
+# url:     your GitHub Pages root, e.g. https://username.github.io
+#          optional — only needed for canonical links and OG metadata
 title: AI Sketchbook
 description: "A working collection of ideas for using AI in humanities teaching and research. Rough, experimental, honest about what's been tested."
-url: https://amaranth-unm.github.io/ai-sketchbook
 baseurl: /ai-sketchbook
-repository: amaranth-unm/ai-sketchbook
 
 search: true
-
-sass:
-  encoding: utf-8

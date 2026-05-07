@@ -1,683 +1,590 @@
-/*****************************************************
-CARDS
-*****************************************************/
-
-.card {
-  /* Display */
+/* ─── Landing nav cards ───────────────────────────────────────────────────── */
+.sketchbook-nav-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--rule-gray);
+  border-radius: 2px;
+  padding: 1.75rem;
+  text-decoration: none !important;
+  color: var(--black) !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
   overflow: hidden;
-
-  /* Typography */
-  font-family: var(--font-body);
-
-  /* Visual */
-  background: var(--bg-card);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  opacity: 0.9;
-
-  /* Interactivity */
-  transition: transform var(--transition-normal), opacity var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.card:hover {
-  /* Visual */
-  opacity: 1;
-  box-shadow: var(--shadow-lg);
-  border-color: var(--interactive-hover);
-  transform: translateY(-4px);
-}
-
-.card a {
-  /* Typography */
+.sketchbook-nav-card:hover {
+  border-color: var(--dark-gray);
+  box-shadow: var(--shadow-md);
   text-decoration: none;
-  color: inherit;
-
-  /* Visual */
-  border-bottom: 0;
+  transform: none;
+  background: var(--white);
 }
 
-.card a h3,
-.card a p {
-  /* Typography */
-  color: var(--text-body);
+.sketchbook-nav-card.teach    { border-top: 3px solid var(--terra); }
+.sketchbook-nav-card.research { border-top: 3px solid var(--turquoise); }
+
+.sketchbook-nav-card::after { display: none; }
+
+.sketchbook-nav-card .card-eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: var(--caveat-display);
+  letter-spacing: 0.02em;
+  display: block;
+  margin-bottom: 0.4rem;
+  line-height: 1;
+  transform: rotate(-1deg);
+  transform-origin: left center;
 }
 
-.card-body {
-  /* Box Model */
-  padding: var(--spacing-md);
+.sketchbook-nav-card.teach    .card-eyebrow { color: var(--terra); }
+.sketchbook-nav-card.research .card-eyebrow { color: var(--turquoise); }
 
-  /* Typography */
-  font-family: var(--font-body);
-  text-align: left;
+.sketchbook-nav-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--black);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
-.card h3 {
-  /* Box Model */
-  margin: var(--spacing-xs) 0 var(--spacing-sm) 0;
-
-  /* Typography */
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text-body);
+.sketchbook-nav-card p {
+  color: var(--mid-gray);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.55;
 }
 
-.card-text {
-  /* Typography */
-  font-size: 1rem;
-  font-weight: normal;
-  color: var(--text-muted);
-  text-align: left;
+.sketchbook-nav-card .card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.15s;
 }
 
+.sketchbook-nav-card.teach    .card-link { color: var(--terra); }
+.sketchbook-nav-card.research .card-link { color: var(--turquoise); }
 
-/* Vertical cards for grid layouts */
-.v-card {
-  /* Display */
+.sketchbook-nav-card:hover .card-link { color: var(--sunset); }
+
+
+/* ─── Sketch entries (listing pages) ─────────────────────────────────────── */
+.sketch-entry {
+  padding: 1.75rem 0 0.5rem;
+  border-top: 1px solid var(--rule-gray);
+  margin-bottom: 0.25rem;
+}
+
+.sketch-entries > .sketch-entry:first-child {
+  border-top-color: transparent;
+  padding-top: 0.25rem;
+}
+
+.sketch-entries.teach    .sketch-entry { border-top-color: var(--rule-gray); }
+.sketch-entries.research .sketch-entry { border-top-color: var(--rule-gray); }
+
+/* Entry header: title left, tags right */
+.sketch-entry-header {
   display: flex;
-  flex-direction: column;
-  
-  /* Box Model */
-  height: 100%;
-  min-height: 20rem;
-}
-
-.v-card .card-img-top {
-  /* Box Model */
-  width: 100%;
-  height: 15rem;
-
-  /* Visual */
-  overflow: hidden;  /* clips thumbnail-zoom transform */
-}
-
-.v-card .card-img-top img {
-  /* Box Model */
-  width: 100%;
-  height: 100%;
-
-  /* Visual */
-  object-fit: cover;
-}
-
-.v-card .card-body {
-  /* Display */
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  flex: 1 1 auto;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.v-card:hover {
-  /* Visual */
-  transform: scale(1.03);
+.sketch-entry-title {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 3vw, 2.9rem);
+  color: var(--black);
+  margin: 0;
+  line-height: 0.95;
+  flex: 1;
+  transform: rotate(-0.5deg);
+  transform-origin: left center;
 }
 
-
-/* Horizontal cards for stacked layouts */
-.h-card {
-  /* Display */
+/* Tags cluster */
+.sketch-tags {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+
+.sketch-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sketch-tag.rough {
+  background: transparent;
+  color: var(--muted-gray);
+  border: 1px solid var(--rule-gray);
+}
+
+.sketch-tag.tested {
+  background: var(--research-soft);
+  color: var(--turquoise);
+  border: 1px solid rgba(0, 122, 134, 0.3);
+}
+
+.sketch-tag.refined {
+  background: var(--teach-soft);
+  color: var(--terra);
+  border: 1px solid rgba(192, 81, 49, 0.3);
+}
+
+.sketch-tag.topic {
+  background: transparent;
+  color: var(--mid-gray);
+  border: 1px solid var(--rule-gray);
+}
+
+/* Entry body */
+.sketch-entry p {
+  color: var(--mid-gray);
+  font-size: 0.97rem;
+  margin-bottom: 0.6rem;
+}
+
+.sketch-entry p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Prompt callout */
+.sketch-prompt {
+  background: var(--light-gray);
+  border-left: 3px solid var(--mesa);
+  border-top: none;
+  border-radius: 0;
+  padding: 0.9rem 1.1rem;
+  margin-top: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--mid-gray);
+  box-shadow: none;
+  transform: rotate(-0.2deg);
+  transform-origin: left center;
+}
+
+.sketch-prompt-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mesa);
+  margin-bottom: 0.4rem;
+}
+
+/* Entry footer: read more right-aligned */
+.sketch-entry-footer {
+  margin-top: 1.25rem;
+  text-align: right;
+}
+
+.sketch-read-more {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-gray);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.sketch-read-more:hover {
+  color: var(--sunset);
+  text-decoration: none;
+}
+
+.sketch-entries.teach    .sketch-read-more:hover { color: var(--terra); }
+.sketch-entries.research .sketch-read-more:hover { color: var(--turquoise); }
+
+
+/* ─── Section label ───────────────────────────────────────────────────────── */
+.sketch-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule-gray);
+}
+
+
+/* ─── Intro cards (listing pages) ────────────────────────────────────────── */
+.sketchbook-intro-cards {
+  margin: 2rem 0 2.5rem;
+}
+
+.sketchbook-intro-cards .card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 1.6rem 0;
+  position: relative;
+  transition: background-color 0.15s ease;
+}
+
+.sketchbook-intro-cards .card:hover {
+  box-shadow: none;
+  transform: none;
+  background: transparent;
+}
+
+/* Three-column row: meta | image | content */
+.sketchbook-intro-cards .card .row {
+  flex-wrap: nowrap;
   align-items: stretch;
-
-  /* Box Model */
-  min-height: 14rem;
-  margin-bottom: var(--spacing-lg);
 }
 
-.h-card .card-img-left {
-  /* Box Model */
-  flex: 0 0 320px;
-  width: 320px;
-  height: 16rem;
-
-  /* Visual */
-  overflow: hidden;  /* clips thumbnail-zoom transform */
+.card-meta-col {
+  flex: none;
+  width: 110px;
+  min-width: 110px;
+  padding: 1.4rem 1rem 1.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-right: 1.1rem;
 }
 
-.h-card .card-img-left img {
-  /* Box Model */
-  width: 100%;
-  height: 100%;
-
-  /* Visual */
-  object-fit: cover;
+.card-meta-year {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  letter-spacing: 0.03em;
+  display: block;
+  line-height: 1;
 }
 
-.h-card .card-body {
-  /* Display */
+.card-meta-status,
+.card-meta-type {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  line-height: 1;
+}
+
+.card-meta-status.rough    { color: var(--muted-gray); }
+.card-meta-status.tested   { color: var(--turquoise); }
+.card-meta-status.refined  { color: var(--terra); }
+
+.card-meta-type.activity   { color: var(--terra); }
+.card-meta-type.assignment { color: var(--sunset); }
+.card-meta-type.policy     { color: var(--mesa); }
+.card-meta-type.research   { color: var(--turquoise); }
+
+.card-meta-effort,
+.card-meta-level,
+.card-meta-tools {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  line-height: 1;
+  color: var(--muted-gray);
+}
+
+.card-meta-effort { color: var(--dark-gray); }
+
+.sketchbook-intro-cards .card-horizontal .col-sm-4 {
+  flex: 0 0 24%;
+  max-width: 24%;
+}
+
+.sketchbook-intro-cards .card-horizontal .col-sm-8,
+.sketchbook-intro-cards .card-horizontal .col-sm-12 {
+  flex: 1;
+  max-width: none;
+  min-width: 0;
+}
+
+/* Top rule divider */
+.sketchbook-intro-cards .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule-gray);
+  transition: background 0.15s ease, height 0.15s ease;
+}
+
+.sketchbook-intro-cards .card:hover::before {
+  height: 2px;
+  background: var(--terra);
+}
+
+/* Bottom rule on last card */
+.sketchbook-intro-cards .card::after {
+  display: none;
+}
+
+.sketchbook-intro-cards .card:last-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--rule-gray);
+  display: block;
+}
+
+.sketchbook-intro-cards .card .card-main-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sketchbook-intro-cards .card .card-main-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sketchbook-intro-cards .card-title {
+  position: relative;
+  z-index: 1;
+}
+
+.sketchbook-intro-cards .card .row {
+  align-items: stretch !important;
+  transition: transform 0.15s ease;
+}
+
+.sketchbook-intro-cards .card:hover .row {
+  transform: translateX(3px);
+}
+
+.sketchbook-intro-cards .card-image,
+.sketchbook-intro-cards .card-img-top {
+  border-radius: 0 !important;
+  height: 100% !important;
+  min-height: 220px;
+  margin: 0;
+  filter: grayscale(1) contrast(1.8) brightness(1.1);
+  transition: filter 0.35s ease;
+}
+
+.sketchbook-intro-cards .card:hover .card-image,
+.sketchbook-intro-cards .card:hover .card-img-top {
+  filter: saturate(1) contrast(1) brightness(1);
+}
+
+.sketchbook-intro-cards .card .col-sm-4 {
+  padding-right: 1.4rem;
+}
+
+.sketchbook-intro-cards .card-horizontal .card-title,
+.sketchbook-intro-cards .card-title {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
+  font-weight: 400;
+  color: var(--black) !important;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 0.95;
+  transform: rotate(-0.5deg);
+  transform-origin: left center;
+}
+
+.sketchbook-intro-cards .card-text {
+  color: var(--mid-gray) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sketchbook-intro-cards .sketch-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.95rem;
+  position: relative;
+  z-index: 2;
+}
+
+.sketchbook-intro-cards .card-body {
+  padding: 0.2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 auto;
+  min-height: 220px;
 }
 
-.h-card:hover {
-  /* Visual */
-  transform: translateX(8px);
+.sketchbook-intro-cards .card-text {
+  font-size: 0.97rem;
+  line-height: 1.55;
 }
 
-/* Card link wrapper */
-.h-card a.card-link {
-  /* Display */
+.sketch-card-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  flex: 1;
-  
-  /* Typography */
-  text-decoration: none;
-  color: inherit;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.5rem;
 }
 
-.h-card a.card-link:hover {
-  /* Typography */
+.sketch-card-skills li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  color: var(--black);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.sketch-card-skills li::before {
+  content: "✓ ";
+  color: var(--terra);
+  font-size: 0.6rem;
+}
+
+.sketchbook-intro-cards .sketch-tag {
+  background: transparent;
+}
+
+.sketchbook-intro-cards a.sketch-tag {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sketchbook-intro-cards .card:hover .card-title { color: var(--black) !important; }
+.sketchbook-intro-cards .card:hover .card-text  { color: var(--dark-gray) !important; }
+
+.sketchbook-post-meta a.sketch-tag,
+.sketchbook-intro-cards a.sketch-tag {
   text-decoration: none;
 }
 
-/* Tags in cards */
-.card .tags {
-  /* Display */
+.sketchbook-post-meta a.sketch-tag:hover,
+.sketchbook-intro-cards a.sketch-tag:hover {
+  color: var(--terra);
+  border-color: rgba(192, 81, 49, 0.4);
+  background: var(--teach-soft);
+}
+
+
+/* ─── Tags page ──────────────────────────────────────────────────────────── */
+.sketchbook-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  
-  /* Box Model */
-  margin-top: 0.75rem;
+  margin: 1.5rem 0 1rem;
 }
 
-.card .tags .badge {
-  /* Box Model */
-  padding: 0.35rem 0.65rem;
-  
-  /* Typography */
-  font-size: 0.85rem;
-  font-weight: normal;
-}
-
-/* Tag pills (inline tags on cards) */
-.tag-pill {
-  display: inline-block;
-  padding: 0.3rem 0.65rem;
-  background: var(--accent-primary);
-  color: var(--text-on-dark);
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 500;
+.sketchbook-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem 0.25rem;
+  border-radius: 0;
+  border: 1px solid var(--rule-gray);
+  background: transparent;
+  color: var(--mid-gray) !important;
   text-decoration: none;
-  transition: background var(--transition-fast);
-  border-bottom: none;
-}
-
-/* Override a:visited from typography.css (loads after cards.css) */
-.tag-pill:visited {
-  color: var(--text-on-dark);
-  border-bottom: none;
-}
-
-.tag-pill:hover {
-  background: var(--interactive-hover);
-  color: var(--text-on-dark);
-}
-
-
-/* Card grid layout using CSS Grid */
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
-}
-
-@media (min-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-/* ===== TAG PAGE STYLES ===== */
-
-/* Tag filter UI */
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.5rem 0 2rem 0;
-  padding: 1rem 0;
-}
-
-.tag-badge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--bg-card);
-  border: 2px solid var(--border-light);
-  color: var(--text-body);
-  border-radius: var(--radius-md);
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.tag-badge:hover {
-  background: var(--accent-primary);
-  color: var(--text-on-dark);
-  border-color: var(--accent-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.tag-badge.active {
-  background: var(--accent-primary-dark);
-  color: var(--text-on-dark);
-  border-color: var(--accent-primary-dark);
-}
-
-.tag-clear {
-  background: var(--accent-primary-dark);
-  color: var(--text-on-dark);
-  border-color: var(--accent-primary-dark);
-}
-
-.tag-clear:hover {
-  background: var(--interactive-hover);
-  border-color: var(--interactive-hover);
-}
-
-/* Tag page text */
-.tag-help {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.tag-help code {
-  background: var(--bg-code);
-  padding: 0.15rem 0.4rem;
-  border-radius: var(--radius-sm);
   font-family: var(--font-mono);
-  font-size: 0.9em;
-}
-
-.tag-summary {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.tag-empty {
-  text-align: center;
-  padding: 3rem;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-/* Ensure card links work properly */
-.v-card a.card-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-
-
-/* Bootstrap is loaded globally — no .row shim needed */
-
-/* Responsive: horizontal cards become vertical on small screens */
-@media (max-width: 768px) {
-  .h-card {
-    /* Display */
-    flex-direction: column;
-
-    /* Box Model */
-    margin-left: var(--spacing-md);
-    margin-right: var(--spacing-md);
-  }
-
-  .h-card a.card-link {
-    /* Display */
-    flex-direction: column;
-  }
-
-  .h-card .card-img-left {
-    /* Box Model */
-    flex: 0 0 auto;
-    width: 100%;
-    height: 200px;
-  }
-
-  .card-body {
-    /* Box Model */
-    padding: var(--spacing-xs);
-  }
-
-  .card h3 {
-    /* Box Model */
-    margin: var(--spacing-xs) 0;
-
-    /* Typography */
-    font-size: 1.1rem;
-  }
-
-  .card-text,
-  .card p {
-    /* Box Model */
-    margin-bottom: var(--spacing-xs);
-
-    /* Typography */
-    font-size: 0.9rem;
-  }
-
-  /* Remove text padding inside cards on mobile */
-  .card p,
-  .card h3,
-  .toc-row p,
-  .toc-row h3 {
-    /* Box Model */
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Ensure text is visible in h-cards on mobile */
-  .h-card .card-body h3,
-  .h-card .card-body p {
-    /* Typography */
-    color: var(--text-body);
-  }
-
-  .toc-row {
-    /* Box Model */
-    padding: var(--spacing-sm);
-    margin-left: var(--spacing-md);
-    margin-right: var(--spacing-md);
-  }
-
-  .toc-row-flex {
-    /* Display */
-    justify-content: flex-start;
-    gap: var(--spacing-xs);
-  }
-
-  .toc-body {
-    /* Display */
-    flex: 1;
-  }
-
-  .toc-row h3 {
-    /* Box Model */
-    margin: var(--spacing-xs) 0;
-
-    /* Typography */
-    font-size: 110%;
-  }
-
-  .toc-row p {
-    /* Box Model */
-    margin-bottom: 0;
-
-    /* Typography */
-    font-size: 0.9rem;
-  }
-
-  .toc-arrow {
-    /* Box Model */
-    flex-shrink: 0;
-    /* margin-left: 0 moved to end of file — must come after base .toc-arrow rule */
-  }
-
-  .toc-arrow svg {
-    /* Box Model */
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .v-card {
-    /* Box Model */
-    margin-left: var(--spacing-md);
-    margin-right: var(--spacing-md);
-  }
-}
-
-
-
-
-/*****************************************************
-ToC ROWS
-*****************************************************/
-
-.toc-row {
-  /* Display */
-  align-items: center;
-  overflow: hidden;
-
-  /* Box Model */
-  margin-bottom: var(--spacing-sm);
-  padding: var(--spacing-md);
-
-  /* Typography */
-  font-family: var(--font-body);
-  font-weight: 300;
-
-  /* Visual */
-  background: var(--bg-card);
-  border-left: 3px solid var(--accent-border);
-  border-radius: 6px;
-
-  /* Interactivity */
-  transition: all var(--transition-normal);
-}
-
-.toc-row:hover {
-  /* Visual */
-  border-left-color: var(--interactive-hover);
-
-  /* Interactivity */
-  cursor: pointer;
-}
-
-.toc-row a {
-  /* Typography */
-  font-weight: normal;
-  text-decoration: none;
-  color: inherit;
-}
-
-
-.toc-row h3 {
-  /* Box Model */
-  margin-top: 0;
-
-  /* Typography */
-  font-size: 150%;
-  color: var(--text-body);
+  font-size: 0.7rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
-.toc-row p {
-  /* Box Model */
-  margin-bottom: 0;
-
-  /* Typography */
-  color: var(--text-muted);
-  line-height: 1.4;
+.sketchbook-tag-badge:hover {
+  transform: none;
+  border-color: var(--terra);
+  color: var(--terra) !important;
+  background: transparent;
 }
 
-.toc-row-flex {
-  /* Display */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.sketchbook-tag-badge.active {
+  background: var(--teach-soft);
+  border-color: var(--terra);
+  color: var(--terra) !important;
 }
 
-.toc-body {
-  /* Display */
-  flex: 1;
+.sketchbook-tag-badge .tag-count {
+  font-size: 0.65rem;
+  color: var(--muted-gray);
 }
 
-.toc-arrow {
-  /* Display */
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  
-  /* Box Model */
-  margin-left: var(--spacing-lg);
-  
-  /* Visual */
-  opacity: 0.7;
-  
-  /* Interactivity */
-  transition: opacity var(--transition-normal);
+.sketchbook-tag-summary,
+.sketchbook-tag-empty {
+  color: var(--mid-gray);
+  margin-bottom: 1rem;
 }
 
-.toc-arrow svg {
-  /* Box Model */
-  width: 4rem;
-  height: 4rem;
-}
 
-.toc-row:hover .toc-arrow {
-  /* Visual */
-  opacity: 1;
-}
-
-.toc-row:hover .toc-arrow polyline {
-  stroke: var(--interactive-hover);
-}
-
-/*****************************************************
-COMPACT ToC ROWS (for documentation indexes)
-*****************************************************/
-
-.toc-row-compact {
-  /* Display */
-  align-items: flex-start;
-  overflow: hidden;
-
-  /* Box Model */
-  margin-bottom: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-md);
-
-  /* Typography */
-  font-family: var(--font-body);
-  font-weight: 300;
-
-  /* Visual */
-  background: var(--bg-card);
-  border-left: 2px solid var(--accent-border);
-  border-radius: 4px;
-
-  /* Interactivity */
-  transition: all var(--transition-normal);
-}
-
-.toc-row-compact:hover {
-  /* Visual */
-  border-left-color: var(--interactive-hover);
-
-  /* Interactivity */
-  cursor: pointer;
-}
-
-.toc-row-compact a {
-  /* Typography */
-  font-weight: normal;
-  text-decoration: none;
-  color: inherit;
-}
-
-.toc-row-compact h3 {
-  /* Box Model */
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-
-  /* Typography */
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-body);
-}
-
-.toc-row-compact p,
-.toc-row-compact ul {
-  /* Box Model */
-  margin-bottom: 0;
-
-  /* Typography */
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.3;
-}
-
-.toc-row-compact ul {
-  /* Box Model */
-  margin-top: 0.25rem;
-  padding-left: 1.2rem;
-}
-
-.toc-row-compact li {
-  /* Box Model */
-  margin-bottom: 0.1rem;
-}
-
-.toc-row-compact .toc-row-flex {
-  /* Display */
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.toc-row-compact .toc-body {
-  /* Display */
-  flex: 1;
-}
-
-.toc-row-compact .toc-arrow {
-  /* Display */
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  
-  /* Box Model */
-  margin-left: var(--spacing-md);
-  margin-top: 0.2rem;
-  
-  /* Visual */
-  opacity: 0.6;
-  
-  /* Interactivity */
-  transition: opacity var(--transition-normal);
-}
-
-.toc-row-compact .toc-arrow svg {
-  /* Box Model */
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.toc-row-compact:hover .toc-arrow {
-  /* Visual */
-  opacity: 1;
-}
-
-.toc-row-compact:hover .toc-arrow polyline {
-  stroke: var(--interactive-hover);
-}
-
-/*
-  Mobile override for .toc-arrow placed here (after base .toc-arrow rule above)
-  so it wins by source order without needing !important.
-*/
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .toc-arrow {
-    margin-left: 0;
+  .sketchbook-intro-cards .card {
+    padding: 1.25rem 0;
+  }
+
+  .sketchbook-intro-cards .card .col-sm-4 {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .sketchbook-intro-cards .card-image,
+  .sketchbook-intro-cards .card-img-top,
+  .sketchbook-intro-cards .card-body {
+    min-height: 0;
+  }
+
+  .sketchbook-intro-cards .card .row { flex-wrap: wrap; }
+
+  .card-meta-col {
+    width: 100%;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    border-right: none;
+    border-bottom: 1px solid var(--rule-gray);
+    padding: 0.5rem 0 0.6rem;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .sketchbook-intro-cards .card-horizontal .col-sm-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .sketch-entry-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sketch-tags {
+    justify-content: flex-start;
   }
 }

@@ -2,8 +2,8 @@
 layout: sketchbook
 title: Research Sketches
 description: "Workflow experiments, analysis techniques, and methodological notes — ways AI has proven useful (and useless) in actual humanities scholarship."
-css: sketchbook.css
 date: 2026-04-01
+wide: true
 ---
 
 {% assign section_pages = site.pages

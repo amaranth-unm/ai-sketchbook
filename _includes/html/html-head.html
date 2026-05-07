@@ -8,14 +8,14 @@
   <meta name="description" content="{{ page.summary | default: site.description | escape }}">
   <meta name="author" content="{{ site.author | default: '' }}">
   <link rel="icon" href="{{site.baseurl}}/favicon.ico">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if site.url %}<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{% endif %}
 
   <!-- Open Graph for social sharing -->
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
   <meta property="og:description" content="{{ page.summary | default: site.description | escape }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  {% if page.thumbnail or page.header-image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.dir }}{{ page.thumbnail | default: page.header-image }}">
+  {% if site.url %}<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{% endif %}
+  {% if site.url and page.thumbnail or site.url and page.header-image %}
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.dir }}{{ page.thumbnail | default: page.header-image }}">
   {% endif %}
 
   <!-- Icons -->
@@ -24,26 +24,23 @@
   <!-- Footnotes -->
   <link rel="stylesheet" href="https://unpkg.com/littlefoot/dist/littlefoot.css" />
 
-  <!-- Base CSS — load order matters: sketchbook.css overrides everything above it -->
+  <!-- Sketchbook theme -->
+  <link href="{{site.baseurl}}/assets/css/vars.css" rel="stylesheet">
   <link href="{{site.baseurl}}/assets/css/base.css" rel="stylesheet">
-  <link href="{{site.baseurl}}/assets/css/cards.css" rel="stylesheet">
   <link href="{{site.baseurl}}/assets/css/typography.css" rel="stylesheet">
   <link href="{{site.baseurl}}/assets/css/nav.css" rel="stylesheet">
-  <link href="{{site.baseurl}}/assets/css/nav-left.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/assets/css/components.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/assets/css/cards.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/assets/css/layout.css" rel="stylesheet">
 
-  <!-- Page header CSS: loaded when a page sets header-image in front matter -->
+  <!-- Page header: loaded when a page sets header-image in front matter -->
   {% if page.header-image %}
   <link href="{{site.baseurl}}/assets/css/page-header.css" rel="stylesheet">
   {% endif %}
 
-  <!-- Search CSS: loaded when search is enabled in _config.yml -->
+  <!-- Search: loaded when search is enabled in _config.yml -->
   {% if site.search %}
   <link href="{{site.baseurl}}/assets/css/search.css" rel="stylesheet">
-  {% endif %}
-
-  <!-- Page-specific CSS: set css: filename.css in a page's front matter -->
-  {% if page.css %}
-  <link href="{{site.baseurl}}/assets/css/{{page.css}}" rel="stylesheet">
   {% endif %}
 
 </head>

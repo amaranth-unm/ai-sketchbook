@@ -3,10 +3,15 @@ layout: sketchbook
 title: Argument Audit
 description: "A teaching sketch that uses AI-generated objections to help students sharpen an argument instead of outsourcing one."
 summary: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or genuinely persuasive."
-thumbnail: "/assets/images/headers/wormiani.jpg"
-css: sketchbook.css
+thumbnail: "images/960px-Puzzle_Krypt-2.jpg"
 date: 2026-04-09
 status: rough
+type: activity
+effort: "20–30 min in class"
+tools:
+  - ChatGPT
+  - Claude
+level: upper-div / grad
 tags:
   - writing
   - argument
@@ -15,6 +20,10 @@ skills:
   - revising thesis claims
   - anticipating counterarguments
   - recognizing vague reasoning
+teaches:
+  - the difference between tone and analytical precision
+  - what makes an objection substantive vs. generic
+  - how vague writing produces vague critique
 card_order: 10
 ---
 
@@ -22,13 +31,15 @@ card_order: 10
 
 <span class="section-accent teach"></span>
 
-Students often treat critique as something that happens after a draft is mostly finished. This exercise moves critique earlier. The AI becomes a machine for producing objections on demand, and the students' job is to decide which of those objections are generic noise and which ones expose a real weakness in the argument.
+{% include typography/sketch-info.html %}
 
-The point is not that AI is a brilliant critic. Usually it is not. The point is that it can quickly generate the kind of broad, plausible counterarguments that force students to clarify what exactly they are claiming, what evidence would count against them, and where their wording is still too loose.
+Students often treat critique as something that happens after a draft is mostly finished. This exercise moves critique earlier. The AI becomes a machine for producing objections on demand — and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
 
+{% include typography/pullquote.html text="Vague objections often reveal vague writing. The point is not that AI is a brilliant critic. The point is that it forces students to clarify what exactly they are claiming." %}
 
-## How It Works
-Ask students to bring in a working thesis paragraph, interpretive claim, or partial draft. They paste that argument into an AI tool and ask it to produce the three strongest objections it can imagine.
+## The Setup
+
+Ask students to bring a working thesis paragraph, interpretive claim, or partial draft. They paste that argument into an AI tool and ask it to produce the three strongest objections it can imagine.
 
 Then the real work begins. Students annotate the objections and sort them into three buckets:
 
@@ -36,9 +47,19 @@ Then the real work begins. Students annotate the objections and sort them into t
 - objections that misunderstand the argument as written
 - objections that actually expose a gap, ambiguity, or unsupported leap
 
-That sorting process is the assignment. It makes students articulate why an objection fails instead of merely feeling that it fails.
+That sorting process is the assignment. It makes students articulate *why* an objection fails instead of merely feeling that it fails.
 
-## Sample Prompt
+**Running it in class:**
+
+1. Students paste in their draft paragraph.
+2. They collect the objections.
+3. They mark up the AI output individually.
+4. In pairs, they compare which objections they took seriously and why.
+5. They revise the original claim in light of the strongest objection.
+
+That final revision matters. Without it, the exercise stays at the level of commentary. With it, students leave with sharper prose and a more defensible claim.
+
+## The Prompt
 
 {::nomarkdown}
 <div class="sketch-prompt">
@@ -47,27 +68,12 @@ That sorting process is the assignment. It makes students articulate why an obje
 </div>
 {:/nomarkdown}
 
-## In Class
+## Why It Works
 
-This works well as a 20 to 30 minute workshop inside a larger writing day.
+A counterargument is only strong if it lands on the actual claim being made. This exercise makes that concrete: defending an argument means specifying scope, evidence, and stakes — not just reasserting it with more confidence. Authoritative tone is not the same thing as analytical precision, and students can see that distinction clearly when working with AI-generated objections that sound reasonable but are detached from the actual text.
 
-1. Students paste in their draft paragraph.
-2. They collect the objections.
-3. They mark up the AI output individually.
-4. In pairs, they compare which objections they took seriously and why.
-5. They revise the original claim in light of the strongest objection.
+## What to Watch For
 
-That final revision matters. Without it, the exercise can stay at the level of commentary. With it, students leave with sharper prose and a more defensible claim.
+{% include typography/callout.html type="warning" text="AI tends to generate objections that are thin, repetitive, or detached from the actual text. That limitation is useful here — but only if students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly." %}
 
-## What Students Learn
-
-- A counterargument is only strong if it lands on the actual claim being made.
-- Vague objections often reveal vague writing.
-- Defending an argument means specifying scope, evidence, and stakes.
-- Authoritative tone is not the same thing as analytical precision.
-
-## Caveats
-
-AI tends to generate objections that sound reasonable but are thin, repetitive, or detached from the actual text. That limitation is useful here, but only if students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly.
-
-I would use this in upper-division courses, graduate seminars, or any class where students are making sustained interpretive claims rather than summarizing material.
+Best used in upper-division courses, graduate seminars, or any class where students are making sustained interpretive claims rather than summarizing material.

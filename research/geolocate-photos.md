@@ -2,11 +2,16 @@
 layout: sketchbook
 title: Photos to Map Pins
 description: "A workflow experiment in vibe coding a website to display 200 geolocated photos of street cats."
-summary: "Create a map with pins for hundreds of photos, in less than an hour."
+summary: "Create an interactive map with pins for hundreds of photos, using GPS metadata already embedded in your phone's images — in under an hour."
 thumbnail: "images/marrakech-thumbnail.jpg"
-css: sketchbook.css
 date: 2026-04-09
 status: tested
+type: data work
+effort: "less than 1 hour"
+tools:
+  - GitHub Copilot
+  - GitHub Pages
+level: any
 tags:
   - vibe coding
   - maps
@@ -15,20 +20,30 @@ skills:
   - extracting GPS metadata from image files
   - building a map visualization with AI-assisted coding
   - presenting geolocated data in a public-facing format
-card_order: 10
+teaches:
+  - how GPS metadata is embedded in image files
+  - what vibe coding looks like in practice
+  - how to turn a personal collection into a public-facing dataset
+card_order: 20
 ---
 
 # Photos to Map Pins
 
 <span class="section-accent research"></span>
 
-The process described in this sketchbook entry resulted in the website [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/). It took less than an hour from the time of downloading the images to my laptop to the creation of a map with clickable pins.
+{% include typography/sketch-info.html %}
 
-For Spring Break, I traveled to Marrakech. As my travel buddy and I walked around the medina, I saw cats everywhere and couldn’t stop myself from taking pictures of them all. In the end, I had over 200 photos of cats. Since I had turned on the feature in my phone's Camera app to include my location as I took photos, I had GPS coordinates in the metadata for each of the photos. 
+The process described here produced the website [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/). It took less than an hour from downloading the images to a laptop to a live map with clickable pins. The workflow requires no prior coding knowledge and generalizes to any collection of geolocated images — field photographs, pilgrimage routes, urban documentation surveys.
 
-In my work designing websites using [Xanthan](https://xanthan-web.github.io/) templates for GitHub Pages, I had experimented with the AI agent Copilot. Copilot allows users to type in their idea for a webpage and then it writes the code directly into the necessary files. After I copied the photos into a new folder in assets/images within my GitHub repository, Copilot was able to create all the code necessary for making the cat photos into pins on the map.
+{% include typography/pullquote.html text="From download to interactive map in under an hour — with no code written by hand." %}
 
-## Sample Prompt
+## The Workflow
+
+During Spring Break, I traveled to Marrakech and photographed street cats throughout the medina. With location services enabled in the phone's Camera app, GPS coordinates were embedded in the metadata of every image. By the end of the trip, I had over 200 photos — and 200 precise locations.
+
+After copying the photos into an `assets/images` folder in a GitHub repository, I described the goal to GitHub Copilot in plain language. Copilot wrote all the necessary code: a YAML data file extracting GPS coordinates from each image's metadata, and an updated `map.html` that reads that file and places a clickable pin for each photo. No manual data entry, no coordinate lookup, no JavaScript written by hand.
+
+## The Prompt
 
 {::nomarkdown}
 <div class="sketch-prompt">
@@ -37,14 +52,14 @@ In my work designing websites using [Xanthan](https://xanthan-web.github.io/) te
 </div>
 {:/nomarkdown}
 
-## Research Potential
+## Why It Matters
 
-- Expanding understandings of human geography.
-- Reconstruction of pilgrimage journeys.
-- Experimenting with point of view and perspective.
-- Quickly capturing histories of urban development.
-- Transferring research findings into a public facing format.
+- Expanding understandings of human geography through dense, localized image collections.
+- Reconstruction of pilgrimage journeys or migration routes from photographic evidence.
+- Experimenting with point of view and perspective by mapping where documentation happens.
+- Quickly capturing histories of urban development, neighborhood change, or informal space.
+- Transferring research findings into a public-facing format accessible to non-specialist audiences.
 
-## Caveats
+## What to Watch For
 
-Geolocation data features on phones can sometimes be less exact at the street level. Some photos taken inside buildings might have pins on the map placed across the street. 
+{% include typography/callout.html type="warning" text="Geolocation data from phones is sometimes imprecise at the street level. Photos taken inside buildings may have pins placed across the street or several meters off. This is a limitation of phone GPS rather than the workflow itself — but it matters if spatial precision is central to the research question." %}

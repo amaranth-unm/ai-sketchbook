@@ -1,12 +1,17 @@
 ---
 layout: sketchbook
 title: Remixing Plato
-description: "A teaching sketch where students remix a Platonic dialogue using AI, exploring interpretation, authorship, and the limits of AI-assisted understanding."
-summary: "Students translate, reshape, or re-perform a Platonic dialogue through AI—then analyze what the AI got right, got wrong, and what that reveals about both the text and the tool."
-thumbnail: "/assets/images/headers/wormiani.jpg"
-css: sketchbook.css
-date: 2026-04-09
+description: "Students remix a Platonic dialogue using AI, then analyze what the AI got right, got wrong, and what that reveals about both the text and the tool."
+summary: "Students translate, reshape, or re-perform a Platonic dialogue through AI — then analyze what changed and why."
+thumbnail: "images/960px-Plato's_Academy_mosaic_from_Pompeii.jpg"
+date: 2026-04-01
 status: tested
+type: assignment
+effort: "1–2 hours out of class"
+tools:
+  - ChatGPT
+  - Claude
+level: undergrad / grad
 tags:
   - philosophy
   - remix
@@ -16,6 +21,10 @@ skills:
   - close reading through transformation
   - analyzing how meaning shifts across forms
   - prompting as a rhetorical skill
+teaches:
+  - what AI can and cannot preserve in philosophical argument
+  - how form and genre reshape meaning
+  - that prompting requires the same clarity as writing
 card_order: 10
 ---
 
@@ -23,37 +32,42 @@ card_order: 10
 
 <span class="section-accent teach"></span>
 
-### Dialogue Remix: Rewriting Plato with AI
+{% include typography/sketch-info.html %}
 
-This assignment asks students to take a canonical philosophical dialogue—most often Phaedrus—and “remix” it using AI. The task is deceptively simple: translate, reshape, or re-perform the dialogue into a new form, audience, or style. In practice, it becomes a compact laboratory for thinking about interpretation, authorship, and the limits of AI-assisted understanding.
+Students take a canonical philosophical dialogue — most often the *Phaedrus* — and remix it using AI: translate it into a new form, audience, or style. The task sounds simple. In practice it becomes a compact laboratory for thinking about interpretation, authorship, and the limits of AI-assisted understanding.
 
-At a high level, the assignment draws on the logic of remix as a core intellectual practice. Remixing is not just aesthetic play; it is a way of engaging existing texts by recontextualizing them for new purposes and audiences. In composition studies, remix assignments often aim to help students see how meaning shifts across media, genres, and rhetorical situations. ([Course Hero][1]) Here, that same principle is applied to philosophical dialogue and AI systems simultaneously.
+{% include typography/pullquote.html text="Prompting is not merely a technical skill but a rhetorical one. It requires clarity about purpose, audience, and desired constraints — and students learn this by doing it badly first." %}
 
-What makes this assignment distinct is that the “remix engine” is not just the student, but the interaction between student and AI. Students must prompt, revise, and iterate—effectively co-authoring a transformation of the original text. This creates a layered interpretive process: they are not only interpreting Plato, but also interpreting how the AI interprets Plato.
+## The Setup
 
-Several learning outcomes emerge from this structure.
+Students must prompt, revise, and iterate — effectively co-authoring a transformation of the original text. This creates a layered interpretive process: they are not only interpreting Plato, but also interpreting how the AI interprets Plato.
 
-First, students develop a more active understanding of dialogue as a form. Rather than passively reading Phaedrus, they must reconstruct its logic in order to transform it. Many reported that the assignment clarified the purpose of the dialogue format itself—why ideas are staged as exchanges between characters rather than presented as straightforward arguments. The act of remixing makes visible the scaffolding of the original: voice, pacing, tension, and the gradual unfolding of ideas.
+The act of remixing makes visible the scaffolding of the original: voice, pacing, tension, and the gradual unfolding of ideas. Students routinely report that the assignment clarified the purpose of the dialogue format itself — why ideas are staged as exchanges rather than presented as arguments. By making the text strange, they see it more clearly.
 
-Second, the assignment foregrounds the performative dimension of philosophical texts. Students often noticed elements that might otherwise fade into the background during reading: tone shifts, rhetorical posturing, and the distinct “personality” of speakers like Socrates. In remixing the dialogue into contemporary or playful formats, these performative features become exaggerated and easier to analyze. The result is a kind of interpretive defamiliarization: by making the text strange, students see it more clearly.
+AI can remix surface features — tone, setting, genre — and sometimes in surprising ways. But it often struggles with deeper conceptual fidelity. It can "revise" the dialogue stylistically without preserving its philosophical stakes. That gap is the most productive part of the assignment.
 
-Third, the assignment highlights the importance of prompting as a form of thinking. Students consistently observed that the specificity of their prompts shaped the quality and direction of the AI’s output. Vague prompts produced generic or flattened remixes; precise prompts yielded more interesting and controlled transformations. This reinforces a key AI literacy insight: prompting is not merely a technical skill but a rhetorical one. It requires clarity about purpose, audience, and desired constraints.
+**To strengthen it:**
+- Require a short meta-commentary: what was your prompting strategy, what changed across iterations, what could the AI not capture?
+- Break it into phases — initial remix, prompt revision, comparative analysis — to make the learning visible
+- For advanced students: constrain the AI to preserve specific argumentative moves, or test multiple models against each other
 
-At the same time, the assignment exposes the limits of AI. Students noted that the system could remix surface features like tone, setting, genre---and sometimes in surprising ways, but often struggled with deeper conceptual fidelity. It could “revise” the dialogue stylistically without necessarily preserving its philosophical stakes. This gap was pedagogically productive. We could more readily discuss where the AI succeeds, where it distorts, and what those distortions reveal about both the original text, their prompts, and the model.
+## The Prompt
 
-More experienced AI users sometimes found the assignment less novel in terms of tool use. However, even for them, the assignment functioned as a conceptual exercise rather than a technical one. It shifted attention from “what can AI do?” to “what does it mean to reinterpret a text through AI?” In that sense, the assignment works best not as an introduction to AI capabilities, but as a structured reflection on their implications.
+{::nomarkdown}
+<div class="sketch-prompt">
+  <span class="sketch-prompt-label">prompt to give students</span>
+  Take the following passage from Plato's Phaedrus: [paste excerpt]. Remix it into [new form, audience, or style — e.g., a text message exchange, a TED talk, a Reddit thread]. Keep as much of the original philosophical content as you can. Then write a 200-word reflection: what did the AI preserve, what did it lose, and what does that tell you about the original text?
+</div>
+{:/nomarkdown}
 
-Students also responded positively to the contrast between academic and “pop” versions of the dialogue. Moving between these registers helped them see how ideas travel across contexts, and how meaning is reshaped by tone, genre, and audience expectations. This aligns with broader goals of remix-based pedagogy, which emphasizes how texts are continually reworked rather than simply consumed. ([wavelength.barefield.ua.edu][2])
+## Why It Works
 
-That said, the assignment could benefit from clearer framing and scaffolding. Student feedback suggests a few ways to strengthen it:
+The assignment shifts attention from "what can AI do?" to "what does it mean to reinterpret a text through AI?" That is a different and more valuable question. Students who are experienced AI users sometimes find the tool use unremarkable — but even for them, the assignment functions as a conceptual exercise. Moving between academic and popular registers of the dialogue helps students see how meaning is reshaped by tone, genre, and audience.
 
-* **Clarify the purpose upfront.** Emphasize that the goal is not just to produce a creative remix, but to analyze the interaction between AI, interpretation, and form.
-* **Build in structured reflection.** Require a short meta-commentary where students explain their prompting strategy, what changed across iterations, and what the AI could or could not capture.
-* **Stage the assignment.** Break it into phases (initial remix, prompt revision, comparative analysis) to make the learning process more visible.
-* **Differentiate for experience levels.** Provide optional challenges for advanced users, such as constraining the AI to preserve specific argumentative moves or testing multiple models against each other.
-* **Position it as a warm-up.** The assignment works well as an early, low-stakes exercise that introduces key ideas about AI mediation, rather than as a standalone deep dive.
+As one AI put it when asked to describe the assignment: students are asked to renovate a building with an unpredictable contractor who sometimes misunderstands the blueprint.
 
-Ultimately, the Dialogue Remix assignment occupies an interesting space between close reading, creative production, and AI critique. It asks students to inhabit a text, deform it, and then step back to analyze what happened in the process. As an augment to our pre-assignment discussion, this assignment invites students to: (as ChatGPT once phrased it to me) renovate it with an unpredictable contractor who sometimes misunderstands the blueprint.
+## What to Watch For
 
-[1]: https://www.coursehero.com/file/120226523/Multimodal-Remix-Assignment-Promptdocx/?utm_source=chatgpt.com "Multimodal Remix Assignment Prompt.docx - First-Year Assignment Introduction: Multimodal Remix Composition For this assignment you will reformat and | Course Hero"
-[2]: https://wavelength.barefield.ua.edu/remix-projects/?utm_source=chatgpt.com "Remix Projects – Wavelength"
+{% include typography/callout.html type="warning" text="Works best as an early, low-stakes exercise that introduces AI mediation — not as a standalone deep dive. If students haven't read the dialogue carefully first, the remix has nothing to push against." %}
+
+Best positioned as a warm-up to more sustained close reading, not a replacement for it.

@@ -2,13 +2,11 @@
 PAGE HEADER
 All styles for the .page-header component live here.
 
-Three tiers:  hero (full screen), section (~60vh), banner (~22vh)
-Five filters: botanical, sketch, woodcut, etching, photo
+Three tiers: hero (full screen), section (~60vh), banner (~22vh)
 
 Editing guide:
   - Colors:   Edit the variables in the .page-header block below
   - Tiers:    Scroll to "Tier" sections to adjust heights and spacing
-  - Filters:  Scroll to "Filter system" to adjust image treatments
   - Template: _includes/layout/page-header.html
 
 The accent color (vertical bar + eyebrow text) comes from
@@ -52,7 +50,8 @@ if you want a different accent color just for headers.
   inset: 0;
   background-size: cover;
   background-position: center right;
-  opacity: 0.28;
+  filter: saturate(1.05) brightness(0.85);
+  opacity: 0.80;
 }
 
 /* Subtle grid overlay for visual texture */
@@ -248,7 +247,7 @@ if you want a different accent color just for headers.
 }
 
 .page-header--section .page-header-bg {
-  opacity: 0.18;
+  opacity: 0.72;
 }
 
 /* Reduce gap between section header and first h2 in page content */
@@ -288,7 +287,7 @@ if you want a different accent color just for headers.
 }
 
 .page-header--banner .page-header-bg {
-  opacity: 0.10;
+  opacity: 0.50;
 }
 
 .page-header--banner .page-header-bar {
@@ -298,109 +297,6 @@ if you want a different accent color just for headers.
 /* Reduce gap between banner header and first h2 in page content */
 .page-header--banner ~ .container h2:first-child {
   margin-top: 1.5rem;
-}
-
-
-/* =====================================================
-   FILTER SYSTEM
-
-   Controls how the background image is processed.
-   Set via the filter parameter in page front matter.
-
-   botanical  Line-art engravings on white background.
-              Inverts the image so dark lines glow as
-              accent-colored lines; white background
-              becomes transparent via mix-blend-mode: screen.
-              Requires: dark lines on white/near-white bg.
-
-   sketch     Like botanical but with a contrast pre-boost
-              to darken faint lines before inverting.
-              Use when botanical produces dim results.
-              Tune: contrast (2–4, higher = thicker lines).
-
-   woodcut    Historical images with natural color preserved.
-              Slight darken only, no color transformation.
-              Use for manuscripts, illuminations, woodcuts.
-
-   etching    Color photos → high-contrast silhouette + tint.
-              Produces bold shapes, not fine lines.
-              For photos needing a line-art look, pre-process
-              the image and use botanical instead.
-
-   photo      Color photos kept photographic (default).
-              Darkened and desaturated slightly for legibility.
-   ===================================================== */
-
-/* --- Filter: Botanical --- */
-.page-header-bg--botanical {
-  filter: invert(1) sepia(0.6) hue-rotate(320deg) saturate(2.5);
-  mix-blend-mode: screen;
-}
-
-/* --- Filter: Sketch
-     Tune: contrast (2–4, higher = thicker lines), final brightness (1.5–2.5) --- */
-.page-header-bg--sketch {
-  filter: grayscale(1) contrast(2.5) invert(1) sepia(0.6) hue-rotate(320deg) saturate(3) brightness(2);
-  mix-blend-mode: screen;
-}
-
-.page-header--section .page-header-bg--sketch {
-  opacity: 0.55;
-}
-
-.page-header--banner .page-header-bg--sketch {
-  opacity: 0.35;
-}
-
-/* --- Filter: Woodcut
-     Tune brightness and opacity to balance image vs. text readability --- */
-.page-header-bg--woodcut {
-  filter: saturate(1.05) brightness(0.85);
-  mix-blend-mode: normal;
-  opacity: 0.75;
-}
-
-.page-header--section .page-header-bg--woodcut {
-  opacity: 0.65;
-}
-
-.page-header--banner .page-header-bg--woodcut {
-  opacity: 0.45;
-}
-
-/* --- Filter: Etching
-     Pipeline: grayscale → pre-brighten → threshold → post-darken → invert → tint
-     contrast(5+) collapses continuous tone to black/white.
-     Pre-brightness(1.3) shifts which tones fall above threshold.
-     Post-brightness(0.55) controls darkness of the inverted result. --- */
-.page-header-bg--etching {
-  filter: grayscale(1) brightness(1.3) contrast(5) brightness(0.55) invert(1) sepia(0.5) hue-rotate(320deg) saturate(3);
-  mix-blend-mode: screen;
-}
-
-.page-header--section .page-header-bg--etching {
-  opacity: 0.40;
-}
-
-.page-header--banner .page-header-bg--etching {
-  opacity: 0.25;
-}
-
-/* --- Filter: Photo (default)
-     saturate(1.05) gives a slight color lift; brightness(0.85) darkens for legibility.
-     Tune opacity up if image is too faint, down if text becomes hard to read. --- */
-.page-header-bg--photo {
-  filter: saturate(1.05) brightness(0.85);
-  mix-blend-mode: normal;
-  opacity: 0.80;
-}
-
-.page-header--section .page-header-bg--photo {
-  opacity: 0.72;
-}
-
-.page-header--banner .page-header-bg--photo {
-  opacity: 0.50;
 }
 
 

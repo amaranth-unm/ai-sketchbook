@@ -1,8 +1,8 @@
 ---
 layout: sketchbook
 title: Teaching Sketches
-css: sketchbook.css
 date: 2026-04-01
+wide: true
 ---
 
 {% assign section_pages = site.pages

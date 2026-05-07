@@ -23,7 +23,6 @@
         divider = page.header-divider
         height = headerheight
         tier = page.header-tier
-        filter = page.header-filter
         bg-position = headerposition
         bg-opacity = page.header-opacity
         zoom = page.header-zoom
@@ -31,10 +30,23 @@
 
     {% endif %}
 
-    <div class="{{ page.container-class | default: 'container sketchbook-container' }}">
-      {{ content }}
-    </div>
-
+    {% assign container_class = page.container-class | default: 'container sketchbook-container' %}
+    {% if page.wide %}
+      <div class="{{ container_class }}">
+        {{ content }}
+      </div>
+    {% elsif page.scrollspy %}
+      <div class="{{ container_class }} sketchbook-container--scrollspy">
+        <div class="scrollspy-wrapper">
+          <div class="scrollspy-content">{{ content }}</div>
+          {% include nav/scrollspy.html %}
+        </div>
+      </div>
+    {% else %}
+      <div class="{{ container_class }} sketchbook-container--narrow">
+        {{ content }}
+      </div>
+    {% endif %}
     {% include nav/search.html %}
     {% include html/html-js.html %}
 
