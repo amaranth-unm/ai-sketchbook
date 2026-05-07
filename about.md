@@ -11,10 +11,19 @@ description: "What the AI Sketchbook is, why it exists, and why humanists are we
 The AI Sketchbook is a collection of teaching experiments and research workflows — accounts of what happened when people actually tried using AI in humanities classrooms and projects. Not best practices, not speculation, just a working record of what's been tested, what's been learned, and what's still uncertain.
 
 
-## Why engage with AI 
-AI fabricates sources. It reflects the biases of its training data — disproportionately English-language, Western, recent, and digitized. It produces confident, well-structured text that can be subtly or badly wrong. It flattens the kind of complexity and ambiguity that makes humanistic inquiry worth doing. These aren't edge cases. They're structural features of how these tools work.
+## Why engage with AI
+College instructors are right to be skeptical. AI makes academic dishonesty frictionless and nearly undetectable, and complicates formative assessment, the low-stakes exercises and reflective drafts that help students locate their own confusion, because an LLM can complete them in seconds without any learning occurring. Writing assignments honed over years of iteration become untenable overnight. Yet when faculty are pressured to teach students "how to use AI effectively" — rarely engages with any of this honestly.
 
-Which is exactly why humanists need to be in this conversation.
+The epistemic problems run just as deep. AI fabricates sources with unearned confidence. It reflects the biases of its training data — disproportionately English-language, Western, recent, and already digitized. It produces authoritative, well-structured prose that can be subtly or badly wrong. And it flattens precisely the kind of complexity and ambiguity that makes humanistic inquiry worth doing. These aren't edge cases. They're structural features of how these systems work.
+
+So why engage at all?
+
+Because the friction matters — and humanists are unusually equipped to say why. The difficulty of working through an argument, of writing your way toward an idea, of confronting sources that resist easy interpretation---these are the key learning moments that students must recognize they should embrace. 
+
+Students who use AI to complete coursework largely understand this. 
+They use it for courses outside their major and do the work themselves when it actually matters to them. The problem is not that they are not always clear about what they might be missing and why the friction matters. The incentive structures of higher education make skipping the friction feel rational.
+
+Humanists who engage critically with these tools help shape what "use AI" actually means in practice — in their departments, their disciplines, and their classrooms. Those who disengage leave that work to others.
 
 
 ## Why humanists are well-positioned
