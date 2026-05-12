@@ -21,7 +21,7 @@ skills:
   - building an agentic pipeline for bulk document processing
   - combining multiple LLMs to improve transcription accuracy
   - enabling full-text search of handwritten archival sources
-teaches:
+demonstrates:
   - how to design a multi-model agentic pipeline
   - the difference between usable and citable transcription quality
   - trade-offs between cost, time, and accuracy at scale
