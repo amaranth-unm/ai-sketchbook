@@ -20,7 +20,7 @@ skills:
   - extracting GPS metadata from image files
   - building a map visualization with AI-assisted coding
   - presenting geolocated data in a public-facing format
-teaches:
+demonstrates:
   - how GPS metadata is embedded in image files
   - what vibe coding looks like in practice
   - how to turn a personal collection into a public-facing dataset

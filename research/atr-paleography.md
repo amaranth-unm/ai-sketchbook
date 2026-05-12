@@ -7,11 +7,11 @@ thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 date: 2026-04-09
 status: tested
 type: processing sources
-effort: "hours to set up; ~12hr/register"
+effort: "downloaded document images; two hours to set up; automated run of ~12hr/register"
 tools:
   - Gemini
   - Claude
-  - Claude Code
+  - Open Claw
 level: researcher
 tags:
   - big data
@@ -43,7 +43,7 @@ The government of Spain hosts a website called [PARES](https://pares.cultura.gob
 {% capture text %}
 In early February 2026, uploading a PARES image to Gemini produced a transcription of better quality than what I had gotten from the specialized HTR platform [Transkribus](https://www.transkribus.org/), even after training a model there with 60 documents of ground-truth transcriptions. In late February, I started combining results from Gemini and Claude to increase transcription quality further.
 
-By March, I was using agentic AI — specifically Claude Code — to obtain usable HTR and translations for entire registers. The pipeline runs as follows: Claude Code downloads images from PARES, passes each one to Gemini and Claude for parallel transcription, merges the outputs, and writes the result to a text file. A final pass combines all image-level text files into a single CSV.
+By March, I was using agentic AI — specifically Open Claw — to obtain usable HTR and translations for entire registers. The pipeline runs as follows: Open Claw downloads images from PARES, passes each one to Gemini and Claude for parallel transcription, merges the outputs, and writes the result to a text file. A final instruction to Open Claw combines all image-level text files into a single CSV.
 
 {% endcapture %}
 
@@ -58,13 +58,14 @@ By March, I was using agentic AI — specifically Claude Code — to obtain usab
 
 [Register 1819](https://jonathanseyfried.net/aca-reg1819-transcriptions/) was the first complete register I processed. [Register 2053](https://jonathanseyfried.net/aca-reg2053-transcriptions) — the third — produced notably higher quality output, suggesting that prompt refinement and model improvements between February and March made a measurable difference.
 
-## Why It Matters
+## Results
 
-- Generating big data from handwritten documents previously unavailable for automated text recognition.
-- Full-text keyword search for names and toponyms across entire registers.
-- Leveraging multiple LLMs to check and correct each other's work.
-- Analysis of image archives at scale — not just scanned documents but any collection of historical images.
+I was able to analyze image archives at scale — and this will work not just scanned documents but any collection of historical images.
 
-## What to Watch For
+It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. The resulting text enables discovery through full-text search but is not reliable enough for citation-level accuracy — dates in particular remain inconsistent even after pipeline refinements.
 
-{% include typography/callout.html type="warning" text="It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. The resulting text enables discovery through full-text search but is not reliable enough for citation-level accuracy — dates in particular remain inconsistent even after pipeline refinements." %}
+
+## What I Learned
+
+{% include typography/callout.html type="warning" text="It is possible to generate big data from handwritten documents previously unavailable for automated text recognition. This opens the possibility for full-text keyword search for names and toponyms across entire registers. It is effective to leverage multiple LLMs to check and correct each other's work." %}
+
