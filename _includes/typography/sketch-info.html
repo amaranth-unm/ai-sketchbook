@@ -15,6 +15,10 @@
   <dt>Teaches</dt>
   <dd>{% for item in page.teaches %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
   {% endif %}
+  {% if page.demonstrates %}
+  <dt>Demonstrates</dt>
+  <dd>{% for item in page.demonstrates %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
+  {% endif %}
   {% if page.skills %}
   <dt>You gain</dt>
   <dd>{% for item in page.skills %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
