@@ -2,6 +2,8 @@
 layout: sketchbook
 title: Generate 3D Prints from 2D Drawings
 description: "Creating a scale model of an IUD from the 1970s using AI-generated 3D files."
+summary: "AI can transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
+thumbnail: "images/iud-printed-small.jpg"
 experiment: "Can AI transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
 thumbnail: "images/meshy-screenshot.jpg"
 thumbnail-position: "10% 50%"
