@@ -34,7 +34,7 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) which contains over a million digitized images of archival documents — including much of the material in the Archive of the Crown of Aragon. By the fourteenth century, the chancery produced thousands of pages of documentation every year. A single register might run to 300 folios of dense Gothic secretarial script. These documents have been digitized but never transcribed at scale.
+I wanted to know if AI LLMs could translate a notoriously difficult script, Gothic secretarial hand from the late fourteenth century. The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) which contains over a million digitized images of archival documents — including much of the material in the Archive of the Crown of Aragon. By the fourteenth century, the chancery produced thousands of pages of documentation every year. A single register might run to 300 folios of dense Gothic secretarial script. These documents have been digitized but never transcribed at scale.
 
 {% include typography/pullquote.html text="Combining Gemini and Claude produces usable handwriting recognition for late fourteenth-century Gothic secretarial hand — something even specialized HTR platforms couldn't reliably achieve." %}
 
@@ -50,7 +50,7 @@ By March, I was using agentic AI — specifically Open Claw — to obtain usable
 {% include images/figure-wrap.html
   class="left"
   width="50%"
-  caption="An example of a folio from an ACA register, ACA CR R2053 f4r."
+  caption="An example of a folio from an ACA register, ACA CR R2053 f4r. The script has been notoriously difficult and abbreviations are frequent."
   image-path="images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
   text = text
 %}
@@ -60,12 +60,13 @@ By March, I was using agentic AI — specifically Open Claw — to obtain usable
 
 ## Results
 
-I was able to analyze image archives at scale — and this will work not just scanned documents but any collection of historical images.
+I was able to analyze image archives at scale — and this will work not just for scanned documents but any collection of historical images.
 
 It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. The resulting text enables discovery through full-text search but is not reliable enough for citation-level accuracy — dates in particular remain inconsistent even after pipeline refinements.
 
 
 ## What I Learned
 
-{% include typography/callout.html type="warning" text="It is possible to generate big data from handwritten documents previously unavailable for automated text recognition. This opens the possibility for full-text keyword search for names and toponyms across entire registers. It is effective to leverage multiple LLMs to check and correct each other's work." %}
+{% include typography/callout.html type="warning" text="It is possible to use agentic AI to generate big data from handwritten documents previously unavailable for automated text recognition." %}
 
+This opens the possibility for full-text keyword search for names and toponyms across entire registers. It is effective to leverage multiple LLMs to check and correct each other's work. Even though the transcriptions and translations were far from perfect, I was surprised at how well the LLMs transcribed the script and expanded abbreviations.
