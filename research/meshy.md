@@ -5,7 +5,6 @@ description: "Creating a scale model of an IUD from the 1970s using AI-generated
 summary: "AI can transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
 thumbnail: "images/iud-printed-small.jpg"
 experiment: "Can AI transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
-thumbnail: "images/meshy-screenshot.jpg"
 date: 2026-04-09
 status: tested
 type: data work
