@@ -251,6 +251,9 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
   transform: none;
   background: transparent;
+}
+
+.sketchbook-intro-cards .card[data-href] {
   cursor: pointer;
 }
 
@@ -376,6 +379,7 @@
 .sketchbook-intro-cards .card .row {
   align-items: stretch !important;
 }
+
 
 .sketchbook-intro-cards .card-image,
 .sketchbook-intro-cards .card-img-top {

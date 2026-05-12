@@ -14,7 +14,7 @@
 {% assign joined_tags = item.tags | join: '|' | downcase %}
 {% if item.url contains '/research/' %}{% assign card_section = "research" %}
 {% else %}{% assign card_section = nil %}{% endif %}
-<div class="{{ card_classes }}"{% if include.tag-data and item.tags %} data-tags="{{ joined_tags }}"{% endif %}>
+<div class="{{ card_classes }}" data-href="{{ card_href }}"{% if include.tag-data and item.tags %} data-tags="{{ joined_tags }}"{% endif %}>
   <div class="row g-0 align-items-stretch">
     <div class="card-meta-col">
       {% if item.date %}<span class="card-meta-year">{{ item.date | date: "%b %Y" }}</span>{% endif %}
@@ -27,7 +27,8 @@
     {% if card_thumbnail %}
     {% capture card_img_url %}{% include images/image-path.html image-path=card_thumbnail page-dir=item.dir %}{% endcapture %}
     <div class="col-sm-4">
-      <img src="{{ card_img_url | strip }}" class="img-fluid card-image" alt="{{ item.title | escape }}" style="object-fit: cover; height: 200px; width: 100%;">
+      {% assign thumb_pos = item.thumbnail-position | default: "center" %}
+      <img src="{{ card_img_url | strip }}" class="img-fluid card-image" alt="{{ item.title | escape }}" style="object-fit: cover; height: 200px; width: 100%; object-position: {{ thumb_pos }};">
     </div>
     <div class="col-sm-8 d-flex align-items-center">
     {% else %}

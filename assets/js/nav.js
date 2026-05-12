@@ -49,6 +49,15 @@
       }
     });
 
+    // Clickable cards — navigate on click unless a nested link was the target
+    document.querySelectorAll('[data-href]').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (!e.target.closest('a')) {
+          window.location = card.dataset.href;
+        }
+      });
+    });
+
     // Close mobile nav when a link is clicked
     if (collapse) {
       collapse.querySelectorAll('a:not(.top-nav-dropdown-toggle)').forEach(function (link) {
