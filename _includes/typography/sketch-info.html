@@ -11,6 +11,14 @@
 {% endif %}
 
 <dl class="{{ sketch_info_class }}">
+  {% if page.experiment %}
+  <dt>Experiment</dt>
+  <dd>{{ page.experiment }}</dd>
+  {% endif %}
+  {% if page['what-i-learned'] %}
+  <dt>What I learned</dt>
+  <dd><ul class="sketch-card-skills">{% for item in page['what-i-learned'] %}<li>{{ item }}</li>{% endfor %}</ul></dd>
+  {% endif %}
   {% if page['what-students-learn'] %}
   <dt>What students learn</dt>
   <dd>{% for item in page['what-students-learn'] %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>

@@ -50,12 +50,6 @@
               {% for r in item.results %}<li>{{ r }}</li>{% endfor %}
             </ul>
             {% endif %}
-            {% if item['what-i-learned'] %}
-            <span class="sketch-card-label">What I learned</span>
-            <ul class="sketch-card-skills sketch-card-skills--research">
-              {% for w in item['what-i-learned'] %}<li>{{ w }}</li>{% endfor %}
-            </ul>
-            {% endif %}
           {% else %}
             {% assign key_q = item['key-question'] | default: card_summary %}
             {% if key_q %}

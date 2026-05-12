@@ -36,7 +36,7 @@ The process described here produced the website [Cats of Marrakech](https://jese
 
 {% include typography/pullquote.html text="From download to interactive map in under an hour — with no code written by hand." %}
 
-## The Workflow
+## The Experiment
 
 During Spring Break, I traveled to Marrakech and photographed street cats throughout the medina. With location services enabled in the phone's Camera app, GPS coordinates were embedded in the metadata of every image. By the end of the trip, I had over 200 photos — and 200 precise locations.
 
@@ -54,13 +54,13 @@ After copying the photos into an `assets/images` folder in a GitHub repository, 
 
 ## Results
 
-The major takeaway from this experiment is that in just a half hour an AI assistant can create a map with hundreds of your photos. The only coding knowledge required is the basic framework for the [Xanthan](https://xanthan-web.github.io/) website templates.
+The major takeaway from this experiment is that in just a half hour an AI assistant can create a map with hundreds of your photos. The only knowledge required is the basic framework for the [Xanthan](https://xanthan-web.github.io/) website templates.
 
-Keep in mind that geolocation data from phones is sometimes imprecise at the street level. Photos taken inside buildings may have pins placed across the street or several meters off. This is a limitation of phone GPS rather than the workflow itself — but it matters if spatial precision is central to the research question.
+Keep in mind that geolocation precision from phones varies. Photos taken inside buildings may have pins placed across the street or several meters off. This is a limitation of phone GPS rather than the workflow itself — but it matters if spatial precision is central to the research question.
 
 ## What I Learned
 
 {% include typography/callout.html type="warning" text="It is far easier than it used to be to transfer photos into a public-facing format." %}
 
-Websites like this can expand understandings of human geography through dense, localized image collections. You might consider this for a reconstruction of pilgrimage journeys or migration routes using photographic evidence. There is also potential for experimenting with point of view and perspective by mapping where documentation happens. The ease of this process allows for quickly capturing histories of urban development, neighborhood change, or informal space.
+Even hastily produced maps like this one can expand understandings of human geography through dense, localized image collections. You might consider this for a reconstruction of pilgrimage journeys or migration routes using photographic evidence. There is also potential for experimenting with point of view and perspective by mapping where documentation happens. The ease of this process allows for quickly capturing histories of urban development, neighborhood change, or informal space.
 
