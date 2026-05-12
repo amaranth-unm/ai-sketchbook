@@ -51,13 +51,12 @@ The input is simply an uploaded image. Meshy interprets the drawing, generates a
 </div>
 {:/nomarkdown}
 
-## Why It Matters
 
-When historians present findings, they typically rely on images — slides, reproductions, scans. Sometimes an image connects clearly to the argument; sometimes it remains implicitly related. Objects like these IUDs offer a different possibility: the tactile occupying the same status as the visual in research presentations. AI-assisted 3D generation dramatically lowers the barrier to that kind of work. This workflow can extend to any material culture object that survives as a 2D record — architectural drawings, artifact illustrations, anatomical diagrams.
+## Results
 
-## What to Watch For
+Meshy, an AI-based web app, created accurate 3D representations of objects that otherwise only survive in 2D drawings. 
 
-{% include typography/callout.html type="warning" text="The AI sometimes 'corrects' what it interprets as imperfections. When we uploaded a 2D drawing of a Middleton Cross, Meshy smoothed and regularized the asymmetries that were part of the original design. For objects where exact historical form matters, review the generated model carefully before printing." %}
+However, The AI sometimes 'corrects' what it interprets as imperfections. When we uploaded a 2D drawing of a Middleton Cross, Meshy smoothed and regularized the asymmetries that were part of the original design. For objects where exact historical form matters, review the generated model carefully before printing.
 
 {% include images/figure.html
   class="left"
@@ -65,3 +64,10 @@ When historians present findings, they typically rely on images — slides, repr
   caption="Screenshot of what Meshy.ai produced for a Middleton Cross."
   image-path="images/meshy-middleton.jpg"
 %}
+
+## What I Learned
+
+{% include typography/callout.html type="warning" text="AI can be used to create 3D models from 2D drawings." %}
+
+When historians present findings, they typically rely on images — slides, reproductions, scans. Sometimes an image connects clearly to the argument; sometimes it remains implicitly related. Objects like these IUDs offer a different possibility: the tactile occupying the same status as the visual in research presentations. AI-assisted 3D generation dramatically lowers the barrier to that kind of work. This workflow can extend to any material culture object that survives as a 2D record — architectural drawings, artifact illustrations, anatomical diagrams.
+

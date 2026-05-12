@@ -52,14 +52,16 @@ After copying the photos into an `assets/images` folder in a GitHub repository, 
 </div>
 {:/nomarkdown}
 
-## Why It Matters
 
-- Expanding understandings of human geography through dense, localized image collections.
-- Reconstruction of pilgrimage journeys or migration routes from photographic evidence.
-- Experimenting with point of view and perspective by mapping where documentation happens.
-- Quickly capturing histories of urban development, neighborhood change, or informal space.
-- Transferring research findings into a public-facing format accessible to non-specialist audiences.
+## Results
 
-## What to Watch For
+The major takeaway from this experiment is that in just a half hour an AI assistant can create a map with hundreds of your photos. The only coding knowledge required is the basic framework for the [Xanthan](https://xanthan-web.github.io/) website templates.
 
-{% include typography/callout.html type="warning" text="Geolocation data from phones is sometimes imprecise at the street level. Photos taken inside buildings may have pins placed across the street or several meters off. This is a limitation of phone GPS rather than the workflow itself — but it matters if spatial precision is central to the research question." %}
+Keep in mind that geolocation data from phones is sometimes imprecise at the street level. Photos taken inside buildings may have pins placed across the street or several meters off. This is a limitation of phone GPS rather than the workflow itself — but it matters if spatial precision is central to the research question.
+
+## What I Learned
+
+{% include typography/callout.html type="warning" text="It is far easier than it used to be to transfer photos into a public-facing format." %}
+
+Websites like this can expand understandings of human geography through dense, localized image collections. You might consider this for a reconstruction of pilgrimage journeys or migration routes using photographic evidence. There is also potential for experimenting with point of view and perspective by mapping where documentation happens. The ease of this process allows for quickly capturing histories of urban development, neighborhood change, or informal space.
+
