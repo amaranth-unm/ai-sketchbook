@@ -1,8 +1,7 @@
 ---
 layout: sketchbook
 title: Citation Test
-description: "A teaching sketch that uses AI-generated bibliographies to teach verification, source checking, and skepticism about polished prose."
-summary: "Students verify AI-generated citations one by one and turn fabricated sources into a lesson about evidence and authority."
+activity: "Students verify AI-generated citations one by one and turn fabricated sources into a lesson about evidence and authority."
 thumbnail: "/assets/images/headers/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
 date: 2026-04-09
 status: refined
@@ -16,14 +15,11 @@ tags:
   - source evaluation
   - fabrication
   - research skills
-skills:
-  - verifying sources in library databases
-  - distinguishing real from fabricated citations
-  - questioning authority of polished prose
-teaches:
+key-question: "How can AI output help students learn scholarly integrity?"
+what-students-learn:
   - why polished prose is not evidence of accuracy
   - how hallucination happens and why it's convincing
-  - verification as a scholarly habit, not a library ritual
+  - verification is a scholarly habit, not a library ritual
 card_order: 20
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Remixing Plato
-description: "Students remix a Platonic dialogue using AI, then analyze what the AI got right, got wrong, and what that reveals about both the text and the tool."
+activity: "Students remix a Platonic dialogue into modern garb using AI to investigate how conversations of authority evolve over time."
 summary: "Students translate, reshape, or re-perform a Platonic dialogue through AI — then analyze what changed and why."
 thumbnail: "images/960px-Plato's_Academy_mosaic_from_Pompeii.jpg"
 date: 2026-04-01
@@ -17,11 +17,12 @@ tags:
   - remix
   - prompting
   - interpretation
+key-question: How can AI help translate ideas into contemporary culture?
 skills:
   - close reading through transformation
   - analyzing how meaning shifts across forms
   - prompting as a rhetorical skill
-teaches:
+what-students-learn:
   - what AI can and cannot preserve in philosophical argument
   - how form and genre reshape meaning
   - that prompting requires the same clarity as writing

@@ -1,8 +1,7 @@
 ---
 layout: sketchbook
 title: Photos to Map Pins
-description: "A workflow experiment in vibe coding a website to display 200 geolocated photos of street cats."
-summary: "Create an interactive map with pins for hundreds of photos, using GPS metadata already embedded in your phone's images — in under an hour."
+experiment: "Create an interactive map with pins for hundreds of photos, using GPS metadata already embedded in your phone's images — in under an hour."
 thumbnail: "images/marrakech-thumbnail.jpg"
 date: 2026-04-09
 status: tested
@@ -16,11 +15,11 @@ tags:
   - vibe coding
   - maps
   - agentic AI
-skills:
+results:
   - extracting GPS metadata from image files
   - building a map visualization with AI-assisted coding
   - presenting geolocated data in a public-facing format
-demonstrates:
+what-i-learned:
   - how GPS metadata is embedded in image files
   - what vibe coding looks like in practice
   - how to turn a personal collection into a public-facing dataset

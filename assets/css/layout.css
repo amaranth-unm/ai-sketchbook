@@ -67,6 +67,7 @@ footer h5,
 }
 
 .site-footer-sketchbook {
+  margin-top: 4rem;
   border-top: 2px solid var(--sunset);
   background: var(--near-black);
 }

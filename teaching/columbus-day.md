@@ -19,7 +19,7 @@ skills:
   - comparing interpretations of a source
   - identifying how framing shapes meaning
   - applying historical thinking frameworks
-teaches:
+what-students-learn:
   - how context shapes historical interpretation
   - what filter bubbles look like in practice
   - the difference between pronouncing and puzzling about sources

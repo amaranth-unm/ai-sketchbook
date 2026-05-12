@@ -15,14 +15,12 @@ tags:
   - model comparison
   - parameters
   - AI literacy
-skills:
-  - comparing outputs across model sizes
-  - understanding how temperature and sampling affect responses
-  - recognizing that "AI" is not a single thing
-teaches:
+key-question: "How to introduce students to the basics of AI output differences?"
+what-students-learn:
   - AI is a spectrum of models, not one fixed thing
   - how temperature, token limits, and sampling shape output
   - what training data has to do with what a model knows
+
 card_order: 5
 ---
 

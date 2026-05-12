@@ -1,8 +1,7 @@
 ---
 layout: sketchbook
 title: Argument Audit
-description: "A teaching sketch that uses AI-generated objections to help students sharpen an argument instead of outsourcing one."
-summary: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or genuinely persuasive."
+activity: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or genuinely persuasive."
 thumbnail: "images/960px-Puzzle_Krypt-2.jpg"
 date: 2026-04-09
 status: rough
@@ -16,11 +15,8 @@ tags:
   - writing
   - argument
   - seminar
-skills:
-  - revising thesis claims
-  - anticipating counterarguments
-  - recognizing vague reasoning
-teaches:
+key-question: How can AI help sharpen writing skills instead of replace them?
+what-students-learn:
   - the difference between tone and analytical precision
   - what makes an objection substantive vs. generic
   - how vague writing produces vague critique

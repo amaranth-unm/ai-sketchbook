@@ -1,8 +1,7 @@
 ---
 layout: sketchbook
 title: Medieval Handwriting Recognition Workflow
-description: "A workflow experiment in creating an agentic AI pipeline to create transcripts of digitized images and audit its accuracy."
-summary: "An AI agent worked with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of handwritten sources."
+experiment: "To create an AI agent to work with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of medieval handwriting."
 thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 date: 2026-04-09
 status: tested
@@ -17,11 +16,11 @@ tags:
   - big data
   - paleography
   - agentic AI
-skills:
+results:
   - building an agentic pipeline for bulk document processing
   - combining multiple LLMs to improve transcription accuracy
   - enabling full-text search of handwritten archival sources
-demonstrates:
+what-i-learned:
   - how to design a multi-model agentic pipeline
   - the difference between usable and citable transcription quality
   - trade-offs between cost, time, and accuracy at scale

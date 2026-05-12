@@ -40,12 +40,37 @@
             {% for tag in item.tags limit: 3 %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
           </p>
           {% endif %}
-          {% if item.skills %}
-          <ul class="sketch-card-skills">
-            {% for skill in item.skills %}<li>{{ skill }}</li>{% endfor %}
-          </ul>
+          {% if card_section == "research" %}
+            {% if item.experiment %}
+            <p class="sketch-card-section"><span class="sketch-card-label">Experiment</span>{{ item.experiment }}</p>
+            {% endif %}
+            {% if item.results %}
+            <span class="sketch-card-label">Results</span>
+            <ul class="sketch-card-skills sketch-card-skills--research">
+              {% for r in item.results %}<li>{{ r }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+            {% if item['what-i-learned'] %}
+            <span class="sketch-card-label">What I learned</span>
+            <ul class="sketch-card-skills sketch-card-skills--research">
+              {% for w in item['what-i-learned'] %}<li>{{ w }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+          {% else %}
+            {% assign key_q = item['key-question'] | default: card_summary %}
+            {% if key_q %}
+            <p class="sketch-card-section"><span class="sketch-card-label">Key question</span>{{ key_q }}</p>
+            {% endif %}
+            {% if item.activity %}
+            <p class="sketch-card-section"><span class="sketch-card-label">Activity</span>{{ item.activity }}</p>
+            {% endif %}
+            {% if item['what-students-learn'] %}
+            <span class="sketch-card-label">What students learn</span>
+            <ul class="sketch-card-skills">
+              {% for learn in item['what-students-learn'] %}<li>{{ learn }}</li>{% endfor %}
+            </ul>
+            {% endif %}
           {% endif %}
-          <p class="card-text"> {{ card_summary }} </p>
       </div>
     </div>
   </div>
