@@ -8,13 +8,11 @@ status: rough
 type: activity
 effort: "20–30 min in class"
 tools:
-  - ChatGPT
-  - Claude
-level: upper-div / grad
+  - any AI tools
+level: any
 tags:
   - writing
   - argument
-  - seminar
 key-question: How can AI help sharpen writing skills instead of replace them?
 what-students-learn:
   - the difference between tone and analytical precision
@@ -29,31 +27,25 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Students often treat critique as something that happens after a draft is mostly finished. This exercise moves critique earlier. The AI becomes a machine for producing objections on demand — and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
+Students often treat critique as something that happens after a draft is mostly finished. 
 
-{% include typography/pullquote.html text="Vague objections often reveal vague writing. The point is not that AI is a brilliant critic. The point is that it forces students to clarify what exactly they are claiming." %}
+This exercise experiments with moving critique earlier. The AI becomes a machine for producing objections on demand — and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
+
+{% include typography/pullquote.html text="Vague objections often reveal vague writing. The point is not that AI is a brilliant critic. The point is that it forces students to consider alternate interpretations and clarify what exactly they are claiming." %}
 
 ## The Setup
-
 Ask students to bring a working thesis paragraph, interpretive claim, or partial draft. They paste that argument into an AI tool and ask it to produce the three strongest objections it can imagine.
 
-Then the real work begins. Students annotate the objections and sort them into three buckets:
+Students then annotate the objections and sort them into three buckets:
 
 - objections that are too generic to matter
 - objections that misunderstand the argument as written
 - objections that actually expose a gap, ambiguity, or unsupported leap
 
-That sorting process is the assignment. It makes students articulate *why* an objection fails instead of merely feeling that it fails.
+**The sorting process is the assignment.** It makes students articulate *why* an objection fails instead of deciding to dismiss it because it's hard to work with.
 
-**Running it in class:**
+Students carry this work into their final revision, leading to sharper prose and a more defensible claim.
 
-1. Students paste in their draft paragraph.
-2. They collect the objections.
-3. They mark up the AI output individually.
-4. In pairs, they compare which objections they took seriously and why.
-5. They revise the original claim in light of the strongest objection.
-
-That final revision matters. Without it, the exercise stays at the level of commentary. With it, students leave with sharper prose and a more defensible claim.
 
 ## The Prompt
 
@@ -64,12 +56,14 @@ That final revision matters. Without it, the exercise stays at the level of comm
 </div>
 {:/nomarkdown}
 
-## Why It Works
 
+## Why It Works
 A counterargument is only strong if it lands on the actual claim being made. This exercise makes that concrete: defending an argument means specifying scope, evidence, and stakes — not just reasserting it with more confidence. Authoritative tone is not the same thing as analytical precision, and students can see that distinction clearly when working with AI-generated objections that sound reasonable but are detached from the actual text.
+
 
 ## What to Watch For
 
 {% include typography/callout.html type="warning" text="AI tends to generate objections that are thin, repetitive, or detached from the actual text. That limitation is useful here — but only if students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly." %}
 
-Best used in upper-division courses, graduate seminars, or any class where students are making sustained interpretive claims rather than summarizing material.
+## What I learned
+As with other AI assignments that may be unfamiliar to students
