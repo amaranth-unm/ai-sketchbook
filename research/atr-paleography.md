@@ -17,9 +17,9 @@ tags:
   - paleography
   - agentic AI
 results:
-  - building an agentic pipeline for bulk document processing
-  - combining multiple LLMs to improve transcription accuracy
-  - enabling full-text search of handwritten archival sources
+  - built an agentic pipeline for bulk document processing
+  - combined multiple LLMs to improve transcription accuracy
+  - enabled full-text search of handwritten archival sources
 what-i-learned:
   - how to design a multi-model agentic pipeline
   - the difference between usable and citable transcription quality
