@@ -4,7 +4,7 @@ title: Generate 3D Prints from 2D Drawings
 description: "Creating a scale model of an IUD from the 1970s using AI-generated 3D files."
 summary: "AI can transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
 thumbnail: "images/iud-printed-small.jpg"
-experiment: "Can AI transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
+experiment: "AI can transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
 thumbnail: "images/meshy-screenshot.jpg"
 thumbnail-position: "10% 50%"
 date: 2026-04-09
@@ -19,9 +19,9 @@ tags:
   - material culture
   - tactile
 results:
-  - generating 3D-printable files from 2D historical images
-  - reconstructing material culture objects for research
-  - incorporating tactile elements into research presentations
+  - generated 3D-printable files from 2D historical images
+  - reconstructed material culture objects for research
+  - incorporated tactile elements into research presentations
 what-i-learned:
   - how AI interprets 2D drawings to generate 3D geometry
   - where AI corrects vs. faithfully represents source material

@@ -2,7 +2,7 @@
 layout: sketchbook
 title: Historical Source Evaluation
 description: "A teaching sketch that uses AI-generated historical argument to examine filter bubbles."
-summary: "Students prompt AI to analyze a short newspaper article from 1892 and compare results across accounts and incognito mode."
+summary: "How do filter bubbles affect the way a LLM chatbot writes historical analysis?"
 thumbnail: "images/columbus-day.png"
 date: 2026-04-09
 status: refined

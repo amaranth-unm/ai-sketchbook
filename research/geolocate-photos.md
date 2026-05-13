@@ -16,9 +16,9 @@ tags:
   - maps
   - agentic AI
 results:
-  - extracting GPS metadata from image files
-  - building a map visualization with AI-assisted coding
-  - presenting geolocated data in a public-facing format
+  - extracted GPS metadata from image files
+  - built a map visualization with AI-assisted coding
+  - presented geolocated data in a public-facing format
 what-i-learned:
   - how GPS metadata is embedded in image files
   - what vibe coding looks like in practice
