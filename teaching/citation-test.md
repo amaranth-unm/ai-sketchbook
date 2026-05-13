@@ -29,9 +29,9 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-Ask AI for a reading list on a focused scholarly topic. Then verify every citation in public. Some will be real. Some will be distorted. Some will be entirely fabricated while sounding perfectly plausible.
+Ask AI for a reading list on a focused scholarly topic. Then verify every citation together as a class. Some will be real. Some will be distorted. Some will be entirely fabricated while sounding perfectly plausible.
 
-{% include typography/pullquote.html text="Fluent prose and bibliographic formatting do not guarantee the existence of a source. It makes verification feel less like a library ritual and more like an intellectual necessity." %}
+{% include typography/pullquote.html text="Fluent prose and bibliographic formatting do not guarantee the existence of a source — and recognizing that makes verification feel less like a library ritual and more like an intellectual necessity." %}
 
 ## The Setup
 
@@ -48,18 +48,30 @@ Works individually, but best as a group exercise where each team verifies two or
 
 ## The Prompt
 
-{::nomarkdown}
-<div class="sketch-prompt">
-  <span class="sketch-prompt-label">prompt</span>
-  Give me a reading list of 8 to 10 important scholarly works on [topic]. Include author, full title, journal or publisher, year, and a one-sentence note about why each source matters.
-</div>
-{:/nomarkdown}
+{% capture citation_prompt %}
+Give me a reading list of 8 to 10 important scholarly works on [topic]. Include author, full title, journal or publisher, year, and a one-sentence note about why each source matters.
+{% endcapture %}
+
+{% include typography/callout.html type="prompt" title="Prompt" text=citation_prompt %}
 
 ## Why It Works
 
 Unlike more abstract conversations about hallucination, this exercise gives students a task with a clear answer. Either the source exists or it does not. Either the metadata is right or it is not. That clarity makes it a strong early-semester exercise in classes that involve research papers, annotated bibliographies, or historiographic review.
 
 Once students start finding errors, the conversation usually shifts from "AI makes mistakes" to the more useful question: why are we so easily persuaded by the look and tone of correctness?
+
+
+## Another push
+You can have students better understand how AI works by asking AI to explain **precisely** where citations come from. 
+
+{% capture citation_prompt2 %}
+Tell me precisely how you found or generated these citations.
+{% endcapture %}
+
+{% include typography/callout.html type="another prompt" title="Prompt" text=citation_prompt2 %}
+
+Students then get to see some of the origins of intellectual adjacent ideas and publications getting combined that makes perfect sense for the LLM engine, but no basis in reality.
+
 
 ## What to Watch For
 

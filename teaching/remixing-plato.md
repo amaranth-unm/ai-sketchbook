@@ -5,13 +5,12 @@ activity: "Students remix a Platonic dialogue into modern garb using AI to inves
 summary: "Students translate, reshape, or re-perform a Platonic dialogue through AI — then analyze what changed and why."
 thumbnail: "images/960px-Plato's_Academy_mosaic_from_Pompeii.jpg"
 date: 2026-04-01
-status: tested
+status: lightly tested
 type: assignment
 effort: "1–2 hours out of class"
 tools:
-  - ChatGPT
-  - Claude
-level: undergrad / grad
+  - any AI tool
+level: anyone
 tags:
   - philosophy
   - remix
@@ -53,22 +52,23 @@ AI can remix surface features — tone, setting, genre — and sometimes in surp
 - For advanced students: constrain the AI to preserve specific argumentative moves, or test multiple models against each other
 
 ## The Prompt
+{% include typography/callout.html type="prompt" 
+  title="prompt to give students"
+  text="
+  Take the following passage from Plato's Phaedrus: [paste excerpt]. Remix it into [new form, audience, or style — e.g., a text message exchange, a TED talk, a Reddit thread]. Keep as much of the original philosophical content as you can. Then write a 200-word reflection: what did the AI preserve, what did it lose, and what does that tell you about the original text?" 
+%}
 
-{::nomarkdown}
-<div class="sketch-prompt">
-  <span class="sketch-prompt-label">prompt to give students</span>
-  Take the following passage from Plato's Phaedrus: [paste excerpt]. Remix it into [new form, audience, or style — e.g., a text message exchange, a TED talk, a Reddit thread]. Keep as much of the original philosophical content as you can. Then write a 200-word reflection: what did the AI preserve, what did it lose, and what does that tell you about the original text?
-</div>
-{:/nomarkdown}
 
 ## Why It Works
-
 The assignment shifts attention from "what can AI do?" to "what does it mean to reinterpret a text through AI?" That is a different and more valuable question. Students who are experienced AI users sometimes find the tool use unremarkable — but even for them, the assignment functions as a conceptual exercise. Moving between academic and popular registers of the dialogue helps students see how meaning is reshaped by tone, genre, and audience.
 
-As one AI put it when asked to describe the assignment: students are asked to renovate a building with an unpredictable contractor who sometimes misunderstands the blueprint.
+When asked to describe the assignment, one AI offered this: students are renovating a building with an unpredictable contractor who sometimes misunderstands the blueprint.
+
 
 ## What to Watch For
+{% include typography/callout.html type="warning" text="Best positioned as a warm-up to deeper AI investigations" %}
 
-{% include typography/callout.html type="warning" text="Works best as an early, low-stakes exercise that introduces AI mediation — not as a standalone deep dive. If students haven't read the dialogue carefully first, the remix has nothing to push against." %}
+- Works best as an early, low-stakes exercise that introduces AI mediation — not as a standalone deep dive. 
+- If students don't understand some nuance of the dialogue format, and therefore create vague prompts, the remix easily loses some of the edge that a dialogue brings.
+- If students aren't attune to the larger issues the original tries to make, the remix has nothing to push against.
 
-Best positioned as a warm-up to more sustained close reading, not a replacement for it.

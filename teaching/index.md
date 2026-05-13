@@ -12,7 +12,7 @@ wide: true
 
 # Teaching Sketches
 
-Assignments, discussion setups, and classroom experiments. The common thread: using AI in situations where critical thinking is the actual point, not an afterthought.
+Assignments, discussion setups, and classroom experiments for courses that want to engage AI seriously — not just acknowledge it exists. The common thread: AI as a tool for sharpening critical thinking, not bypassing it. Each sketch is self-contained and classroom-tested, with enough context that an instructor from any field could adapt it.
 
 <span class="section-accent teach"></span>
 

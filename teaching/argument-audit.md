@@ -6,7 +6,7 @@ thumbnail: "images/960px-Puzzle_Krypt-2.jpg"
 date: 2026-04-09
 status: rough
 type: activity
-effort: "20–30 min in class"
+effort: "~30 min in class"
 tools:
   - any AI tools
 level: any
@@ -27,9 +27,7 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Students often treat critique as something that happens after a draft is mostly finished. 
-
-This exercise experiments with moving critique earlier. The AI becomes a machine for producing objections on demand — and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
+Students often treat critique as something that happens after a draft is mostly finished — a late-stage polish rather than a genuine test of an idea. This exercise moves critique earlier. The AI becomes a machine for producing objections on demand, and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
 
 {% include typography/pullquote.html text="Vague objections often reveal vague writing. The point is not that AI is a brilliant critic. The point is that it forces students to consider alternate interpretations and clarify what exactly they are claiming." %}
 
@@ -49,12 +47,12 @@ Students carry this work into their final revision, leading to sharper prose and
 
 ## The Prompt
 
-{::nomarkdown}
-<div class="sketch-prompt">
-  <span class="sketch-prompt-label">prompt to give students</span>
-  Here is my argument: [paste paragraph]. Give me the three strongest objections to this claim. For each objection, explain what someone would have to believe for that objection to succeed, and identify what evidence would make the objection more serious.
-</div>
-{:/nomarkdown}
+{% capture audit_prompt %}
+Here is my argument: [paste your thesis paragraph or interpretive claim]. Generate the three strongest objections you can imagine to this argument. For each objection, be as specific as possible — refer to the actual claims I'm making, the evidence I'm relying on, or the logical moves I'm asking the reader to accept.
+{% endcapture %}
+
+{% include typography/callout.html type="prompt" title="Prompt" text=audit_prompt %}
+
 
 
 ## Why It Works
@@ -62,8 +60,10 @@ A counterargument is only strong if it lands on the actual claim being made. Thi
 
 
 ## What to Watch For
+{% include typography/callout.html type="warning" text="The AI confidence can encourage students to put too much weight on counterarguments" %}
 
-{% include typography/callout.html type="warning" text="AI tends to generate objections that are thin, repetitive, or detached from the actual text. That limitation is useful here — but only if students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly." %}
+- Students can feel that AI knows more than they  do (which is true in terms of textual awareness), but they can underestimate their own ability to separate the wheat from the chaff. AI tends to generate objections that are thin, repetitive, or detached from the actual text, and students need to be primed to recognize this and categorize accordingly.
+- Students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly.
 
 ## What I learned
-As with other AI assignments that may be unfamiliar to students
+Brief instructor modeling of the sorting process helps orient students before they work independently — especially in classes where students haven't been asked to articulate *why* an objection fails rather than just dismiss it.

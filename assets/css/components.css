@@ -86,6 +86,24 @@
   background: rgba(0, 122, 134, 0.05);
 }
 
+.callout-prompt {
+  border-left: 3px solid var(--mesa);
+  background: var(--light-gray);
+  transform: rotate(-0.2deg);
+  transform-origin: left center;
+}
+
+.callout-prompt .callout-title {
+  color: var(--mesa);
+}
+
+.callout-prompt p {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--mid-gray);
+}
+
 .callout-title {
   font-family: var(--font-mono);
   font-size: 0.7rem;
