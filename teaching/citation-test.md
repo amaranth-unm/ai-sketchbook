@@ -68,7 +68,7 @@ You can have students better understand how AI works by asking AI to explain **p
 Tell me precisely how you found or generated these citations.
 {% endcapture %}
 
-{% include typography/callout.html type="another prompt" title="Prompt" text=citation_prompt2 %}
+{% include typography/callout.html type="prompt" title="A follow-up prompt" text=citation_prompt2 %}
 
 Students then get to see some of the origins of intellectual adjacent ideas and publications getting combined that makes perfect sense for the LLM engine, but no basis in reality.
 
