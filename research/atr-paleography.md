@@ -33,14 +33,14 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-I wanted to know if AI LLMs could translate a notoriously difficult script, Gothic secretarial hand from the late fourteenth century. The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) which contains over a million digitized images of archival documents — including much of the material in the Archive of the Crown of Aragon. By the fourteenth century, the chancery produced thousands of pages of documentation every year. A single register might run to 300 folios of dense Gothic secretarial script. These documents have been digitized but never transcribed at scale.
+I wanted to know if AI LLMs could translate a notoriously difficult medieval script (Gothic secretarial) from the late fourteenth century. The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) which contains over a million digitized images of archival documents — including much of the material in the Archive of the Crown of Aragon. These documents have been digitized but never transcribed at scale.
 
 {% include typography/pullquote.html text="Combining Gemini and Claude produces usable handwriting recognition for late fourteenth-century Gothic secretarial hand — something even specialized HTR platforms couldn't reliably achieve." %}
 
 ## The Workflow
 
 {% capture text %}
-In early February 2026, uploading a PARES image to Gemini produced a transcription of better quality than what I had gotten from the specialized HTR platform [Transkribus](https://www.transkribus.org/), even after training a model there with 60 documents of ground-truth transcriptions. In late February, I started combining results from Gemini and Claude to increase transcription quality further.
+In early February 2026, uploading a PARES image to Gemini produced a transcription of better quality than what I had gotten from the specialized HTR platform [Transkribus](https://www.transkribus.org/), even after training a model there with 60 documents of ground-truth transcriptions. Soon after, I started combining results from Gemini and Claude to increase transcription quality further.
 
 By March, I was using agentic AI — specifically Open Claw — to obtain usable HTR and translations for entire registers. The pipeline runs as follows: Open Claw downloads images from PARES, passes each one to Gemini and Claude for parallel transcription, merges the outputs, and writes the result to a text file. A final instruction to Open Claw combines all image-level text files into a single CSV.
 
@@ -59,9 +59,13 @@ By March, I was using agentic AI — specifically Open Claw — to obtain usable
 
 ## Results
 
-I was able to analyze image archives at scale — and this will work not just for scanned documents but any collection of historical images.
+This pipeline worked successfully and using two different models to hone accuracy of transcriptions and create and audit trail greatly improved my confidence in the transcriptions. It also made clear the kinds of errors that routinely surfaced and exposed some of the contours of the "jagged frontier".
 
-It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. The resulting text enables discovery through full-text search but is not reliable enough for citation-level accuracy — dates in particular remain inconsistent even after pipeline refinements.
+With this workflow I was able to analyze image archives at scale, and the pipelinwe could be applied to any collection of historical images.
+
+It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. 
+
+The resulting text enables discovery through full-text search but is not reliable enough for citation-level accuracy — dates in particular remain inconsistent even after pipeline refinements.
 
 
 ## What I Learned
