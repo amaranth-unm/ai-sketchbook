@@ -1,21 +1,23 @@
 ---
 layout: sketchbook
 title: AI Sketchbook
-description: "A working collection of ideas for using AI in humanities teaching and research. Rough, experimental, honest about what's been tested."
+description: "A working collection of ideas for using AI in humanities teaching and research. Rough, experimental, and potentially helpful."
 date: 2026-04-01
 wide: true
 ---
 
 # AI Sketchbook
 
-A shared space for thinking out loud about AI in humanities teaching and research — not a guide, not a verdict, just colleagues comparing notes.
+A shared space for thinking out loud about AI in humanities teaching and research. Colleagues comparing notes and trying to be helpful in this grand experiment.
+
+We're all having conversations--wanted or not--about AI in higher ed. This is place to make some ideas a bit less ephemeral.
+
 
 <span class="section-accent default"></span>
 
-There is no shortage of AI advice. What is harder to find is something local — people who share students, classrooms, campus culture (and constraints and opportunities), and disciplinary habits. That is what this is trying to be. A place to build a community of practice.
+There is no shortage of AI advice. What is harder to find is something local — people who share disciplinary habits, students, classrooms, campus culture. This collection of sketches is tries to build a community of practice.
 
-Nothing here is authoritative. The sketches are rough, the experiments are ongoing, and plenty of the ideas have been tried only a handful of times. The status tags — *rough*, *tested*, *refined* — are meant to help you understand their context, but also the importance of ongoing experimentation.
-
+Nothing here pretends to be authoritative. The sketches are rough, the experiments are ongoing, and like a real sketchbook, there's a wide spectrum of ideas, with differing levels of utility based on circumstances.
 
 
 {::nomarkdown}
