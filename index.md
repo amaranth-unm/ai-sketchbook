@@ -56,6 +56,6 @@ ALSO: [Browse the sketchbook by tag →](/tags/)
 
 ## Add a sketch!
 
-Tried something with AI? Hit a wall? Learned something you didn't expect? A few paragraphs is enough to start — [send us a draft](mailto:amaranth@unm.edu) and we'll help shape it.
+Tried something with AI? Hit a wall? Learned something you didn't expect? A few paragraphs is enough to start — [send us a draft](mailto:amaranth@unm.edu). We'd love to chat about it give you all the credit.
 
-GitHub is totally optional — [email us a draft](mailto:amaranth@unm.edu) and we'll handle the rest. If you want to submit directly and own your sketch from the start, the [contribute page](contribute) walks through that too.
+Do you already have a complete sketch in mind? — [email us a draft](mailto:amaranth@unm.edu) and we can work it up into a web page for you. If you want to submit directly and own your sketch from the start, the [contribute page](contribute) walks through that too.

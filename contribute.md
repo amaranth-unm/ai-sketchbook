@@ -17,11 +17,9 @@ If you've tried something with AI in a class or a research project — and you h
 
 ---
 
-## The optional way: submit directly via GitHub
+## The control freak way: submit directly via GitHub
 
-GitHub is a free service for storing and sharing files. If you want to submit your sketch directly — and see it as a live webpage before it goes to us — here's how. This is completely optional. Most contributors just email.
-
----
+GitHub is a free platform for sharing code and making websites and that's what the sketchbook runs on. If you want to submit your sketch directly — and see it and shape it as a live webpage before it goes to us — here's how. Completely optional, but try it!
 
 ---
 
