@@ -15,11 +15,12 @@ tags:
   - source evaluation
   - fabrication
   - research skills
+  - library instruction
 key-question: "How can AI output help students learn scholarly integrity?"
 what-students-learn:
   - why polished prose is not evidence of accuracy
   - how hallucination happens and why it's convincing
-  - verification is a scholarly habit, not a library ritual
+  - verification is a scholarly habit that connects classroom work with library expertise
 card_order: 20
 ---
 
@@ -36,6 +37,8 @@ Ask AI for a reading list on a focused scholarly topic. Then verify every citati
 ## The Setup
 
 Choose a topic narrow enough to sound scholarly but broad enough that students will not already know the literature by heart. Ask AI for eight to ten key books and articles. Then have students track each citation across library catalogs, publisher pages, journal databases, and Google Scholar.
+
+This is a natural place to partner with a librarian. The exercise is not trying to turn library instruction into a gotcha moment about AI; it uses AI's fluent mistakes to make source evaluation feel concrete, consequential, and shared across the course and the library.
 
 Works individually, but best as a group exercise where each team verifies two or three citations and reports back. The room usually ends up with a mix of confirmed sources, half-right sources, and fully invented ones.
 
@@ -75,6 +78,6 @@ Students then get to see some of the origins of intellectual adjacent ideas and 
 
 ## What to Watch For
 
-{% include typography/callout.html type="warning" text="This works best when students have access to a real library discovery system and at least some guidance on how to search beyond Google. Without that, the exercise can slide into frustration rather than insight." %}
+{% include typography/callout.html type="warning" text="This works best when students have access to a real library discovery system and at least some guidance on how to search beyond Google. A librarian-led or librarian-supported version would likely be stronger. Without that scaffolding, the exercise can slide into frustration rather than insight." %}
 
 Frame it carefully: the lesson is not simply "AI bad." The lesson is that verification is a scholarly habit, and AI gives us a vivid way to show why that habit matters.

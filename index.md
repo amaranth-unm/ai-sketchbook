@@ -8,32 +8,41 @@ wide: true
 
 # AI Sketchbook
 
-A shared space for thinking out loud about AI in humanities teaching and research. Colleagues comparing notes and trying to be helpful in this grand experiment.
+A shared space for thinking out loud about AI in humanities teaching, research, and policy. Colleagues comparing notes and trying to be helpful in this grand experiment.
 
-We're all having conversations--wanted or not--about AI in higher ed. This is place to make some ideas a bit less ephemeral.
+We're all having conversations--wanted or not--about AI in higher ed. This is a place to make some ideas a bit less ephemeral.
 
 
 <span class="section-accent default"></span>
 
-There is no shortage of AI advice. What is harder to find is something local — people who share disciplinary habits, students, classrooms, campus culture. This collection of sketches is tries to build a community of practice.
+There is no shortage of AI advice. What is harder to find is something local — people who share disciplinary habits, students, classrooms, campus culture. This collection of sketches tries to build a community of practice.
 
-Nothing here pretends to be authoritative. The sketches are rough, the experiments are ongoing, and like a real sketchbook, there's a wide spectrum of ideas, with differing levels of utility based on circumstances.
+Nothing here pretends to solve AI. The sketches are rough, the experiments are ongoing, and like a real sketchbook, there's a wide spectrum of ideas, with differing levels of utility based on circumstances.
+
+Nor does AI belong to any one campus unit. Libraries, teaching centers, academic technology, writing programs, social scientists, humanists, professional schools, departments, and students all see different parts of the problem. This sketchbook begins from humanities classrooms and research projects, but it is meant as one contribution to a wider conversation.
 
 
 {::nomarkdown}
-<blockquote class="sketchbook-pull">Think of this less as a guidebook than as a set of working notes meant to support conversation, experimentation, and a shared local vocabulary.</blockquote>
+<blockquote class="sketchbook-pull">Think of this less as a guidebook than as a set of working notes: ideas to test, steal, argue with, and hand to a colleague on a slow afternoon.</blockquote>
 {:/nomarkdown}
 
 {::nomarkdown}
 <div class="row mt-4 mb-4">
-  <div class="col-md-6 mb-3">
+  <div class="col-md-4 mb-3">
     <a href="teaching" class="sketchbook-nav-card teach">
       <span class="card-eyebrow">Teaching</span>
       <p>Assignments, discussion prompts, and pedagogical experiments — ways to bring AI into your teaching with a humanist's critical eye.</p>
       <span class="card-link">See teaching sketches →</span>
     </a>
   </div>
-  <div class="col-md-6 mb-3">
+  <div class="col-md-4 mb-3">
+    <a href="policy" class="sketchbook-nav-card policy">
+      <span class="card-eyebrow">Policy</span>
+      <p>Syllabus language, assignment rules, and course-level frameworks for thinking through how AI belongs in learning.</p>
+      <span class="card-link">See policy sketches →</span>
+    </a>
+  </div>
+  <div class="col-md-4 mb-3">
     <a href="research" class="sketchbook-nav-card research">
       <span class="card-eyebrow">Research</span>
       <p>Workflow experiments, analysis techniques, and methodological notes — ways AI has been useful (and useless) in actual humanities research.</p>
@@ -46,8 +55,7 @@ Nothing here pretends to be authoritative. The sketches are rough, the experimen
 ALSO: [Browse the sketchbook by tag →](/tags/)
 
 ## Add a sketch!
-If you have tried something with AI and had an opinion about it---whether favorable or not---please share!  
 
-Whether you tried an exercise in class that was insightful, or helped speed up research work, or expanded what you can produce through AI's coding skill, share it. If you have something in mind, [draft and submit it](contribute), and of course [get in touch](mailto:amaranth@unm.edu) if you want to discuss further or need help writing it up. 
+Tried something with AI? Hit a wall? Learned something you didn't expect? A few paragraphs is enough to start — [send us a draft](mailto:amaranth@unm.edu) and we'll help shape it.
 
-We'd love hear about your motivation, experience, and what you learned.
+GitHub is totally optional — [email us a draft](mailto:amaranth@unm.edu) and we'll handle the rest. If you want to submit directly and own your sketch from the start, the [contribute page](contribute) walks through that too.

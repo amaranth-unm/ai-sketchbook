@@ -13,6 +13,7 @@
 {% endif %}
 {% assign joined_tags = item.tags | join: '|' | downcase %}
 {% if item.url contains '/research/' %}{% assign card_section = "research" %}
+{% elsif item.url contains '/policy/' %}{% assign card_section = "policy" %}
 {% else %}{% assign card_section = nil %}{% endif %}
 <div class="{{ card_classes }}" data-href="{{ card_href }}"{% if include.tag-data and item.tags %} data-tags="{{ joined_tags }}"{% endif %}>
   <div class="row g-0 align-items-stretch">

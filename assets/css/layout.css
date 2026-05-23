@@ -172,6 +172,7 @@ p:has(> .section-accent) {
 }
 
 .section-accent.teach    { background: linear-gradient(90deg, var(--terra)     0%, var(--terra)     60%, transparent 100%); }
+.section-accent.policy   { background: linear-gradient(90deg, var(--indigo)    0%, var(--indigo)    60%, transparent 100%); }
 .section-accent.research { background: linear-gradient(90deg, var(--turquoise) 0%, var(--turquoise) 60%, transparent 100%); }
 .section-accent.default  { background: linear-gradient(90deg, var(--terra) 0%, var(--mesa) 40%, var(--sunset) 68%, transparent 100%); }
 

@@ -79,7 +79,7 @@ However, The AI sometimes "corrects" what it interprets as imperfections. When w
 
 ## What I Learned
 
-{% include typography/callout.html type="warning" text="AI can be used to create 3D models from 2D drawings." %}
+{% include typography/callout.html type="note" text="AI can be used to create 3D models from 2D drawings." %}
 
 When historians present findings, they typically rely on images — slides, reproductions, scans. Sometimes an image connects clearly to the argument; sometimes it remains implicitly related. 
 

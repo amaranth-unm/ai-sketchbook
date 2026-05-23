@@ -1,8 +1,8 @@
 ---
 layout: sketchbook
-title: Historical Source Evaluation
-description: "A teaching sketch that uses AI-generated historical argument to examine filter bubbles."
-summary: "How do filter bubbles affect the way a LLM chatbot writes historical analysis?"
+title: Same Prompt, Different History
+description: "A teaching sketch that uses AI-generated historical argument to examine filter bubbles and the difference between pronouncing and puzzling."
+summary: "The same prompt to ChatGPT produces different histories depending on whether you're logged in or not — and that difference is the lesson."
 thumbnail: "images/columbus-day.png"
 date: 2026-04-09
 status: refined
@@ -26,7 +26,7 @@ what-students-learn:
 card_order: 20
 ---
 
-# Historical Source Evaluation
+# Same Prompt, Different History
 
 <span class="section-accent teach"></span>
 

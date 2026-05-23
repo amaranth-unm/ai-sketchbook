@@ -6,6 +6,8 @@
 
 {% if page.url contains '/teaching/' %}
   {% assign sketch_info_class = 'sketch-info sketch-info--teach' %}
+{% elsif page.url contains '/policy/' %}
+  {% assign sketch_info_class = 'sketch-info sketch-info--policy' %}
 {% else %}
   {% assign sketch_info_class = 'sketch-info sketch-info--research' %}
 {% endif %}

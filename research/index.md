@@ -13,7 +13,7 @@ wide: true
 
 # Research Sketches
 
-Workflow experiments, analysis techniques, and methodological notes — ways AI has proven useful (and useless) in actual humanities scholarship.
+Workflow experiments, analysis techniques, and methodological notes — ways AI has proven useful (and useless) in actual humanities scholarship. These sketches often touch areas where other campus experts have deep knowledge: libraries and archives, metadata, data ethics, social-scientific method, accessibility, privacy, and research computing.
 
 <span class="section-accent research"></span>
 

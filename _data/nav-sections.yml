@@ -1,5 +1,7 @@
 sections:
   - name: teaching
     display: Teaching
+  - name: policy
+    display: Policy
   - name: research
     display: Research

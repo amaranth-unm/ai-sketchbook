@@ -21,6 +21,7 @@
 }
 
 .sketchbook-nav-card.teach    { border-top: 3px solid var(--terra); }
+.sketchbook-nav-card.policy   { border-top: 3px solid var(--indigo); }
 .sketchbook-nav-card.research { border-top: 3px solid var(--turquoise); }
 
 .sketchbook-nav-card::after { display: none; }
@@ -37,6 +38,7 @@
 }
 
 .sketchbook-nav-card.teach    .card-eyebrow { color: var(--terra); }
+.sketchbook-nav-card.policy   .card-eyebrow { color: var(--indigo); }
 .sketchbook-nav-card.research .card-eyebrow { color: var(--turquoise); }
 
 .sketchbook-nav-card h3 {
@@ -68,6 +70,7 @@
 }
 
 .sketchbook-nav-card.teach    .card-link { color: var(--terra); }
+.sketchbook-nav-card.policy   .card-link { color: var(--indigo); }
 .sketchbook-nav-card.research .card-link { color: var(--turquoise); }
 
 .sketchbook-nav-card:hover .card-link { color: var(--sunset); }
@@ -86,6 +89,7 @@
 }
 
 .sketch-entries.teach    .sketch-entry { border-top-color: var(--rule-gray); }
+.sketch-entries.policy   .sketch-entry { border-top-color: var(--rule-gray); }
 .sketch-entries.research .sketch-entry { border-top-color: var(--rule-gray); }
 
 /* Entry header: title left, tags right */
@@ -215,6 +219,7 @@
 }
 
 .sketch-entries.teach    .sketch-read-more:hover { color: var(--terra); }
+.sketch-entries.policy   .sketch-read-more:hover { color: var(--indigo); }
 .sketch-entries.research .sketch-read-more:hover { color: var(--turquoise); }
 
 
@@ -301,6 +306,7 @@
 .card-meta-type.activity   { color: var(--terra); }
 .card-meta-type.assignment { color: var(--sunset); }
 .card-meta-type.policy     { color: var(--mesa); }
+.card-meta-type.policy-sketch { color: var(--indigo); }
 .card-meta-type.research   { color: var(--turquoise); }
 
 .card-meta-effort,

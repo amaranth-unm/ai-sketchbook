@@ -11,6 +11,7 @@
 }
 
 .sketch-info--teach    { border-left-color: var(--terra);     background: var(--teach-soft); }
+.sketch-info--policy   { border-left-color: var(--indigo);    background: var(--policy-soft); }
 .sketch-info--research { border-left-color: var(--turquoise); background: var(--research-soft); }
 
 .sketch-info dt {

@@ -1,6 +1,6 @@
 ---
 layout: sketchbook
-title: Medieval Handwriting Recognition Workflow
+title: When AI Could Read What Archivists Couldn't
 experiment: "To create an AI agent to work with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of medieval handwriting."
 thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 date: 2026-04-09
@@ -27,7 +27,7 @@ what-i-learned:
 card_order: 10
 ---
 
-# Medieval Handwriting Recognition Workflow
+# When AI Could Read What Archivists Couldn't
 
 <span class="section-accent research"></span>
 
@@ -70,6 +70,6 @@ The resulting text enables discovery through full-text search but is not reliabl
 
 ## What I Learned
 
-{% include typography/callout.html type="warning" text="It is possible to use agentic AI to generate big data from handwritten documents previously unavailable for automated text recognition." %}
+{% include typography/callout.html type="note" text="It is possible to use agentic AI to generate big data from handwritten documents previously unavailable for automated text recognition." %}
 
 This opens the possibility for full-text keyword search for names and toponyms across entire registers. It is effective to leverage multiple LLMs to check and correct each other's work. Even though the transcriptions and translations were far from perfect, I was surprised at how well the LLMs transcribed the script and expanded abbreviations.

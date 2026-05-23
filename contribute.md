@@ -9,9 +9,19 @@ scrollspy: true
 
 <span class="section-accent default"></span>
 
-If you've tried something with AI in a class or a research project — and you have something honest to say about how it went — this is the right place for it. Rough drafts and partial experiments are welcome. We're not looking for polished success stories.
+If you've tried something with AI in a class or a research project — and you have something honest to say about how it went — this is the right place for it. Rough drafts and partial experiments are welcome. We're not looking for polished success stories. The most useful sketches are often the ones where something went sideways.
 
-Here's how to add your sketch. You don't need to know anything about GitHub to start.
+## The easy way: just email us
+
+[Send a draft to amaranth@unm.edu](mailto:amaranth@unm.edu). A few paragraphs describing what you tried and what happened is enough to start. We'll help shape it into a sketch and handle all the technical parts.
+
+---
+
+## The optional way: submit directly via GitHub
+
+GitHub is a free service for storing and sharing files. If you want to submit your sketch directly — and see it as a live webpage before it goes to us — here's how. This is completely optional. Most contributors just email.
+
+---
 
 ---
 
@@ -89,7 +99,10 @@ Write your sketch here. What did you try? What happened? What would you do diffe
 
 ## Sample Prompt
 
-## Caveats
+## What to Watch For
+
+## Open Questions
+What's still unresolved? What would you want to test next? What would need to be different for this to work in your context?
 ```
 
 Change `section: teach` to `section: research` if it belongs in the research section.

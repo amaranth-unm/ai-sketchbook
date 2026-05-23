@@ -10,6 +10,7 @@
   --terra:     #c05131;   /* rust-red     — teaching, primary accent */
   --mesa:      #d6a461;   /* warm tan     — secondary, muted accent */
   --turquoise: #007a86;   /* cool teal    — research accent */
+  --indigo:    #4b5f9e;   /* muted blue   — policy accent */
   --cherry:    #ba0c2f;   /* deep red     — footer heart icon via --unm-cherry */
   --unm-cherry: var(--cherry);
 
@@ -30,6 +31,8 @@
   --teach-mid:     rgba(192, 81, 49, 0.20);
   --research-soft: rgba(0, 122, 134, 0.07);
   --research-mid:  rgba(0, 122, 134, 0.20);
+  --policy-soft:   rgba(75, 95, 158, 0.07);
+  --policy-mid:    rgba(75, 95, 158, 0.20);
 
   /* ── Shadows ───────────────────────────────────────────────────────────── */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
