@@ -21,11 +21,10 @@ It's worth naming why that's hard. AI makes academic dishonesty easier and can q
 
 None of that is a reason to disengage — it's the reason engagement has to be deliberate. The difficulty of working through an argument, writing your way toward an idea, testing evidence, or confronting sources and data that resist easy interpretation: these are key learning moments.
 
-{% include typography/pullquote.html text="AI can make some work faster, but speed is not the same thing as learning." %}
+{% include typography/pullquote.html text="Engaging well doesn't mean using AI everywhere, or in every assignment. It means being deliberate about when it helps, saying so plainly when it's used, being crystal why it's not allowed, and building students' judgment. We think that's worth working out together, which is what this site is for." %}
 
 Students already sense this. Many use AI freely in courses outside their major and do the work themselves when it actually matters to them — they're just not always sure where that line is, or how to talk about it openly. The incentive structures of higher education make skipping the friction feel rational, which is exactly where guidance from faculty, librarians, instructional designers, and technologists matters.
 
-Engaging well doesn't mean using AI everywhere, or in every assignment. It means being deliberate about when it helps, saying so plainly when it's used, being crystal why it's not allowed, and building students' judgment. We think that's worth working out together, which is what this site is for.
 
 
 ## Collaborative Learning
