@@ -9,6 +9,7 @@ permalink: /tags/
 {% assign tag_pages = site.pages
   | where_exp: "item", "item.tags.size > 0"
   | where_exp: "item", "item.name != 'index.md'"
+  | where_exp: "item", "item.listed != false"
   | sort: "title" %}
 
 {% assign all_tags = "" | split: "" %}
@@ -21,7 +22,7 @@ permalink: /tags/
 
 # Sketchbook Tags
 
-A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, fabrication, archives, or source evaluation rather than whether a sketch started in teaching or research.
+A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, source fabrication, archives, or source evaluation rather than whether a sketch started in teaching or research.
 
 <span class="section-accent default"></span>
 

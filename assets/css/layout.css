@@ -15,6 +15,14 @@
   padding-top: 1.5rem;
 }
 
+.sketchbook-container--home {
+  grid-template-columns:
+    [full-start] minmax(2rem, 1fr)
+    [content-start] min(820px, 100% - 3rem)
+    [content-end] minmax(0.5rem, 1fr)
+    [full-end];
+}
+
 /* Constrain images inside content containers */
 .sketchbook-container img {
   max-width: 100%;
@@ -101,6 +109,10 @@ footer h5,
   color: var(--dark-gray);
 }
 
+.site-footer-sketchbook .footer-heart {
+  color: var(--unm-cherry);
+}
+
 .site-footer-sketchbook .footer-bottom-contact a {
   color: var(--mesa);
   text-decoration: none;
@@ -130,7 +142,8 @@ footer h5,
 
 /* Page title h1 — larger than the body h2 defined in typography.css */
 .sketchbook-page-header h1,
-.sketchbook-container > h1:first-child {
+.sketchbook-container > h1:first-child,
+.section-intro > h1:first-child {
   margin-top: 0;
   padding-top: 1.5rem;
   margin-bottom: 0.25rem;
@@ -143,8 +156,8 @@ footer h5,
   font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.65;
   color: var(--mid-gray);
-  max-width: 640px;
-  margin: 0.75rem 0 0;
+  max-width: 760px;
+  margin: 0.75rem 0 1.75rem;
 }
 
 .sketchbook-page-header.sketchbook-post p {
@@ -178,19 +191,56 @@ p:has(> .section-accent) {
 
 
 /* ─── Home page lede & pull quote ────────────────────────────────────────── */
-.sketchbook-lede {
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+.sketchbook-page-lede,
+.lede {
+  max-width: min(90%, 760px);
+  font-size: clamp(1.08rem, 2vw, 1.22rem);
   color: var(--mid-gray);
-  line-height: 1.65;
-  max-width: 680px;
-  margin: 0 0 1.5rem;
+  line-height: 1.6;
+  margin: 0 0 0.7rem;
+}
+
+.sketchbook-page-lede {
+  margin: 0.75rem 0 2.15rem;
+}
+
+.sketchbook-container > h1:first-child + .sketchbook-page-lede,
+.sketchbook-container > h1:first-child + .lede {
+  margin-top: 0.85rem;
+}
+
+.sketchbook-page-lede p,
+.sketchbook-lede {
+  font-size: clamp(1.08rem, 2vw, 1.22rem);
+  color: var(--mid-gray);
+  line-height: 1.6;
+  margin: 0 0 0.7rem;
+}
+
+.lede + .lede {
+  margin-top: -0.15rem;
+  margin-bottom: 2.15rem;
+}
+
+.sketchbook-page-lede p:last-child {
+  margin-bottom: 0;
+}
+
+.sketchbook-page-lede + p:has(> .section-accent) .section-accent,
+.lede + p:has(> .section-accent) .section-accent {
+  margin-top: 0;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto 2rem;
 }
 
 .sketchbook-pull {
   font-family: 'Caveat', cursive;
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.55rem);
   color: var(--dark-gray);
-  line-height: 1.25;
+  line-height: 1.18;
   padding: 1rem 1.5rem;
   margin: 2rem 0;
   border-left: 3px solid var(--terra);
@@ -213,14 +263,18 @@ p:has(> .section-accent) {
   justify-content: flex-end;
 }
 
-/* Post h2 is slightly larger than the global h2 in typography.css */
 .sketchbook-post h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   position: relative;
   padding-bottom: 0.45rem;
   scroll-margin-top: 5rem;
-  font-size: clamp(1.2rem, 2.5vw, 1.35rem);
+  font-size: clamp(2rem, 4vw, 2.55rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--black);
 }
 
 /* Fading underline beneath each section heading */
@@ -229,9 +283,9 @@ p:has(> .section-accent) {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: min(100%, 28rem);
   height: 1px;
-  background: linear-gradient(90deg, var(--dark-gray) 0%, transparent 80%);
+  background: linear-gradient(90deg, rgba(192, 81, 49, 0.42) 0%, transparent 82%);
 }
 
 .sketchbook-post ul {
@@ -241,4 +295,52 @@ p:has(> .section-accent) {
 .sketchbook-post li {
   margin-bottom: 0.5rem;
   line-height: 1.35;
+}
+
+
+/* ─── Feature row include ────────────────────────────────────────────────── */
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.feature-row-text {
+  flex: 1 1 auto;
+  max-width: 50%;
+  min-width: 0;
+}
+
+.feature-row-text--wide {
+  max-width: 60%;
+}
+
+.feature-row-text--narrow {
+  max-width: 40%;
+}
+
+.feature-row h5 {
+  margin-top: 0;
+}
+
+.feature-row p {
+  margin-bottom: 0;
+}
+
+.feature-row-action {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .feature-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .feature-row-text,
+  .feature-row-text--wide,
+  .feature-row-text--narrow {
+    max-width: none;
+  }
 }

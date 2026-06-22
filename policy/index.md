@@ -8,17 +8,18 @@ wide: true
 {% assign section_pages = site.pages
   | where_exp: "item", "item.dir == page.dir"
   | where_exp: "item", "item.name != 'index.md'"
+  | where_exp: "item", "item.listed != false"
   | sort: "card_order" %}
+
+<div class="section-intro" markdown="1">
 
 # Policy Sketches
 
 Syllabus language, assignment rules, and course-level frameworks for thinking through how AI belongs in learning.
 
-These are not model university policies, and they are not meant to settle the question of AI in higher education. They are decision tools: ways to name a course posture, clarify assignment expectations, and make local choices visible. The point is not to produce one rule for every class. The point is to help instructors, librarians, programs, departments, and other campus partners ask better questions about what AI is allowed to do, what students must still demonstrate, and where a policy might fail.
+These are not model university policies, and they are not meant to settle the question of AI in higher education. They are decision tools for making local choices visible: what AI is allowed to do, what students are being asked to demonstrate, and where a policy might fail.
 
-<span class="section-accent policy"></span>
-
-{% include typography/callout.html type="note" title="How to read these" text="Treat each policy sketch as a starting point. Some offer syllabus language, some offer assignment-level rules, and some offer a vocabulary for institutional conversation. Adapt the language to your course, your students, your campus rules, and the expertise of the people already working on AI literacy, research support, accessibility, academic integrity, and student success." %}
+{% include typography/callout.html type="note" title="How to read these" text="Treat each policy sketch as a starting point. Adapt the language to your course, your students, your campus rules, and the expertise of people already working on AI literacy, research support, accessibility, academic integrity, and student success." %}
 
 ## A Loose Map
 
@@ -29,8 +30,11 @@ The policy sketches mix levels on purpose:
 - **Process documentation** helps make student judgment visible without turning every case into a detection problem.
 - **Caveats and redo paths** help policies stay pedagogical rather than purely punitive.
 
-The sketches are written from classroom and humanities research contexts, but many are easier to use with partners. A citation exercise might become stronger with a librarian. A disclosure policy might benefit from a writing program or teaching center. A research workflow might need archival, metadata, accessibility, privacy, or social-scientific expertise.
+Many of these sketches may become more useful with partners. A disclosure policy might benefit from a writing program or teaching center; assignment rules might be stronger with library, accessibility, academic integrity, or disciplinary input.
+
+</div>
 
 {% include nav/sketchbook-card-list.html pages=section_pages %}
 
-[Browse all sketchbook tags →]({{site.baseurl}}/tags/)
+[Browse all sketchbook tags →]({{ '/tags/' | relative_url }}){: .tag-browse-button}
+{: .tag-browse-cta}

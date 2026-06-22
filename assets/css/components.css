@@ -2,7 +2,7 @@
 .sketch-info {
   display: grid;
   grid-template-columns: 6.5rem 1fr;
-  row-gap: 0.5rem;
+  row-gap: 0.65rem;
   column-gap: 1.25rem;
   padding: 1rem 1.25rem;
   margin: 0 0 2.25rem 0;
@@ -16,7 +16,7 @@
 
 .sketch-info dt {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--muted-gray);
@@ -27,10 +27,39 @@
 
 .sketch-info dd {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   color: var(--dark-gray);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.45;
+}
+
+.sketch-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sketch-info-list li {
+  position: relative;
+  margin: 0 0 0.32rem;
+  padding-left: 0.9rem;
+  line-height: 1.38;
+}
+
+.sketch-info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.sketch-info-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.45;
 }
 
 
@@ -38,9 +67,9 @@
 .pullquote {
   position: relative;
   font-family: 'IM Fell English', Georgia, serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.38rem, 2.8vw, 1.8rem);
   font-style: italic;
-  line-height: 1.55;
+  line-height: 1.48;
   color: var(--dark-gray);
   margin: 2.5rem 0;
   padding: 1.5rem 1.5rem 1rem;
@@ -184,12 +213,32 @@ pre.highlight {
 
 
 /* ─── Figures ────────────────────────────────────────────────────────────── */
+.figure-placeholder {
+  border: 2px dashed var(--rule-gray);
+  padding: 1.5rem;
+  color: var(--muted-gray);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.figure-sized {
+  width: min(var(--figure-width, 40%), 100%);
+}
+
+.figure-sized img {
+  width: 100%;
+  height: auto;
+}
+
 figure figcaption,
 figure figcaption p {
-  font-family: 'Caveat', cursive;
-  font-size: 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
   color: var(--muted-gray);
-  line-height: 1.4;
+  line-height: 1.45;
+  margin-top: 0.45rem;
 }
 
 figure.right {
@@ -208,4 +257,54 @@ figure.right img,
 figure.left img {
   border-radius: 10px;
   box-shadow: 3px 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.figure-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin: 1.5rem 0;
+}
+
+.figure-wrap--right {
+  flex-direction: row-reverse;
+}
+
+.figure-wrap__image {
+  flex: 0 1 var(--figure-wrap-image-width, 40%);
+  max-width: 100%;
+  margin: 0;
+}
+
+.figure-wrap__image img {
+  width: 100%;
+  height: auto;
+}
+
+.figure-wrap__text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  figure.right,
+  figure.left {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.25rem;
+  }
+
+  .figure-sized {
+    width: 100%;
+  }
+
+  .figure-wrap,
+  .figure-wrap--right {
+    flex-direction: column;
+  }
+
+  .figure-wrap__image {
+    flex-basis: auto;
+    width: 100%;
+  }
 }

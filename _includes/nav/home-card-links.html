@@ -1,0 +1,26 @@
+{% comment %}
+  Home Card Links
+
+  Usage:
+    {% include nav/home-card-links.html cards=page.home-cards %}
+
+  Parameters:
+    - cards: array with title, href, class, text, and link-text
+{% endcomment %}
+
+{% assign cards = include.cards %}
+
+{% if cards %}
+<div class="row mt-4 mb-4">
+  {% for card in cards %}
+  {% assign card_href = card.href | default: card.url | default: "#" %}
+  <div class="col-sm-12 mb-3">
+    <a href="{{ card_href | relative_url }}" class="sketchbook-nav-card {{ card.class }}">
+      <span class="card-eyebrow">{{ card.title }}</span>
+      <p>{{ card.text }}</p>
+      <span class="card-link">{{ card.link-text | default: "Explore" }} →</span>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

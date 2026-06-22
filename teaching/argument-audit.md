@@ -27,7 +27,7 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Students often treat critique as something that happens after a draft is mostly finished — a late-stage polish rather than a genuine test of an idea. This exercise moves critique earlier. The AI becomes a machine for producing objections on demand, and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
+Students often treat critique as something that happens after a draft is mostly finished: a late-stage polish rather than a genuine test of an idea. This exercise moves critique earlier. AI becomes a ready source of objections, and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
 
 {% include typography/pullquote.html text="Vague objections often reveal vague writing. The point is not that AI is a brilliant critic. The point is that it forces students to consider alternate interpretations and clarify what exactly they are claiming." %}
 
@@ -60,9 +60,9 @@ A counterargument is only strong if it lands on the actual claim being made. Thi
 
 
 ## What to Watch For
-{% include typography/callout.html type="warning" text="The AI confidence can encourage students to put too much weight on counterarguments" %}
+{% include typography/callout.html type="warning" text="AI's confidence can make even thin counterarguments feel weightier than they are." %}
 
-- Students can feel that AI knows more than they  do (which is true in terms of textual awareness), but they can underestimate their own ability to separate the wheat from the chaff. AI tends to generate objections that are thin, repetitive, or detached from the actual text, and students need to be primed to recognize this and categorize accordingly.
+- Students can feel that AI knows more than they do. In some ways it may notice more textual possibilities, but students can still underestimate their own ability to separate useful critique from filler. AI tends to generate objections that are thin, repetitive, or detached from the actual text, so it helps to model how to recognize and sort them.
 - Students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly.
 
 ## What I learned

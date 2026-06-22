@@ -17,7 +17,7 @@ If you've tried something with AI in a class or a research project — and you h
 
 ---
 
-## The control freak way: submit directly via GitHub
+## The hands-on way: submit directly via GitHub
 
 GitHub is a free platform for sharing code and making websites and that's what the sketchbook runs on. If you want to submit your sketch directly — and see it and shape it as a live webpage before it goes to us — here's how. Completely optional, but try it!
 
@@ -62,7 +62,7 @@ You now have a "local" copy of the repository, which is all files that make the 
 
 From your forked repository Code tab, press the **`.` (period) key** on your keyboard. This opens a full text editor in your browser — no software to install.
 
-It looks intimidating because there is a lot of potential features to use. But we just want a list of files on the left and our files to open on the right. The interface is simply a way of viewing and editing text files.
+It looks intimidating because there are a lot of possible features. For this, you only need the list of files on the left and the file editor on the right. The interface is simply a way of viewing and editing text files.
 
 ---
 
@@ -108,7 +108,7 @@ Change `section: teach` to `section: research` if it belongs in the research sec
 ---
 
 ## 5. Commit and Rebuild
-You work is basically saved as you work, but you need to tell GitHub to officially move your working files into your repository and rebuild your website.
+Your work is basically saved as you work, but you need to tell GitHub to officially move your working files into your repository and rebuild your website.
 
 - Click the branch icon in the left sidebar (it looks like a small network diagram). 
 - Type a short message describing your change — like "add citation-test sketch" — and click **Commit & Push**.

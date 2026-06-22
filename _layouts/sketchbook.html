@@ -34,17 +34,22 @@
     {% if page.wide %}
       <div class="{{ container_class }}">
         {{ content }}
+        {% include nav/sketch-pagination.html %}
       </div>
     {% elsif page.scrollspy %}
       <div class="{{ container_class }} sketchbook-container--scrollspy">
         <div class="scrollspy-wrapper">
-          <div class="scrollspy-content">{{ content }}</div>
+          <div class="scrollspy-content">
+            {{ content }}
+            {% include nav/sketch-pagination.html %}
+          </div>
           {% include nav/scrollspy.html %}
         </div>
       </div>
     {% else %}
       <div class="{{ container_class }} sketchbook-container--narrow">
         {{ content }}
+        {% include nav/sketch-pagination.html %}
       </div>
     {% endif %}
     {% include nav/search.html %}

@@ -1,6 +1,6 @@
 # AI Sketchbook
 
-A shared space for thinking out loud about AI in humanities teaching and research — not a guide, not a verdict, just colleagues comparing notes.
+A shared space for thinking out loud about AI in teaching, research, and academic practice — not a guide, not a verdict, just colleagues comparing notes.
 
 **[View the site](https://amaranth.unm.edu/ai-sketchbook/)**
 

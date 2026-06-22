@@ -13,7 +13,6 @@ tools:
 level: anyone
 tags:
   - philosophy
-  - remix
   - prompting
   - interpretation
 key-question: How can AI help translate ideas into contemporary culture?
@@ -34,15 +33,14 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Students take a canonical philosophical dialogue — most often the *Phaedrus* — and remix it using AI: translate it into a new form, audience, or style. The task sounds simple. In practice it becomes a compact laboratory for thinking about interpretation, authorship, and the limits of AI-assisted understanding.
+Students take a canonical philosophical dialogue — the *Phaedrus* — and remix it using AI: translate it into a new form, audience, or style. The task sounds simple. In practice it becomes a compact laboratory for thinking about interpretation, authorship, and the limits of AI-assisted understanding.
 
-{% include typography/pullquote.html text="Prompting is not merely a technical skill but a rhetorical one. It requires clarity about purpose, audience, and desired constraints — and students learn this by doing it badly first." %}
+{% include typography/pullquote.html text="Prompting is not merely a technical skill but a rhetorical one. It requires clarity about purpose, audience, and desired constraints, and students often learn this by making a gloriously messy first attempt." %}
 
 ## The Setup
+Students prompt, revise, and iterate, effectively co-authoring a transformation of the original text. This creates a layered interpretive process: they are not only interpreting Plato, but also interpreting how the AI mimics Plato.
 
-Students must prompt, revise, and iterate — effectively co-authoring a transformation of the original text. This creates a layered interpretive process: they are not only interpreting Plato, but also interpreting how the AI interprets Plato.
-
-The act of remixing makes visible the scaffolding of the original: voice, pacing, tension, and the gradual unfolding of ideas. Students routinely report that the assignment clarified the purpose of the dialogue format itself — why ideas are staged as exchanges rather than presented as arguments. By making the text strange, they see it more clearly.
+The act of remixing makes visible the scaffolding of the original: voice, pacing, tension, and the gradual unfolding of ideas. Students report that the assignment clarified the purpose of the dialogue format itself — why ideas are staged as exchanges rather than presented as arguments. By converting the text into modern language, they see key features more clearly.
 
 AI can remix surface features — tone, setting, genre — and sometimes in surprising ways. But it often struggles with deeper conceptual fidelity. It can "revise" the dialogue stylistically without preserving its philosophical stakes. That gap is the most productive part of the assignment.
 
@@ -60,15 +58,20 @@ AI can remix surface features — tone, setting, genre — and sometimes in surp
 
 
 ## Why It Works
-The assignment shifts attention from "what can AI do?" to "what does it mean to reinterpret a text through AI?" That is a different and more valuable question. Students who are experienced AI users sometimes find the tool use unremarkable — but even for them, the assignment functions as a conceptual exercise. Moving between academic and popular registers of the dialogue helps students see how meaning is reshaped by tone, genre, and audience.
+The assignment shifts attention from "what can AI do?" to "what does it mean to reinterpret a text through AI?" That is a different and more valuable question. Students who are experienced AI users may be less surprised at how well AI can do — but even for them, the assignment functions as a conceptual exercise. Moving between academic and popular registers of the dialogue helps students see how meaning is reshaped by tone, genre, and audience.
 
-When asked to describe the assignment, one AI offered this: students are renovating a building with an unpredictable contractor who sometimes misunderstands the blueprint.
+Student evaluations made clear that this was a favorite and surprising exercise for many students.
+
+When asked to describe the assignment, one AI agent offered this analogy: students are renovating a building with an unpredictable contractor who sometimes misunderstands the blueprint. Asking students to read through the creative dialogue from AI and assess the level of misunderstanding was playful, useful, and surprisingly clarifying.
 
 
 ## What to Watch For
-{% include typography/callout.html type="warning" text="Best positioned as a warm-up to deeper AI investigations" %}
+{% capture remix_warning %}
+Best positioned as a warm-up to explore creative AI use rather than a deep AI investigation. It works better when framed not as "can I get AI to do this" but "what are the key themes, and what happens when I try to modernize them?"
+{% endcapture %}
+
+{% include typography/callout.html type="warning" text=remix_warning %}
 
 - Works best as an early, low-stakes exercise that introduces AI mediation — not as a standalone deep dive. 
-- If students don't understand some nuance of the dialogue format, and therefore create vague prompts, the remix easily loses some of the edge that a dialogue brings.
-- If students aren't attune to the larger issues the original tries to make, the remix has nothing to push against.
-
+- If students miss the nuance of the dialogue format and create vague prompts, the remix can get convoluted quickly and lose some of the crispness that a dialogue should bring.
+- If students aren't attuned to the larger issues the original tries to raise, the remix has nothing to push against.

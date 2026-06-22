@@ -15,13 +15,15 @@
 {% endcomment %}
 
 {% capture card_image_url %}{% include images/image-path.html image-path=include.card.thumbnail page-dir=include.card.dir %}{% endcapture %}
-{% assign thumb_pos = include.card.thumbnail-position | default: 'center' %}
-{% assign thumb_zoom = include.card.thumbnail-zoom %}
+{% assign image_class = "card-image-media" %}
+{% if include.card.thumbnail-position == "10% 50%" %}
+  {% assign image_class = image_class | append: " card-image-media--left" %}
+{% endif %}
 
 <div class="{{ include.class }}">
   <img
     src="{{ card_image_url | strip }}"
     alt="{{ include.card.title | escape }}"
-    style="object-position: {{ thumb_pos }};{% if thumb_zoom %} transform: scale({{ thumb_zoom }}); transform-origin: {{ thumb_pos }};{% endif %}"
+    class="{{ image_class }}"
   >
 </div>

@@ -3,7 +3,8 @@ layout: sketchbook
 title: AI Use Notes
 activity: "A policy sketch for asking students to document AI use in a short reflective note rather than treating disclosure as a confession."
 summary: "A flexible disclosure model that scales from light-touch acknowledgment to substantive process reflection."
-thumbnail: "/assets/images/headers/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
+policy-aim: "Try a process-disclosure policy that asks students to explain how AI shaped their work and what judgment they exercised afterward."
+thumbnail: "/assets/images/policy/notebook-pencil.jpg"
 date: 2026-05-22
 status: rough
 type: policy sketch
@@ -13,7 +14,7 @@ tools:
 level: any
 tags:
   - policy language
-  - process
+  - process documentation
   - authorship
   - assessment
 key-question: "How can students disclose AI use in a way that supports learning?"
@@ -54,7 +55,7 @@ If AI meaningfully shaped your work, include an AI use note at the end of your s
 
 AI use notes can scale with the assignment.
 
-**Light disclosure:** name the tool and the purpose. Useful for low-stakes drafting or brainstorming.
+**Light disclosure:** name the tool, the purpose, and the basic prompt. Useful for low-stakes drafting or brainstorming.
 
 **Process disclosure:** explain how the tool shaped the work. Useful for essays, research projects, and revisions.
 
@@ -63,10 +64,9 @@ AI use notes can scale with the assignment.
 **Workflow disclosure:** document prompts, settings, model choices, and verification steps. Useful for research or digital projects where reproducibility matters.
 
 ## Why It Works
+This can turn disclosure into a working habit rather than a moment of confession. Students practice distinguishing between receiving help and outsourcing the assignment. They also practice the metacognitive work that AI can otherwise hide: why this suggestion, why this revision, why this source, why this claim?
 
-This policy move can turn disclosure into a learning habit. Students have to distinguish between receiving help and outsourcing the assignment. They also have to practice the metacognitive work that AI can otherwise hide: why this suggestion, why this revision, why this source, why this claim?
-
-For instructors, AI use notes create a response path that is less brittle than detection. The question becomes whether the process note gives enough evidence of judgment and learning.
+For instructors, AI use notes create a response path that is less brittle than detection. Instead of asking only whether a tool was used, the instructor can ask whether the process note offers evidence of judgment and learning.
 
 ## What to Watch For
 
@@ -74,6 +74,6 @@ For instructors, AI use notes create a response path that is less brittle than d
 
 Students may also write vague notes: "I used ChatGPT to help me." The note needs prompts that ask for actions: accepted, rejected, corrected, changed. Verbs matter here.
 
-## What I Would Do Differently
 
+## What I Would Do Differently
 I would show students two sample AI use notes: one too vague to be useful and one that actually explains process. I would also decide in advance whether the note is graded, checked for completion, or used only when questions arise. That choice changes how students understand the purpose of disclosure.

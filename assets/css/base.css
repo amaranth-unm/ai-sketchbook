@@ -8,6 +8,7 @@
 html, body {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-wrap {
@@ -49,6 +50,7 @@ body {
   background-attachment: fixed;
   color: var(--black);
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-wrap: break-word;
 }
 
 
@@ -73,10 +75,20 @@ body {
 .row  { display: flex; flex-wrap: wrap; }
 .g-0  { gap: 0; margin-left: 0; margin-right: 0; }
 
-/* Column widths — sm breakpoint (576px+) */
-.col-sm-4  { flex: 0 0 33.333%; max-width: 33.333%; }
-.col-sm-8  { flex: 0 0 66.667%; max-width: 66.667%; }
-.col-sm-12 { flex: 0 0 100%;    max-width: 100%; }
+/* Column widths — stacked by default, split at the sm breakpoint (576px+) */
+.col-sm-4,
+.col-sm-8,
+.col-sm-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 576px) {
+  .col-sm-4  { flex: 0 0 33.333%; max-width: 33.333%; }
+  .col-sm-8  { flex: 0 0 66.667%; max-width: 66.667%; }
+  .col-sm-12 { flex: 0 0 100%;    max-width: 100%; }
+}
 
 /* col-md-6: stacked on mobile, side-by-side at 768px+ */
 .col-md-6 { flex: 0 0 100%; max-width: 100%; }

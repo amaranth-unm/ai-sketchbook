@@ -1,6 +1,6 @@
 ---
 layout: sketchbook
-title: When AI Could Read What Archivists Couldn't
+title: Pipelines for Medieval Handwriting Recognition
 experiment: "To create an AI agent to work with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of medieval handwriting."
 thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 date: 2026-04-09
@@ -13,6 +13,7 @@ tools:
   - Open Claw
 level: researcher
 tags:
+  - archives
   - big data
   - paleography
   - agentic AI
@@ -27,15 +28,15 @@ what-i-learned:
 card_order: 10
 ---
 
-# When AI Could Read What Archivists Couldn't
+# When AI Could Help Read a Difficult Script
 
 <span class="section-accent research"></span>
 
 {% include typography/sketch-info.html %}
 
-I wanted to know if AI LLMs could translate a notoriously difficult medieval script (Gothic secretarial) from the late fourteenth century. The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) which contains over a million digitized images of archival documents — including much of the material in the Archive of the Crown of Aragon. These documents have been digitized but never transcribed at scale.
+I wanted to know if LLMs could read a notoriously difficult medieval script, late fourteenth-century Gothic secretarial hand. The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html), which contains over a million digitized images of archival documents, including much of the material in the Archive of the Crown of Aragon. These documents have been digitized but never transcribed at scale.
 
-{% include typography/pullquote.html text="Combining Gemini and Claude produces usable handwriting recognition for late fourteenth-century Gothic secretarial hand — something even specialized HTR platforms couldn't reliably achieve." %}
+{% include typography/pullquote.html text="Combining Gemini and Claude produced usable handwriting recognition for late fourteenth-century Gothic secretarial hand, at a scale that specialized HTR platforms had not handled reliably in this case." %}
 
 ## The Workflow
 
@@ -59,9 +60,9 @@ By March, I was using agentic AI — specifically Open Claw — to obtain usable
 
 ## Results
 
-This pipeline worked successfully and using two different models to hone accuracy of transcriptions and create and audit trail greatly improved my confidence in the transcriptions. It also made clear the kinds of errors that routinely surfaced and exposed some of the contours of the "jagged frontier".
+This pipeline worked, and using two different models to improve transcription accuracy and create an audit trail gave me much more confidence in the results. It also made the recurring errors easier to see.
 
-With this workflow I was able to analyze image archives at scale, and the pipelinwe could be applied to any collection of historical images.
+With this workflow, I was able to analyze image archives at scale. The same pipeline could be applied to other collections of historical images.
 
 It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. 
 
@@ -72,4 +73,4 @@ The resulting text enables discovery through full-text search but is not reliabl
 
 {% include typography/callout.html type="note" text="It is possible to use agentic AI to generate big data from handwritten documents previously unavailable for automated text recognition." %}
 
-This opens the possibility for full-text keyword search for names and toponyms across entire registers. It is effective to leverage multiple LLMs to check and correct each other's work. Even though the transcriptions and translations were far from perfect, I was surprised at how well the LLMs transcribed the script and expanded abbreviations.
+This opens the possibility of full-text keyword search for names and toponyms across entire registers. It is useful to have multiple LLMs check and correct each other's work. Even though the transcriptions and translations were far from perfect, I was surprised at how well the LLMs transcribed the script and expanded abbreviations.

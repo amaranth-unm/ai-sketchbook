@@ -2,18 +2,17 @@
 layout: sketchbook
 title: What Does Cilantro Taste Like?
 description: "Students compare how small and large language models answer the same question, then experiment with model settings to see how parameters shape output."
-summary: "A hands-on demo using AI Playground to show how model size and settings change what AI says — using one simple, relatable question."
+summary: "A hands-on demo to show how model size and settings change what AI says — using one simple, relatable question."
 thumbnail: "images/960px-_Coriander_.jpg"
 date: 2026-03-01
 status: rough
 type: activity
-effort: "20–30 min in class"
+effort: "20 min in class"
 tools:
   - Allen AI Playground
 level: any
 tags:
-  - model comparison
-  - parameters
+  - model behavior
   - AI literacy
 key-question: "How to introduce students to the basics of AI output differences?"
 what-students-learn:
@@ -62,12 +61,12 @@ With the large model selected, experiment with the available parameters:
 
 ## Why It Works
 
-Cilantro is an ideal demo question because it has a concrete, sensory answer students can verify from their own experience — and because the soap-taste detail is a meaningful test of whether a model has encountered real knowledge about the world, or just plausible-sounding filler. The genetic variation angle also opens a brief but productive conversation about what "training data" actually means: the model knows about cilantro-as-soap because enough people wrote about it.
+Cilantro is an ideal demo question because it has a concrete, sensory answer students can verify from their own experience — and because the soap-taste detail is a meaningful test of whether a model has encountered real knowledge about the world, or just plausible-sounding filler. The genetic variation angle also opens a brief but productive conversation about what "training data" actually means: the model knows about cilantro-as-soap because enough people wrote about it and it "knew" enough to not filter it out.
 
 The parameter demo grounds abstract concepts — temperature, tokens, sampling — in something students can observe in real time rather than read about in a textbook. Most students arrive thinking AI is a single, fixed thing. This activity gives them a concrete counter-example in under 30 minutes.
 
 ## What to Watch For
 
-{% include typography/callout.html type="warning" text="The specific models available on the Allen AI Playground change over time — the contrast between small and large models is the point, not any particular model name. If the playground changes its interface or model lineup, the activity still works; just find the smallest and largest options available." %}
+{% include typography/callout.html type="warning" text="The specific models available on the Allen AI Playground change over time — the contrast between small and large models is the point, not any particular model's result. If the playground changes its interface or model lineup, the activity still works; just find the smallest and largest options available." %}
 
-The activity works best when students generate responses on their own devices so they can see variation across the class — even the same prompt to the same model will produce slightly different output each time, which is itself worth discussing.
+The activity works best when students generate their own responses so they can see variation across the class — even the same prompt to the same model will produce slightly different output each time, which is itself worth discussing. Everyone generalizes about "AI output," which makes sense, but students benefit from seeing how much variation lives inside that phrase.

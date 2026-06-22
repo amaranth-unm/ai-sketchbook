@@ -1,38 +1,39 @@
 ---
 layout: sketchbook
 title: About
-description: "What the AI Sketchbook is, why it exists, and why humanists are well-positioned to engage with AI."
+description: "Why higher ed needs to engage with AI now, and how this site supports cross-disciplinary conversations about doing it well."
 ---
 
 # About
 
+Our students are going to be expected to use AI — in their majors, their jobs, their civic lives — whether or not any of us teach them how. That makes engaging with AI in higher ed less a trend to chase or resist, and more a responsibility: we owe students the judgment to know when AI helps, when it doesn't, and how to be honest about which is which.
+{: .lede}
+
+The AI Sketchbook is where faculty, librarians, technologists, and students compare notes on what that looks like in practice — a working record of what's been tried, what's worked, what hasn't, and what's still unresolved.
+{: .lede}
+
 <span class="section-accent default"></span>
 
-The AI Sketchbook is a collection of teaching experiments, research workflows, and policy sketches — accounts of what happened when people actually tried using AI in humanities classrooms and projects, alongside language for thinking through what AI should and should not do in coursework. Not best practices, not final answers, just a working record of what's been tested, what's been learned, and what's still uncertain.
-
-It is also deliberately partial. Libraries, teaching and learning centers, academic technology units, writing programs, social scientists, computer scientists, professional schools, student support offices, and students themselves all bring expertise the humanities do not replace. The sketchbook starts from one vantage point, but the work of shaping AI practice on campus has to be collaborative.
-
-
-## Why humanists are well-positioned
-The fundamental debates surrounding AI — authorship, bias, authority, expertise, and trust — are longstanding humanistic questions. Humanists have spent decades examining what makes sources reliable, who gets to count as an authority, how power shapes what gets preserved and what gets forgotten.
-
-These are not peripheral concerns. They are central to whether AI is used well or badly. The skills developed through humanistic training — evaluating sources, recognizing bias, attending to what's missing from an account — are exactly what make AI use meaningful rather than mechanical.
-
-The values and norms around AI are still being formed. Humanists who engage critically can help shape those norms in their classrooms, their institutions, and their fields. They should not have to do that alone, and they should not pretend to.
-
-
 ## Why engage with AI
-And yet, college instructors are right to be skeptical. AI makes academic dishonesty frictionless and nearly undetectable, and complicates formative assessment, the low-stakes exercises and reflective drafts that help students locate their own confusion, because an LLM can complete them in seconds without any learning occurring. Writing assignments honed over years of iteration become untenable overnight. Yet when faculty are pressured to teach students "how to use AI effectively" — rarely engages with any of this honestly.
+The question isn't whether students will use AI. It's whether they'll learn to use it with judgment — knowing when to reach for it, when to set it aside, and how to say plainly what they did. That's not a skill students pick up on their own; it's one we have to teach, the same way we teach foundational knowledge, source evaluation or research methodology.
 
-The epistemic problems run just as deep. AI fabricates sources with unearned confidence. It reflects the biases of its training data — disproportionately English-language, Western, recent, and already digitized. It produces authoritative, well-structured prose that can be subtly or badly wrong. And it flattens precisely the kind of complexity and ambiguity that makes humanistic inquiry worth doing. These aren't edge cases. They're structural features of how these systems work.
+It's worth naming why that's hard. AI makes academic dishonesty easier and can quietly hollow out the low-stakes, formative work — reflective drafts, early problem sets — that helps students find their own confusion. It fabricates sources with unearned confidence, reflects the biases of training data that is disproportionately English-language, Western, recent, and already digitized, and produces fluent, well-structured prose that can be subtly or badly wrong.
 
-So why engage at all?
+None of that is a reason to disengage — it's the reason engagement has to be deliberate. The difficulty of working through an argument, writing your way toward an idea, testing evidence, or confronting sources and data that resist easy interpretation: these are key learning moments.
 
-Because the friction matters — and humanists are unusually equipped to say why. The difficulty of working through an argument, of writing your way toward an idea, of confronting sources that resist easy interpretation---these are the key learning moments that students must recognize they should embrace. 
+{% include typography/pullquote.html text="AI can make some work faster, but speed is not the same thing as learning." %}
 
-Students who use AI to complete coursework largely understand this. They use it for courses outside their major and do the work themselves when it actually matters to them. The problem is not that they are not always clear about what they might be missing and why the friction matters. The incentive structures of higher education make skipping the friction feel rational.
+Students already sense this. Many use AI freely in courses outside their major and do the work themselves when it actually matters to them — they're just not always sure where that line is, or how to talk about it openly. The incentive structures of higher education make skipping the friction feel rational, which is exactly where guidance from faculty, librarians, instructional designers, and technologists matters.
 
-Humanists who engage critically with these tools help shape what "use AI" actually means in practice — in their departments, their disciplines, and their classrooms. That work is strongest when it sits alongside the expertise of librarians, instructional designers, technologists, social scientists, writing teachers, and students.
+Engaging well doesn't mean using AI everywhere, or in every assignment. It means being deliberate about when it helps, saying so plainly when it's used, being crystal why it's not allowed, and building students' judgment. We think that's worth working out together, which is what this site is for.
+
+
+## Collaborative Learning
+No single discipline owns these questions. Humanists have long studied interpretation and authorship. Librarians bring deep expertise in information literacy, metadata, access, and source evaluation. Social scientists bring methods for studying data, behavior, and inequality. Technologists understand systems and infrastructure and access issues. STEM faculty and students run into still other parts of the problem, in labs and problem sets where AI raises its own questions about process and rigor.
+
+{% include typography/callout.html type="note" title="One vantage point, many partners" text="The sketchbook does not claim AI as the territory of any one field or office. It offers concrete examples that can travel across units, disciplines, and conversations." %}
+
+These are not peripheral concerns. They are central to the future of AI use, which will be in the hands of our students. The skills that make AI use meaningful rather than mechanical — evaluating sources, recognizing bias, attending to what's missing, understanding method, documenting process, judging consequences — are distributed across the university. That's the case for sharing what we learn instead of each of us working it out alone.
 
 
 ## What this site is
@@ -46,32 +47,27 @@ The sketches here are experiments. Some have been run more than others.
 
 Everything is tagged by status — rough, tested, or refined — so you can tell what's been tried once versus what's been iterated and classroom-tested.
 
+{% include typography/callout.html type="tip" title="Read for adaptation" text="The sketches are meant to be useful even as works-in-progress. The caveats, failures, and local constraints are often the most transferable parts." %}
+
 
 ## What makes a sketch
 
-Each sketch documents a specific experiment, framework, or policy move — a single assignment, a research workflow, a tool used for a defined purpose, or a piece of language that helps clarify expectations. They share enough structure to make them easy to evaluate and adapt, but they are not meant to be formulaic.
+Each sketch documents a specific experiment, framework, or policy idea: a single assignment, a research workflow, a tool used for a defined purpose, or a piece of language that helps clarify expectations. They share enough structure to make them easy to evaluate and adapt, but they are not meant to be formulaic.
 
-At the top of every sketch, a quick-reference block surfaces four things:
+They are not refined advice or best practices, although some may become so over time. Any ideas that you think are worth trying can probably help someone else.
 
-**Teaches** identifies the conceptual questions or intellectual habits the sketch puts into practice — what students encounter as a problem of interpretation, evidence, authorship, or argument.
-
-**You gain** describes the practical skills acquired through the exercise — the concrete things a student or researcher walks away able to do. These often map onto transferable AI literacies: writing effective prompts, critically evaluating AI-generated output, using tools to process or visualize a body of material.
-
-**You'll need** lists the specific AI tools the sketch relies on, so you can verify access before committing to an assignment or workflow.
-
-**Format** captures how long the sketch takes and what course level it's suited for. An exercise designed for a graduate seminar may not transfer cleanly to a lower-division survey, and vice versa.
-
-Every sketch also carries a **status** tag — *rough*, *tested*, or *refined* — indicating how much iteration it has been through. Read the status before you adapt. The most useful part of any sketch is usually the caveats section. That is where the experiment, framework, or policy language gets interesting.
 
 
 ## Contribute a sketch
 
-If you've tried something with AI in a class or research project — and you have something honest to say about how it went — we want to hear about it. Rough accounts and failed experiments are exactly what this site is for.
+We owe it to our students to figure this out, and that's a lot easier together, from various vantage points, than alone. If you've tried something with AI in a class or research project — and you have something honest to say about how it went — we want to hear about it. Rough accounts and failed experiments are exactly what this site is for.
 
 The easiest way to start: [email us a draft](mailto:amaranth@unm.edu). A few paragraphs describing what you tried and what happened is enough. We can help shape it into a sketch.
 
-GitHub is entirely optional — most people just email. If you want to submit directly and own your sketch from the start, the [contribute page]({{ '/contribute' | relative_url }}) walks through that process too. Or drop by studio hours at Mesa Vista Hall 2068.
+If you want to submit directly and own your sketch from the start, the [contribute page]({{ '/contribute' | relative_url }}) walks through that process too. 
+
+Or drop by Amaranth studio hours at Mesa Vista Hall 2068.
 
 ---
 
-*The AI Sketchbook is a project of [Amaranth Digital Humanities Studio](https://github.com/amaranth-unm) at the University of New Mexico, built with the [Xanthan](https://github.com/xanthan-web/xanthan-web.github.io) open-source framework for academic Jekyll sites.*
+*The AI Sketchbook is a project of [Amaranth Digital Humanities Studio](https://github.com/amaranth-unm) at the University of New Mexico, built with the [Xanthan](https://xanthan-web.github.io) open-source framework for academic Jekyll sites.*

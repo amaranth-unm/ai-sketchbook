@@ -4,7 +4,7 @@
 # url:     your GitHub Pages root, e.g. https://username.github.io
 #          optional — only needed for canonical links and OG metadata
 title: AI Sketchbook
-description: "A working collection of ideas for using AI in humanities teaching and research. Rough, experimental, honest about what's been tested."
+description: "A working collection of ideas for using AI in teaching, research, and academic practice. Rough, experimental, honest about what's been tested."
 baseurl: /ai-sketchbook
 
 search: true

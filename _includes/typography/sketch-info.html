@@ -13,9 +13,19 @@
 {% endif %}
 
 <dl class="{{ sketch_info_class }}">
-  {% if page.experiment %}
-  <dt>Experiment</dt>
-  <dd>{{ page.experiment }}</dd>
+  {% if page.url contains '/policy/' %}
+    {% assign summary_label = 'Policy aim' %}
+    {% assign summary_text = page['policy-aim'] | default: page['basic-idea'] | default: page.activity | default: page.summary %}
+  {% elsif page.url contains '/research/' %}
+    {% assign summary_label = 'Experiment' %}
+    {% assign summary_text = page.experiment | default: page['basic-idea'] | default: page.summary %}
+  {% else %}
+    {% assign summary_label = 'Basic idea' %}
+    {% assign summary_text = page['basic-idea'] | default: page.activity | default: page.summary %}
+  {% endif %}
+  {% if summary_text %}
+  <dt>{{ summary_label }}</dt>
+  <dd>{{ summary_text }}</dd>
   {% endif %}
   {% if page['what-i-learned'] %}
   <dt>What I learned</dt>
@@ -23,7 +33,13 @@
   {% endif %}
   {% if page['what-students-learn'] %}
   <dt>What students learn</dt>
-  <dd>{% for item in page['what-students-learn'] %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
+  <dd>
+    <ul class="sketch-info-list">
+      {% for item in page['what-students-learn'] %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </dd>
   {% endif %}
   {% if page.demonstrates %}
   <dt>Demonstrates</dt>
@@ -37,8 +53,8 @@
   <dt>You'll need</dt>
   <dd>{% for item in page.tools %}{{ item }}{% unless forloop.last %}, {% endunless %}{% endfor %}</dd>
   {% endif %}
-  {% if page.effort or page.level %}
+  {% if page.effort %}
   <dt>Format</dt>
-  <dd>{% if page.effort %}{{ page.effort }}{% endif %}{% if page.effort and page.level %} · {% endif %}{% if page.level %}{{ page.level }}{% endif %}</dd>
+  <dd>{{ page.effort }}</dd>
   {% endif %}
 </dl>
