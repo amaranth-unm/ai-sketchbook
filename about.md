@@ -30,9 +30,9 @@ Students already sense this. Many use AI freely in courses outside their major a
 ## Collaborative Learning
 No single discipline owns these questions. Humanists have long studied interpretation and authorship. Librarians bring deep expertise in information literacy, metadata, access, and source evaluation. Social scientists bring methods for studying data, behavior, and inequality. Technologists understand systems and infrastructure and access issues. STEM faculty and students run into still other parts of the problem, in labs and problem sets where AI raises its own questions about process and rigor.
 
-{% include typography/callout.html type="note" title="One vantage point, many partners" text="The sketchbook does not claim AI as the territory of any one field or office. It offers concrete examples that can travel across units, disciplines, and conversations." %}
-
 These are not peripheral concerns. They are central to the future of AI use, which will be in the hands of our students. The skills that make AI use meaningful rather than mechanical — evaluating sources, recognizing bias, attending to what's missing, understanding method, documenting process, judging consequences — are distributed across the university. That's the case for sharing what we learn instead of each of us working it out alone.
+
+{% include typography/callout.html type="note" title="Many perspectives, many partners" text="The sketchbook does not claim AI as the territory of any one field or office. It offers concrete examples that can travel across units, disciplines, and conversations. We hope to faciliate a broad community of practice" %}
 
 
 ## What this site is
