@@ -45,8 +45,10 @@ AI does not belong to any one campus unit or discipline. Libraries, teaching cen
 [Browse all sketchbook tags →]({{ '/tags/' | relative_url }}){: .tag-browse-button}
 {: .tag-browse-cta}
 
-## Add a sketch!
+## Share your wisdom!
 
-Tried something with AI? Hit a wall? Learned something you didn't expect? A few paragraphs is enough to start — [send us a draft](mailto:amaranth@unm.edu). We'd love to chat about it and give you all the credit.
+Tried something with AI? Hit a wall and broke through? Learned something you didn't expect? Found something you'll never do again? 
 
-Do you already have a complete sketch in mind? — [email us a draft](mailto:amaranth@unm.edu) and we can work it up into a web page for you. If you want to submit directly and own your sketch from the start, the [contribute page](contribute) walks through that too.
+We hope you'll share your experience! If you have an idea, [email us your thoughts](mailto:amaranth@unm.edu) and we'll help start getting it in sketch form.  
+
+If you want to submit a sketch directly--great! The [contribute page](contribute) walks through the details--and they sound more complicated than they actually are. Try it!
