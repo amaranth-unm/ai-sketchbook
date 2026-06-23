@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Argument Audit
-activity: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or genuinely persuasive."
+summary: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or genuinely persuasive."
 thumbnail: "images/960px-Puzzle_Krypt-2.jpg"
 date: 2026-04-09
 status: rough
@@ -23,7 +23,7 @@ card_order: 10
 
 # Argument Audit
 
-<span class="section-accent teach"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
@@ -51,7 +51,10 @@ Students carry this work into their final revision, leading to sharper prose and
 Here is my argument: [paste your thesis paragraph or interpretive claim]. Generate the three strongest objections you can imagine to this argument. For each objection, be as specific as possible — refer to the actual claims I'm making, the evidence I'm relying on, or the logical moves I'm asking the reader to accept.
 {% endcapture %}
 
-{% include typography/callout.html type="prompt" title="Prompt" text=audit_prompt %}
+{% include typography/callout.html type="prompt" 
+title="Prompt" 
+text=audit_prompt 
+%}
 
 
 

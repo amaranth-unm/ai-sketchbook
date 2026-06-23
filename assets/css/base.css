@@ -57,7 +57,7 @@ body {
 /* ─── Bootstrap-free shim ────────────────────────────────────────────────── */
 /*
  * Minimal replacements for the Bootstrap classes used in this site's
- * templates (card-list.html, nav-top-sketchbook.html, index.md).
+ * templates (card-list.html, nav-top.html, index.md).
  * No other Bootstrap CSS or JS is loaded.
  */
 

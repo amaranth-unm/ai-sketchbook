@@ -25,7 +25,7 @@ card_order: 5
 
 # What Does Cilantro Taste Like?
 
-<span class="section-accent teach"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
@@ -52,12 +52,7 @@ With the large model selected, experiment with the available parameters:
 
 ## The Prompt
 
-{::nomarkdown}
-<div class="sketch-prompt">
-  <span class="sketch-prompt-label">prompt</span>
-  What does cilantro taste like?
-</div>
-{:/nomarkdown}
+{% include typography/sketch-prompt.html text="What does cilantro taste like?" %}
 
 ## Why It Works
 

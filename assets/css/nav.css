@@ -1,6 +1,6 @@
 /* ─── Navbar ──────────────────────────────────────────────────────────────── */
 .navbar {
-  background-color: var(--terra) !important;
+  background-color: var(--terra);
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   box-shadow: none;
 }
@@ -18,7 +18,7 @@
 }
 
 .navbar-brand {
-  color: var(--white) !important;
+  color: var(--white);
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
@@ -29,7 +29,13 @@
 }
 
 .navbar-brand:hover {
-  color: var(--sunset) !important;
+  color: var(--sunset);
+}
+
+.navbar-collapse {
+  display: flex;
+  margin-left: auto;
+  min-width: 0;
 }
 
 .navbar-nav {
@@ -41,21 +47,53 @@
   gap: 0.1rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 0 auto;
+  margin: 0;
   min-width: 0;
 }
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  display: block;
+  width: 1.4rem;
+  height: 2px;
+  background: var(--white);
+  border-radius: 1px;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.4rem;
+  height: 2px;
+  background: var(--white);
+  border-radius: 1px;
+}
+
+.navbar-toggler-icon::before { top: -6px; }
+.navbar-toggler-icon::after { top: 6px; }
 
 /* Override typography.css link styles inside the navbar */
 .navbar a,
 .navbar a:hover,
 .navbar a:focus,
 .navbar a:visited {
-  text-decoration: none !important;
-  border-bottom: none !important;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
@@ -66,7 +104,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--sunset) !important;
+  color: var(--sunset);
 }
 
 button.nav-link {
@@ -138,45 +176,10 @@ button.nav-link {
 
 /* ─── Scrollspy ──────────────────────────────────────────────────────────── */
 
-.scrollspy-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: start;
-}
-
-/* Two-column layout at medium screens: content + nav side by side */
-@media (min-width: 60rem) {
-  .scrollspy-wrapper {
-    grid-template-columns: 1fr 11rem;
-    column-gap: 3rem;
-  }
-}
-
-/* Wider nav column at large screens to reduce label truncation */
-@media (min-width: 80rem) {
-  .scrollspy-wrapper {
-    grid-template-columns: 1fr 14rem;
-  }
-  .scrollspy-label {
-    max-width: 12rem;
-  }
-}
-
-.scrollspy-content {
-  min-width: 0;
-}
-
+/* Hidden below 60rem; the breakpoint overrides live in the Responsive
+   section at the bottom of this file. */
 .scrollspy {
   display: none;
-}
-
-@media (min-width: 60rem) {
-  .scrollspy {
-    display: block;
-    position: sticky;
-    top: 5rem;
-    align-self: start;
-  }
 }
 
 .scrollspy-list {
@@ -205,8 +208,8 @@ button.nav-link {
   align-items: center;
   gap: 0.5rem;
   justify-content: flex-end;
-  text-decoration: none !important;
-  border-bottom: none !important;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .scrollspy-label {
@@ -256,24 +259,64 @@ button.nav-link {
 @media (max-width: 768px) {
   .navbar-sketchbook .container-fluid {
     min-height: auto;
-    gap: 0.8rem;
-    padding-top: 0.9rem;
-    padding-bottom: 0.9rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
   }
 
   .navbar-nav {
-    flex: 1 1 100%;
-    justify-content: flex-start;
-    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0.6rem;
+    gap: 0.2rem;
   }
 
   .nav-item-search {
+    width: 100%;
     margin-left: 0;
     padding-left: 0;
     border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 0.4rem;
+    margin-top: 0.2rem;
   }
 
   .breadcrumb-nav-list-item {
     font-size: 0.72rem;
+  }
+}
+
+/* The scrollspy nav floats fixed to the viewport's top-right corner rather
+   than living in a layout column — it should stay put regardless of how
+   wide the centered content column is. */
+@media (min-width: 60rem) {
+  .scrollspy {
+    display: block;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+  }
+}
+
+/* Slightly wider scrollspy labels at large screens, since there's more margin to use */
+@media (min-width: 80rem) {
+  .scrollspy-label {
+    max-width: 12rem;
   }
 }

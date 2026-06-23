@@ -1,7 +1,7 @@
 {% comment %}
   Sketch info box — at-a-glance summary drawn from front matter.
   Place after <span class="section-accent"> and before the first paragraph.
-  Reads: page['what-students-learn'], page.skills, page.tools, page.effort, page.level
+  Reads: page.summary, page['what-i-learned'], page['what-students-learn'], page.results, page.skills, page.tools, page.effort
 {% endcomment %}
 
 {% if page.url contains '/teaching/' %}
@@ -15,21 +15,19 @@
 <dl class="{{ sketch_info_class }}">
   {% if page.url contains '/policy/' %}
     {% assign summary_label = 'Policy aim' %}
-    {% assign summary_text = page['policy-aim'] | default: page['basic-idea'] | default: page.activity | default: page.summary %}
   {% elsif page.url contains '/research/' %}
     {% assign summary_label = 'Experiment' %}
-    {% assign summary_text = page.experiment | default: page['basic-idea'] | default: page.summary %}
   {% else %}
     {% assign summary_label = 'Basic idea' %}
-    {% assign summary_text = page['basic-idea'] | default: page.activity | default: page.summary %}
   {% endif %}
+  {% assign summary_text = page.summary %}
   {% if summary_text %}
   <dt>{{ summary_label }}</dt>
   <dd>{{ summary_text }}</dd>
   {% endif %}
   {% if page['what-i-learned'] %}
   <dt>What I learned</dt>
-  <dd><ul class="sketch-card-skills">{% for item in page['what-i-learned'] %}<li>{{ item }}</li>{% endfor %}</ul></dd>
+  <dd><ul class="sketch-skills">{% for item in page['what-i-learned'] %}<li>{{ item }}</li>{% endfor %}</ul></dd>
   {% endif %}
   {% if page['what-students-learn'] %}
   <dt>What students learn</dt>
@@ -41,9 +39,9 @@
     </ul>
   </dd>
   {% endif %}
-  {% if page.demonstrates %}
+  {% if page.results %}
   <dt>Demonstrates</dt>
-  <dd>{% for item in page.demonstrates %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
+  <dd>{% for item in page.results %}{{ item }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd>
   {% endif %}
   {% if page.skills %}
   <dt>You gain</dt>

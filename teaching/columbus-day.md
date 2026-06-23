@@ -29,7 +29,7 @@ card_order: 20
 
 # Same Prompt, Different History
 
-<span class="section-accent teach"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

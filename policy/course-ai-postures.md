@@ -2,9 +2,8 @@
 layout: sketchbook
 title: Course AI Postures
 listed: false
-activity: "A framework for deciding whether a course treats AI as a forbidden shortcut, limited aid, routine tool, or object of study."
 summary: "A policy sketch for naming the overall stance a course takes toward AI before writing specific rules or assignment permissions."
-thumbnail: "/assets/images/policy/compass-card.jpg"
+thumbnail: "images/compass-card.jpg"
 date: 2026-05-22
 status: rough
 type: policy sketch
@@ -26,7 +25,7 @@ card_order: 30
 
 # Course AI Postures
 
-<span class="section-accent policy"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

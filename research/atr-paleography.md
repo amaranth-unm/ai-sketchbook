@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Pipelines for Medieval Handwriting Recognition
-experiment: "To create an AI agent to work with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of medieval handwriting."
+summary: "To create an AI agent to work with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of medieval handwriting."
 thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 date: 2026-04-09
 status: tested
@@ -30,7 +30,7 @@ card_order: 10
 
 # When AI Could Help Read a Difficult Script
 
-<span class="section-accent research"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

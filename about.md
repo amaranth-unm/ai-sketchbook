@@ -12,7 +12,7 @@ Our students are going to be expected to use AI — in their majors, their jobs,
 The AI Sketchbook is where faculty, librarians, technologists, and students compare notes on what that looks like in practice — a working record of what's been tried, what's worked, what hasn't, and what's still unresolved.
 {: .lede}
 
-<span class="section-accent default"></span>
+{% include typography/section-accent.html %}
 
 ## Why engage with AI
 The question isn't whether students will use AI. It's whether they'll learn to use it with judgment — knowing when to reach for it, when to set it aside, and how to say plainly what they did. That's not a skill students pick up on their own; it's one we have to teach, the same way we teach foundational knowledge, source evaluation or research methodology.
@@ -35,16 +35,15 @@ These are not peripheral concerns. They are central to the future of AI use, whi
 {% include typography/callout.html type="note" title="Many perspectives, many partners" text="The sketchbook does not claim AI as the territory of any one field or office. It offers concrete examples that can travel across units, disciplines, and conversations. We hope to faciliate a broad community of practice" %}
 
 
-## What this site is
-The sketches here are experiments. Some have been run more than others.
+## Three (for now) kinds of sketches
 
-**Teaching sketches** focus on assignments and classroom setups where AI becomes an object of critical inquiry — situations where using AI teaches students something about how knowledge gets made, evaluated, and trusted. The goal is never to outsource thinking. It's to make the thinking more visible.
+**Teaching sketches** focus on assignments and classroom setups where AI becomes an object of critical inquiry — situations where using AI teaches students something about how knowledge gets made, evaluated, and trusted. The goal is never to outsource thinking; it's to make the thinking more visible.
 
-**Policy sketches** offer adaptable language and decision tools for syllabi, assignments, programs, and departments. They are not model university policies. They are prompts for making local choices visible: what AI is allowed to do, what students must still demonstrate, and where a rule might fail. Many of these questions are natural places for collaboration with libraries, teaching centers, writing programs, academic technology, and other units with a stake in student learning.
+**Policy sketches** offer adaptable language and decision tools for syllabi, assignments, programs, and departments. They are not model university policies. They are prompts for making local choices visible: what AI is allowed to do, what students must still demonstrate, and help students make responsible AI choices. 
 
-**Research sketches** document workflows: what it actually took to bulk-process a set of archival documents, build a map from a folder of photographs, or generate a 3D model from a line drawing. They include what the tools got wrong and what it cost.
+**Research sketches** document workflow ideas: what it actually took to bulk-process a set of archival documents, build a map from a folder of photographs, or generate a 3D model from a line drawing. They try to provide a balance of limitations and possibilities
 
-Everything is tagged by status — rough, tested, or refined — so you can tell what's been tried once versus what's been iterated and classroom-tested.
+Sketches are tagged by status — rough, tested, or refined — so you can tell what's been tried once versus what's been iterated and classroom-tested.
 
 {% include typography/callout.html type="tip" title="Read for adaptation" text="The sketches are meant to be useful even as works-in-progress. The caveats, failures, and local constraints are often the most transferable parts." %}
 

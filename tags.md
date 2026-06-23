@@ -24,7 +24,7 @@ permalink: /tags/
 
 A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, source fabrication, archives, or source evaluation rather than whether a sketch started in teaching or research.
 
-<span class="section-accent default"></span>
+{% include typography/section-accent.html %}
 
 Below are the tags currently in use across sketchbook post pages. As the sketchbook grows, this should become a more useful way to move across related ideas.
 

@@ -1,0 +1,16 @@
+{% comment %}
+  Sketch prompt — short, single-line AI prompt shown in the handwritten-note style.
+  For longer or multi-part prompts, use typography/callout.html type="prompt" instead.
+
+  Usage:
+    {% include typography/sketch-prompt.html text="What does cilantro taste like?" %}
+    {% include typography/sketch-prompt.html label="prompt to give to Copilot" text="..." %}
+
+  Parameters:
+    text:  the prompt text (required)
+    label: small caps label above the prompt (default: "prompt")
+{% endcomment %}
+<div class="sketch-prompt">
+  <span class="sketch-prompt-label">{{ include.label | default: "prompt" }}</span>
+  {{ include.text }}
+</div>

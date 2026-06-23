@@ -1,10 +1,8 @@
 ---
 layout: sketchbook
 title: AI Integration Ladder
-activity: "A course policy framework that names different levels of AI use and attaches them directly to assignment-level permissions."
-summary: "A policy sketch for turning AI expectations into assignment labels rather than relying on a single yes/no course rule."
-policy-aim: "Try a course-wide vocabulary for AI use that becomes useful when each assignment names its level, boundaries, and evidence of learning."
-thumbnail: "/assets/images/policy/ladder-stile.jpg"
+summary: "Try a course-wide vocabulary for AI use that becomes useful when each assignment names its level, boundaries, and evidence of learning."
+thumbnail: "images/ladder-stile.jpg"
 date: 2026-05-22
 status: rough
 type: policy sketch
@@ -28,7 +26,7 @@ card_order: 20
 
 # AI Integration Ladder
 
-<span class="section-accent policy"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

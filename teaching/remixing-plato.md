@@ -1,7 +1,6 @@
 ---
 layout: sketchbook
 title: Remixing Plato
-activity: "Students remix a Platonic dialogue into modern garb using AI to investigate how conversations of authority evolve over time."
 summary: "Students translate, reshape, or re-perform a Platonic dialogue through AI — then analyze what changed and why."
 thumbnail: "images/960px-Plato's_Academy_mosaic_from_Pompeii.jpg"
 date: 2026-04-01
@@ -29,7 +28,7 @@ card_order: 10
 
 # Remixing Plato
 
-<span class="section-accent teach"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

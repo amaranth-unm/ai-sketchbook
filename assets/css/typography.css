@@ -23,16 +23,19 @@ li {
   color: var(--dark-gray);
 }
 
-a,
-a:visited {
+/* :where() zeroes out this rule's specificity, so any component class
+   elsewhere (.navbar-brand, .sketchbook-nav-card, .sketch-tag, etc.) wins
+   automatically — including against the :visited/:hover pseudo-classes
+   here, which would otherwise out-specify a lone class. This is what lets
+   those components override link styling without !important. */
+:where(a, a:visited) {
   color: var(--terra);
   text-underline-offset: 2px;
   text-decoration-color: rgba(192, 81, 49, 0.35);
   border-bottom: none;
 }
 
-a:hover,
-a:visited:hover {
+:where(a:hover, a:visited:hover) {
   color: var(--sunset);
   text-decoration-color: var(--sunset);
 }

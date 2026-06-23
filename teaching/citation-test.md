@@ -1,9 +1,8 @@
 ---
 layout: sketchbook
 title: Citation Test
-activity: "Students verify AI-generated citations one by one and turn fabricated sources into a lesson about evidence and authority."
-basic-idea: "Ask students to verify AI-generated citations so fabricated sources become a concrete lesson about evidence, authority, citation accuracy, and why LLMs can produce sources that sound real but do not exist."
-thumbnail: "/assets/images/headers/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
+summary: "Ask students to verify AI-generated citations so fabricated sources become a concrete lesson about evidence, authority, citation accuracy, and why LLMs can produce sources that sound real but do not exist."
+thumbnail: "images/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
 date: 2026-03-28
 status: refined
 type: activity
@@ -26,7 +25,7 @@ card_order: 20
 
 # Citation Test
 
-<span class="section-accent teach"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

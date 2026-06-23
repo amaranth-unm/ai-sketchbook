@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Photos to Map Pins
-experiment: "Create an interactive map with pins for hundreds of photos, using GPS metadata already embedded in your phone's images — in under an hour."
+summary: "Create an interactive map with pins for hundreds of photos, using GPS metadata already embedded in your phone's images — in under an hour."
 thumbnail: "images/marrakech-thumbnail.jpg"
 date: 2026-04-09
 status: tested
@@ -28,7 +28,7 @@ card_order: 20
 
 # Photos to Map Pins
 
-<span class="section-accent research"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
@@ -53,12 +53,7 @@ No manual data entry, no coordinate lookup, no figuring out how to copy and past
 
 ## The Prompt
 
-{::nomarkdown}
-<div class="sketch-prompt">
-  <span class="sketch-prompt-label">prompt to give to Copilot</span>
-  Please create a new YML file in the _data folder that lists each of the images in assets/images. The YML file should include geographic location extracted from the metadata of each image. Then edit map.html so that the map uses the newly created YML file. The overall goal is to have a pin on the map for each of the photos, and when a user clicks on the pin, the image appears.
-</div>
-{:/nomarkdown}
+{% include typography/sketch-prompt.html label="prompt to give to Copilot" text="Please create a new YML file in the _data folder that lists each of the images in assets/images. The YML file should include geographic location extracted from the metadata of each image. Then edit map.html so that the map uses the newly created YML file. The overall goal is to have a pin on the map for each of the photos, and when a user clicks on the pin, the image appears." %}
 
 
 ## Results

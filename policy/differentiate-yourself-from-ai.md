@@ -1,11 +1,10 @@
 ---
 layout: sketchbook
 title: Differentiate Yourself From AI
-summary: "A syllabus policy sketch that shifts attention from detecting AI use to asking whether student work goes beyond a generic AI response."
-policy-aim: "Try a stark course policy: if submitted work does not clearly distinguish the student from AI, the student may have to redo the assignment."
-thumbnail: "/assets/images/policy/fingerprint-whorl.jpg"
+summary: "Try a stark course policy: if submitted work does not clearly distinguish the student from AI, the student may have to redo the assignment."
+thumbnail: "images/fingerprint-whorl.jpg"
 date: 2026-05-22
-status: rough
+status: tested
 type: policy sketch
 effort: "syllabus language + assignment follow-through"
 tools:
@@ -26,7 +25,7 @@ card_order: 10
 
 # Differentiate Yourself From AI
 
-<span class="section-accent policy"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 

@@ -38,11 +38,13 @@
     [full-end];
 }
 
-/* Scrollspy — wider to accommodate the side nav column */
+/* Scrollspy — same reading width as --narrow; the side nav is fixed to the
+   viewport (see .scrollspy in nav.css), so the content column doesn't need
+   extra width reserved for it. */
 .sketchbook-container--scrollspy {
   grid-template-columns:
     [full-start] minmax(2rem, 1fr)
-    [content-start] min(66rem, 100% - 3rem)
+    [content-start] min(48rem, 100% - 3rem)
     [content-end] minmax(0.5rem, 1fr)
     [full-end];
 }
@@ -123,25 +125,8 @@ footer h5,
 }
 
 
-/* ─── Page header ─────────────────────────────────────────────────────────── */
-.sketchbook-page-header {
-  padding: 2.5rem 0 1.75rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid var(--rule-gray);
-}
-
-.sketchbook-page-header .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--muted-gray);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Page title h1 — larger than the body h2 defined in typography.css */
-.sketchbook-page-header h1,
+/* ─── Page title ──────────────────────────────────────────────────────────── */
+/* Larger than the body h2 defined in typography.css */
 .sketchbook-container > h1:first-child,
 .section-intro > h1:first-child {
   margin-top: 0;
@@ -151,21 +136,12 @@ footer h5,
   line-height: 1.15;
 }
 
-.sketchbook-page-header p,
 .sketchbook-container > h1:first-child + p {
   font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.65;
   color: var(--mid-gray);
   max-width: 760px;
   margin: 0.75rem 0 1.75rem;
-}
-
-.sketchbook-page-header.sketchbook-post p {
-  max-width: 760px;
-}
-
-.sketchbook-page-header.sketchbook-post {
-  padding-bottom: 3rem;
 }
 
 
@@ -190,47 +166,7 @@ p:has(> .section-accent) {
 .section-accent.default  { background: linear-gradient(90deg, var(--terra) 0%, var(--mesa) 40%, var(--sunset) 68%, transparent 100%); }
 
 
-/* ─── Home page lede & pull quote ────────────────────────────────────────── */
-.sketchbook-page-lede,
-.lede {
-  max-width: min(90%, 760px);
-  font-size: clamp(1.08rem, 2vw, 1.22rem);
-  color: var(--mid-gray);
-  line-height: 1.6;
-  margin: 0 0 0.7rem;
-}
-
-.sketchbook-page-lede {
-  margin: 0.75rem 0 2.15rem;
-}
-
-.sketchbook-container > h1:first-child + .sketchbook-page-lede,
-.sketchbook-container > h1:first-child + .lede {
-  margin-top: 0.85rem;
-}
-
-.sketchbook-page-lede p,
-.sketchbook-lede {
-  font-size: clamp(1.08rem, 2vw, 1.22rem);
-  color: var(--mid-gray);
-  line-height: 1.6;
-  margin: 0 0 0.7rem;
-}
-
-.lede + .lede {
-  margin-top: -0.15rem;
-  margin-bottom: 2.15rem;
-}
-
-.sketchbook-page-lede p:last-child {
-  margin-bottom: 0;
-}
-
-.sketchbook-page-lede + p:has(> .section-accent) .section-accent,
-.lede + p:has(> .section-accent) .section-accent {
-  margin-top: 0;
-}
-
+/* ─── Home page intro & pull quote ───────────────────────────────────────── */
 .section-intro {
   max-width: 760px;
   margin: 0 auto 2rem;
@@ -245,56 +181,6 @@ p:has(> .section-accent) {
   margin: 2rem 0;
   border-left: 3px solid var(--terra);
   width: 100%;
-}
-
-
-/* ─── Sketch post pages ───────────────────────────────────────────────────── */
-.sketchbook-post {
-  max-width: 860px;
-}
-
-.sketchbook-post-meta {
-  position: absolute;
-  bottom: 0.75rem;
-  right: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  justify-content: flex-end;
-}
-
-.sketchbook-post h2 {
-  font-family: 'Caveat', cursive;
-  font-weight: 600;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-  position: relative;
-  padding-bottom: 0.45rem;
-  scroll-margin-top: 5rem;
-  font-size: clamp(2rem, 4vw, 2.55rem);
-  line-height: 0.95;
-  letter-spacing: 0.01em;
-  color: var(--black);
-}
-
-/* Fading underline beneath each section heading */
-.sketchbook-post h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: min(100%, 28rem);
-  height: 1px;
-  background: linear-gradient(90deg, rgba(192, 81, 49, 0.42) 0%, transparent 82%);
-}
-
-.sketchbook-post ul {
-  padding-left: 1.2rem;
-}
-
-.sketchbook-post li {
-  margin-bottom: 0.5rem;
-  line-height: 1.35;
 }
 
 

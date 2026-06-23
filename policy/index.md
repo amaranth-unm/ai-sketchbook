@@ -21,17 +21,6 @@ These are not model university policies, and they are not meant to settle the qu
 
 {% include typography/callout.html type="note" title="How to read these" text="Treat each policy sketch as a starting point. Adapt the language to your course, your students, your campus rules, and the expertise of people already working on AI literacy, research support, accessibility, academic integrity, and student success." %}
 
-## A Loose Map
-
-The policy sketches mix levels on purpose:
-
-- **Course-level framing** helps instructors name the role AI plays across a semester.
-- **Assignment-level language** helps students know what is allowed for a particular task.
-- **Process documentation** helps make student judgment visible without turning every case into a detection problem.
-- **Caveats and redo paths** help policies stay pedagogical rather than purely punitive.
-
-Many of these sketches may become more useful with partners. A disclosure policy might benefit from a writing program or teaching center; assignment rules might be stronger with library, accessibility, academic integrity, or disciplinary input.
-
 </div>
 
 {% include nav/sketchbook-card-list.html pages=section_pages %}

@@ -69,43 +69,43 @@
     {% endif %}
       <div class="card-body">
           {% if item.tags %}
-          <p class="sketch-card-meta">
+          <p class="sketch-meta">
             {% for tag in item.tags limit: 3 %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}
           </p>
           {% endif %}
           <h3 class="card-title"><a class="card-main-link stretched-link" href="{{ card_href }}">{{ item.title }}</a></h3>
           {% if card_section == "research" %}
-            {% if item.experiment %}
-            <p class="sketch-card-section"><span class="sketch-card-label">Experiment</span>{{ item.experiment }}</p>
+            {% if item.summary %}
+            <p class="sketch-section"><span class="sketch-label">Experiment</span>{{ item.summary }}</p>
             {% endif %}
             {% if item.results %}
-            <span class="sketch-card-label">Results</span>
-            <ul class="sketch-card-skills sketch-card-skills--research">
+            <span class="sketch-label">Results</span>
+            <ul class="sketch-skills sketch-skills--research">
               {% for r in item.results %}<li>{{ r }}</li>{% endfor %}
             </ul>
             {% endif %}
           {% elsif card_section == "policy" %}
             {% assign key_q = item['key-question'] | default: card_summary %}
             {% if key_q %}
-            <p class="sketch-card-section"><span class="sketch-card-label">Key question</span>{{ key_q }}</p>
+            <p class="sketch-section"><span class="sketch-label">Key question</span>{{ key_q }}</p>
             {% endif %}
             {% if item['what-students-learn'] %}
-            <span class="sketch-card-label">What it clarifies</span>
-            <ul class="sketch-card-skills">
+            <span class="sketch-label">What it clarifies</span>
+            <ul class="sketch-skills">
               {% for learn in item['what-students-learn'] %}<li>{{ learn }}</li>{% endfor %}
             </ul>
             {% endif %}
           {% else %}
             {% assign key_q = item['key-question'] | default: card_summary %}
             {% if key_q %}
-            <p class="sketch-card-section"><span class="sketch-card-label">Key question</span>{{ key_q }}</p>
+            <p class="sketch-section"><span class="sketch-label">Key question</span>{{ key_q }}</p>
             {% endif %}
-            {% if item.activity %}
-            <p class="sketch-card-section"><span class="sketch-card-label">Activity</span>{{ item.activity }}</p>
+            {% if item.summary %}
+            <p class="sketch-section"><span class="sketch-label">Activity</span>{{ item.summary }}</p>
             {% endif %}
             {% if item['what-students-learn'] %}
-            <span class="sketch-card-label">What students learn</span>
-            <ul class="sketch-card-skills">
+            <span class="sketch-label">What students learn</span>
+            <ul class="sketch-skills">
               {% for learn in item['what-students-learn'] %}<li>{{ learn }}</li>{% endfor %}
             </ul>
             {% endif %}

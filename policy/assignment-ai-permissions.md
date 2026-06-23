@@ -2,9 +2,8 @@
 layout: sketchbook
 title: Assignment-Level AI Permissions
 listed: false
-activity: "A policy sketch for attaching a short AI permission statement to each assignment rather than relying only on the syllabus."
 summary: "A framework for making AI expectations concrete at the assignment level: what is allowed, what is not, and what evidence students are being asked to provide."
-thumbnail: "/assets/images/policy/traffic-light-sign.jpg"
+thumbnail: "images/traffic-light-sign.jpg"
 date: 2026-05-22
 status: rough
 type: policy sketch
@@ -27,7 +26,7 @@ card_order: 30
 
 # Assignment-Level AI Permissions
 
-<span class="section-accent policy"></span>
+{% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
