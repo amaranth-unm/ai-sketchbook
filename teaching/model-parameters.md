@@ -5,7 +5,7 @@ description: "Students compare how small and large language models answer the sa
 summary: "A hands-on demo to show how model size and settings change what AI says — using one simple, relatable question."
 thumbnail: "images/960px-_Coriander_.jpg"
 date: 2026-03-01
-status: rough
+status: lightly tested
 type: activity
 effort: "20 min in class"
 tools:

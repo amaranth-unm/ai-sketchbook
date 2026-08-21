@@ -1,79 +1,287 @@
-/* ─── Landing nav cards ───────────────────────────────────────────────────── */
-.sketchbook-nav-card {
+/* ─── Home section rail ───────────────────────────────────────────────────── */
+/*
+  Small section boxes that float into the upper right of the home page intro so
+  the intro text wraps around them. Rendered by nav/home-card-links.html.
+
+  The .home-intro wrapper matters: .container is a CSS grid (base.css) and grid
+  items ignore float, so the rail needs a plain block-flow parent to float in.
+*/
+.home-intro::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.home-sections {
+  float: right;
+  width: 15.5rem;
+  max-width: 42%;
+  margin: 0.4rem 0 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.home-section-box {
   display: block;
   background: var(--white);
   border: 1px solid var(--rule-gray);
+  border-top: 3px solid var(--rule-gray);
   border-radius: 2px;
-  padding: 1.75rem;
+  padding: 0.8rem 1rem 0.9rem;
   text-decoration: none;
   color: var(--black);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-.sketchbook-nav-card:hover {
+.home-section-box:hover {
   border-color: var(--dark-gray);
   box-shadow: var(--shadow-md);
+  background: var(--white);
   text-decoration: none;
   transform: none;
-  background: var(--white);
 }
 
-.sketchbook-nav-card.teach    { border-top: 3px solid var(--terra); }
-.sketchbook-nav-card.policy   { border-top: 3px solid var(--indigo); }
-.sketchbook-nav-card.research { border-top: 3px solid var(--turquoise); }
+.home-section-box::after { display: none; }
 
-.sketchbook-nav-card::after { display: none; }
+.home-section-box.teach    { border-top-color: var(--terra); }
+.home-section-box.policy   { border-top-color: var(--indigo); }
+.home-section-box.research { border-top-color: var(--turquoise); }
 
-.sketchbook-nav-card .card-eyebrow {
+.home-section-box__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.home-section-box__title {
   font-family: 'Caveat', cursive;
-  font-size: var(--caveat-display);
-  letter-spacing: 0.02em;
-  display: block;
-  margin-bottom: 0.4rem;
+  font-size: var(--caveat-label);
   line-height: 1;
+  letter-spacing: 0.02em;
   transform: rotate(-1deg);
   transform-origin: left center;
 }
 
-.sketchbook-nav-card.teach    .card-eyebrow { color: var(--terra); }
-.sketchbook-nav-card.policy   .card-eyebrow { color: var(--indigo); }
-.sketchbook-nav-card.research .card-eyebrow { color: var(--turquoise); }
+.home-section-box.teach    .home-section-box__title { color: var(--terra); }
+.home-section-box.policy   .home-section-box__title { color: var(--indigo); }
+.home-section-box.research .home-section-box__title { color: var(--turquoise); }
 
-.sketchbook-nav-card h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--black);
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
-}
-
-.sketchbook-nav-card p {
-  color: var(--mid-gray);
-  font-size: 0.95rem;
-  margin-bottom: 0;
-  line-height: 1.55;
-}
-
-.sketchbook-nav-card .card-link {
-  display: inline-block;
-  margin-top: 1rem;
+.home-section-box__count {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-size: 0.63rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: color 0.15s;
+  color: var(--muted-gray);
+  white-space: nowrap;
 }
 
-.sketchbook-nav-card.teach    .card-link { color: var(--terra); }
-.sketchbook-nav-card.policy   .card-link { color: var(--indigo); }
-.sketchbook-nav-card.research .card-link { color: var(--turquoise); }
+.home-section-box__text {
+  display: block;
+  color: var(--mid-gray);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
 
-.sketchbook-nav-card:hover .card-link { color: var(--sunset); }
+
+/* ─── Home featured sketch ────────────────────────────────────────────────── */
+/*
+  Compact bar showing one random sketch. Every pick is in the markup; only
+  .is-active is displayed. See nav/home-featured.html for the picker script.
+*/
+.home-featured {
+  clear: right;
+  margin: 0 0 0.5rem;
+}
+
+.home-featured__controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.6rem;
+}
+
+.home-featured__shuffle {
+  border: 1px solid var(--rule-gray);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--mid-gray);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem 0.35rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.home-featured__shuffle:hover,
+.home-featured__shuffle:focus {
+  border-color: var(--terra);
+  color: var(--terra);
+}
+
+.home-featured__pick { display: none; }
+
+.home-featured__pick.is-active {
+  display: flex;
+  align-items: stretch;
+  background: var(--bg-card);
+  border: 1px solid var(--rule-gray);
+  border-left: 3px solid var(--rule-gray);
+  border-radius: 2px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--black);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-featured__pick.teaching { border-left-color: var(--terra); }
+.home-featured__pick.research { border-left-color: var(--turquoise); }
+
+.home-featured__pick:hover {
+  border-color: var(--dark-gray);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.home-featured__pick::after { display: none; }
+
+/* The image is absolutely positioned so its intrinsic height never sets the
+   bar's height — the summary text does, and the thumb fills whatever it gets. */
+.home-featured__thumb {
+  position: relative;
+  flex: 0 0 9rem;
+  width: 9rem;
+  align-self: stretch;
+  overflow: hidden;
+  background: var(--light-gray);
+}
+
+/* Specificity note: layout.css sets `.sketchbook-container img { height: auto }`
+   and loads after this file, so this selector needs the extra class to win. */
+.home-featured__pick .home-featured__thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-featured__body {
+  display: block;
+  padding: 0.85rem 1.1rem 0.9rem;
+  min-width: 0;
+}
+
+.home-featured__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-featured__section { color: var(--muted-gray); }
+
+.home-featured__effort {
+  color: var(--muted-gray);
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
+.home-featured__effort::before {
+  content: "·";
+  margin-right: 0.5rem;
+}
+
+.home-featured__pick.teaching .home-featured__section { color: var(--terra); }
+.home-featured__pick.research .home-featured__section { color: var(--turquoise); }
+
+.home-featured__title {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+  transition: color 0.15s ease;
+}
+
+.home-featured__pick:hover .home-featured__title { color: var(--terra); }
+
+.home-featured__summary {
+  color: var(--mid-gray);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* .sketch-label carries a 1.1rem top margin for use inside sketch bodies —
+   too much air for this bar. */
+.home-featured__label {
+  margin-top: 0.75rem;
+  font-size: 0.68rem;
+}
+
+.home-featured__skills {
+  margin-bottom: 0;
+  gap: 0.2rem 0.9rem;
+}
+
+.home-featured__skills li {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--dark-gray);
+}
+
+.home-featured__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+}
+
+
+/* ─── Home tag cloud ──────────────────────────────────────────────────────── */
+.home-tag-cloud {
+  clear: right;
+  margin: 0 0 2.5rem;
+}
+
+.home-tag-cloud__list {
+  margin: 0.4rem 0 0;
+}
+
+.home-tag-cloud__all {
+  border-color: rgba(192, 81, 49, 0.55);
+  color: var(--terra);
+}
+
+
+@media (max-width: 640px) {
+  .home-sections {
+    float: none;
+    width: auto;
+    max-width: none;
+    margin: 1.25rem 0 1.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .home-section-box { flex: 1 1 12rem; }
+
+  .home-featured__thumb { display: none; }
+}
 
 .tag-browse-cta {
   display: flex;

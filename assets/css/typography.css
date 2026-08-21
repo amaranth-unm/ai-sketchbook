@@ -14,6 +14,26 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/*
+  Lead paragraph — the opening paragraph of a page, set slightly larger than
+  body copy. Two ways in:
+
+    1. Explicitly, with a kramdown IAL on the line right after the paragraph:
+         Some opening sentence.
+         {: .lede}
+
+    2. Automatically on sketch pages: the paragraph directly after the
+       sketch-info box is the sketch's opening line, so it gets the treatment
+       without contributors needing to remember the IAL.
+*/
+.lede,
+.sketch-info + p {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: var(--near-black);
+  margin-bottom: 1.4rem;
+}
+
 ul, ol {
   margin-bottom: 1.25rem;
   padding-left: 1.5rem;
@@ -24,7 +44,7 @@ li {
 }
 
 /* :where() zeroes out this rule's specificity, so any component class
-   elsewhere (.navbar-brand, .sketchbook-nav-card, .sketch-tag, etc.) wins
+   elsewhere (.navbar-brand, .home-section-box, .sketch-tag, etc.) wins
    automatically — including against the :visited/:hover pseudo-classes
    here, which would otherwise out-specify a lone class. This is what lets
    those components override link styling without !important. */

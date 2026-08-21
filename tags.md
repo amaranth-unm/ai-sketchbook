@@ -23,6 +23,7 @@ permalink: /tags/
 # Sketchbook Tags
 
 A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, source fabrication, archives, or source evaluation rather than whether a sketch started in teaching or research.
+{: .lede}
 
 {% include typography/section-accent.html %}
 

@@ -33,6 +33,7 @@ card_order: 30
 {% include typography/callout.html type="note" title="Folded into the ladder sketch" text="This sketch has been folded into the AI Integration Ladder. The assignment-level language here is most useful as the implementation layer of that framework rather than as a separate policy idea." %}
 
 Syllabus policies are broad by design. Assignments are where students actually decide what to do. A short AI permission statement on each assignment can prevent the common problem where students remember that "AI is allowed" but forget what kind of work the assignment is trying to assess.
+{: .lede}
 
 {% include typography/pullquote.html text="The syllabus sets the philosophy. The assignment tells students what that philosophy means this week." %}
 

@@ -172,7 +172,10 @@ p:has(> .section-accent) {
   margin: 0 auto 2rem;
 }
 
+/* clear: right keeps the home page pull quote clear of the floated
+   .home-sections rail when the intro text runs shorter than the boxes. */
 .sketchbook-pull {
+  clear: right;
   font-family: 'Caveat', cursive;
   font-size: clamp(1.85rem, 3.2vw, 2.55rem);
   color: var(--dark-gray);

@@ -1,0 +1,126 @@
+{% comment %}
+  Home Featured Sketch
+
+  A compact bar that opens the sketchbook to a random page. Every listed
+  teaching and research sketch is rendered into the deck; CSS shows one at a
+  time and the inline script below picks a different one on each visit, so the
+  bar stays useful without a build. With JS off, the first pick simply stands.
+
+  The heading belongs to the calling page (an `##` in index.md), not to this
+  include — the include renders only the deck and its shuffle control.
+
+  Usage:
+    {% include nav/home-featured.html %}
+
+  Parameters: none — the pool is drawn from site.pages.
+
+  Front matter each pick reads, all optional except title/summary:
+    summary, thumbnail, effort, tags,
+    what-students-learn (teaching) / results (research), with `skills` and
+    `what-i-learned` as fallbacks for either.
+{% endcomment %}
+
+{% comment %} Sections the bar draws from — add a folder here to include it. {% endcomment %}
+{% assign featured_sections = "/teaching/,/research/" | split: "," %}
+
+{% assign featured_pool = "" | split: "" %}
+{% for section_dir in featured_sections %}
+  {% assign section_picks = site.pages
+    | where: "dir", section_dir
+    | where_exp: "item", "item.name != 'index.md'"
+    | where_exp: "item", "item.listed != false"
+    | where_exp: "item", "item.summary" %}
+  {% assign featured_pool = featured_pool | concat: section_picks %}
+{% endfor %}
+{% assign featured_pool = featured_pool | sort: "title" %}
+
+{% if featured_pool.size > 0 %}
+<div class="home-featured">
+  <div class="home-featured__deck" id="home-featured-deck">
+    {% for item in featured_pool %}
+
+    {% if item.dir == '/research/' %}
+      {% assign item_section = 'research' %}
+      {% assign takeaways = item.results | default: item['what-i-learned'] | default: item.skills %}
+      {% assign takeaway_label = 'Demonstrates' %}
+    {% else %}
+      {% assign item_section = 'teaching' %}
+      {% assign takeaways = item['what-students-learn'] | default: item.skills %}
+      {% assign takeaway_label = 'What students learn' %}
+    {% endif %}
+
+    <a class="home-featured__pick {{ item_section }}{% if forloop.first %} is-active{% endif %}" href="{{ item.url | relative_url }}">
+      {% if item.thumbnail %}
+      {% capture featured_img %}{% include images/image-path.html image-path=item.thumbnail page-dir=item.dir %}{% endcapture %}
+      {%- comment -%}
+        lazy: every pick is in the markup but only the active one has a layout
+        box, so the browser downloads one thumbnail instead of all of them.
+      {%- endcomment -%}
+      <span class="home-featured__thumb"><img src="{{ featured_img | strip }}" alt="" loading="lazy" decoding="async"></span>
+      {% endif %}
+
+      <div class="home-featured__body">
+        <div class="home-featured__meta">
+          <span class="home-featured__section">{{ item_section }}</span>
+          {%- comment -%} truncated: a couple of sketches use `effort` as a long note. {%- endcomment -%}
+          {% if item.effort %}<span class="home-featured__effort">{{ item.effort | truncate: 44 }}</span>{% endif %}
+        </div>
+
+        <div class="home-featured__title">{{ item.title }}</div>
+        <div class="home-featured__summary">{{ item.summary | strip_html | truncate: 190 }}</div>
+
+        {% if takeaways.size > 0 %}
+        <span class="sketch-label home-featured__label">{{ takeaway_label }}</span>
+        <ul class="sketch-skills home-featured__skills{% if item_section == 'research' %} sketch-skills--research{% endif %}">
+          {% for takeaway in takeaways limit: 3 %}<li>{{ takeaway }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if item.tags %}
+        <div class="home-featured__tags">
+          {% for tag in item.tags limit: 4 %}<span class="sketch-tag topic">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  {% if featured_pool.size > 1 %}
+  <div class="home-featured__controls">
+    <button type="button" class="home-featured__shuffle" id="home-featured-shuffle">Another one →</button>
+  </div>
+  {% endif %}
+</div>
+
+<script>
+/* Runs during parse, before the deck paints, so no first-pick flash. */
+(function () {
+  var deck = document.getElementById('home-featured-deck');
+  if (!deck) return;
+  var picks = deck.getElementsByClassName('home-featured__pick');
+  if (picks.length < 2) return;
+
+  function show(index) {
+    for (var i = 0; i < picks.length; i++) {
+      picks[i].classList.toggle('is-active', i === index);
+    }
+  }
+
+  var current = Math.floor(Math.random() * picks.length);
+  show(current);
+
+  var shuffle = document.getElementById('home-featured-shuffle');
+  if (shuffle) {
+    shuffle.addEventListener('click', function () {
+      var next = current;
+      while (next === current) {
+        next = Math.floor(Math.random() * picks.length);
+      }
+      current = next;
+      show(current);
+    });
+  }
+})();
+</script>
+{% endif %}

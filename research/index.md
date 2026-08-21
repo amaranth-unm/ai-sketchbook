@@ -17,6 +17,7 @@ wide: true
 # Research Sketches
 
 Workflow experiments, analysis techniques, and methodological notes: ways AI has proven useful, uneven, or surprisingly limited in actual scholarship.
+{: .lede}
 
 {% include typography/callout.html type="note" title="How to read these" text="Treat each research sketch as a field note from an experiment. The point is not that a tool solved the problem, but what it made possible, what it got wrong, and what expertise was still needed around archives, metadata, data ethics, accessibility, privacy, method, or research computing." %}
 

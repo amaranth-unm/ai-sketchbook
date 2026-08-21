@@ -10,6 +10,7 @@ scrollspy: true
 {% include typography/section-accent.html %}
 
 If you've tried something with AI in a class or a research project — and you have something honest to say about how it went — this is the right place for it. Rough drafts and partial experiments are welcome. We're not looking for polished success stories. The most useful sketches are often the ones where something went sideways.
+{: .lede}
 
 ## The easy way: just email us
 
