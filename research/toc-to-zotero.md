@@ -33,7 +33,7 @@ card_order: 20
 
 In my research, I often come across essay collections in which almost all the chapters will end up in a footnote in one of my papers. Often, Google Scholar lacks correct pagination data for these book sections and in the past it took me a long time to enter in all entries for them into Zotero. I wanted to know if AI could handle this drudgery for me.
 
-{% include typography/pullquote.html text="From a Table of Contents on a publisher's website to book sections in Zotero in under ten minutes." %}
+{% include typography/pullquote.html text="From a Table of Contents on a publisher's website to Zotero items of the individual book sections in under ten minutes." %}
 
 ## The Experiment
 To test the capabilities of AI, I used the [Table of Contents webpage](https://academic.oup.com/edited-volume/34632) for the essay collection *The Oxford Handbook of Public History.* First, I tried the Zotero extension on this webpage, but it failed to import page numbers and put the editors in as authors.
