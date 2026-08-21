@@ -42,7 +42,7 @@ I then asked Claude to create BibTeX entries for each of the chapters that I cou
 
 ## The Prompt
 
-{% include typography/sketch-prompt.html label="prompt to give to Copilot" text="There is a 2017 essay collection titled The Oxford Handbook of Public History edited by Hamilton and Gardner (DOI 10.1093/oxfordhb/9780199766024.001.0001). I want a single text file list of all the chapters to import into Zotero. So I would like you to make a single text file that includes a BibTeX entry for each of the chapters. In addition to the default BibTeX output for each chapter, please ensure that each BibTeX entry has the item type "book section", the page numbers of the chapter, and the editors as Paula Hamilton and James B. Gardner." %}
+{% include typography/sketch-prompt.html label="prompt to give to Copilot" text="There is a 2017 essay collection titled The Oxford Handbook of Public History edited by Hamilton and Gardner (DOI 10.1093/oxfordhb/9780199766024.001.0001). I want a single text file list of all the chapters to import into Zotero. So I would like you to make a single text file that includes a BibTeX entry for each of the chapters. In addition to the default BibTeX output for each chapter, please ensure that each BibTeX entry has the item type 'book section', the page numbers of the chapter, and the editors as Paula Hamilton and James B. Gardner." %}
 
 
 ## Results
