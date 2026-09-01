@@ -24,7 +24,7 @@ what-i-learned:
 card_order: 20
 ---
 
-# Table of Contents to Zotero
+# The Effect of Model Tiers on LLM Responses
 
 {% include typography/section-accent.html %}
 
