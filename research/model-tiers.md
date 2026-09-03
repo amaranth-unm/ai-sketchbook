@@ -43,7 +43,7 @@ The default settings on the free tier LLMs will often struggle with prompts that
 
 
 ## Results
-The prompt generated an almost entirely useless response from Gemini Flash Lite, seen below.
+The prompt generated an almost entirely useless response from Gemini Flash Lite, seen below. The quote is not about court ceremony and is actually the opening sentence of the entire book.
 {% include images/figure-wrap.html
   class="center"
   width="90%"
@@ -52,7 +52,7 @@ The prompt generated an almost entirely useless response from Gemini Flash Lite,
   text = text
 %}
 
-However, using Claude Opus 5, the response identified content in The Waning of the Middle Ages that sensibly connected to the topic of court ceremony. Claude Opus 5 did not fabricate pagination.
+However, using Claude Opus 5, the response identified content in *The Waning of the Middle Ages* that sensibly connected to the topic of court ceremony. Claude Opus 5 did not fabricate pagination.
 
 {% include images/figure-wrap.html
   class="center"
@@ -63,4 +63,4 @@ However, using Claude Opus 5, the response identified content in The Waning of t
 %}
 
 ## What I Learned
-I learned that it is generally easy to demonstrate the quality difference in responses from free tier low level generative AI versus the paid tier high level models. Increasingly, the latest LLMs are trained not just through pattern recognition but also through pathfinder training.
+I learned that it is generally easy to demonstrate the quality difference in responses from free tier low level generative AI versus the paid tier high level models. Increasingly, as of 2026, the latest LLMs are trained not just through pattern recognition but also through reinforcement learning processes. This means that the LLMs are not only like giant spell-checkers but now also operate with more of a pathfinding functionality. This is a part of the explanation for the growing levels of reliability in LLM output. 
