@@ -16,11 +16,10 @@ tags:
   - model tiers
   - hallucinations
 results:
-  - demonstrated responses quality differences
-  - connected lower quality response to lower tier LLM
+  - hallucinations occur far less frequently with higher tier models
 what-i-learned:
   - the LLM model tier makes a significant difference in prompt response quality
-  - hallucinations occur far less frequently with higher tier models
+  - lower tier LLMs generate less reliable responses
 card_order: 20
 ---
 
@@ -39,7 +38,7 @@ The default settings on the free tier LLMs will often struggle with prompts that
 
 ## The Prompt
 
-{% include typography/sketch-prompt.html label="prompt to give to Copilot" text="What did Huizinga say about court ceremony in The Waning of the Middle Ages? Quote the passage with page number.." %}
+{% include typography/sketch-prompt.html label="prompt to give to the LLM" text="What did Huizinga say about court ceremony in The Waning of the Middle Ages? Quote the passage with page number." %}
 
 
 ## Results
