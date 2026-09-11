@@ -20,8 +20,6 @@ home-cards:
 
 <div class="home-intro" markdown="1">
 
-{% include nav/home-card-links.html cards=page.home-cards %}
-
 A shared space for thinking out loud about AI in both teaching and research. Colleagues trying things, comparing notes, and learning together. AI is not a temporary disruption we can simply wait out, so this is a place to make **local ideas** a bit less ephemeral as we experiment.
 {: .lede}
 
@@ -31,6 +29,8 @@ There is no shortage of AI advice. What is harder to find is something local —
 Students need to know how to work with AI, but not as a substitute for their own thinking. We need to help them use these tools to extend their curiosity and creativity while staying alert to the borrowed, uneven, and sometimes misleading expertise AI seems to offer.
 
 </div>
+
+{% include nav/home-card-links.html cards=page.home-cards %}
 
 
 ## Open to a random sketch
@@ -48,7 +48,12 @@ Students need to know how to work with AI, but not as a substitute for their own
 {:/nomarkdown}
 
 
-## Share your wisdom!
+## The whole sketchbook
+
+{% include nav/home-sketch-index.html %}
+
+
+## Share your experience!
 Tried something with AI? Hit a wall and broke through? Learned something you didn't expect? Found something you'll never do again? 
 
 We hope you'll share your experience! If you have an idea, [email us your thoughts](mailto:amaranth@unm.edu) and we'll help start getting it in sketch form.  

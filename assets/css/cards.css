@@ -1,48 +1,36 @@
-/* ─── Home section rail ───────────────────────────────────────────────────── */
+/* ─── Home section cards ─────────────────────────────────────────────────── */
 /*
-  Small section boxes that float into the upper right of the home page intro so
-  the intro text wraps around them. Rendered by nav/home-card-links.html.
-
-  The .home-intro wrapper matters: .container is a CSS grid (base.css) and grid
-  items ignore float, so the rail needs a plain block-flow parent to float in.
+  Teaching / Research cards under the home page intro. Rendered by
+  nav/home-card-links.html. They run the full content width, side by side, so
+  the two places a reader can go next are the largest thing on the page after
+  the intro itself.
 */
-.home-intro::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .home-sections {
-  float: right;
-  width: 15.5rem;
-  max-width: 42%;
-  margin: 0.4rem 0 1.25rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.25rem;
+  margin: 0.5rem 0 3rem;
 }
 
 .home-section-box {
   display: block;
   background: var(--white);
   border: 1px solid var(--rule-gray);
-  border-top: 3px solid var(--rule-gray);
+  border-top: 5px solid var(--rule-gray);
   border-radius: 2px;
-  padding: 0.8rem 1rem 0.9rem;
+  padding: 1.3rem 1.5rem 1.45rem;
   text-decoration: none;
   color: var(--black);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .home-section-box:hover {
   border-color: var(--dark-gray);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   background: var(--white);
   text-decoration: none;
-  transform: none;
+  transform: translateY(-2px);
 }
-
-.home-section-box::after { display: none; }
 
 .home-section-box.teach    { border-top-color: var(--terra); }
 .home-section-box.policy   { border-top-color: var(--indigo); }
@@ -52,13 +40,13 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.2rem;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .home-section-box__title {
   font-family: 'Caveat', cursive;
-  font-size: var(--caveat-label);
+  font-size: var(--caveat-display);
   line-height: 1;
   letter-spacing: 0.02em;
   transform: rotate(-1deg);
@@ -71,7 +59,7 @@
 
 .home-section-box__count {
   font-family: var(--font-mono);
-  font-size: 0.63rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted-gray);
@@ -81,9 +69,25 @@
 .home-section-box__text {
   display: block;
   color: var(--mid-gray);
-  font-size: 0.85rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
+
+/* Reads as the card's call to action; the whole card is the link. */
+.home-section-box__go {
+  display: block;
+  margin-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-gray);
+  transition: color 0.15s ease;
+}
+
+.home-section-box.teach:hover    .home-section-box__go { color: var(--terra); }
+.home-section-box.policy:hover   .home-section-box__go { color: var(--indigo); }
+.home-section-box.research:hover .home-section-box__go { color: var(--turquoise); }
 
 
 /* ─── Home featured sketch ────────────────────────────────────────────────── */
@@ -92,7 +96,6 @@
   .is-active is displayed. See nav/home-featured.html for the picker script.
 */
 .home-featured {
-  clear: right;
   margin: 0 0 0.5rem;
 }
 
@@ -254,7 +257,6 @@
 
 /* ─── Home tag cloud ──────────────────────────────────────────────────────── */
 .home-tag-cloud {
-  clear: right;
   margin: 0 0 2.5rem;
 }
 
@@ -268,19 +270,127 @@
 }
 
 
+/* ─── Home sketch index ────────────────────────────────────────── */
+/*
+  One-line-per-sketch list at the foot of the home page, grouped by section.
+  Rendered by nav/home-sketch-index.html. Each group sets its own accent, so
+  adding a section means adding a class here and a folder in the include.
+*/
+.home-index {
+  margin: 0 0 2.5rem;
+}
+
+.home-index__group {
+  --home-index-accent: var(--terra);
+  margin-top: 1.6rem;
+}
+
+.home-index__group:first-child { margin-top: 0.4rem; }
+
+.home-index__group.research { --home-index-accent: var(--turquoise); }
+.home-index__group.policy   { --home-index-accent: var(--indigo); }
+
+.home-index__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid var(--home-index-accent);
+}
+
+.home-index__section {
+  font-family: 'Caveat', cursive;
+  font-size: var(--caveat-label);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--home-index-accent);
+  text-decoration: none;
+}
+
+.home-index__section:hover { color: var(--sunset); }
+
+.home-index__section::after { display: none; }
+
+.home-index__count {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-gray);
+  white-space: nowrap;
+}
+
+.home-index__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-index__item + .home-index__item {
+  border-top: 1px dotted var(--rule-gray);
+}
+
+.home-index__link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  overflow: hidden;
+  padding: 0.4rem 0.45rem;
+  text-decoration: none;
+  color: var(--black);
+  transition: background-color 0.15s ease;
+}
+
+.home-index__link:hover {
+  background: var(--bg-card);
+  text-decoration: none;
+}
+
+.home-index__link::after { display: none; }
+
+/* Titles never wrap: one line per sketch is the whole point of this list, and
+   `overflow-wrap: break-word` on body would otherwise split them mid-word. A
+   title long enough to fill the row clips rather than pushing the layout. */
+.home-index__title {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+.home-index__link:hover .home-index__title { color: var(--home-index-accent); }
+
+/* The gloss takes whatever room the title leaves and clips rather than wraps,
+   so every row stays exactly one line tall. */
+.home-index__summary {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--mid-gray);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.home-index__summary::before {
+  content: "\00b7";
+  margin-right: 0.55rem;
+  color: var(--rule-gray);
+}
+
+
 @media (max-width: 640px) {
-  .home-sections {
-    float: none;
-    width: auto;
-    max-width: none;
-    margin: 1.25rem 0 1.5rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .home-section-box { flex: 1 1 12rem; }
-
   .home-featured__thumb { display: none; }
+
+  /* Titles alone at this width — a clipped gloss would show a word or two. */
+  .home-index__summary { display: none; }
 }
 
 .tag-browse-cta {

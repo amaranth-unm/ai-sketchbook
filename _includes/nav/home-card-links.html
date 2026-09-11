@@ -1,9 +1,10 @@
 {% comment %}
   Home Card Links
 
-  Compact section rail for the home page. Renders one small box per section,
-  meant to float in the upper right of the intro text so readers can see what
-  the sketchbook contains while they read what it is.
+  The section cards under the home page intro. Renders one card per section,
+  side by side at full content width, as the reader's main way into the
+  sketchbook. Each card is a single link; the sketch count comes from the
+  pages in that folder, so it stays right on its own.
 
   Usage:
     {% include nav/home-card-links.html cards=page.home-cards %}
@@ -13,7 +14,8 @@
         title  — section name, shown in the handwritten face
         href   — section index URL, e.g. "/teaching/" (also used to count sketches)
         class  — section accent class: teach | policy | research
-        text   — one short phrase; keep it brief, the box is narrow
+        text   — a sentence or two on what the section holds
+        go     — optional call-to-action line; defaults to "Browse <title> sketches →"
 {% endcomment %}
 
 {% assign cards = include.cards %}
@@ -27,6 +29,7 @@
     | where_exp: "item", "item.name != 'index.md'"
     | where_exp: "item", "item.listed != false"
     | size %}
+  {% capture card_go %}Browse {{ card.title | downcase }} sketches →{% endcapture %}
   <a href="{{ card_href | relative_url }}" class="home-section-box {{ card.class }}">
     <span class="home-section-box__head">
       <span class="home-section-box__title">{{ card.title }}</span>
@@ -35,6 +38,7 @@
       {% endif %}
     </span>
     <span class="home-section-box__text">{{ card.text }}</span>
+    <span class="home-section-box__go">{{ card.go | default: card_go }}</span>
   </a>
   {% endfor %}
 </aside>
