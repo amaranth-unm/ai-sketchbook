@@ -30,7 +30,7 @@ card_order: 20
 
 I wanted to test a top-tier LLM's capability to generate an annotated bibliography for a new research topic. 
 
-In his 2026 monograph, *Using Generative AI in Historical Practice*, Yaniv Fox discusses two terms that he sees as integral to sophisticated use of AI by historians: agency and taste.[^yf] Agency refers to the formulation and conception of a new research question. Taste refers to the evaluation of the LLM's output for quality and reliability. Expertise is required for both agency and taste. 
+In his 2026 monograph, *Using Generative AI in Historical Practice*, Yaniv Fox discusses two terms that he sees as integral to sophisticated use of AI by historians: agency and taste.[^yf] *Agency* refers to the formulation and conception of a new research question. *Taste* refers to the evaluation of the LLM's output for quality and reliability. Expertise is required for both agency and taste. 
 
 [^yf]:Yaniv Fox, *Using Generative AI in Historical Practice* (Cambridge University Press, 2026), 16.
 
@@ -46,7 +46,7 @@ To demonstrate Fox's ideas, I prompted a high tier LLM, Claude Fable 5.1, with a
 
 
 ## Results
-Claude Fable 5.1 began its response by identifying assumptions in the prompt. I had made an assumption that there was scholarly consensus on the rolling back of McCarthyism when in fact there are scholars who argue that pre-McCarthyism norms were not restored. 
+Claude Fable 5.1 began its response by identifying assumptions in the prompt. I had made an assumption that there was scholarly consensus on the rolling back of McCarthyism when in fact there are scholars who argue that pre-McCarthyism norms were not restored. Obviously, though, in the twenty years following its rise, McCarthyism ended. The congressional committees disbanded, and blacklisted people gained social stature. With my own background knowledge about the period, I know that Claude's interpretive challenge to my framing should not be read too literally. This is an example of what Fox calls *taste*.
 
 {% include images/figure-wrap.html
   class="center"
@@ -67,4 +67,6 @@ Following that framing statement, Claude [responded](pdfs/mccarthyism-chat-claud
 %}
 
 ## What I Learned
+I practiced research *agency* by asking for a synthesis of scholarship on the rollback of McCarthyism. When checking the citations for accuracy and considering Claude's challenge to my conceptual framing, I practiced *taste*. 
+
 I learned that high-tier LLMs such as Claude Fable 5.1 can offer researchers a sophisticated starting point for their questions. While LLM-generated summaries and interpretations might put limiting boundaries on a researcher's perception of a new topic, LLMs can also alert researchers to potential additional interpretive directions. By requiring ISBNs, DOIs, or the best available citation information in the prompt, the LLM will only return reliable sources. [Hallucinated sources](model-tiers.md) are now very rare in the higher tier models.
