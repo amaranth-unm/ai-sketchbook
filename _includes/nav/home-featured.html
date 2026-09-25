@@ -16,8 +16,8 @@
 
   Front matter each pick reads, all optional except title/summary:
     summary, thumbnail, effort, tags,
-    what-students-learn (teaching) / results (research), with `skills` and
-    `what-i-learned` as fallbacks for either.
+    what-students-learn (teaching) / results (research), with `what-i-learned`
+    as a fallback for research.
 {% endcomment %}
 
 {% comment %} Sections the bar draws from — add a folder here to include it. {% endcomment %}
@@ -41,11 +41,11 @@
 
     {% if item.dir == '/research/' %}
       {% assign item_section = 'research' %}
-      {% assign takeaways = item.results | default: item['what-i-learned'] | default: item.skills %}
+      {% assign takeaways = item.results | default: item['what-i-learned'] %}
       {% assign takeaway_label = 'Demonstrates' %}
     {% else %}
       {% assign item_section = 'teaching' %}
-      {% assign takeaways = item['what-students-learn'] | default: item.skills %}
+      {% assign takeaways = item['what-students-learn'] %}
       {% assign takeaway_label = 'What students learn' %}
     {% endif %}
 

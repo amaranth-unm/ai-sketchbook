@@ -25,6 +25,7 @@ Markup throughout uses Bootstrap-style class names — `navbar`, `navbar-toggler
 
 - Add rules to whichever existing stylesheet already owns that concern — don't create a new stylesheet or reach for inline `style=`.
 - Reuse the custom properties in `vars.css` (colors, spacing, shadows, fonts) instead of hardcoding values. If a value isn't there yet and you'll reuse it, add it as a variable rather than repeating a literal.
+- Font sizes come from the type scale in `vars.css` (`--text-label` through `--text-2xl`). Don't add a new literal size; pick the nearest step. Only headings and display type use their own `clamp()` values.
 
 ## Includes should document themselves
 

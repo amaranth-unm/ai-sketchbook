@@ -1,6 +1,7 @@
 {% comment %}
   Scrollspy — fixed vertical nav tracking h2 sections via Intersection Observer.
-  Enable with scrollspy: true in front matter.
+  Enable with scrollspy: true in front matter. Skips h2.sketch-aside-heading
+  (the license and related-sketches boxes).
 {% endcomment %}
 
 <nav class="scrollspy" id="scrollspy" aria-label="Page sections" hidden>
@@ -11,7 +12,7 @@
 (function () {
   var nav      = document.getElementById('scrollspy');
   var list     = document.getElementById('scrollspy-list');
-  var headings = Array.from(document.querySelectorAll('.sketchbook-container h2'));
+  var headings = Array.from(document.querySelectorAll('.sketchbook-container h2:not(.sketch-aside-heading)'));
 
   if (headings.length < 2) return;
 

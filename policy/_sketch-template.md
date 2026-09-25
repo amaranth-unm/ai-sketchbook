@@ -1,8 +1,10 @@
 ---
 layout: sketchbook                                          # required — always this value
 title: Your Sketch Title                                    # required
+author: "Your Name, Department"                              # recommended — shown in the summary box; the citation uses the name before the comma
 summary: "One sentence: the policy move this sketch tries."  # required — drives the listing card and the "Policy aim" box below
 thumbnail: "images/your-image.jpg"                          # optional — put the image file in policy/images/; omit for a text-only card
+thumbnail-credit: "Creator, *Title*, date. Source."            # optional — caption and alt text for the image beside the summary box
 date: 2026-06-22                                            # optional — shown on the listing card
 status: rough                                               # optional — rough | lightly tested | tested | refined
 type: policy sketch                                          # optional — short label

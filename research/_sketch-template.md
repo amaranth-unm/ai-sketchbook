@@ -1,6 +1,7 @@
 ---
 layout: sketchbook                                          # required — always this value
 title: Your Sketch Title                                    # required
+author: "Your Name, Department"                              # recommended — shown in the summary box; the citation uses the name before the comma
 summary: "One sentence: what you built or extracted, and what it's for."  # required — drives the listing card and the "Experiment" box below
 thumbnail: "images/your-image.jpg"                          # optional — put the image file in research/images/; omit for a text-only card
 date: 2026-06-22                                            # optional — shown on the listing card

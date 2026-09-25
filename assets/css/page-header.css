@@ -115,7 +115,7 @@ if you want a different accent color just for headers.
 
 /* Subtitle paragraph below the title */
 .page-header p {
-  font-size: 1.4rem;
+  font-size: var(--text-xl);
   color: var(--header-subtitle);
   line-height: 1.6;
   font-weight: 300;
@@ -155,7 +155,7 @@ if you want a different accent color just for headers.
 /* Small caps label above the title */
 .page-header-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   letter-spacing: 0.3em;
   color: var(--accent-primary);
   text-transform: uppercase;
@@ -178,7 +178,7 @@ if you want a different accent color just for headers.
 
 .page-header-divider span {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.3em;
   color: var(--header-divider-text);
   text-transform: uppercase;
@@ -193,7 +193,7 @@ if you want a different accent color just for headers.
   padding: 1.4rem 1rem 0.45rem 3rem;
   background: linear-gradient(to top, rgba(0,0,0,0.72), transparent);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--text-label);
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.75);
   text-align: right;

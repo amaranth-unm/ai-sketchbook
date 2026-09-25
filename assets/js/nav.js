@@ -31,6 +31,13 @@
       });
     });
 
+    // Print buttons (e.g. the "Using This Sketch" box)
+    document.querySelectorAll('[data-print]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        window.print();
+      });
+    });
+
     // Close mobile nav when a link or button inside it is clicked
     if (collapse) {
       collapse.querySelectorAll('a, button').forEach(function (link) {

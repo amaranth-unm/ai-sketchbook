@@ -3,9 +3,16 @@
 
   {% include html/html-head.html %}
 
-  <body class="sketchbook-shell{% if page.body-class %} {{ page.body-class }}{% endif %}">
+  {% assign show_sketch_hero = false %}
+  {% if page.thumbnail and page.name != "index.md" and page.header-image == nil %}
+    {% if page.dir == "/teaching/" or page.dir == "/policy/" %}{% assign show_sketch_hero = true %}{% endif %}
+  {% endif %}
+
+  <body class="sketchbook-shell{% if show_sketch_hero %} has-sketch-hero{% endif %}{% if page.body-class %} {{ page.body-class }}{% endif %}">
 
     {% include nav/nav-top.html %}
+
+    {% if show_sketch_hero %}{% include layout/sketch-hero.html %}{% endif %}
 
     {% assign headerimage = page.header-image %}
     {% assign headertitle = page.header-title %}
@@ -34,6 +41,8 @@
     {% if page.wide %}
       <div class="{{ container_class }}">
         {{ content }}
+        {% include layout/sketch-license.html %}
+        {% include nav/related-sketches.html %}
         {% include nav/sketch-pagination.html %}
       </div>
     {% elsif page.scrollspy %}
@@ -41,6 +50,8 @@
         <div class="scrollspy-wrapper">
           <div class="scrollspy-content">
             {{ content }}
+            {% include layout/sketch-license.html %}
+            {% include nav/related-sketches.html %}
             {% include nav/sketch-pagination.html %}
           </div>
           {% include nav/scrollspy.html %}
@@ -49,6 +60,8 @@
     {% else %}
       <div class="{{ container_class }} sketchbook-container--narrow">
         {{ content }}
+        {% include layout/sketch-license.html %}
+        {% include nav/related-sketches.html %}
         {% include nav/sketch-pagination.html %}
       </div>
     {% endif %}

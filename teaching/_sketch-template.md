@@ -3,6 +3,7 @@ layout: sketchbook                                          # required — alway
 title: Your Sketch Title                                    # required
 summary: "One sentence: what students do, and why it's worth trying."   # required — drives the listing card and the "Basic idea" box below
 thumbnail: "images/your-image.jpg"                          # optional — put the image file in teaching/images/; omit for a text-only card
+thumbnail-credit: "Creator, *Title*, date. Source."            # optional — caption and alt text for the image beside the summary box
 date: 2026-06-22                                            # optional — shown on the listing card
 status: rough                                               # optional — rough | lightly tested | tested | refined
 type: activity                                              # optional — short label, e.g. "activity" or "assignment"
@@ -10,14 +11,16 @@ effort: "30 min in class"                                   # optional — shown
 tools:                                                       # optional — AI tools used, if any
   - any AI tool
 level: any                                                   # optional — who this is for, e.g. "any", "intro", "advanced"
+author: "Your Name, Department"                              # recommended — shown in the summary box; the citation uses the name before the comma
+context: "HIST 1105 Making History (intro survey), UNM"       # recommended — the course where you ran it: number, title, level
+last-run: "Spring 2026"                                       # recommended — most recent term you ran it; add the AI tools if it matters, e.g. "Spring 2026 (ChatGPT, Claude)"
+handout: "https://example.edu/your-assignment-page"           # optional — link to the student-facing assignment as students saw it
 tags:                                                        # recommended — powers the /tags/ browsing page
   - your-tag
 key-question: "The question this activity helps answer."    # recommended — shown on the listing card
 what-students-learn:                                         # recommended — shown as "What students learn" in the summary box
   - one concrete takeaway
   - another concrete takeaway
-skills:                                                       # optional — shown as "You gain"; a transferable skill, distinct from the takeaways above
-  - a transferable skill students practice
 card_order: 99                                                # optional — sort position on the listing page; check sibling files and pick the next number
 ---
 
@@ -44,6 +47,10 @@ Walk through what you actually did, step by step — enough that someone else co
 ## Why It Works
 
 Explain the pedagogical logic — why this surfaces something worth learning, not just a clever use of AI.
+
+## What to Grade
+
+For graded assignments: what the grade rests on, and what separates strong work from weak. Name the part of the work that carries the learning (often the critique or the process, not the AI output). Delete this section for ungraded in-class activities.
 
 ## What to Watch For
 

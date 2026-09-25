@@ -50,7 +50,7 @@
   background: none;
   border: none;
   color: rgba(255, 255, 255, 0.4);
-  font-size: 1.75rem;
+  font-size: var(--text-2xl);
   line-height: 1;
   cursor: pointer;
   padding: 0;
@@ -62,7 +62,7 @@
 
 .search-hint {
   font-family: 'Fira Mono', monospace;
-  font-size: 0.68rem;
+  font-size: var(--text-label);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.25);
@@ -95,7 +95,7 @@
 
 .search-result-link {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: var(--text-md);
   font-weight: 600;
   color: var(--white);
   text-decoration: none;
@@ -106,7 +106,7 @@
 }
 
 .search-result-summary {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.45);
   margin: 0.2rem 0 0;
   line-height: 1.5;

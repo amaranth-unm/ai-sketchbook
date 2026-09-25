@@ -1,0 +1,67 @@
+{% comment %}
+  Related sketches — up to two teaching/policy sketches that share the most
+  tags with the current page, shown as small cards: type and status, title,
+  and the sketch's key question (falling back to a truncated summary). Renders only on
+  individual teaching/ and policy/ sketch pages that have tags. Research
+  sketches are neither shown here nor given related cards.
+
+  Ranking: most shared tags first; ties go to sketches in the same section,
+  then to lower card_order.
+
+  Reads: page.tags, page.url, page.dir; candidates' tags, listed, name, dir,
+  card_order, title, type, status, key-question, summary
+  Parameters:
+    limit: maximum number of cards (default: 2)
+
+  Usage (in the layout, after the page content):
+    {% include nav/related-sketches.html %}
+{% endcomment %}
+
+{% assign related_limit = include.limit | default: 2 %}
+
+{% if page.tags and page.tags.size > 0 and page.name != "index.md" %}
+{% if page.dir == "/teaching/" or page.dir == "/policy/" %}
+
+  {% assign candidates = site.pages
+    | where_exp: "item", "item.tags.size > 0"
+    | where_exp: "item", "item.name != 'index.md'"
+    | where_exp: "item", "item.listed != false"
+    | where_exp: "item", "item.url != page.url"
+    | where_exp: "item", "item.dir != '/research/'"
+    | sort: "card_order" %}
+
+  {% assign related = "" | split: "" %}
+  {% for score in (1..6) reversed %}
+    {% for pass in (1..2) %}
+      {% for item in candidates %}
+        {% if related.size >= related_limit %}{% break %}{% endif %}
+        {% if pass == 1 and item.dir != page.dir %}{% continue %}{% endif %}
+        {% if pass == 2 and item.dir == page.dir %}{% continue %}{% endif %}
+        {% assign shared = 0 %}
+        {% for t in item.tags %}
+          {% if page.tags contains t %}{% assign shared = shared | plus: 1 %}{% endif %}
+        {% endfor %}
+        {% if shared == score %}{% assign related = related | push: item %}{% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if related.size > 0 %}
+  <section class="sketch-related" aria-label="Related sketches">
+    <h2 class="sketch-aside-heading">Related Sketches</h2>
+    <div class="related-card-grid">
+      {% for item in related %}
+      {% if item.dir == "/policy/" %}{% assign rel_section = "policy" %}{% else %}{% assign rel_section = "teach" %}{% endif %}
+      {% assign rel_point = item['key-question'] | default: item.summary | truncate: 120 %}
+      <a class="related-card related-card--{{ rel_section }}" href="{{ item.url | relative_url }}">
+        <span class="related-card-meta">{{ item.type | default: rel_section }}{% if item.status %} · {{ item.status }}{% endif %}</span>
+        <span class="related-card-title">{{ item.title }}</span>
+        {% if rel_point %}<span class="related-card-point">{{ rel_point }}</span>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+{% endif %}
+{% endif %}
