@@ -56,6 +56,18 @@ They are not refined advice or best practices, although some may become so over 
 
 
 
+## Kindred projects
+
+The sketchbook is one voice in a larger conversation. These projects do related work, each in its own way:
+
+- **[AI Pedagogy Project](https://aipedagogy.org/assignments/)** (metaLAB at Harvard): curated AI assignments across many disciplines, filterable by theme, subject, and tool.
+- **[TextGenEd](https://wacclearinghouse.org/repository/collections/textgened/)** (WAC Clearinghouse): peer-reviewed writing assignments with text generation, updated yearly through its Continuing Experiments series.
+- **[Exploring AI Pedagogy](https://exploringaipedagogy.hcommons.org/)** (MLA-CCCC Task Force): candid teaching reflections posted quickly, failures welcome. The closest in spirit to this site.
+- **[The AI Assessment Scale](https://aiassessmentscale.com/)** (Perkins, Furze, and Roe): a five-level framework for AI use in assessment, translated into more than 30 languages.
+- **[AHA Guiding Principles for AI in History Education](https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/)**: history-specific principles and a matrix of acceptable and unacceptable uses.
+
+What the sketchbook adds is the local and the unfinished: what colleagues here actually tried, with the rough edges left in.
+
 ## Contribute a sketch
 
 We owe it to our students to figure this out, and that's a lot easier together, from various vantage points, than alone. If you've tried something with AI in a class or research project — and you have something honest to say about how it went — we want to hear about it. Rough accounts and failed experiments are exactly what this site is for.
