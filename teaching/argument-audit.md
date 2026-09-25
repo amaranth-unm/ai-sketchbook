@@ -1,8 +1,9 @@
 ---
 layout: sketchbook
 title: Argument Audit
-summary: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or genuinely persuasive."
-thumbnail: "images/960px-Puzzle_Krypt-2.jpg"
+summary: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or persuasive."
+thumbnail: "images/puzzle-krypt.jpg"
+thumbnail-credit: 'Puzzle, photo by Muns (derivative by Schlurcher), 2009. [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/), via Wikimedia Commons.'
 date: 2026-04-09
 status: rough
 type: activity
@@ -10,9 +11,10 @@ effort: "~30 min in class"
 tools:
   - any AI tools
 level: any
+author: "Fred Gibbs, History"
 tags:
   - writing
-  - argument
+  - interpretation
 key-question: How can AI help sharpen writing skills instead of replace them?
 what-students-learn:
   - the difference between tone and analytical precision
@@ -27,23 +29,21 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Students often treat critique as something that happens after a draft is mostly finished: a late-stage polish rather than a genuine test of an idea. This exercise moves critique earlier. AI becomes a ready source of objections, and the students' job is to decide which ones are generic noise and which ones expose a real weakness in the argument.
+Most students meet critique at the end, when a draft is nearly done and feedback feels like polish. This exercise pulls it forward. AI supplies a stack of objections on demand, and students have to decide which are noise and which just found a hole in their argument.
 
-{% include typography/pullquote.html text="Vague objections often reveal vague writing. The point is not that AI is a brilliant critic. The point is that it forces students to consider alternate interpretations and clarify what exactly they are claiming." %}
+{% include typography/pullquote.html text="Vague objections often reveal vague writing. AI isn't a brilliant critic, but it forces students to say exactly what they're claiming." %}
 
 ## The Setup
-Ask students to bring a working thesis paragraph, interpretive claim, or partial draft. They paste that argument into an AI tool and ask it to produce the three strongest objections it can imagine.
 
-Students then annotate the objections and sort them into three buckets:
+Students bring a working thesis paragraph, an interpretive claim, or a partial draft. They paste it into an AI tool and ask for the three strongest objections it can come up with.
 
-- objections that are too generic to matter
-- objections that misunderstand the argument as written
-- objections that actually expose a gap, ambiguity, or unsupported leap
+Then they annotate each objection and sort it into one of three piles:
 
-**The sorting process is the assignment.** It makes students articulate *why* an objection fails instead of deciding to dismiss it because it's hard to work with.
+- too generic to matter
+- misreads the argument as written
+- exposes a real gap, ambiguity, or unsupported leap
 
-Students carry this work into their final revision, leading to sharper prose and a more defensible claim.
-
+**The sorting is the assignment.** Students have to say *why* an objection fails instead of waving off the ones that are hard to answer. They take the third pile into their final revision.
 
 ## The Prompt
 
@@ -56,17 +56,17 @@ title="Prompt"
 text=audit_prompt 
 %}
 
-
-
 ## Why It Works
-A counterargument is only strong if it lands on the actual claim being made. This exercise makes that concrete: defending an argument means specifying scope, evidence, and stakes — not just reasserting it with more confidence. Authoritative tone is not the same thing as analytical precision, and students can see that distinction clearly when working with AI-generated objections that sound reasonable but are detached from the actual text.
 
+An objection only counts if it lands on the claim actually being made. To dismiss one, students have to pin down their scope, evidence, and stakes, which is exactly what revision needs. And AI objections make a useful foil: they sound authoritative while floating free of the text, so students see for themselves that a confident tone isn't the same as a precise point.
 
 ## What to Watch For
-{% include typography/callout.html type="warning" text="AI's confidence can make even thin counterarguments feel weightier than they are." %}
 
-- Students can feel that AI knows more than they do. In some ways it may notice more textual possibilities, but students can still underestimate their own ability to separate useful critique from filler. AI tends to generate objections that are thin, repetitive, or detached from the actual text, so it helps to model how to recognize and sort them.
-- Students already have something specific enough to test. If the draft is too early or too vague, the exercise becomes generic very quickly.
+{% include typography/callout.html type="warning" text="AI's confidence can make thin counterarguments feel weightier than they are." %}
 
-## What I learned
-Brief instructor modeling of the sorting process helps orient students before they work independently — especially in classes where students haven't been asked to articulate *why* an objection fails rather than just dismiss it.
+- Students may assume the AI knows better. It sometimes spots readings they missed, but much of what it produces is thin, repetitive, or detached from the text. Model the sorting once so they trust their own judgment.
+- The draft has to be specific enough to test. If it's too early or too vague, the objections turn generic fast.
+
+## What I Learned
+
+A few minutes of modeling the sorting up front makes a big difference, especially with students who have never had to explain *why* an objection fails instead of just dismissing it.

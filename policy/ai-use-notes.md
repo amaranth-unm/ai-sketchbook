@@ -3,6 +3,7 @@ layout: sketchbook
 title: AI Use Notes
 summary: "Create a process-disclosure policy that asks students to explain how AI shaped their work and what judgment they exercised afterward."
 thumbnail: "images/notebook-pencil.jpg"
+thumbnail-credit: 'Notebook and pencil. Photo by Jan Kahánek, 2017, CC0 (via Unsplash).'
 date: 2026-05-22
 status: rough
 type: policy sketch
@@ -10,11 +11,10 @@ effort: "3-5 sentences per assignment"
 tools:
   - any AI tool
 level: any
+author: "Fred Gibbs, History"
 tags:
-  - policy language
-  - process documentation
-  - authorship
   - assessment
+  - authorship
 key-question: "How can students disclose AI use in a way that supports learning?"
 what-students-learn:
   - AI use can be documented as part of process
@@ -29,13 +29,13 @@ card_order: 40
 
 {% include typography/sketch-info.html %}
 
-Disclosure language can easily become punitive: "admit whether you used AI." An AI use note frames disclosure differently. It asks students to describe how a tool shaped their process and what judgment they exercised afterward.
+Disclosure language slides easily into punishment: "admit whether you used AI." An AI use note asks something more interesting: how did a tool shape your process, and what judgment did you exercise afterward?
 
-{% include typography/pullquote.html text="The useful question is not simply 'Did you use AI?' but 'What did the tool do, and what did you do with what it gave you?'" %}
+{% include typography/pullquote.html text="Skip 'Did you use AI?' Ask 'What did the tool do, and what did you do with what it gave you?'" %}
 
 ## The Setup
 
-An AI use note can be required for every assignment where AI is allowed, or only for assignments where AI meaningfully shaped the final product. The note works best when it is short enough that students will actually write it, but specific enough that it gives the instructor evidence of process.
+Require the note on every assignment that allows AI, or only where AI meaningfully shaped the final product. Keep it short enough that students will write it and specific enough to show you their process.
 
 {% capture note_language %}
 If AI meaningfully shaped your work, include an AI use note at the end of your submission. In 3-5 sentences, explain:
@@ -53,26 +53,26 @@ If AI meaningfully shaped your work, include an AI use note at the end of your s
 ## Levels Of Disclosure
 AI use notes can scale with the assignment.
 
-**Light disclosure:** name the tool and the purpose and basic prompting. Useful for low-stakes drafting or brainstorming.
+**Light disclosure:** name the tool, the purpose, and the basic prompting. Useful for low-stakes drafting or brainstorming.
 
 **Process disclosure:** explain how the tool shaped the work. Useful for essays, research projects, and revisions.
 
-**Critical disclosure:** evaluate the tool's output in a rigorous and explicit way, including errors or assumptions. Useful when AI is an object of study.
+**Critical disclosure:** evaluate the tool's output explicitly, including its errors and assumptions. Useful when AI is an object of study.
 
 **Workflow disclosure:** document prompts, settings, model choices, and verification steps. Useful for research or digital projects where reproducibility matters.
 
 
 ## Why It Works
-This can turn disclosure into a work habit rather than a sheepish confession. Students have to distinguish between receiving help and outsourcing the assignment. They also have to practice the metacognitive work that AI can otherwise hide: why this suggestion, why this revision, why this source, why this claim?
+Disclosure becomes a work habit instead of a sheepish confession. Students have to tell getting help apart from outsourcing the assignment, and they practice the metacognitive work AI can otherwise hide: why this suggestion, this revision, this source, this claim?
 
-For instructors, AI use notes create a response path that is less brittle than detection. Instead of asking only whether a tool was used, the instructor can ask whether the process note gives enough evidence of judgment and learning.
+Instructors get a sturdier response than detection. The question shifts from whether a tool was used to whether the note shows enough judgment and learning.
 
 ## What to Watch For
 
-{% include typography/callout.html type="warning" title="Do not overburden small tasks" text="A disclosure requirement can become busywork if attached to every tiny use of AI. The policy should define what counts as meaningful use, or distinguish between light and substantial documentation." %}
+{% include typography/callout.html type="warning" title="Do not overburden small tasks" text="Attach disclosure to every tiny use of AI and it becomes busywork. Define what counts as meaningful use, or distinguish light from substantial documentation." %}
 
-Students may also write vague notes: "I used ChatGPT to help me." The note needs prompts that ask for actions: accepted, rejected, corrected, changed. Verbs matter here.
+Expect vague notes like "I used ChatGPT to help me." The prompts need to ask for actions (accepted, rejected, corrected, changed). Verbs matter here.
 
 
 ## What I Would Do Differently
-I would show students two sample AI use notes: one too vague to be useful and one that actually explains process. I would also decide in advance whether the note is graded, checked for completion, or used only when questions arise. That choice changes how students understand the purpose of disclosure.
+I'd show students two sample notes: one too vague to be useful and one that explains the process. I'd also decide in advance whether the note is graded, checked for completion, or consulted only when questions arise. That choice shapes how students understand what disclosure is for.

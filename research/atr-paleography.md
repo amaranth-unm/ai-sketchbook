@@ -12,6 +12,7 @@ tools:
   - Claude
   - Open Claw
 level: researcher
+author: "Fred Gibbs, History"
 tags:
   - archives
   - big data
@@ -34,7 +35,7 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-I wanted to know if LLMs could read a notoriously difficult medieval script, late fourteenth-century Gothic secretarial hand. The government of Spain hosts a website called [PARES](https://pares.cultura.gob.es/pares/en/inicio.html), which contains over a million digitized images of archival documents, including much of the material in the Archive of the Crown of Aragon. These documents have been digitized but never transcribed at scale.
+Could LLMs read a notoriously difficult medieval script, the Gothic secretarial hand of the late fourteenth century? Spain's [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) website holds over a million digitized archival images, including much of the Archive of the Crown of Aragon. They've been digitized but never transcribed at scale.
 
 {% include typography/pullquote.html text="Combining Gemini and Claude produced usable handwriting recognition for late fourteenth-century Gothic secretarial hand, at a scale that specialized HTR platforms had not handled reliably in this case." %}
 
@@ -43,7 +44,7 @@ I wanted to know if LLMs could read a notoriously difficult medieval script, lat
 {% capture text %}
 In early February 2026, uploading a PARES image to Gemini produced a transcription of better quality than what I had gotten from the specialized HTR platform [Transkribus](https://www.transkribus.org/), even after training a model there with 60 documents of ground-truth transcriptions. Soon after, I started combining results from Gemini and Claude to increase transcription quality further.
 
-By March, I was using agentic AI — specifically Open Claw — to obtain usable HTR and translations for entire registers. The pipeline runs as follows: Open Claw downloads images from PARES, passes each one to Gemini and Claude for parallel transcription, merges the outputs, and writes the result to a text file. A final instruction to Open Claw combines all image-level text files into a single CSV.
+By March, I was using an AI agent, Open Claw, to get usable HTR and translations for entire registers. The pipeline runs as follows: Open Claw downloads images from PARES, passes each one to Gemini and Claude for parallel transcription, merges the outputs, and writes the result to a text file. A final instruction to Open Claw combines all image-level text files into a single CSV.
 
 {% endcapture %}
 
@@ -56,21 +57,21 @@ By March, I was using agentic AI — specifically Open Claw — to obtain usable
 %}
 
 
-[Register 1819](https://jonathanseyfried.net/aca-reg1819-transcriptions/) was the first complete register I processed. [Register 2053](https://jonathanseyfried.net/aca-reg2053-transcriptions) — the third — produced notably higher quality output, suggesting that prompt refinement and model improvements between February and March made a measurable difference.
+[Register 1819](https://jonathanseyfried.net/aca-reg1819-transcriptions/) was the first complete register I processed. [Register 2053](https://jonathanseyfried.net/aca-reg2053-transcriptions), the third, came out noticeably better, which suggests that prompt refinement and model improvements between February and March made a measurable difference.
 
 ## Results
 
-This pipeline worked, and using two different models to improve transcription accuracy and create an audit trail gave me much more confidence in the results. It also made the recurring errors easier to see.
+The pipeline worked. Running two models side by side improved accuracy and created an audit trail, which gave me far more confidence in the results and made recurring errors easier to spot.
 
-With this workflow, I was able to analyze image archives at scale. The same pipeline could be applied to other collections of historical images.
+It let me analyze an image archive at scale, and the same pipeline could work on other collections of historical images.
 
 It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. 
 
-The resulting text enables discovery through full-text search but is not reliable enough for citation-level accuracy — dates in particular remain inconsistent even after pipeline refinements.
+The text supports discovery through full-text search but isn't reliable enough to cite. Dates in particular stayed inconsistent even after refining the pipeline.
 
 
 ## What I Learned
 
 {% include typography/callout.html type="note" text="It is possible to use agentic AI to generate big data from handwritten documents previously unavailable for automated text recognition." %}
 
-This opens the possibility of full-text keyword search for names and toponyms across entire registers. It is useful to have multiple LLMs check and correct each other's work. Even though the transcriptions and translations were far from perfect, I was surprised at how well the LLMs transcribed the script and expanded abbreviations.
+That opens up full-text search for names and places across entire registers. Having multiple LLMs check and correct each other's work helps. The transcriptions and translations were far from perfect, but I was surprised by how well the models read the script and expanded its abbreviations.

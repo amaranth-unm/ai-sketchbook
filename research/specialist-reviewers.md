@@ -10,6 +10,7 @@ effort: "one prompt per reviewer; an afternoon to work through the responses"
 tools:
   - any AI tool
 level: researcher
+author: "Fred Gibbs, History"
 tags:
   - writing
   - peer review
@@ -31,7 +32,7 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-I had a draft article on medieval dietetics and the usual problem: the people best positioned to tell me what was wrong with it were busy, and I would not hear from them until the piece was already under review. So I approximated them. Instead of asking AI for feedback on the draft, I asked it to read the draft as four specific people, one at a time.
+I had a draft article on medieval dietetics and the usual problem: the people best positioned to tell me what was wrong with it were busy, and I would not hear from them until the piece was already under review. So I simulated them. Instead of asking AI for feedback, I asked it to read the draft as four specific readers, one at a time.
 
 {% include typography/pullquote.html text="Asking for feedback gets you feedback. Asking a named reader with a stake in the argument gets you an objection." %}
 
@@ -39,31 +40,31 @@ I had a draft article on medieval dietetics and the usual problem: the people be
 
 The four readers were chosen to match the actual audience the article would meet:
 
-- a **historian of medieval diet and health** — the closest subfield expert, the one who would know the sources
-- a **historian of medicine with a modern focus** — an adjacent specialist who would not share my period assumptions
-- the **volume editor** — concerned with fit, framing, and the shape of the collection
-- **other chapter authors** in the volume — related topics, various expertises, each with their own angle of approach
+- a **historian of medieval diet and health:** the closest subfield expert, the one who would know the sources
+- a **historian of medicine with a modern focus:** an adjacent specialist who wouldn't share my period's assumptions
+- the **volume editor:** concerned with fit, framing, and the shape of the collection
+- **other chapter authors** in the volume: related topics, varied expertise, each with their own angle
 
-I ran each as a separate prompt rather than asking for all four at once. That mattered. A single prompt asking for four perspectives tends to produce four paragraphs in one voice, differentiated by label. Separate prompts let each reader work through the whole draft on its own terms and arrive somewhere the others did not.
+I ran each as a separate prompt instead of asking for all four at once, and that mattered. One prompt asking for four perspectives tends to produce four paragraphs in one voice with different labels. Separate prompts let each reader work through the whole draft on its own terms and end up somewhere the others didn't.
 
 ## The Prompt
 
 {% include typography/sketch-prompt.html label="prompt to give to any AI tool" text="You are a historian of medieval diet and health, reading a draft chapter for an edited volume. Read the draft below and respond as that reader would: what claims would you question, what evidence would you want, what would you push back on, and what does the argument assume that a specialist in your area would not grant? [paste draft]" %}
 
-Then the same structure for each other reader, with the vantage point and its concerns swapped in — the volume editor asked about fit and framing, the modern historian of medicine asked what the piece takes for granted about periodization and continuity.
+Then the same structure for each of the others, with the vantage point and its concerns swapped in: the volume editor asked about fit and framing, the modern historian of medicine about what the piece takes for granted on periodization and continuity.
 
 ## Results
 
-Every one of the four produced something I had not considered. They also each produced suggestions that were not especially relevant to what I was doing. That ratio held across all four perspectives — no reader was uniformly useful, and none was useless.
+Every reader raised something I hadn't considered, and every reader also offered suggestions that didn't much matter for what I was doing. No reader was uniformly useful, and none was useless.
 
-The productive part was that the irrelevant suggestions were irrelevant in *different ways*, depending on who was ostensibly speaking. The adjacent specialist pushed on things the subfield expert took for granted; the editor cared about matters neither historian raised. Reading the four sets against each other made it easier to see which objections were artifacts of the framing and which were real gaps.
+The payoff: the irrelevant suggestions were irrelevant in *different ways*, depending on who was supposedly speaking. The adjacent specialist pushed on things the subfield expert took for granted; the editor cared about matters neither historian raised. Reading the four sets against each other made it easier to see which objections were artifacts of the framing and which were real gaps.
 
-I revised the draft substantially as a result. I think it is more robust for it — better defended at the places where a reader outside my immediate subfield would have stopped and objected.
+I revised the draft substantially. I think it's stronger for it, better defended at exactly the spots where a reader outside my subfield would have stopped and objected.
 
 ## What I Learned
 
-{% include typography/callout.html type="warning" text="This is not a substitute for actual peer review, and the simulated readers are not the people they name. It is a way to find weak points before real readers do — the objections are worth taking seriously as objections, not as evidence about what any particular scholar thinks." %}
+{% include typography/callout.html type="warning" text="This doesn't replace peer review, and the simulated readers aren't the people they name. It's a way to find weak points before real readers do. Take the objections seriously as objections, not as evidence of what any particular scholar thinks." %}
 
-The main finding is that specificity in the reader produces specificity in the response. "Review this draft" yields the generic register of feedback; "read this as the volume editor" yields something with a point of view and, usefully, an agenda.
+A specific reader gets a specific response. "Review this draft" yields generic feedback; "read this as the volume editor" yields a point of view and, usefully, an agenda.
 
-I did not experiment enough to have advice on doing it better — how many readers is optimal, whether the reader descriptions should be longer, whether feeding back the other reviews would sharpen or homogenize them. Those seem like the obvious next things to try.
+I haven't experimented enough to say how to do it better: how many readers is ideal, whether longer reader descriptions help, whether sharing the other reviews would sharpen or homogenize them. Those are the obvious next things to try.

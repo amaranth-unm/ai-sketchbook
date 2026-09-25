@@ -11,6 +11,7 @@ tools:
   - Claude
   - Zotero
 level: any
+author: "Jonathan Seyfried"
 tags:
   - citations
   - prompting
@@ -31,14 +32,14 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-In my research, I often come across essay collections in which almost all the chapters will end up in a footnote in one of my papers. Often, Google Scholar lacks correct pagination data for these book sections and in the past it took me a long time to enter in all entries for them into Zotero. I wanted to know if AI could handle this drudgery for me.
+I often run into essay collections where nearly every chapter will end up in one of my footnotes. Google Scholar often lacks correct page numbers for these chapters, and entering them all into Zotero by hand used to take forever. Could AI handle the drudgery?
 
-{% include typography/pullquote.html text="From a Table of Contents on a publisher's website to Zotero items of the individual book sections in under ten minutes." %}
+{% include typography/pullquote.html text="From a publisher's table of contents to a Zotero entry for every chapter, in under ten minutes." %}
 
 ## The Experiment
-To test the capabilities of AI, I used the [Table of Contents webpage](https://academic.oup.com/edited-volume/34632) for the essay collection *The Oxford Handbook of Public History.* First, I tried the Zotero extension on this webpage, but it failed to import page numbers and put the editors in as authors.
+My test case was the [table of contents page](https://academic.oup.com/edited-volume/34632) for *The Oxford Handbook of Public History*. The Zotero browser extension failed on it: no page numbers, and the editors listed as authors.
 
-I then asked Claude to create BibTeX entries for each of the chapters that I could then import into Zotero.
+So I asked Claude to create a BibTeX entry for each chapter that I could import into Zotero.
 
 ## The Prompt
 
@@ -46,9 +47,9 @@ I then asked Claude to create BibTeX entries for each of the chapters that I cou
 
 
 ## Results
-Not only did Claude create the BibTeX entries perfectly, but since I was using the Claude app, at the end I got a button called **Open in Zotero**. I clicked that and then got a new collection folder in Zotero with everything in it. 
+Claude produced the BibTeX entries perfectly. Because I was using the Claude app, it also offered an **Open in Zotero** button; one click, and a new Zotero collection appeared with everything in it.
 
-Claude corrected my error to ensure that the item type code was correct. It also made the file into a .bib without my asking for that.
+Claude even fixed my mistake in the item type code, and saved the file as a .bib without being asked.
 
 ## What I Learned
-I learned that AI can help me to reduce the amount of time spent on bibliographic drudgery. I also learned that Claude, using one of the advanced models such as Opus 4.8, will not make any mistakes in compiling a small amount of data when you prompt it to do a simple data transfer task. 
+AI can cut the time I spend on bibliographic drudgery. With an advanced model like Opus 4.8, Claude handled this small, simple data-transfer task without a single mistake. 

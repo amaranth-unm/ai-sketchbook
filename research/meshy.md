@@ -12,6 +12,7 @@ effort: "30–60 min"
 tools:
   - Meshy.ai
 level: any
+author: "Fred Gibbs, History"
 tags:
   - 3D printing
   - material culture
@@ -32,17 +33,15 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-3D printing, even via plastic facsimiles, can be a powerful way to understand the physicality of an object. Until recently, though, prints usually required carefully scanned or digitally constructed models.
-
-The experiment here was whether AI can help turn a line drawing into a 3D-printable object.
+Even a plastic facsimile can reveal a lot about an object's physicality. Until recently, though, 3D printing required carefully scanned or digitally built models. Could AI turn a simple line drawing into something printable?
 
 {% include typography/pullquote.html text="It's one thing to see a line drawing. It's an entirely different experience to hold a replica in your palm and imagine its use." %}
 
-History doctoral candidate Edrea Mendoza researches public health sex education initiatives in Mexico in the 1970s. In the course of that research, she encountered drawings of IUDs manufactured in Mexico during that decade — devices that represented a broader government push for population control. She wanted replicas. It's one thing to see a line drawing; it's another experience entirely to hold a replica in your palm and imagine its use.
+History doctoral candidate Edrea Mendoza studies public health and sex education initiatives in 1970s Mexico. Her research turned up drawings of IUDs manufactured in Mexico during that decade, devices tied to a broader government push for population control. She wanted replicas she could hold.
 
 
 ## The Workflow
-The input is simply an uploaded image. Meshy interprets the drawing, generates a 3D mesh, and exports a file ready for a standard 3D printer.
+You upload an image. Meshy interprets the drawing, generates a 3D mesh, and exports a file ready for a standard 3D printer.
 
 {% include images/figure.html
   width="100%"
@@ -71,7 +70,7 @@ The tool sometimes "corrects" what it interprets as imperfections. When we uploa
 %}
 
 
-But line drawings worked differently: given less visual noise to interpret, Meshy produced accurate representations.
+Line drawings were a different story. With less visual noise to interpret, Meshy produced accurate models.
 
 
 
@@ -79,8 +78,8 @@ But line drawings worked differently: given less visual noise to interpret, Mesh
 
 {% include typography/callout.html type="note" text="AI tools can reliably create printable 3D models from 2D drawings, at least for simple diagrams." %}
 
-When historians present findings, they typically rely on images — slides, reproductions, scans. Sometimes an image connects clearly to the argument; sometimes it remains implicitly related. 
+Historians usually present findings through images: slides, reproductions, scans. Sometimes an image clearly supports the argument; sometimes the connection stays implicit.
 
-3D prints like these IUDs offer a different possibility: the tactile occupying the same status as the visual in research presentations. AI-assisted 3D generation dramatically lowers the barrier to that kind of work. 
+3D prints like these IUDs let touch stand alongside sight in a research presentation, and AI-assisted 3D generation dramatically lowers the barrier to doing it.
 
-This workflow can extend to any material culture object that survives as a 2D record: architectural drawings, artifact illustrations, anatomical diagrams. Like many AI workflows, strengths and limitations sit right next to each other, so every drawing is its own experiment. But it is quick enough to try that the experiment itself can be revealing.
+The workflow extends to any material culture object that survives as a 2D record: architectural drawings, artifact illustrations, anatomical diagrams. As with many AI workflows, strengths and limitations sit side by side, so every drawing is its own experiment. But it's quick enough to try that the experiment itself can be revealing.

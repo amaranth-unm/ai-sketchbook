@@ -2,7 +2,9 @@
 layout: sketchbook
 title: Differentiate Yourself From AI
 summary: "Try a stark course policy: if submitted work does not clearly distinguish the student from AI, the student may have to redo the assignment."
-thumbnail: "images/fingerprint-whorl.jpg"
+thumbnail: "images/fingerprint-thumb.jpg"
+thumbnail-credit: 'A right thumbprint on a Spanish-language fingerprint card. Photo by Metrónomo, 2013. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons.'
+thumbnail-position: "center 45%"
 date: 2026-05-22
 status: tested
 type: policy sketch
@@ -10,8 +12,8 @@ effort: "syllabus language + assignment follow-through"
 tools:
   - any AI tool
 level: any
+author: "Fred Gibbs, History"
 tags:
-  - policy language
   - academic integrity
   - authorship
   - assessment
@@ -29,27 +31,27 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Some AI policies try to define permitted tools, require disclosure, or make the writing process more visible. This one is intentionally starker: students are asked to differentiate themselves from AI in the work they submit.
+Some AI policies define permitted tools, require disclosure, or make the writing process visible. This one is deliberately starker: students have to differentiate themselves from AI in the work they submit.
 
-That means their submitted work should show signs of human judgment, creativity, and reflection that are specific to the course and assignment: close engagement with assigned materials, situated interpretation, accountable evidence, personal revision choices, and claims that do more than reproduce the safest middle of what a chatbot might say.
+Their work should show human judgment, creativity, and reflection specific to the course and the assignment: close engagement with assigned materials, situated interpretation, accountable evidence, their own revision choices, and claims that go beyond the safe middle a chatbot would produce.
 
-{% include typography/pullquote.html text="The question is not only whether a student used AI. The question here is whether the student can go beyond AI and amplify their own creativity, judgment, and expertise." %}
+{% include typography/pullquote.html text="Whether a student used AI matters less than whether they can go beyond it and amplify their own creativity, judgment, and expertise." %}
 
 
 ## The Setup
-This policy allows some AI use, but asks students to make sure the final submission goes beyond what AI can easily produce. If a submitted assignment is so generic, detached from course materials, or machine-like that the instructor cannot identify the student's unique voice and perspective, the student may be asked to revise or redo the work.
+The policy allows some AI use but asks that the final submission go beyond what AI can easily produce. If the work is so generic, detached from course materials, or machine-like that the instructor can't find the student's own voice and perspective, the student may be asked to revise or redo it.
 
-The tone matters here. The redo should feel like a route back into the assignment, not a trapdoor into an accusation.
+Tone matters. A redo should feel like a way back into the assignment, not a trapdoor into an accusation.
 
-It works best when students know what "differentiation" looks like in practice. Depending on the course, that might mean:
+Students need to know what "differentiation" looks like in practice. Depending on the course, it might mean:
 
-- citing and interpreting assigned texts in ways that are specific rather than decorative
+- citing and interpreting assigned texts specifically, not decoratively
 - making claims that respond to class discussion, local examples, or course vocabulary
 - explaining why a particular source, passage, image, or object matters
 - making a risky, specific, or situated interpretive choice
 - showing expertise, curiosity, or judgment that a generic chatbot response would not contain
 
-The advantage of this framing is that it keeps the focus on the submitted work rather than on surveillance. The risk is that it gives the instructor interpretive authority over what counts as sufficiently differentiated, which can feel subjective unless the policy is explained with examples and a clear redo path.
+The framing keeps attention on the submitted work instead of on surveillance. The risk: the instructor decides what counts as differentiated enough, which can feel subjective without examples and a clear redo path.
 
 ## Syllabus Language
 
@@ -64,25 +66,25 @@ Using AI is not a substitute for reading, thinking, drafting, or learning. You r
 {% include typography/callout.html type="prompt" title="Possible syllabus language" text=policy_language %}
 
 ## Why It Works
-It does not require the instructor to reconstruct the student's whole process or prove whether AI was used. The question is whether the work, as submitted, shows something beyond what a generic AI response could offer.
+Nobody has to reconstruct the student's process or prove whether AI was used. The only question is whether the work, as submitted, offers something beyond a generic AI response.
 
-It also gives instructors a way to respond to suspicious or generic work without turning every case into an investigation. "Redo this because I cannot assess your thinking yet" can be a more useful pedagogical response than "prove you did not use AI." It preserves the instructor's responsibility to assess learning while giving the student a way back into the assignment.
+Generic or suspicious work gets a response without an investigation. "Redo this because I can't assess your thinking yet" teaches more than "prove you didn't use AI." The instructor keeps the job of assessing learning, and the student gets a way back into the assignment.
 
 
 ## What to Watch For
-{% include typography/callout.html type="warning" title="Subjectivity is the hard part" text="A policy built around differentiating student thinking from AI output can be powerful, but it needs examples. Without examples, students may experience the standard as vague or arbitrary, especially if they are still learning what strong disciplinary thinking looks like." %}
+{% include typography/callout.html type="warning" title="Subjectivity is the hard part" text="This policy can be powerful, but it needs examples. Without them, students may find the standard vague or arbitrary, especially while they're still learning what strong disciplinary thinking looks like." %}
 
-The policy works best when students see concrete contrasts: a generic AI-shaped paragraph beside a paragraph that makes a risky, specific, evidence-based choice. Otherwise, "differentiate yourself" can sound like a vibe rather than an assessable expectation.
+Show concrete contrasts: a generic AI-shaped paragraph beside one that makes a risky, specific, evidence-based choice. Otherwise "differentiate yourself" sounds like a vibe instead of an expectation you can assess.
 
-It is also worth naming the fairness problem. Some students write in polished, generic academic prose because they have been trained to do exactly that. Others may sound unlike themselves because they are multilingual writers, anxious writers, or writers still trying on disciplinary voice. A redo policy should be framed as an opportunity to discuss what makes work specific, creative, and assessable, not as an automatic accusation.
+Name the fairness problem, too. Some students write polished, generic academic prose because they were trained to. Others sound unlike themselves because they're multilingual, anxious, or still trying on a disciplinary voice. Frame a redo as a chance to talk about what makes work specific, creative, and assessable, never as an automatic accusation.
 
 
 ## What I Would Do Differently
-I would not rely on the syllabus statement alone. The policy needs to appear again inside assignments and class discussions, especially in the first few weeks, with language specific to that task:
+Don't rely on the syllabus statement alone. Bring the policy back inside assignments and class discussions, especially in the first few weeks, with language specific to each task:
 
 - "Your response should refer to at least two moments from today's reading that AI would not know were emphasized in class."
 - "Make one interpretive move that depends on your own reading of a passage, object, or source."
 - "Your answer should do more than summarize the obvious middle of the topic."
 - "If your submission could have been produced by a generic chatbot response, I may ask you to redo it."
 
-I would also build in a low-stakes practice version before using the policy on a major assignment. Students could compare an AI-generated response with a stronger student response and identify where the human thinking becomes visible.
+I'd also run a low-stakes practice round before applying the policy to a major assignment. Students compare an AI-generated response with a stronger student response and point to where the human thinking shows.

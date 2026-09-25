@@ -11,6 +11,7 @@ tools:
   - GitHub Copilot
   - GitHub Pages
 level: any
+author: "Fred Gibbs, History"
 tags:
   - AI-assisted coding
   - maps
@@ -32,24 +33,20 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-I was curious how well AI coding agents could help me create a map of images with a simple prompt.
+Could an AI coding agent turn a folder of photos into a map from one plain-language prompt? It could: this workflow produced [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/), a live web map with a clickable pin for every photo.
 
-It took less than an hour to go from a folder of images to a live web map with clickable pins. 
+No coding knowledge required, and it works for any collection of geolocated images: field photographs, urban surveys, monuments, public art.
 
-The workflow requires no prior coding knowledge and generalizes to any collection of geolocated images — field photographs, urban documentation surveys, monuments, public art, whatever.
-
-The process described here produced the website [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/).
-
-{% include typography/pullquote.html text="From download to interactive map in under an hour — with no code written by hand." %}
+{% include typography/pullquote.html text="From download to interactive map in under an hour, without writing a line of code by hand." %}
 
 ## The Experiment
-During March 2026, I traveled to Marrakech and photographed street cats throughout the medina. With location services enabled in the phone's Camera app, GPS coordinates were embedded in the metadata of every image. By the end of the trip, I had over 200 photos of cats — and 200 precise locations.
+During March 2026, I traveled to Marrakech and photographed street cats throughout the medina. With location services enabled in the phone's Camera app, GPS coordinates were embedded in the metadata of every image. By the end of the trip, I had over 200 photos of cats, and 200 precise locations.
 
 I used the [Xanthan](https://xanthan-web.github.io/) web framework, specifically the portfolio template, to start with a simple static website that I could easily update. The template gives you a clean GitHub repository with the files and folders needed for a small website.
 
 After copying the photos into the `images` folder in a GitHub repository, I described the goal to GitHub Copilot in plain language. Copilot wrote all the necessary code: a YAML data file extracting GPS coordinates from each image's metadata, and an updated `map.html` that reads that file and places a clickable pin for each photo. 
 
-No manual data entry, no coordinate lookup, no figuring out how to copy and paste code I didn't understand.
+No manual data entry, no looking up coordinates, no pasting in code I didn't understand.
 
 ## The Prompt
 
@@ -57,16 +54,14 @@ No manual data entry, no coordinate lookup, no figuring out how to copy and past
 
 
 ## Results
-Starting with a folder of photos, I produced the website [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/) in about half an hour.
+From the folder of photos to the finished site took about half an hour. I had a head start because I already knew the basics of the [Xanthan](https://xanthan-web.github.io/) templates, but those take only about 15 minutes to learn.
 
-The major takeaway is that an AI assistant can turn hundreds of geolocated photos into a browsable map very quickly. I could get started because I already knew the basics of the [Xanthan](https://xanthan-web.github.io/) website templates, but those take only about 15 minutes to learn.
-
-Keep in mind that geolocation precision from phones varies. Photos taken inside buildings may have pins placed across the street or several meters off. This is a limitation of phone GPS rather than the workflow itself — but it matters if spatial precision is central to the research question.
+Phone geolocation varies in precision. Photos taken indoors may land across the street or several meters off. That's a limit of phone GPS, not the workflow, but it matters if spatial precision is central to your research question.
 
 ## What I Learned
 
 {% include typography/callout.html type="warning" text="Before AI, even something as straightforward as putting pins on a map could take a full day without previous coding experience. Now it can take under an hour, and the AI assistant can explain how the code works along the way." %}
 
-AI coding agents are lowering the barrier for small digital scholarship projects. Even quickly produced maps like this one can expand understandings of human geography through dense, localized image collections. You might consider this for a reconstruction of pilgrimage journeys or migration routes using photographic evidence. 
+AI coding agents are lowering the barrier to small digital scholarship projects. Even a quick map like this one can deepen our sense of human geography through dense, local image collections. Imagine reconstructing pilgrimage journeys or migration routes from photographic evidence.
 
-There is also potential for experimenting with point of view and perspective by mapping where documentation happens. The ease of this process allows for quickly capturing histories of urban development, neighborhood change, or informal space.
+Mapping where documentation happens also opens up questions of point of view. Because the process is so easy, it can quickly capture histories of urban development, neighborhood change, or informal space.

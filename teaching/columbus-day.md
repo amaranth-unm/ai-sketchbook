@@ -3,7 +3,10 @@ layout: sketchbook
 title: Same Prompt, Different History
 description: "A teaching sketch that uses AI-generated historical argument to examine filter bubbles and the difference between pronouncing and puzzling."
 summary: "The same prompt to ChatGPT produces different histories depending on whether you're logged in or not — and that difference is the lesson."
-thumbnail: "images/columbus-day.png"
+key-question: "Does the same prompt give everyone the same history?"
+thumbnail: "images/landing-of-columbus-vanderlyn.jpg"
+thumbnail-credit: 'John Vanderlyn, *Landing of Columbus*, 1847. U.S. Capitol Rotunda.'
+thumbnail-position: "center 35%"
 date: 2026-04-09
 status: refined
 type: activity
@@ -11,15 +14,10 @@ effort: "45–60 min in class"
 tools:
   - ChatGPT
 level: any
+author: "Fred Gibbs, History"
 tags:
   - source evaluation
-  - filter bubbles
   - historical thinking
-  - history
-skills:
-  - comparing interpretations of a source
-  - identifying how framing shapes meaning
-  - applying historical thinking frameworks
 what-students-learn:
   - how context shapes historical interpretation
   - what filter bubbles look like in practice
@@ -33,17 +31,19 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-Ask AI to perform a historical analysis of a short article from 1892 announcing President Harrison's establishment of Columbus Day as a federal holiday. Students will see different analyses generated when they're logged into their personal account versus incognito mode — and that difference becomes the lesson.
+Students ask ChatGPT for a historical analysis of an 1892 newspaper article announcing President Harrison's proclamation of Columbus Day as a national holiday. Then they ask again in an incognito window. The two histories don't match, and working out why is the lesson.
 
-{% include typography/pullquote.html text="When some historical context goes missing, the meaning of the narrative changes dramatically. Students experience this firsthand rather than taking it on faith." %}
+{% include typography/pullquote.html text="Drop a little historical context and the whole story changes. Students watch it happen on their own screens instead of taking it on faith." %}
+
+{% include typography/callout.html type="note" title="Inspired by" text="Sam Wineburg, *Why Learn History (When It's Already on Your Phone)*, Chapter 4, which gives the same 1892 document to a strong high school student and to history graduate students. **The core change:** the comparison runs between two AI responses, logged in and incognito, so students watch context reshape the history in real time." %}
 
 ## The Setup
 
-This works best with students working individually, so they can compare their own logged-in response against an incognito response — and then compare those against each other's.
+Students work individually, so each can compare their own logged-in response with an incognito one, and then compare notes with classmates.
 
-The activity is grounded in Sam Wineburg's *Why Learn History When It's Already on Your Phone* (Chapter 4). Wineburg gave the same document — a short *New York Times* article from July 22, 1892 about Columbus Day — to a high-achieving AP US History student (Jacob) and to a group of history graduate students. Jacob talked about what Columbus did and whether honoring him is justified. The graduate students immediately began wondering about late nineteenth-century US politics — immigration, nativism, Harrison's political pressures. Jacob issued pronouncements; the graduate students raised questions.
+Wineburg gave the same document — a short *New York Times* article from July 22, 1892 about Columbus Day — to a high-achieving AP US History student (Jacob) and to a group of history graduate students. Jacob talked about what Columbus did and whether he deserved the honor. The graduate students went straight to late nineteenth-century politics: immigration, nativism, the pressures on Harrison. Jacob issued pronouncements; the graduate students asked questions.
 
-ChatGPT, when responding to a logged-in account, produced something closer to the graduate students' approach: contextual, attentive to immigration and national identity debates of the 1890s. Responding anonymously, it still addressed historical context — but added two paragraphs on the moral dimension of honoring Columbus, left out Catholics, and dropped any critique of assimilation. Different account, different history.
+Responding to a logged-in account, ChatGPT sounded like the graduate students: contextual, alert to 1890s debates over immigration and national identity. Responding anonymously, it still offered some context, but it added two paragraphs on the morality of honoring Columbus, left out Catholics, and dropped any critique of assimilation. Different account, different history.
 
 ## The Prompt
 
@@ -55,8 +55,8 @@ Please write a historical analysis of the following article: New York Times pg.8
 
 ## Why It Works
 
-This exercise gives students concrete, firsthand experience with filter bubbles while practicing historical thinking. The Wineburg contrast between Jacob and the graduate students gives the class a frame: are we pronouncing, or are we puzzling? AI makes that distinction visible in real time, and the incognito comparison adds a second layer — the same tool, shaped by different contexts, producing different histories.
+Students get a firsthand encounter with filter bubbles while practicing historical thinking. Wineburg's contrast gives the class a question to carry: are we pronouncing, or puzzling? AI makes that distinction visible in real time, and the incognito comparison adds a second layer: the same tool, in different contexts, writes different histories.
 
 ## What to Watch For
 
-{% include typography/callout.html type="warning" text="As LLM training sets include more material on historical thinking, AI may become less likely to leave out relevant context — which would reduce the contrast between logged-in and incognito responses. The exercise may need updating as models improve." %}
+{% include typography/callout.html type="warning" text="As models absorb more material on historical thinking, they may leave out less context, which would shrink the gap between logged-in and incognito answers. Rerun the comparison yourself before class; the exercise may need updating as models improve." %}

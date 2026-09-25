@@ -3,7 +3,9 @@ layout: sketchbook
 title: Course AI Postures
 listed: false
 summary: "A policy sketch for naming the overall stance a course takes toward AI before writing specific rules or assignment permissions."
-thumbnail: "images/compass-card.jpg"
+thumbnail: "images/bowen-mariners-compass-1748.jpg"
+thumbnail-credit: 'Emanuel Bowen, "A Circle of Winds," the mariner''s compass, 1747 (detail). Geographicus.'
+thumbnail-position: "center 50%"
 date: 2026-05-22
 status: rough
 type: policy sketch
@@ -11,8 +13,8 @@ effort: "course design conversation"
 tools:
   - any AI tool
 level: any
+author: "Fred Gibbs, History"
 tags:
-  - policy language
   - course design
   - AI literacy
 key-question: "What overall posture should a course take toward AI?"
@@ -29,13 +31,13 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-Before writing rules, it can help to name the course's posture toward AI. A first-year writing class, an upper-division seminar, a methods course, and a project-based lab may all need different policies because they are protecting and cultivating different kinds of learning.
+Before writing rules, name the course's posture toward AI. A first-year writing class, an upper-division seminar, a methods course, and a project-based lab may each need a different policy, because each protects and cultivates a different kind of learning.
 
-{% include typography/pullquote.html text="A good AI policy is not only a boundary. It is a statement about what kind of learning the course is trying to make possible." %}
+{% include typography/pullquote.html text="A good AI policy draws a boundary, and it also says what kind of learning the course is trying to make possible." %}
 
 ## The Setup
 
-This sketch treats course policy as a posture rather than a universal verdict. The posture gives the syllabus a rationale students can understand before they encounter the specific rules.
+Think of the policy as a posture instead of a universal verdict. It gives students a rationale they can understand before they meet the specific rules.
 
 {% capture posture_language %}
 This course takes a **[choose one]** posture toward AI:
@@ -55,16 +57,16 @@ This course takes a **[choose one]** posture toward AI:
 
 ## Why It Works
 
-Naming a posture can help avoid a common policy mismatch: a syllabus says AI is permitted, but the assignments quietly depend on skills that AI can bypass. Or a syllabus bans AI, but the course also claims to teach students how to understand contemporary tools. The posture makes that tension visible.
+Naming a posture exposes a common mismatch: the syllabus permits AI, but the assignments quietly depend on skills AI can bypass. Or the syllabus bans AI while the course claims to help students understand contemporary tools.
 
-It can also make departmental conversations less brittle. Instead of asking everyone to adopt the same rule, faculty can ask whether a course's posture fits its level, discipline, and learning goals.
+It also makes department conversations easier. Instead of pushing everyone toward the same rule, faculty can ask whether each course's posture fits its level, discipline, and goals.
 
 ## What to Watch For
 
-{% include typography/callout.html type="warning" title="Posture is not enough" text="A course posture explains the logic of the policy, but students still benefit from concrete assignment rules. The posture can introduce assignment-level permissions, not replace them." %}
+{% include typography/callout.html type="warning" title="Posture is not enough" text="A posture explains the logic of the policy, but students still need concrete assignment rules. Let the posture introduce assignment-level permissions, not replace them." %}
 
-Some courses may need mixed postures. A course might use protected practice for weekly reading responses, critical integration for one AI analysis unit, and open experimentation for a final project. That is not inconsistency if the reason is explained.
+Some courses need mixed postures: protected practice for weekly reading responses, critical integration for an AI analysis unit, open experimentation for the final project. That's not inconsistency, as long as you explain why.
 
 ## What I Would Do Differently
 
-I would put the posture near the beginning of the syllabus policy, before the rules. Students are more likely to accept constraints when they understand what the constraints are protecting. I would also revisit the posture midway through the course and ask whether the actual assignments matched the policy's stated philosophy.
+I'd put the posture at the top of the syllabus policy, before the rules. Students accept constraints more readily when they know what the constraints protect. I'd also revisit it midway through the term and check whether the assignments matched the stated philosophy.

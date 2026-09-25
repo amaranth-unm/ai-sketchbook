@@ -1,8 +1,10 @@
 ---
 layout: sketchbook
 title: Remixing Plato
-summary: "Students translate, reshape, or re-perform a Platonic dialogue through AI — then analyze what changed and why."
-thumbnail: "images/960px-Plato's_Academy_mosaic_from_Pompeii.jpg"
+summary: "Students remix Plato's worries about writing into a new dialogue about AI — building the characters themselves, then iterating with AI until each position is sharp."
+thumbnail: "images/plato-academy-mosaic.jpg"
+thumbnail-credit: '*Plato''s Academy*, mosaic from Pompeii, 1st century. National Archaeological Museum, Naples.'
+thumbnail-position: "center 55%"
 date: 2026-04-01
 status: lightly tested
 type: assignment
@@ -10,17 +12,17 @@ effort: "1–2 hours out of class"
 tools:
   - any AI tool
 level: anyone
+author: "Fred Gibbs, History"
+context: "HIST 300 Critical Thinking with AI (upper-division), UNM"
+last-run: "Spring 2026"
+handout: "https://fredgibbs.net/courses/critical-thinking-with-ai/dialogue-remix"
 tags:
-  - philosophy
-  - prompting
   - interpretation
-key-question: How can AI help translate ideas into contemporary culture?
-skills:
-  - close reading through transformation
-  - analyzing how meaning shifts across forms
-  - prompting as a rhetorical skill
+  - prompting
+key-question: "If Plato's worries about writing were recast as worries about AI, what would change and what would stay the same?"
 what-students-learn:
   - what AI can and cannot preserve in philosophical argument
+  - how old anxieties about new media resemble current debates about AI
   - how form and genre reshape meaning
   - that prompting requires the same clarity as writing
 card_order: 10
@@ -32,45 +34,59 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Students take a canonical philosophical dialogue — the *Phaedrus* — and remix it using AI: translate it into a new form, audience, or style. The task sounds simple. In practice it becomes a compact laboratory for thinking about interpretation, authorship, and the limits of AI-assisted understanding.
+In the *Phaedrus*, Socrates worries that writing will give people the appearance of wisdom without the substance: a text can't answer back, and people will stop exercising their memories. Swap "writing" for "AI" and he could be posting this week. Students use AI to remix Plato's worries into a contemporary dialogue about large language models, still about memory, authority, and truth, and then ask what has changed and what hasn't. It has been a student favorite.
 
-{% include typography/pullquote.html text="Prompting is not merely a technical skill but a rhetorical one. It requires clarity about purpose, audience, and desired constraints, and students often learn this by making a gloriously messy first attempt." %}
+{% include typography/pullquote.html text="Prompting is a rhetorical skill as much as a technical one. It takes clarity about purpose, audience, and constraints, and students often learn that from a gloriously messy first attempt." %}
 
 ## The Setup
-Students prompt, revise, and iterate, effectively co-authoring a transformation of the original text. This creates a layered interpretive process: they are not only interpreting Plato, but also interpreting how the AI mimics Plato.
 
-The act of remixing makes visible the scaffolding of the original: voice, pacing, tension, and the gradual unfolding of ideas. Students report that the assignment clarified the purpose of the dialogue format itself — why ideas are staged as exchanges rather than presented as arguments. By converting the text into modern language, they see key features more clearly.
+The first version of this assignment asked students to remix a passage into a new form: a text-message exchange, a TED talk, a Reddit thread. It made a playful warm-up, but students who hadn't grasped the original's argument had nothing to push against, and the remixes drifted into style without stakes. The current version builds understanding first and gives the remix an argument to carry.
 
-AI can remix surface features — tone, setting, genre — and sometimes in surprising ways. But it often struggles with deeper conceptual fidelity. It can "revise" the dialogue stylistically without preserving its philosophical stakes. That gap is the most productive part of the assignment.
+**1. Warm up with AI as questioner.** After discussing the *Phaedrus* in class, students ask AI to quiz them on it, one question at a time, and then to help them apply it to AI. A second round widens the frame: what hopes and fears have surfaced about writing, the telegraph, radio, television, and the internet, and what do they have in common? A third asks what perspectives a modern dialogue about AI would need.
 
-**To strengthen it:**
-- Require a short meta-commentary: what was your prompting strategy, what changed across iterations, what could the AI not capture?
-- Break it into phases — initial remix, prompt revision, comparative analysis — to make the learning visible
-- For advanced students: constrain the AI to preserve specific argumentative moves, or test multiple models against each other
+**2. Assign roles by hand.** Students define three to five characters, each with a clearly stated position. For example, a frightened academic who thinks AI produces "zombie" knowledge, a techno-optimist who sees a spectacular new tool, a purist worried that nothing is authored or trustworthy anymore. Characters can borrow the style of a literary or pop-culture figure, but the position still has to be spelled out, or every character ends up saying the same thing.
+
+**3. Draft.** Students tell AI what they're making and why — a modern remix of the *Phaedrus* about AI — and paste in their role definitions.
+
+**4. Revise and iterate.** Where does it flow, and where is it hard to follow? Are the positions distinct, or do they need sharpening? Students can ask AI to read the dialogue as a high school student would and name its key themes, or to suggest missing perspectives, and then decide whether those help or muddle.
+
+**5. Refine.** Do the characters have personalities that match their positions? Does anyone dominate? Does the argument build? Can the prose be livelier without getting less clear?
+
+**6. Post and read.** Dialogues go on a discussion board before class, and students read and respond to each other's in pairs. A reading on why people resist new technologies (Calestous Juma's *Innovation and Its Enemies*, in my version) makes a good follow-up: is Socrates a technological resister, or is he making a different kind of argument?
 
 ## The Prompt
-{% include typography/callout.html type="prompt" 
-  title="prompt to give students"
-  text="
-  Take the following passage from Plato's Phaedrus: [paste excerpt]. Remix it into [new form, audience, or style — e.g., a text message exchange, a TED talk, a Reddit thread]. Keep as much of the original philosophical content as you can. Then write a 200-word reflection: what did the AI preserve, what did it lose, and what does that tell you about the original text?" 
-%}
 
+{% capture remix_warmup %}
+I am reading Plato's Phaedrus. Ask me three questions, one at a time, about what the point is. Use my answers to help me understand the broader point. Then, ask 3 questions one at a time to help me understand how to apply it to AI. What's similar and what's different?
+{% endcapture %}
+
+{% include typography/callout.html type="prompt" title="warm-up prompt" text=remix_warmup %}
+
+{% capture remix_draft %}
+Following Phaedrus and Platonic dialogues in general, create a ~1200-word conversation about AI based on the following roles: [PASTE IN YOUR ROLE DEFINITIONS]. [ADD ANY STYLISTIC ADVICE]
+{% endcapture %}
+
+{% include typography/callout.html type="prompt" title="drafting prompt" text=remix_draft %}
 
 ## Why It Works
-The assignment shifts attention from "what can AI do?" to "what does it mean to reinterpret a text through AI?" That is a different and more valuable question. Students who are experienced AI users may be less surprised at how well AI can do — but even for them, the assignment functions as a conceptual exercise. Moving between academic and popular registers of the dialogue helps students see how meaning is reshaped by tone, genre, and audience.
 
-Student evaluations made clear that this was a favorite and surprising exercise for many students.
+The remix makes students state what the original is arguing before they can transpose it. They can't write a character who carries Plato's worry into the present without knowing what the worry is, and the warm-up puts AI to work on that understanding before any writing starts.
 
-When asked to describe the assignment, one AI agent offered this analogy: students are renovating a building with an unpredictable contractor who sometimes misunderstands the blueprint. Asking students to read through the creative dialogue from AI and assess the level of misunderstanding was playful, useful, and surprisingly clarifying.
+Transposing the argument also surfaces the course's central comparison on its own. Some of Socrates' concerns carry over to AI almost unchanged; others don't fit, and the misfit is informative. Students end up reasoning about what's new about AI and what is a very old anxiety about new media.
 
+The character work turns prompting into a knowledge problem. Vague roles produce characters who blur together, and the fix is thinking harder about the positions, not finding a cleverer prompt. Moving between Plato's register and a contemporary one also shows students why the dialogue form stages ideas as exchanges instead of laying them out as arguments.
+
+Asked to describe the assignment, one AI model offered a nice analogy: students are renovating a building with an unpredictable contractor who sometimes misreads the blueprint.
 
 ## What to Watch For
+
 {% capture remix_warning %}
-Best positioned as a warm-up to explore creative AI use rather than a deep AI investigation. It works better when framed not as "can I get AI to do this" but "what are the key themes, and what happens when I try to modernize them?"
+If students haven't grasped the larger issues the original raises, the remix has nothing to push against. Don't skip the warm-up, even for students who were in the class discussion.
 {% endcapture %}
 
 {% include typography/callout.html type="warning" text=remix_warning %}
 
-- Works best as an early, low-stakes exercise that introduces AI mediation — not as a standalone deep dive. 
-- If students miss the nuance of the dialogue format and create vague prompts, the remix can get convoluted quickly and lose some of the crispness that a dialogue should bring.
-- If students aren't attuned to the larger issues the original tries to raise, the remix has nothing to push against.
+- Underspecified roles produce characters who all sound alike. Ask to see the role definitions.
+- AI's first drafts come out balanced and bland. The dialogue comes alive in the refining step, when students push for personality and a real argument.
+- Too many characters muddle the argument. Three to five is plenty.
+- Formatting matters: a dialogue pasted as one giant paragraph is unreadable for the peer-reading step.
