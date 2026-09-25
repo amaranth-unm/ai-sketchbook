@@ -8,8 +8,16 @@
 .home-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: 1.25rem;
-  margin: 0.5rem 0 3rem;
+  gap: 1.5rem;
+  margin: 1.75rem 0 1rem;   /* + the next h2's 2rem top margin (grid margins don't collapse) */
+}
+
+/* The section cards are the home page's main doorway, so they break out of
+   the reading column (centered, up to 68rem) to give them more presence. */
+.container > .home-sections {
+  grid-column: full-start / full-end;
+  justify-self: center;
+  width: min(68rem, 100% - 3rem);
 }
 
 .home-section-box {
@@ -18,7 +26,7 @@
   border: 1px solid var(--rule-gray);
   border-top: 5px solid var(--rule-gray);
   border-radius: 2px;
-  padding: 1.3rem 1.5rem 1.45rem;
+  padding: 1.6rem 1.9rem 1.8rem;
   text-decoration: none;
   color: var(--black);
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
@@ -46,7 +54,7 @@
 
 .home-section-box__title {
   font-family: 'Caveat', cursive;
-  font-size: var(--caveat-display);
+  font-size: clamp(2.4rem, 3.6vw, 3.1rem);
   line-height: 1;
   letter-spacing: 0.02em;
   transform: rotate(-1deg);
@@ -59,7 +67,7 @@
 
 .home-section-box__count {
   font-family: var(--font-mono);
-  font-size: var(--text-label);
+  font-size: var(--text-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted-gray);
@@ -68,17 +76,17 @@
 
 .home-section-box__text {
   display: block;
-  color: var(--mid-gray);
-  font-size: var(--text-md);
-  line-height: 1.55;
+  color: var(--dark-gray);
+  font-size: var(--text-lg);
+  line-height: 1.5;
 }
 
 /* Reads as the card's call to action; the whole card is the link. */
 .home-section-box__go {
   display: block;
-  margin-top: 0.85rem;
+  margin-top: 1.1rem;
   font-family: var(--font-mono);
-  font-size: var(--text-label);
+  font-size: var(--text-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted-gray);
