@@ -33,11 +33,7 @@ Students need to know how to work with AI, but not as a substitute for their own
 {% include nav/home-card-links.html cards=page.home-cards %}
 
 
-## Open to a random sketch
-
-{% include nav/home-featured.html %}
-
-## Topics in play
+## Browse by topic
 
 {% include nav/home-tag-cloud.html %}
 
