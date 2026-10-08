@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Citation Test
-summary: "Students verify an AI-generated reading list and discover how convincingly LLMs invent sources that sound real but do not exist."
+summary: "Students check an AI-generated bibliography against catalogs, publisher records, and the sources themselves."
 thumbnail: "images/eniac-beck-snyder.jpg"
 thumbnail-credit: 'Glen Beck and Betty Snyder program the ENIAC, Ballistic Research Laboratory, c. 1947. U.S. Army photo.'
 date: 2026-03-28
@@ -18,9 +18,9 @@ tags:
   - AI literacy
 key-question: "How can AI output help students learn scholarly integrity?"
 what-students-learn:
-  - why polished prose is not evidence of accuracy
-  - how hallucination happens and why it's convincing
-  - verification is a scholarly habit that connects classroom work with library expertise
+  - "verify bibliographic details using independent records"
+  - "check whether an annotation represents its source"
+  - "document the evidence for accepting or questioning a citation"
 card_order: 20
 ---
 
@@ -30,22 +30,28 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-Ask AI for a reading list on a focused scholarly topic, then hunt down the citations together as a class. Some are real. Some are garbled. Some are pure invention that sounds perfectly plausible, and those are the ones worth lingering over.
+Ask AI for a reading list on a focused scholarly topic, then track down the sources together. The exercise gives students practice checking the parts of a citation and deciding whether its annotation describes the source accurately.
 
-{% include typography/pullquote.html text="Fluent prose and tidy bibliographic formatting don't guarantee that a source exists. Once students see that, verification stops feeling like a library ritual and starts feeling necessary." %}
+Some lists contain invented or garbled references. Others hold up better. Either way, students need to show how they checked them.
 
-## The Setup
+## Preparation and submission
 
-Pick a topic narrow enough to sound scholarly but broad enough that students won't know the literature by heart. Ask AI for eight to ten key books and articles. Then students track each citation through library catalogs, publisher pages, journal databases, and Google Scholar.
+Make sure students can access a catalog and publisher or journal records. Test the topic beforehand and save a list for use if a tool is unavailable. Students don't need to know the literature already, but may need a demonstration of searching an exact title.
 
-It works individually or in teams, with each team taking two or three citations and reporting back. The room usually ends up with a mix of confirmed sources, half-right sources, and outright inventions.
+**Suggested submission:** a verification table with each citation, records consulted, discrepancies or confirmation, and a judgment about its annotation. Mark unresolved searches as unresolved.
 
-**What to verify:**
+## Checking the list
+
+Choose a topic narrow enough to produce a scholarly bibliography but unfamiliar enough that students will need to look things up. Ask for eight to ten works. Students can check them individually or work in teams, with each team reporting on two or three citations.
+
+Use library catalogs, publisher pages, journal databases, and Google Scholar to ask:
+
 - Does the author exist?
-- Does the title exist in that exact form?
-- Does the journal, press, or book series match?
-- Does the year line up?
-- Does the source actually address the topic claimed in the annotation?
+- Does the exact title exist?
+- Do the journal, publisher, and year match?
+- Does the source address the topic claimed in the annotation?
+
+A failed search is a reason to investigate further. It isn't enough on its own to declare a source invented. Record where the group looked and what it found.
 
 ## The Prompt
 
@@ -55,15 +61,13 @@ Give me a reading list of 8 to 10 important scholarly works on [topic]. Include 
 
 {% include typography/callout.html type="prompt" title="Prompt" text=citation_prompt %}
 
-## Why It Works
+## Checking more than existence
 
-Talk about "hallucination" stays abstract. This task has a clear answer: the source exists or it doesn't, and the metadata is right or it isn't. That makes it a strong early-semester exercise for any class headed toward research papers, annotated bibliographies, or historiographic review.
+**Constructed example — not a real citation or search result.** A generated entry gives the correct author, title, and year but claims that a book explains workers' reactions to a factory closure. The catalog confirms the book exists; its introduction instead defines its subject as municipal finance.
 
-It isn't a gotcha about AI. AI's fluent mistakes make source evaluation concrete and show it as part of expert work. Once students start finding errors, the conversation moves from "AI makes mistakes" to a better question: why are we so easily persuaded by the look of correctness? That opens onto how LLMs work, why they confabulate, and what particular errors might reveal about their training data.
+The student can confirm the bibliographic details while questioning the annotation. They should cite the introduction and state what further reading would resolve the mismatch. Finding a real book doesn't settle whether it belongs in this bibliography.
 
-## Another Push
-
-AI tools are getting better at avoiding fabrications when explicitly asked to verify sources. That sets up a second round: ask the tool to explain **precisely** where its citations came from.
+## Ask the model to check too
 
 {% capture citation_prompt2 %}
 Verify each citation for accuracy and tell me precisely how you verified or generated these citations.
@@ -71,10 +75,10 @@ Verify each citation for accuracy and tell me precisely how you verified or gene
 
 {% include typography/callout.html type="prompt" title="A follow-up prompt" text=citation_prompt2 %}
 
-Students can watch the model stitch nearby authors, titles, and publication habits into something that feels plausible but has no source behind it.
+Compare the follow-up with the students' findings. Does it supply a usable link, correct a citation, or simply repeat its assurance? Its explanation of how a reference was generated is another claim to check. It doesn't give the class direct access to the process that produced the first answer.
 
-## What to Watch For
+## Preparing for the activity
 
-{% include typography/callout.html type="warning" text="Try a sample bibliography or two before class. AI tools change quickly, some topics are less error-prone than others, and vaguer prompts get looser bibliographies." %}
+Try the prompt before class so you know what kinds of references it produces. If the citations are accurate, students can examine the annotations and selection: why these sources, and what do they contribute? The exercise needn't depend on catching the tool fabricating a book.
 
-Frame the lesson carefully. It isn't "AI is bad because it makes mistakes." It's how LLMs work, how prompting changes precision, and why verification is the habit that defines expertise.
+The most useful discussion starts with a particular citation and the work required to verify it. Ask what made it look trustworthy initially and what evidence eventually justified or changed that impression.

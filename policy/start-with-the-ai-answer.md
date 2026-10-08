@@ -2,7 +2,7 @@
 layout: sketchbook
 title: Start With the AI Answer
 author: "Fred Gibbs, History"
-summary: "In a fully online course where AI use is invisible anyway, build the main assignments around AI output and grade the critical thinking layered on top, while keeping a few assignments where the thinking has to start with the student."
+summary: "A summer course combined assignments that examine AI output with reflections students began on their own."
 thumbnail: "images/ics-advertisement-1898.jpg"
 thumbnail-credit: "International Correspondence Schools advertisement, *Locomotive Engineering*, 1898. University of Scranton."
 date: 2026-09-25
@@ -21,9 +21,9 @@ tags:
   - online teaching
 key-question: "If you can't see how students work, what if the assignment starts where AI would have?"
 what-students-learn:
-  - that an AI answer is a starting point to interrogate, not a finished product
-  - which kinds of thinking AI can help with and which have to be their own
-  - how to check a confident answer against the actual sources
+  - "which assignments begin with AI output and which require an initial student draft"
+  - "what source-based analysis each submission needs to contain"
+  - "where the instructor still cannot tell how the work was produced"
 card_order: 50
 ---
 
@@ -33,30 +33,25 @@ card_order: 50
 
 {% include typography/sketch-info.html %}
 
-In a remote, asynchronous course, you never see students work. There's no classroom, no discussion to overhear, no drafts taking shape. If an assignment can be done by pasting the prompt into a chatbot, some students will, and nothing will tell you. So in a compressed summer course on the history of diet and health, I tried starting there. The major assignments hand students the AI answer up front and ask them to do something with it: check it, complicate it, find what it missed. A few assignments go the other way and ask students to start from their own thinking, with AI allowed only for polish afterward.
+In a compressed, asynchronous summer course on the history of diet and health, I couldn't watch students work through readings or overhear a discussion as I could in a classroom. I expected some to use AI for assignments, so I designed several around that possibility. Students began with AI output and checked it, challenged it, or found evidence it had missed. Other assignments asked them to develop their own responses before using AI for editing.
 
-{% include typography/pullquote.html text="If AI will produce the first draft anyway, make the first draft the assignment's raw material, and grade what students do with it." %}
+I'm not sure the assignments are great yet. The approach seemed worth recording, including the questions it left me with.
 
-I'm not sure the assignments are great yet. But the approach, meeting AI at the start instead of trying to keep it out, seemed worth recording.
+## How the assignments fit together
 
-## The Setup
+Several assignments made AI output part of the material to examine:
 
-Each assignment names its own relationship to AI. The course leans AI-first, with a few deliberate exceptions.
+- **[AI Reading Investigation](../teaching/ai-reading-investigation.md):** a prompt sequence for a dense article, followed by an account of what students checked and corrected.
+- **[AI as Second Opinion](../teaching/ai-as-second-opinion.md):** students first sampled old diet books, then compared an AI overview with the originals. We did this twice, with more independent prompting the second time.
+- **[Narrate the Slides](../teaching/narrate-the-slides.md):** AI supplied captions for historical images; students examined details the captions missed.
+- **A secondary article on low-fat diets:** students could use AI to help read it, then explain the history using the course.
+- **[Complicate the Obvious](../teaching/complicate-the-obvious.md):** the final essay used course readings to examine the assumptions behind AI dietary advice.
 
-**Start with AI output, then think on top of it:**
+For **reading reflections**, students drafted their reactions first. AI could help with grammar or suggest another question after they had developed an idea. For the **final reflection**, they supplied the account of their experience of the course; AI editing was allowed only after an outline or draft existed.
 
-- **[AI Reading Investigation](../teaching/ai-reading-investigation.md):** a prompt sequence on a dense scholarly article, ending with what students verified and what they had to correct.
-- **[AI as Second Opinion](../teaching/ai-as-second-opinion.md):** twice, students sample old diet books, get AI's overview, and go back to the originals to see where it holds up.
-- **[Narrate the Slides](../teaching/narrate-the-slides.md):** AI captions an unnarrated deck of historical images; students find what the captions skipped.
-- **A long secondary article on low-fat diets:** skim it with AI as much as you like, "iteratively and critically, not just lazily," then explain its history using the course.
-- **[Complicate the Obvious](../teaching/complicate-the-obvious.md):** the end-of-term essay. Ask AI what a healthy diet is, then use the whole course to explain why that answer is historical.
+## The original course policy
 
-**Start with your own thinking:**
-
-- **Reading reflections:** students draft their own reactions. AI can polish grammar, or suggest what else to consider *after* they have their own ideas.
-- **Final reflection:** no AI drafting at all, because AI can't fake the student's experience of the course. AI can smooth the writing once the student has an outline or draft.
-
-## Policy Language
+The summer syllabus used the language below. Its last sentence is a problem: it allows a redo based on an impression of AI use, even when that impression is wrong. The proposed replacement that follows ties revision to specific requirements of the assignment.
 
 {% capture online_policy %}
 Learning to use AI is an important skill in itself, but using it when you're supposed to be working through the friction of thinking on your own is like bringing a forklift into the weight room.
@@ -66,24 +61,32 @@ Each assignment specifies the level and type of AI use that's appropriate. Somet
 One rule applies to every assignment: you must always differentiate your work from AI. If it even *seems* like vanilla AI (even if it isn't), you will need to redo the assignment for credit.
 {% endcapture %}
 
-{% include typography/callout.html type="prompt" title="From the course syllabus" text=online_policy %}
+{% include typography/callout.html type="prompt" title="Original summer syllabus wording — revised below" text=online_policy %}
 
-## Why It Works
+## Revising the rule
 
-It meets students where they already are. Online students will use AI; the only question is whether the assignment acknowledges it. Starting with AI output removes the temptation to pass it off as their own, because the output is already on the table. What earns credit is the layer on top: checking claims against the reading, spotting what the answer flattened, bringing course material to bear on it.
+The assignment should tell students what evidence and interpretation they need to supply. A request to revise should identify where the submission falls short of those requirements. A suspicion about its style gives the student no reliable way to improve it.
 
-The critical thinking still happens, even if students aren't writing everything out themselves. Many of the assignments ask for specific moves (one claim verified, one corrected, one passage understood better, one place the original complicated the AI) that are hard to do without engaging with the sources.
+{% capture revised_policy %}
+Each assignment explains what AI use is permitted and what work you must do yourself. Your submission must meet the stated requirements for evidence, interpretation, and explanation. If it falls short, I may ask you to revise or redo it. My feedback will identify what needs work and how the revision earns credit. This applies whether or not you used AI; a resemblance to AI prose is not itself grounds for a redo.
+{% endcapture %}
 
-The no-AI assignments keep the other half of the skill alive. Reflections are where students practice turning reading into their own interpretation, and the final reflection asks about an experience only they had. Putting both kinds side by side shows students that AI's role depends on what an assignment is for.
+{% include typography/callout.html type="prompt" title="Proposed replacement" text=revised_policy %}
 
-## What to Watch For
+The [separate policy sketch](differentiate-yourself-from-ai.md) develops this revision.
 
-{% include typography/callout.html type="warning" text="AI can do the critique layer too. A student can ask AI to find the flaws in AI's answer and paste the result. The strongest defense is requiring specifics from the actual sources (quoted passages, page-level details, course readings by name), which a generic critique can't supply." %}
+## What I wanted to assess
 
-- The line between "polish" and "draft" in the no-AI assignments is hard to see from outside. The differentiate-yourself rule is what makes it enforceable.
-- Asynchronous students can't ask a quick clarifying question mid-task, so each assignment has to state its AI role plainly and early. A short walk-through video can carry the trickier ones; I made one on how to sample an old book.
-- AI answers change over the course of a term. Build that into the assignments instead of fighting it: variation across a class is evidence, too.
+The AI assignments asked for specific things I could discuss in feedback: a claim checked against a reading, a passage that complicated an overview, or a detail missed in an image. Starting from a disclosed AI response also gave the student and me a common reference when discussing their analysis.
 
-## What I'm Still Unsure About
+That doesn't establish that the analysis was their own. A student could ask AI to write the critique too, including one with quotations from supplied sources. Requiring specifics makes the work easier to assess, but it doesn't settle the authorship question.
 
-Whether the critique students wrote was really theirs, and how I'd know. Whether starting with AI output anchors students to its framing more than it frees them from it. And whether the balance was right: an online course may need more no-AI practice early on, before students are asked to critique AI's version of a reading they haven't wrestled with themselves.
+## Practical details
+
+Each assignment needs to explain its permitted AI use early, particularly when students are working without a live discussion. A short video can help with an unfamiliar task; I made one on sampling an old book.
+
+An outline already makes decisions about an argument, and an edit can change a claim. For a future version, I'd specify what help is allowed on each task and ask students to keep the draft they brought to AI. That would give us something to discuss when a revision changes the substance. Responses also vary across tools and over time, so students need room to describe different results, including an exchange that didn't help.
+
+## What I'm still unsure about
+
+Whether the critique students wrote was really theirs, and how I'd know. Whether starting with AI output anchored students to its framing. And whether the course needed more practice reading and developing an interpretation without AI before asking students to critique its version.

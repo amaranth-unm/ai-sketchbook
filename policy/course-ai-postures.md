@@ -2,7 +2,7 @@
 layout: sketchbook
 title: Course AI Postures
 listed: false
-summary: "A policy sketch for naming the overall stance a course takes toward AI before writing specific rules or assignment permissions."
+summary: "Draft a short explanation of how the course’s AI rules relate to what students need to practice."
 thumbnail: "images/bowen-mariners-compass-1748.jpg"
 thumbnail-credit: 'Emanuel Bowen, "A Circle of Winds," the mariner''s compass, 1747 (detail). Geographicus.'
 thumbnail-position: "center 50%"
@@ -31,13 +31,9 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-Before writing rules, name the course's posture toward AI. A first-year writing class, an upper-division seminar, a methods course, and a project-based lab may each need a different policy, because each protects and cultivates a different kind of learning.
+Before specifying AI permissions, decide what students need to practice in the course. A writing seminar, a research methods course, and a project-based lab may need different arrangements. These proposed descriptions can help explain the reasons behind the rules.
 
-{% include typography/pullquote.html text="A good AI policy draws a boundary, and it also says what kind of learning the course is trying to make possible." %}
-
-## The Setup
-
-Think of the policy as a posture instead of a universal verdict. It gives students a rationale they can understand before they meet the specific rules.
+## Possible course descriptions
 
 {% capture posture_language %}
 This course takes a **[choose one]** posture toward AI:
@@ -55,18 +51,10 @@ This course takes a **[choose one]** posture toward AI:
 
 {% include typography/callout.html type="prompt" title="Possible posture language" text=posture_language %}
 
-## Why It Works
+## Turning the description into instructions
 
-Naming a posture exposes a common mismatch: the syllabus permits AI, but the assignments quietly depend on skills AI can bypass. Or the syllabus bans AI while the course claims to help students understand contemporary tools.
+A course may combine several of these approaches: independent reading responses, an activity that critiques AI, and a final project using AI for a defined task. Explain the reasons for each in the assignment instructions.
 
-It also makes department conversations easier. Instead of pushing everyone toward the same rule, faculty can ask whether each course's posture fits its level, discipline, and goals.
+[AI Roles on Assignments](ai-integration-ladder.md) supplies labels for assignments, while this sketch is a way to think through the course's overall purpose. Either approach still needs to tell students what they may do on the task in front of them.
 
-## What to Watch For
-
-{% include typography/callout.html type="warning" title="Posture is not enough" text="A posture explains the logic of the policy, but students still need concrete assignment rules. Let the posture introduce assignment-level permissions, not replace them." %}
-
-Some courses need mixed postures: protected practice for weekly reading responses, critical integration for an AI analysis unit, open experimentation for the final project. That's not inconsistency, as long as you explain why.
-
-## What I Would Do Differently
-
-I'd put the posture at the top of the syllabus policy, before the rules. Students accept constraints more readily when they know what the constraints protect. I'd also revisit it midway through the term and check whether the assignments matched the stated philosophy.
+I'd revisit the description midway through a course. Do the assignments ask students to practice what the syllabus says matters? Where do the AI permissions make that practice harder to assess? Those questions seem more useful than expecting one rule to cover every kind of work.

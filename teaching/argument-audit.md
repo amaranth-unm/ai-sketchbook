@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Argument Audit
-summary: "Students use AI-generated objections to test whether a thesis is vague, vulnerable, or persuasive."
+summary: "Students sort AI-generated objections to a draft, explain their decisions, and revise the claims that need work."
 thumbnail: "images/puzzle-krypt.jpg"
 thumbnail-credit: 'Puzzle, photo by Muns (derivative by Schlurcher), 2009. [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/), via Wikimedia Commons.'
 date: 2026-04-09
@@ -15,11 +15,11 @@ author: "Fred Gibbs, History"
 tags:
   - writing
   - interpretation
-key-question: How can AI help sharpen writing skills instead of replace them?
+key-question: "Which objections would improve this argument, and which miss the point?"
 what-students-learn:
-  - the difference between tone and analytical precision
-  - what makes an objection substantive vs. generic
-  - how vague writing produces vague critique
+  - "locate the claim an objection addresses"
+  - "explain why a criticism is relevant or mistaken"
+  - "revise an ambiguous or unsupported claim"
 card_order: 10
 ---
 
@@ -29,21 +29,23 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Most students meet critique at the end, when a draft is nearly done and feedback feels like polish. This exercise pulls it forward. AI supplies a stack of objections on demand, and students have to decide which are noise and which just found a hole in their argument.
+A working thesis often needs criticism before it needs polishing. This exercise gives students a set of objections while there is still time to change the argument. Their job is to decide which objections deserve a revision and explain why.
 
-{% include typography/pullquote.html text="Vague objections often reveal vague writing. AI isn't a brilliant critic, but it forces students to say exactly what they're claiming." %}
+## Preparation and submission
 
-## The Setup
+Students need a draft with a claim and supporting evidence, plus enough knowledge of the topic to judge criticism. Prepare a short sorting demonstration. For an adaptation without individual accounts, supply objections to a shared draft.
 
-Students bring a working thesis paragraph, an interpretive claim, or a partial draft. They paste it into an AI tool and ask for the three strongest objections it can come up with.
+**Suggested submission:** the original claim, three annotated objections, and a revised paragraph explaining which criticism prompted the change. If no objection warrants revision, students should justify that judgment.
 
-Then they annotate each objection and sort it into one of three piles:
+## Sorting the objections
 
-- too generic to matter
-- misreads the argument as written
-- exposes a real gap, ambiguity, or unsupported leap
+Students bring a thesis paragraph, an interpretive claim, or a partial draft. They ask an AI tool for its three strongest objections, then annotate each one and sort it into a category:
 
-**The sorting is the assignment.** Students have to say *why* an objection fails instead of waving off the ones that are hard to answer. They take the third pile into their final revision.
+- too generic to address the claim;
+- based on a misreading of the draft;
+- pointing to a gap, ambiguity, or unsupported step.
+
+For each objection, students identify the passage it concerns and explain their decision. They revise in response to the third category. If an objection misreads the argument, they should also consider whether their wording made that reading possible.
 
 ## The Prompt
 
@@ -56,17 +58,20 @@ title="Prompt"
 text=audit_prompt 
 %}
 
-## Why It Works
+## A sorting example
 
-An objection only counts if it lands on the claim actually being made. To dismiss one, students have to pin down their scope, evidence, and stakes, which is exactly what revision needs. And AI objections make a useful foil: they sound authoritative while floating free of the text, so students see for themselves that a confident tone isn't the same as a precise point.
+**Constructed example — the claim and objections below are invented.** Claim: “The library's longer opening hours caused the increase in borrowing because loans rose the next term.”
 
-## What to Watch For
+- “Libraries matter to communities” doesn't challenge this claim; it is too general.
+- “Closing libraries reduces literacy” misreads a claim about longer hours.
+- “Did enrollment or the number of available books also change?” identifies a gap in the causal inference.
 
-{% include typography/callout.html type="warning" text="AI's confidence can make thin counterarguments feel weightier than they are." %}
+A defensible revision would describe borrowing as increasing after the hours changed, while reserving the causal claim until competing explanations are checked.
 
-- Students may assume the AI knows better. It sometimes spots readings they missed, but much of what it produces is thin, repetitive, or detached from the text. Model the sorting once so they trust their own judgment.
-- The draft has to be specific enough to test. If it's too early or too vague, the objections turn generic fast.
+## What needs modeling
 
-## What I Learned
+Model the sorting before students begin, especially if they haven't had to explain why a criticism fails. Show how to distinguish an uncomfortable objection from an irrelevant one. Dismissing a criticism should require as much attention to the draft as accepting it.
 
-A few minutes of modeling the sorting up front makes a big difference, especially with students who have never had to explain *why* an objection fails instead of just dismissing it.
+The model's confidence can make a thin objection seem more substantial than it is. Ask students what the objection would require them to change, and why that change would improve the argument. If they can't answer, the objection may need more examination.
+
+Very early drafts may produce only generic criticism. That can help a student recognize that the claim needs definition, but it gives them less to work with in this particular exercise.

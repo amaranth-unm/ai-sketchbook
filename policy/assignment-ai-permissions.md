@@ -2,7 +2,7 @@
 layout: sketchbook
 title: Assignment-Level AI Permissions
 listed: false
-summary: "A framework for making AI expectations concrete at the assignment level: what is allowed, what is not, and what evidence students are being asked to provide."
+summary: "A short permissions block, now incorporated into AI Roles on Assignments."
 thumbnail: "images/traffic-light-sign.jpg"
 thumbnail-credit: '"Traffic light ahead" sign (Lampu isyarat di hadapan). Photo by Taufik, 2024, CC0.'
 thumbnail-position: "center 30%"
@@ -32,24 +32,11 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-{% include typography/callout.html type="note" title="Folded into the ladder sketch" text="This sketch has been folded into the AI Integration Ladder. Its assignment-level language works best as the practical layer of that framework." %}
+The assignment-level guidance from this sketch is now part of [AI Roles on Assignments](ai-integration-ladder.md). That page combines course-wide categories with a short statement of what AI may do on each assignment.
 
-Syllabus policies are broad by design, but students make their real decisions assignment by assignment. A short AI permissions statement on each one keeps students from remembering only that "AI is allowed" and forgetting what the assignment is trying to assess.
-{: .lede}
+The original idea drew on the acceptable-use matrix in the AHA's [Guiding Principles for Artificial Intelligence in History Education](https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/). It puts the instructions alongside the task students are starting.
 
-{% include typography/pullquote.html text="The syllabus sets the philosophy. The assignment tells students what that philosophy means this week." %}
-
-{% include typography/callout.html type="note" title="Inspired by" text="The acceptable-use matrix in the AHA's [Guiding Principles for Artificial Intelligence in History Education](https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/) (2025), which grades common tasks as acceptable or not. **The core change:** instead of one course-wide grid of tasks, each assignment carries its own short block tied to what that assignment is trying to assess." %}
-
-## The Setup
-
-Each assignment gets a small AI permissions block with three parts:
-
-- what AI may be used for
-- what AI may not replace
-- what students should show or submit
-
-The policy sits right where students act. Writing it can also reveal when an assignment's AI rules are fuzzy because the learning goal itself needs sharpening.
+## The assignment block
 
 {% capture permissions_language %}
 **AI use for this assignment**
@@ -63,18 +50,4 @@ Your submission should show: [specific engagement with course texts / your own i
 
 {% include typography/callout.html type="prompt" title="Reusable assignment block" text=permissions_language %}
 
-## Why It Works
-
-The decision happens at the assignment, not in a syllabus paragraph students read once. If an assignment tests close reading, the rule can protect that skill. If it's about evaluating AI output, the rule can require AI use and spell out the critique.
-
-Students get a checklist where they need it, instead of inferring intent from a general statement written weeks earlier.
-
-## What to Watch For
-
-{% include typography/callout.html type="warning" title="Too much detail can backfire" text="Keep it short. If every assignment carries a long compliance block, students stop reading. Clarify the learning boundary; don't catalog every possible tool behavior." %}
-
-The most useful phrase is often "may not replace." It names the protected intellectual work without pretending you can anticipate every allowed and forbidden use.
-
-## What I Would Do Differently
-
-I'd create three reusable blocks: one for no-AI skill practice, one for AI-supported drafting, and one for AI critique. Most assignments can start from one and change a sentence or two, which makes the policy sustainable across a whole semester.
+Adapt the block to the skill being assessed and keep it brief. The examples are alternatives to choose from, not a list that every assignment needs to carry.

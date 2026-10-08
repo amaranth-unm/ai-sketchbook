@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Narrate the Slides
-summary: "AI writes a caption linking each image in an unnarrated slide deck to the next; students go back through the slides to find what the course lets them see that the AI story missed."
+summary: "Students compare an AI narration of historical images with details they can interpret using the course."
 thumbnail: "images/stereopticon-slides-library-1923.jpg"
 thumbnail-credit: "Children viewing stereopticon slides in the Children's Room of the Old Main Library, Cincinnati, 1923. Cincinnati Public Library."
 date: 2026-09-25
@@ -22,9 +22,9 @@ tags:
   - online teaching
 key-question: "What does a smooth narrative leave out of the images it strings together?"
 what-students-learn:
-  - that images carry historical detail a connecting narrative tends to skip
-  - that AI imposes a tidy story on a sequence whether or not the sources support one
-  - how much course knowledge they bring to looking at a source
+  - "support an interpretation with visual and textual details"
+  - "examine the connections a narrative makes between sources"
+  - "explain what a short caption leaves out"
 card_order: 110
 ---
 
@@ -34,21 +34,21 @@ card_order: 110
 
 {% include typography/sketch-info.html %}
 
-A slide deck with no words is an argument waiting to be made. In a course on diet and health, I gave students a deck of historical images with no captions and no narration. They asked AI to write one sentence per slide, captioning each image and linking it to the next. Out came a neat little story. Then students went back through the slides to find everything that story had skipped.
+For a day without an assigned reading in my history of diet and health course, I gave students a deck of historical images without added captions or narration. They asked AI for one sentence per slide, linking each image to the next. Then they went back through the deck to examine details that the resulting story had passed over.
 
-{% include typography/pullquote.html text="AI will connect any sequence of images into a story. The question is what it had to ignore to make the story smooth." %}
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
 
-{% include typography/callout.html type="note" title="Part of a course" text="One of several AI-first assignments in a remote, asynchronous course. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) explains how they fit together, alongside the assignments that ask for no AI." %}
+## Preparation and submission
 
-## The Setup
+Students need relevant course readings to interpret the images. Retain source and date information separately from the unnarrated deck so claims can be checked afterward. Test the image upload; supplying a shared narration is an alternative when students can't use image-capable tools.
 
-**Build the deck.** Ten to twenty images that relate to the course so far, in a rough order, with no text of your own. Busy images work best (dense advertisements, crowded illustrations, charts, posters with small print), because they give the narrative more to skip.
+The submission is the short post described below. **Suggested revision:** allow students to analyze a caption's well-supported choice as well as an omission or error; they needn't find a fault in every selected image.
 
-**Students generate the narration.** They give AI the slides and ask for one caption per slide, each connecting to the next, so they end up with something like a bulleted story.
+## Preparing the deck
 
-**Then they look for themselves.** With the AI captions in hand, students go back through the slides hunting for what's there, in the image or the text, that connects to the course and never made it into the narration.
+Choose ten to twenty images related to the course so far and put them in a rough order. Dense advertisements, crowded illustrations, charts, and posters offer plenty to examine. Leave the images' own text visible, but don't add your explanation of them.
 
-**The post** has three parts: a brief comment on what was interesting in the AI output overall; two or three slides examined in depth, with the historical perspective the AI narrative left out, flattened, or got wrong; and a brief comparison with one classmate's post. Students don't post the AI captions themselves; those are raw material for the analysis.
+Students give the deck to a tool that can read images and ask for the connecting captions below.
 
 ## The Prompt
 
@@ -58,26 +58,32 @@ Here is a slide deck of historical images: [attach or upload the slides]. Write 
 
 {% include typography/callout.html type="prompt" title="prompt to give students" text=slides_prompt %}
 
-## Why It Works
+## Looking again
 
-One sentence per slide forces AI to decide what each image is *about*, and it almost always picks the most obvious answer. The fine print on an advertisement, a figure in the background of a poster, the numbers on a chart, who is shown eating what: all of it falls out of a caption whose job is to reach the next slide. Students notice what the course trained them to see precisely because the AI didn't.
+With the captions available for comparison, students return to the images. Ask them to find details the captions overlooked, oversimplified, or misread: small print, a figure in the background, figures on a chart, or assumptions about who eats what.
 
-It's also a compact demonstration of how narrative gets imposed. AI will spin a coherent through-line out of any sequence of images, and it's instructive to watch. Historians do the same when they turn sources into a story; the exercise shows what that costs.
+Their short post has three parts:
 
-And it's a light lift on a day with no reading. Students still do real analysis, just on images instead of a text.
+- a brief observation about the generated narrative;
+- a close examination of two or three slides, using the course to assess the narrative's treatment of specific details;
+- a brief comparison with one classmate's post.
 
-## What to Grade
+They don't need to paste the generated captions into the post. Quotations should serve the analysis of particular images.
 
-Grade the in-depth slides. The general comment and the classmate comparison are short by design.
+## From detail to interpretation
 
-- **Strong:** for each chosen slide, names specific visual or textual details the narrative skipped and explains what they mean historically, using course concepts.
-- **Middling:** identifies what the AI missed, but the historical explanation is thin.
-- **Weak:** critiques the AI narrative in general terms ("it was vague") without pointing at anything on the slides.
+**Constructed example — invented poster and caption.** A wartime poster links food choices to national service. AI captions it as advice to eat a balanced diet. A student points to the appeal to service and uses course material to explain how the poster makes eating a civic obligation.
 
-## What to Watch For
+A stronger post also asks what justifies connecting this poster to the next slide. A shared theme doesn't establish that one campaign influenced another.
 
-{% include typography/callout.html type="warning" text="Check that the AI can actually see the slides. Given a link it can't open, a model may politely say so — or it may produce plausible captions for images it never saw. Uploading the images or a PDF export is more reliable than sharing a URL." %}
+## What to discuss and grade
 
-- Students critique the AI narrative in general terms ("it was vague") instead of pointing at specific details in specific slides. Require the in-depth slides.
-- The deck should be tied to the course. The analysis depends on students bringing course concepts to images the AI reads without them.
-- Posts can look alike when everyone picks the most striking slides. The classmate comparison turns that into something to talk about rather than a problem.
+The prompt asks the model to connect the slides, so the class should examine the connections as well as the omissions. What supports the transition from one image to the next? Would another order suggest a different account? These questions apply to our own historical narratives too.
+
+Grade the close examination of the chosen slides. Strong work identifies a detail and explains its historical significance using course concepts. A post that lists omissions needs more explanation; a general complaint about vagueness needs a specific example.
+
+## What to watch for
+
+Check that the tool received the images. A link it cannot open may still produce plausible captions. Uploading images or a PDF export makes it easier to establish what was supplied.
+
+Keep the deck connected to the course so students have knowledge to bring to it. If many choose the same striking slides, use their comparisons to discuss what drew their attention and whether they interpreted the details in the same way.

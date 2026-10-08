@@ -22,12 +22,10 @@ permalink: /tags/
 
 # Sketchbook Tags
 
-A way to browse the AI Sketchbook laterally rather than by section. Useful when the pattern you care about is something like writing, archives, or source evaluation rather than whether a sketch started in teaching or research.
+Browse teaching, research, and policy sketches by subject.
 {: .lede}
 
 {% include typography/section-accent.html %}
-
-Below are the tags currently in use across sketchbook post pages. As the sketchbook grows, this should become a more useful way to move across related ideas.
 
 {::nomarkdown}
 <div class="sketchbook-tag-list" id="sketchbook-tag-list">

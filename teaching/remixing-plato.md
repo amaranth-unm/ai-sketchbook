@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Remixing Plato
-summary: "Students remix Plato's worries about writing into a new dialogue about AI — building the characters themselves, then iterating with AI until each position is sharp."
+summary: "Students define characters and use AI to recast Plato’s argument about writing as a dialogue about AI."
 thumbnail: "images/plato-academy-mosaic.jpg"
 thumbnail-credit: '*Plato''s Academy*, mosaic from Pompeii, 1st century. National Archaeological Museum, Naples.'
 thumbnail-position: "center 55%"
@@ -10,7 +10,7 @@ status: lightly tested
 type: assignment
 effort: "1–2 hours out of class"
 tools:
-  - any AI tool
+  - text chatbot
 level: anyone
 author: "Fred Gibbs, History"
 context: "HIST 300 Critical Thinking with AI (upper-division), UNM"
@@ -21,10 +21,9 @@ tags:
   - prompting
 key-question: "If Plato's worries about writing were recast as worries about AI, what would change and what would stay the same?"
 what-students-learn:
-  - what AI can and cannot preserve in philosophical argument
-  - how old anxieties about new media resemble current debates about AI
-  - how form and genre reshape meaning
-  - that prompting requires the same clarity as writing
+  - "explain a philosophical position well enough to write a character"
+  - "compare an argument across historical settings"
+  - "revise a dialogue when its characters fail to disagree clearly"
 card_order: 10
 ---
 
@@ -34,33 +33,45 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-In the *Phaedrus*, Socrates worries that writing will give people the appearance of wisdom without the substance: a text can't answer back, and people will stop exercising their memories. Swap "writing" for "AI" and he could be posting this week. Students use AI to remix Plato's worries into a contemporary dialogue about large language models, still about memory, authority, and truth, and then ask what has changed and what hasn't. It has been a student favorite.
+In the *Phaedrus*, Socrates worries that writing will give people the appearance of wisdom without its substance. A text can't answer questions, and its readers may stop exercising their memories. Students use AI to carry those worries into a dialogue about AI itself, then consider which parts of the argument survive the move.
 
-{% include typography/pullquote.html text="Prompting is a rhetorical skill as much as a technical one. It takes clarity about purpose, audience, and constraints, and students often learn that from a gloriously messy first attempt." %}
+Students have enjoyed this assignment. My first version asked for a change of genre: a text-message exchange, a TED talk, a Reddit thread. The difficulty was that students who hadn't understood the original argument had little to work with. The current version gives more time to understanding the positions before drafting the dialogue.
 
-## The Setup
+## Preparation and submission
 
-The first version of this assignment asked students to remix a passage into a new form: a text-message exchange, a TED talk, a Reddit thread. It made a playful warm-up, but students who hadn't grasped the original's argument had nothing to push against, and the remixes drifted into style without stakes. The current version builds understanding first and gives the remix an argument to carry.
+Supply the relevant passage from the *Phaedrus* and discuss its argument before the warm-up. Students need enough understanding to evaluate the questions AI asks and the positions it generates.
 
-**1. Warm up with AI as questioner.** After discussing the *Phaedrus* in class, students ask AI to quiz them on it, one question at a time, and then to help them apply it to AI. A second round widens the frame: what hopes and fears have surfaced about writing, the telegraph, radio, television, and the internet, and what do they have in common? A third asks what perspectives a modern dialogue about AI would need.
+**Suggested submission:** character descriptions, dialogue, and a short passage-based comparison naming one concern that carries over and one that changes. The original handout records the assignment as run.
 
-**2. Assign roles by hand.** Students define three to five characters, each with a clearly stated position. For example, a frightened academic who thinks AI produces "zombie" knowledge, a techno-optimist who sees a spectacular new tool, a purist worried that nothing is authored or trustworthy anymore. Characters can borrow the style of a literary or pop-culture figure, but the position still has to be spelled out, or every character ends up saying the same thing.
+## What AI does in this assignment
 
-**3. Draft.** Students tell AI what they're making and why — a modern remix of the *Phaedrus* about AI — and paste in their role definitions.
+Generating the dialogue gives students a draft whose arguments they can examine and revise. It also removes the work of composing the exchanges, where a writer may discover that a position is harder to defend than it first appeared. Defining characters and evaluating their dialogue practice only part of that work.
 
-**4. Revise and iterate.** Where does it flow, and where is it hard to follow? Are the positions distinct, or do they need sharpening? Students can ask AI to read the dialogue as a high school student would and name its key themes, or to suggest missing perspectives, and then decide whether those help or muddle.
+For a course that needs more practice composing an argument, one adaptation would be to have students write a short exchange before generating a comparison. They could then explain which version makes a stronger argument and where the differences matter.
 
-**5. Refine.** Do the characters have personalities that match their positions? Does anyone dominate? Does the argument build? Can the prose be livelier without getting less clear?
+## Preparing and drafting
 
-**6. Post and read.** Dialogues go on a discussion board before class, and students read and respond to each other's in pairs. A reading on why people resist new technologies (Calestous Juma's *Innovation and Its Enemies*, in my version) makes a good follow-up: is Socrates a technological resister, or is he making a different kind of argument?
+1. **Use AI as a questioner.** After discussing the *Phaedrus*, students ask AI to quiz them one question at a time, then help them apply the argument to AI. A second round compares hopes and fears about writing, the telegraph, radio, television, and the internet. A third asks which perspectives a modern dialogue would need.
 
-## The Prompt
+2. **Write the character descriptions.** Students write three to five roles themselves, each with a position and reasons for holding it. One might argue that students need to compose an argument to understand it; another that generated drafts give them more arguments to examine. A third might question who deserves credit for the resulting work. Borrowing a character's style is fine, but the student still has to explain the argument that character will make.
+
+3. **Generate a draft.** Students tell AI what they're making and paste in their role definitions.
+
+4. **Read and revise.** Can a reader tell the positions apart? Where does the argument become hard to follow? Students can ask AI to identify the dialogue's themes or suggest a missing perspective, then decide whether the suggestion helps. They refine the voices and exchanges as well as the claims.
+
+5. **Share the dialogue.** Students post before class and read each other's work in pairs. In my course, Calestous Juma's *Innovation and Its Enemies* follows the assignment. It gives us further questions: which objections to a technology were justified, who stood to gain or lose, and how far can the comparison with Socrates take us?
+
+## The prompts
+
+The warm-up below is a proposed revision. It asks students to work from a supplied passage and leaves room for more than one reading. The questions AI generates also need checking against the text.
 
 {% capture remix_warmup %}
-I am reading Plato's Phaedrus. Ask me three questions, one at a time, about what the point is. Use my answers to help me understand the broader point. Then, ask 3 questions one at a time to help me understand how to apply it to AI. What's similar and what's different?
+I am reading this passage from Plato's Phaedrus: [PASTE PASSAGE]. Ask me three questions, one at a time, about its argument. Ask me to support my answers with words from the passage. If my reading seems doubtful, point to the passage that raises a difficulty rather than simply supplying a verdict. Then ask me three questions, one at a time, about whether the argument applies to AI. Include a question about where the comparison breaks down.
 {% endcapture %}
 
-{% include typography/callout.html type="prompt" title="warm-up prompt" text=remix_warmup %}
+{% include typography/callout.html type="prompt" title="proposed warm-up prompt" text=remix_warmup %}
+
+The drafting prompt used in the assignment was:
 
 {% capture remix_draft %}
 Following Phaedrus and Platonic dialogues in general, create a ~1200-word conversation about AI based on the following roles: [PASTE IN YOUR ROLE DEFINITIONS]. [ADD ANY STYLISTIC ADVICE]
@@ -68,25 +79,23 @@ Following Phaedrus and Platonic dialogues in general, create a ~1200-word conver
 
 {% include typography/callout.html type="prompt" title="drafting prompt" text=remix_draft %}
 
-## Why It Works
+## Where the comparison changes
 
-The remix makes students state what the original is arguing before they can transpose it. They can't write a character who carries Plato's worry into the present without knowing what the worry is, and the warm-up puts AI to work on that understanding before any writing starts.
+**Constructed example — paraphrases, not quotations from Plato or student work.** One character argues that relying on an external text weakens memory. Another replies that a chatbot can answer follow-up questions, unlike the written text under discussion.
 
-Transposing the argument also surfaces the course's central comparison on its own. Some of Socrates' concerns carry over to AI almost unchanged; others don't fit, and the misfit is informative. Students end up reasoning about what's new about AI and what is a very old anxiety about new media.
+That reply identifies a difference but doesn't establish that the answers are reliable or that the learner understands them. Students return to the supplied passage to decide which concern the reply addresses and which remains. A dialogue that treats all worries about writing as interchangeable misses this distinction.
 
-The character work turns prompting into a knowledge problem. Vague roles produce characters who blur together, and the fix is thinking harder about the positions, not finding a cleverer prompt. Moving between Plato's register and a contemporary one also shows students why the dialogue form stages ideas as exchanges instead of laying them out as arguments.
+## What to discuss
 
-Asked to describe the assignment, one AI model offered a nice analogy: students are renovating a building with an unpredictable contractor who sometimes misreads the blueprint.
+The important comparison is between the original argument and the one students have made. Ask them to identify a concern that carries over and one that changes or becomes harder to apply. The dialogue should give them passages to examine, rather than requiring a general verdict about whether old anxieties repeat.
 
-## What to Watch For
+Role definitions also give students something to revisit when the generated characters sound alike. A vague description leaves the model much of the intellectual work. Revising it requires the student to decide what the character believes, why, and what another character could object to.
 
-{% capture remix_warning %}
-If students haven't grasped the larger issues the original raises, the remix has nothing to push against. Don't skip the warm-up, even for students who were in the class discussion.
-{% endcapture %}
+## What needs attention
 
-{% include typography/callout.html type="warning" text=remix_warning %}
-
-- Underspecified roles produce characters who all sound alike. Ask to see the role definitions.
-- AI's first drafts come out balanced and bland. The dialogue comes alive in the refining step, when students push for personality and a real argument.
-- Too many characters muddle the argument. Three to five is plenty.
-- Formatting matters: a dialogue pasted as one giant paragraph is unreadable for the peer-reading step.
+- Leave time for the warm-up, even after a class discussion. The earlier version showed me how much the remix depends on understanding the source.
+- Ask to see the role definitions alongside the dialogue. They help explain the result.
+- Three to five characters is enough to manage. More can make the disagreement difficult to follow.
+- First drafts can be bland or turn into consecutive speeches. Revision should address how characters respond to each other.
+- Require readable dialogue formatting before the peer-reading step.
+- Check that students can use a text chatbot with the passage supplied. For an adaptation that doesn't require individual accounts, an instructor could generate a shared dialogue from students' role definitions and have the class examine it together.

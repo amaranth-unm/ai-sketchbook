@@ -1,82 +1,53 @@
 ---
 layout: sketchbook
 title: About
-description: "Why higher ed needs to engage with AI now, and how this site supports cross-disciplinary conversations about doing it well."
+description: "Why we compare AI experiments at UNM, what the sketches contain, and how to contribute."
 ---
 
 # About
 
-Our students are going to be expected to use AI — in their majors, their jobs, their civic lives — whether or not any of us teach them how. That makes engaging with AI in higher ed less a trend to chase or resist, and more a responsibility: we owe students the judgment to know when AI helps, when it doesn't, and how to be honest about which is which.
-{: .lede}
-
-The AI Sketchbook is where faculty, librarians, technologists, and students compare notes on what that looks like in practice — a working record of what's been tried, what's worked, what hasn't, and what's still unresolved.
+The AI Sketchbook is a place for colleagues at UNM to compare experiences with AI in teaching and research. We collect assignments, research experiments, and policy ideas with enough detail that someone else can try them, question them, or suggest a change.
 {: .lede}
 
 {% include typography/section-accent.html %}
 
-## Why engage with AI
-The question isn't whether students will use AI. It's whether they'll learn to use it with judgment — knowing when to reach for it, when to set it aside, and how to say plainly what they did. That's not a skill students pick up on their own; it's one we have to teach, the same way we teach foundational knowledge, source evaluation or research methodology.
+## Why we're doing this
 
-It's worth naming why that's hard. AI makes academic dishonesty easier and can quietly hollow out the low-stakes, formative work — reflective drafts, early problem sets — that helps students find their own confusion. It fabricates sources with unearned confidence, reflects the biases of training data that is disproportionately English-language, Western, recent, and already digitized, and produces fluent, well-structured prose that can be subtly or badly wrong.
+Students' use of AI gives us a reason to discuss it. Whether to ask them to use it is a separate decision. Reading a difficult passage and checking a generated summary ask different things of a student. Each assignment needs a reason for the work it gives to AI and the work it leaves to the student.
 
-None of that is a reason to disengage — it's the reason engagement has to be deliberate. The difficulty of working through an argument, writing your way toward an idea, testing evidence, or confronting sources and data that resist easy interpretation: these are key learning moments.
+Writing a draft is often how students discover what they think. An assignment that supplies a generated draft gives up some of that practice. We want the sketches to explain what the comparison or revision makes possible, so colleagues can decide whether the trade is worth making in their courses. Keeping an assignment free of AI can be a considered teaching decision.
 
-{% include typography/pullquote.html text="Engaging doesn't mean using AI in every course or assignment. It means being deliberate about when it helps, being crystal _why_ it's not allowed, and building students' judgment about how to get the most out of AI _and themselves_. We think that's worth working out together, which is what this site is for." %}
+Decisions about AI also involve training material, labor, resource use, and dependence on commercial providers. We welcome accounts of choosing not to use a tool for these reasons, as well as experiments that failed on their own terms.
 
-Students already sense this. Many use AI to save time, but do the work themselves when they know how it actually matters to them. But they're not always sure where that line is, or how to talk about it openly. The typical assessment regimen of higher education make skipping the friction feel rational, which is exactly where guidance from faculty, librarians, instructional designers, and technologists matters.
+Research presents related questions. A transcription can be useful for finding a name and still be too unreliable to quote. A model can suggest a new interpretation while overlooking evidence that matters to it. These are the kinds of distinctions we want the sketches to describe through actual attempts.
 
+## What you'll find
 
+**Teaching sketches** describe classroom activities and assignments, including prompts, course context, and advice for adapting them. Some record a change made after an earlier version fell short.
 
-## Collaborative Learning
-No single discipline owns these questions. Humanists have long studied interpretation and authorship. Librarians bring deep expertise in information literacy, metadata, access, and source evaluation. Social scientists bring methods for studying data, behavior, and inequality. Technologists understand systems and infrastructure and access issues. STEM faculty and students run into still other parts of the problem, in labs and problem sets where AI raises its own questions about process and rigor.
+**Research sketches** describe a particular task: processing archival images, mapping photographs, checking a draft, or making a physical model. They report what the tool produced and where the researcher still had work to do.
 
-These are not peripheral concerns. They are central to the future of AI use, which will be in the hands of our students. The skills that make AI use meaningful rather than mechanical — evaluating sources, recognizing bias, attending to what's missing, understanding method, documenting process, judging consequences — are distributed across the university. That's the case for sharing what we learn instead of each of us working it out alone.
+**[Policy sketches]({{ '/policy/' | relative_url }})** offer syllabus language and ways to specify AI use on assignments. They are proposals to adapt to a course and its campus rules, rather than university policy.
 
-{% include typography/callout.html type="note" title="Many perspectives, many partners" text="The sketchbook does not claim AI as the territory of any one field or office. It offers concrete examples that can travel across units, disciplines, and conversations. We hope to faciliate a broad community of practice" %}
+The status labels—**rough**, **lightly tested**, **tested**, and **refined**—describe how much an author has tried and revised a sketch. **Tested** means used in practice. It doesn't establish that students learned more or that another class will get the same result. Read the account for what the author actually observed.
 
+Faculty, students, librarians, and staff are welcome to contribute. A historian and a librarian may notice different problems in the same generated bibliography. Comparing those experiences is part of the point of keeping a local collection.
 
-## Three (for now) kinds of sketches
+## Related projects
 
-**Teaching sketches** focus on assignments and classroom setups where AI becomes an object of critical inquiry — situations where using AI teaches students something about how knowledge gets made, evaluated, and trusted. The goal is never to outsource thinking; it's to make the thinking more visible.
+These projects are useful places to look for other assignments and approaches:
 
-**Policy sketches** offer adaptable language and decision tools for syllabi, assignments, programs, and departments. They are not model university policies. They are prompts for making local choices visible: what AI is allowed to do, what students must still demonstrate, and help students make responsible AI choices. 
+- **[AI Pedagogy Project](https://aipedagogy.org/assignments/)** (metaLAB at Harvard): assignments across disciplines, organized by theme, subject, and tool.
+- **[TextGenEd](https://wacclearinghouse.org/repository/collections/textgened/)** (WAC Clearinghouse): peer-reviewed writing assignments with text generation, including the Continuing Experiments series.
+- **[Exploring AI Pedagogy](https://exploringaipedagogy.hcommons.org/)** (MLA-CCCC Task Force): teaching reflections, including accounts of experiments that failed.
+- **[The AI Assessment Scale](https://aiassessmentscale.com/)** (Perkins, Furze, and Roe): a framework for distinguishing roles for AI in assessment.
+- **[AHA Guiding Principles for AI in History Education](https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/)**: history-specific guidance, including a matrix of AI uses.
 
-**Research sketches** document workflow ideas: what it actually took to bulk-process a set of archival documents, build a map from a folder of photographs, or generate a 3D model from a line drawing. They try to provide a balance of limitations and possibilities
+## Add your experience
 
-Sketches are tagged by status — rough, tested, or refined — so you can tell what's been tried once versus what's been iterated and classroom-tested.
+[Email us a draft](mailto:amaranth@unm.edu). A few paragraphs about what you tried and what happened is enough to start; we can work out the format together. The [contribute page]({{ '/contribute' | relative_url }}) also explains how to submit directly through GitHub.
 
-{% include typography/callout.html type="tip" title="Read for adaptation" text="The sketches are meant to be useful even as works-in-progress. The caveats, failures, and local constraints are often the most transferable parts." %}
-
-
-## What makes a sketch
-
-Each sketch documents a specific experiment, framework, or policy idea: a single assignment, a research workflow, a tool used for a defined purpose, or a piece of language that helps clarify expectations. They share enough structure to make them easy to evaluate and adapt, but they are not meant to be formulaic.
-
-They are not refined advice or best practices, although some may become so over time. Any ideas that you think are worth trying can probably help someone else.
-
-
-
-## Kindred projects
-
-The sketchbook is one voice in a larger conversation. These projects do related work, each in its own way:
-
-- **[AI Pedagogy Project](https://aipedagogy.org/assignments/)** (metaLAB at Harvard): curated AI assignments across many disciplines, filterable by theme, subject, and tool.
-- **[TextGenEd](https://wacclearinghouse.org/repository/collections/textgened/)** (WAC Clearinghouse): peer-reviewed writing assignments with text generation, updated yearly through its Continuing Experiments series.
-- **[Exploring AI Pedagogy](https://exploringaipedagogy.hcommons.org/)** (MLA-CCCC Task Force): candid teaching reflections posted quickly, failures welcome. The closest in spirit to this site.
-- **[The AI Assessment Scale](https://aiassessmentscale.com/)** (Perkins, Furze, and Roe): a five-level framework for AI use in assessment, translated into more than 30 languages.
-- **[AHA Guiding Principles for AI in History Education](https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/)**: history-specific principles and a matrix of acceptable and unacceptable uses.
-
-What the sketchbook adds is the local and the unfinished: what colleagues here actually tried, with the rough edges left in.
-
-## Contribute a sketch
-
-We owe it to our students to figure this out, and that's a lot easier together, from various vantage points, than alone. If you've tried something with AI in a class or research project — and you have something honest to say about how it went — we want to hear about it. Rough accounts and failed experiments are exactly what this site is for.
-
-The easiest way to start: [email us a draft](mailto:amaranth@unm.edu). A few paragraphs describing what you tried and what happened is enough. We can help shape it into a sketch.
-
-If you want to submit directly and own your sketch from the start, the [contribute page]({{ '/contribute' | relative_url }}) walks through that process too. 
-
-Or drop by Amaranth studio hours at Mesa Vista Hall 2068.
+Or bring an idea to Amaranth studio hours at Mesa Vista Hall 2068.
 
 ---
 

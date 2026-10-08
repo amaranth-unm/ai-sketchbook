@@ -4,7 +4,7 @@
 # url:     your GitHub Pages root, e.g. https://username.github.io
 #          optional — only needed for canonical links and OG metadata
 title: AI Sketchbook
-description: "A working collection of ideas for using AI in teaching, research, and academic practice. Rough, experimental, honest about what's been tested."
+description: "Experiments with AI in teaching and research at UNM, with prompts, results, and questions to try next."
 baseurl: /ai-sketchbook
 url: https://amaranth.unm.edu
 

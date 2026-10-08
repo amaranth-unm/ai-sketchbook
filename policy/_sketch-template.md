@@ -15,7 +15,7 @@ level: any                                                   # optional — who 
 tags:                                                        # recommended — powers the /tags/ browsing page
   - policy language
 key-question: "The question this policy answers."           # recommended — shown on the listing card
-what-students-learn:                                         # recommended — shown as "What students learn" in the summary box
+what-students-learn:                                         # recommended — shown as "What it clarifies" in the summary box
   - one concrete thing the policy clarifies for students
   - another concrete thing
 card_order: 99                                                # optional — sort position on the listing page; check sibling files and pick the next number
@@ -29,26 +29,22 @@ card_order: 99                                                # optional — sor
 
 {% include typography/sketch-info.html %}
 
-Open with a sentence or two: what problem this policy is trying to solve, and for whom.
+Start with the particular problem that prompted this sketch. Use the details you have: a reading, an output, an assignment that needed changing, or a task that took too long. If this is a proposal, say so. Don't turn an intended outcome into a claim about what happened.
 
-{% include typography/pullquote.html text="A short, quotable line that captures the core idea behind this policy." %}
+Use only the sections you need below. Rename or combine them to fit the account. A pull quote is optional; the sketch doesn't need a slogan or a concluding lesson. Keep prompts and practical details someone would need to try it. Don't invent an experience or student reaction to make the prose more personal.
 
-## The Setup
+## The situation
 
-Describe the situation this policy responds to — what was unclear or unworkable before it.
+Explain what was unclear or difficult in the course or assignment. If the policy has been used, say where; if it is proposed, explain what you want to try.
 
-## Policy Language
+## Policy language
 
-Give the actual language, structure, or labels — rename this heading to match what you're sharing (e.g. "Assignment Labels," "Syllabus Language," "Levels of Disclosure").
+Give the wording or assignment labels a reader can adapt. Distinguish proposed language from a quotation of what students actually received. Say what students may do, what they must do themselves, and what they should submit.
 
-## Why It Works
+## Applying it
 
-Explain the reasoning — why this framing, and what it makes visible that a generic policy wouldn't.
+Explain how the policy relates to a particular assignment. If an example is invented to illustrate the policy, label it as an example rather than presenting it as a student experience.
 
-## What to Watch For
+## Questions to resolve
 
-{% include typography/callout.html type="warning" text="A caveat, edge case, or place this policy could fail or be gamed." %}
-
-## What I Would Do Differently
-
-Be honest about what you'd change if you wrote this again.
+Describe an ambiguity or difficulty and how you would address it. Explain how students can meet the standard and how feedback will identify a problem they can revise. An impression that prose sounds like AI is not an assessable requirement. If you tried the policy, explain what happened before describing what you'd change. You don't need a retrospective section for a policy that hasn't been used.

@@ -18,6 +18,8 @@ Markup throughout uses Bootstrap-style class names — `navbar`, `navbar-toggler
 
 ## Writing sketch content
 
+- Follow [STYLE-GUIDE.md](STYLE-GUIDE.md) for editorial standards, examples, evidence, and status labels. Preserve the distinction between classroom experience and suggested adaptations.
+
 - Sketch bodies should be **plain Markdown plus the existing typography includes** — not raw HTML, not inline `style="..."` attributes. If you need a visual element a current include doesn't support, extend the include (and its CSS rule) rather than hand-coding it inline in a content file.
 - Front matter fields are standardized per section. Don't invent new keys — copy the relevant `_sketch-template.md` (`teaching/`, `policy/`, `research/`) and use its field set as-is. If a field doesn't already render somewhere (check `_includes/typography/sketch-info.html` and `_includes/nav/card-list.html`), adding it silently does nothing.
 

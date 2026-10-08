@@ -5,7 +5,7 @@
   Status renders as a 3-dot maturity meter: rough (0) · lightly tested (1) · tested (2) · refined (3).
 
   Two columns, divided by a thin rule: what the sketch is and what it takes
-  (summary, what students learn / what I learned, results, tools, format) on
+  (summary, learning aims / what I learned, results, tools, format) on
   the left; provenance and status (author, context, last run, handout, status,
   topics) on the right. Labels sit above their values. On narrow screens the columns stack.
 {% endcomment %}
@@ -37,11 +37,11 @@
     <dd><ul class="sketch-info-list">{% for item in page['what-i-learned'] %}<li>{{ item }}</li>{% endfor %}</ul></dd>
     {% endif %}
     {% if page['what-students-learn'] %}
-    <dt>What students learn</dt>
+    <dt>{% if page.url contains '/policy/' %}What it clarifies{% else %}Learning aims{% endif %}</dt>
     <dd><ul class="sketch-info-list">{% for item in page['what-students-learn'] %}<li>{{ item }}</li>{% endfor %}</ul></dd>
     {% endif %}
     {% if page.results %}
-    <dt>Demonstrates</dt>
+    <dt>Results</dt>
     <dd><ul class="sketch-info-list">{% for item in page.results %}<li>{{ item }}</li>{% endfor %}</ul></dd>
     {% endif %}
     {% if page.tools %}
@@ -80,9 +80,9 @@
       {% when 'refined' %}{% assign status_level = 3 %}
       {% else %}{% assign status_level = 0 %}
     {% endcase %}
-    <dd class="sketch-status" title="Status scale: rough → lightly tested → tested → refined">
+    <dd class="sketch-status" title="Experience and revision: rough → lightly tested → tested → refined. These labels do not establish learning outcomes.">
       <span class="sketch-status-meter" aria-hidden="true">{% for i in (1..3) %}<span class="sketch-status-dot{% if i <= status_level %} is-filled{% endif %}"></span>{% endfor %}</span>
-      <span class="sketch-status-text">{{ page.status }}</span>
+      <a class="sketch-status-text" href="{{ '/contribute.html' | relative_url }}#what-the-status-labels-mean">{{ page.status }}</a>
     </dd>
     {% endif %}
     {% if page.tags and page.tags.size > 0 %}

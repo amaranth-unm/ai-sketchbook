@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: AI Reading Investigation
-summary: "Students work through a dense scholarly article with a structured prompt sequence, then report what AI helped them see, what they verified, and what they had to correct."
+summary: "Students compare their first reading of an article with an AI discussion and explain what changed, if anything."
 thumbnail: "images/rembrandt-scholar-at-his-study.jpg"
 thumbnail-credit: "Rembrandt, *A Scholar Seated at a Desk*, 1634. National Gallery Prague."
 date: 2026-09-25
@@ -9,7 +9,7 @@ status: tested
 type: assignment
 effort: "~400-word post after reading with AI"
 tools:
-  - any AI tool
+  - chatbot with access to the assigned article
 level: any
 author: "Fred Gibbs, History"
 context: "HIST 410 History of Diet and Health (upper-division; remote asynchronous summer course), UNM"
@@ -20,11 +20,11 @@ tags:
   - source evaluation
   - prompting
   - online teaching
-key-question: "How can AI make a difficult reading more investigable without doing the reading for you?"
+key-question: "How does discussing a reading with AI affect a student’s interpretation?"
 what-students-learn:
-  - that a generic summary is the least useful thing AI can do with a reading
-  - how to use AI to generate questions and interpretations, then test them against the text
-  - where AI flattens the texture of a scholarly argument
+  - "test a proposed interpretation against passages in an article"
+  - "identify where a summary changes or oversimplifies an argument"
+  - "develop a reading question from an initial uncertainty"
 card_order: 80
 ---
 
@@ -34,33 +34,33 @@ card_order: 80
 
 {% include typography/sketch-info.html %}
 
-Some readings are hard because they're long, dense, or packed with unfamiliar context, and students will reach for AI whether you invite them to or not. So invite them, and shape what happens next. Instead of asking for a summary, students work through a sequence of prompts that treats AI as a smart but unreliable study partner. It helps them get oriented, name the argument, find the passages worth rereading, and try out interpretations. Then they go back to the article and check.
+In my history of diet and health course, students read Steven Shapin's “Trusting George Cheyne.” I wanted them to consider why people trusted Cheyne and what that trust tells us about expertise. I gave them a sequence of AI prompts to help investigate the article, followed by a short post explaining what they checked in the text.
 
-{% include typography/pullquote.html text="Ask a question, get a possible answer, go back to the text, check the evidence, revise your understanding. The back-and-forth between AI and article is the work." %}
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
 
-{% include typography/callout.html type="note" title="Part of a course" text="One of several AI-first assignments in a remote, asynchronous course. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) explains how they fit together, alongside the assignments that ask for no AI." %}
+## Preparation and submission
 
-## The Setup
+Students need the full article and relevant course discussions about expertise. Test that the tool can read the supplied text and demonstrate checking a suggested passage. The proposed submission below consists of initial notes and a 400-word post; the linked handout preserves the assignment as given.
 
-Pick an article with a clear question that is longer or denser than it needs to be, the kind students skim and misremember. Frame one or two central questions the reading answers. In the version I ran, the article was Steven Shapin's "Trusting George Cheyne," and the question was simple: why did people trust this person, and what does that reveal about how expertise worked?
+## A sequence for a difficult reading
 
-**Before opening AI**, students jot down two or three quick notes: what they think the article is doing, and what seems confusing.
+Before using AI, students write two or three notes about what they think the article is doing and what confuses them. These provide something to compare with their later interpretation.
 
-**Then the prompt sequence**, which students can adapt as they go. Each prompt does a different job:
+Each stage of the sequence has a different purpose. Students can adapt it to the reading and follow up where necessary:
 
-1. **Get oriented** — the question, the argument, how the author uses evidence. Explicitly *not* a flat summary of topics.
-2. **Map the central problem** — a table of the factors the author identifies (in my case, sources of Cheyne's credibility), what evidence in the article supports each, and what the model is uncertain about.
-3. **Clarify key concepts** — plain definitions of the article's key terms, why they mattered in context, and a question to ask on returning to the text.
-4. **Find evidence** — a checklist of passages to reread and what to look for in each. A reading guide, not a summary.
-5. **Test interpretations** — three possible readings, what supports and complicates each, and which is most interesting.
-6. **Connect to course themes** — specific, non-obvious claims a student could make in discussion.
-7. **Sharpen your own angle** — the student pastes their own rough idea, and AI suggests ways to sharpen or complicate it, without writing it. For each suggestion, what would need verifying in the article?
+1. **Get oriented:** identify the question, argument, and use of evidence.
+2. **Map the problem:** make a table of the factors the author discusses, the evidence for each, and uncertainties. In this article, the factors concerned Cheyne's credibility.
+3. **Clarify concepts:** explain a term in context and identify something to check on returning to the article.
+4. **Locate evidence:** suggest passages to reread and what to look for in them.
+5. **Compare interpretations:** propose three readings and the evidence supporting or complicating each.
+6. **Connect with the course:** develop specific connections to themes already discussed.
+7. **Refine a student idea:** respond to the student's own tentative interpretation and identify what it would need to establish.
 
-**The post** (~400 words, written by the student) is organized around five points: one useful AI insight, one AI claim they verified in the article, one AI claim that was vague, wrong, or needed correction, one passage they understand better because of the exchange, and their own answer to the central question.
+This sequence gives AI work we often ask students to practice: identifying an argument, selecting passages, and proposing interpretations. It gives students suggestions to test against the article, but limits their practice making those first judgments. If that independent reading is the aim, an adaptation would be to begin with students' interpretations and use only step 7.
 
-## The Prompt
+For a shorter exercise in assessing AI's reading, use orientation, evidence-finding, and interpretation-testing: steps 1, 4, and 5.
 
-The first prompt sets the tone for the sequence. Adapt the article, the course, and the emphasis:
+## Opening and closing prompts
 
 {% capture reading_prompt %}
 I am reading [author, title] for a course on [subject]. Give me a concise orientation to the article: what question is the author asking, what is the main argument, how is evidence used, and what historical problem is the author trying to solve? Do not provide a flat, high-level summary of topics. Focus on the argument and evidence.
@@ -74,27 +74,31 @@ I need to write my own reading reflection. Here is my current possible angle: [p
 
 {% include typography/callout.html type="prompt" title="last prompt in the sequence" text=reading_prompt7 %}
 
-## Why It Works
+## A revised post
 
-The sequence models a better habit than the one students arrive with. Their default, "summarize this," flattens the article and gives them no reason to open it. Every prompt here points back into the text (a passage to reread, a claim to check, a piece of evidence to find), so the AI conversation becomes a trail of leads instead of a substitute.
+For another run, I'd stop requiring students to report a useful suggestion and a passage they understood better. Those requirements make an unsuccessful exchange difficult to describe honestly.
 
-The post makes verification the deliverable. Students name one claim they confirmed and one they had to correct, so they can't finish without going back to the article. Hunting for a vague or wrong claim teaches them what AI smooths out: tone, hedging, the texture of the evidence.
+Ask for about 400 words addressing:
 
-The last prompt flips the usual roles. The student brings the idea and AI plays critic, which keeps the reflection theirs while still putting AI to work at the writing stage.
+- a suggestion they accepted, rejected, or remained unsure about, and why;
+- a claim they checked against the article and what they found;
+- a passage for which the exchange changed, confirmed, or confused their reading;
+- their own answer to the central historical question.
 
-## What to Grade
+Ask for the initial notes too, so students can explain what changed or stayed the same. A well-supported account of an unhelpful exchange should meet the assignment's requirements. The post should spend its space on passages and interpretations rather than retelling the chat.
 
-The grade rests on the movement between AI and the article: what the student checked, corrected, and understood better.
+## Testing a proposed reading
 
-- **Strong:** careful engagement with the article, thoughtful use of AI, specific passages cited, and a clear answer to the central question.
-- **Middling:** uses AI productively and refers to the article, but could be more specific, better verified, or more clearly connected to course themes.
-- **Weak:** leans on AI summary, gives little evidence from the article, or doesn't explain what the student verified for themselves.
+**Constructed example — no quotations from Shapin or student work.** AI proposes that readers trusted an expert solely because his recommendations were effective. A student finds a passage discussing the expert's character and relationships. They quote that passage, explain how it complicates “solely,” and revise the account of credibility.
 
-## What to Watch For
+If the passage instead supports the proposed interpretation, the same process can justify accepting it. The post needs the evidence and reasoning, not a required story about catching AI out.
 
-{% include typography/callout.html type="warning" text="Try the sequence yourself on the article first. Some articles are well represented in training data and some aren't, and whether students upload the PDF changes the answers considerably. Knowing what AI tends to get wrong about this particular reading helps you steer the discussion." %}
+## Assessing the work
 
-- Students skip the notes-before-AI step, which is what lets them notice how the AI changed their reading. Ask for those notes in the post.
-- Posts drift into summary of the AI conversation. The five required points exist to prevent that; grade against them.
-- The "claim I had to correct" can be manufactured: a trivial quibble offered to satisfy the requirement. Reward the students who explain *why* the AI version was too generic, not just that it was.
-- The sequence is long. For a shorter version, orientation, evidence-finding, and interpretation-testing (prompts 1, 4, and 5) do most of the work.
+Look for specific passages, an explanation of what was checked, and a defensible answer to the historical question. Completing the post doesn't establish that a student read carefully. Their explanation needs to show why a passage supports or complicates a claim.
+
+Give the same attention to agreement and disagreement with the model. Accepting a claim needs evidence; rejecting it needs reasons. Students shouldn't have to manufacture an error or a benefit to complete the task.
+
+## Preparing the reading
+
+Try the sequence yourself first. Answers can differ considerably depending on whether the tool has the article or is answering from its title. Make access to the text explicit in the instructions, and check the passages the model recommends. Knowing the reading's particular difficulties will help you respond when students encounter them. State which tool or account students can use and how they should supply the article. Another adaptation would be to provide one generated response for everyone to examine, avoiding the need for individual accounts.

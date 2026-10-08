@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Take the AI Draft to the Archive
-summary: "Students have AI write a short history of a narrow topic, critique it, then test it against unpublished material in a physical collection — and write about what the model could never have known."
+summary: "Students check an AI-generated local history against unpublished archival sources and explain how the evidence changes the account."
 thumbnail: "images/archive-manuscript-division.jpg"
 thumbnail-credit: "Harris & Ewing, *The Manuscript Division in the Library of Congress*, c. 1930s. Library of Congress."
 date: 2026-09-25
@@ -18,12 +18,12 @@ tags:
   - source evaluation
   - historical thinking
   - archives
-key-question: "What does the archive know that the model doesn't — and why can't it?"
+key-question: "What changes when students test an AI history against archival sources?"
 what-students-learn:
-  - that fluent, specific-sounding history can rest on nothing checkable
-  - that most of the historical record has never been digitized, and so is invisible to AI
-  - that archives are shaped by decisions about what was worth keeping, just as AI output is
-  - how to find and work with unpublished material in a physical collection
+  - "turn claims in a draft into questions for archival research"
+  - "cite and interpret unpublished sources"
+  - "distinguish a contradicted claim from one the available records cannot resolve"
+  - "consider how collecting and cataloging decisions shape an archive"
 card_order: 60
 ---
 
@@ -33,23 +33,25 @@ card_order: 60
 
 {% include typography/sketch-info.html %}
 
-Most assignments that pit AI against "real research" check the model against a book or a website, which mostly tests how well it summarizes. This one sends students somewhere the model has never been. They ask AI for a short history of a narrow topic, pick it apart, then carry that draft into a physical collection of letters, minutes, clippings, photographs, and planning files to find out what the record says. The final essay fuses both and has to account for every difference.
+This assignment puts an AI-generated local history beside material from a physical archive. Students first identify claims in the draft, then visit a collection to check them and look for evidence the draft omitted. The project asks them to consider both the model's account and the choices that shaped the archive.
 
-{% include typography/pullquote.html text="Most of the past was never digitized. A model can only be confident about what it was trained on, and the manuscript box is where students see the edge of that." %}
+## Preparation and submission
 
-## The Setup
+Students need an introduction to finding aids, source citations, and reading-room practice. Coordinate topics and access with the archivist before assigning the project; prepare an alternative using supplied archival reproductions for students unable to visit.
 
-The project runs in two parts, with a class discussion in between.
+The submission includes the unedited AI draft, initial critique, final history, source citations, and comparison. The proposed examples below illustrate how to classify findings; they aren't results from this class.
 
-**Pick a topic that is narrow, local, and held somewhere.** A building, an organization, a protest, a local business, a neighborhood institution, a person who mattered to one place. The sweet spot is a topic the internet has barely touched but a nearby collection holds in boxes: university special collections, a local historical society, county records, a church or company archive. Broad topics fail both ways: the AI draft is competent and the archive is overwhelming. A shared sign-up sheet keeps topics from doubling up.
+## Choosing a topic
 
-**Part 1: generate and critique.** Students prompt for a ~600-word history, asking for specific dates, people, and sources, and save the response *unedited*. That draft is the baseline for everything that follows. Then they write a short critique (3–5 sentences) quoting one passage that seems reliable and one that seems suspicious or thin, and explaining why. Just as valuable is the byproduct: a list of specific claims to check. Drafts and critiques go up before class, and the discussion compares how differently the model handled different topics.
+Choose something narrow and local for which a nearby archive holds material: a building, organization, protest, business, or neighborhood institution. University special collections, a historical society, or an organizational archive may have useful letters, minutes, photographs, and planning files.
 
-**Part 2: the archive.** Students bring their list of claims to the reading room. Published histories are fine for orientation, but the assignment asks for unpublished material: manuscript boxes, not just the reference shelf. An archivist is the best guide here, so let them know what students are looking for.
+Check with an archivist before assigning topics. A broad topic can produce an unmanageable search; a promising narrow one may have little surviving evidence. A shared sign-up sheet prevents students from duplicating topics.
 
-**Write the real essay.** Students reshape the AI draft into a short public-facing history (~800–1000 words) built on what they found, with scanned images, captions that say why each item matters, and citations precise enough (collection, box, folder) that a reader could find the same document.
+## Part 1: generate and critique
 
-**The required comparison section.** The essay ends with an AI–Archive Comparison that quotes the original draft and sorts its claims: confirmed, contradicted, or simply absent from the record. Then the reverse question: what did the archive contain that the AI draft never mentioned, and why couldn't it have?
+Students ask for a history of about 600 words, including dates, people, and sources. They save the response **unedited**. It will be the record against which they compare their later findings.
+
+They write a short critique of three to five sentences, quoting one passage that seems reliable and another that seems doubtful or thin. Their explanation should identify specific claims to investigate. Post these before class so students can compare how the model handled different topics.
 
 ## The Prompt
 
@@ -61,34 +63,37 @@ Write a short history (~600 words) of [your topic]. Include specific dates, even
 
 The prompt is deliberately plain. Asking for specifics and sources pushes the model toward claims that can be checked, and toward citations that may or may not exist.
 
-## Why It Works
+## Part 2: visit the archive and write
 
-Check AI against published or digitized sources and it all comes down to accuracy (did it get the date right?), and the models keep getting better at that. Unpublished material changes the question from *accuracy* to *access*. The letters, minutes, and photographs in a manuscript box were never in any training set. When the draft is silent or generic where the box is rich, students are looking at a structural limit that no better prompt could fix.
+Students take their questions to the reading room. Published histories can help them get oriented, but the assignment requires work with unpublished sources. They should record citations down to collection, box, and folder so someone else can locate the same item.
 
-Part 1 forces a close reading before a verdict. Students have to decide what in the AI draft is checkable, what only sounds specific, and what could describe almost any topic with a few nouns swapped. That list of claims turns an archive visit from browsing into an investigation.
+The final piece is a public-facing history of about 800–1000 words, rebuilt around the evidence they found. It includes scanned images where permitted and captions explaining their relevance.
 
-The best essays notice that it cuts both ways. The archive is no neutral corrective to AI; it reflects someone's decisions about what was worth keeping, how to catalog it, and what to call it. A student who finds the gap in the box (the group that left no records, the meeting with no minutes) has learned the AI draft's lesson from the other direction.
+A closing **AI–Archive Comparison** quotes claims from the original draft and identifies which were confirmed, contradicted, or not resolved by the material examined. It also discusses evidence the draft left out. Absence from the boxes consulted doesn't establish that an event never happened.
 
-## What to Grade
+## Sorting an archival finding
 
-Grade each part on engagement, not on whether the AI draft turned out to be accurate or the archive turned out to be rich.
+**Constructed example — all dates and records here are invented.** The draft says a building opened in 1924. A dated dedication program records its opening in 1926. A student quotes the draft, cites the program, and explains why that record contradicts the date.
 
-**The critique (Part 1)**
-- **Strong:** quotes specific lines from the draft; separates claims that can be checked from claims that can't be verified without specialist knowledge; honest reasoning, even when uncertain.
-- **Weak:** a vague impression ("it seemed made up") with no quotations.
+The draft also says workers opposed the opening, but the folders examined contain only planning minutes. That claim remains unresolved. Silence in those folders neither confirms agreement nor disproves opposition; the student should describe the search's limits and possible next sources.
 
-**The essay (Part 2)**
-- **Strong:** archival evidence throughout, with specific sources cited down to box and folder; the AI–Archive Comparison quotes the draft and names concrete differences; captions explain why each image matters.
-- **Middling:** the archive visit is evident but the engagement is thin, and the comparison stays general ("AI can be inaccurate").
-- **Weak:** could have been written without visiting the archive.
+## What the comparison can show
 
-## What to Watch For
+An archive visit can uncover sources unavailable to the tool used for the draft. Students may also find that an apparently specific AI claim has no traceable source. They should describe those gaps precisely. We generally cannot tell from a response exactly what was in a model's training data, and information from an unpublished document may appear in published scholarship.
 
-{% include typography/callout.html type="warning" text="Check with the collection before you assign it. Confirm that there are materials on the likely topics, that the reading room can handle a class's worth of requests, and what the rules are — pencils only, lockers, retrieval times, scanning. An archivist who knows students are coming is an enormous help." %}
+The archive has limits of its own. Someone decided what to keep, how to describe it, and how to arrange it. Ask students to consider how a thin file, an earlier name, or an unrecorded meeting affects the account they can write.
 
-- Comparisons drift toward "AI can sometimes be inaccurate." Requiring direct quotations from the unedited draft, sorted into confirmed / contradicted / absent, keeps the comparison concrete.
-- Students treat the published history on the reference shelf as the archive. It's useful context, but the assignment only works if they open a box.
-- The archive doesn't always cooperate. Say up front that a thin box, honestly described, is still evidence.
-- Names change. Buildings, organizations, and places often had earlier names, and cataloging is imperfect. Students who search only the current name often conclude that nothing exists.
-- Students edit the AI draft before saving it, and the baseline disappears. Say plainly that the unedited draft is a primary source for this assignment.
-- Plan for at least an hour in the reading room, plus retrieval time, and let students hold a box for a second visit.
+## What to grade
+
+For **Part 1**, look for quoted claims and reasons for investigating them. A general impression that the answer looks invented needs more explanation.
+
+For **Part 2**, look for evidence from the collection, precise citations, useful captions, and a comparison that quotes the original draft. Students should explain how their account changed. A sparse collection can still support careful work; don't make a rich discovery a condition of a good grade.
+
+## Reading-room details
+
+{% include typography/callout.html type="warning" text="Confirm that the collection can accommodate the class and explain its rules before the visit: requests, retrieval times, pencils, lockers, and scanning. Give the archivist advance notice of likely topics." %}
+
+- Allow at least an hour in the reading room, plus retrieval time, and a second visit where possible.
+- Remind students to look for earlier names of buildings, people, and organizations.
+- Explain the distinction between the reference shelves and the unpublished collection they are there to consult.
+- Require the original AI response with the submission so the comparison has a stable reference.

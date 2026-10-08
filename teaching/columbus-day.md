@@ -1,8 +1,8 @@
 ---
 layout: sketchbook
 title: Same Prompt, Different History
-description: "A teaching sketch that uses AI-generated historical argument to examine filter bubbles and the difference between pronouncing and puzzling."
-summary: "The same prompt to ChatGPT produces different histories depending on whether you're logged in or not — and that difference is the lesson."
+description: "Compare two AI analyses of an 1892 Columbus Day proclamation and examine their different uses of historical context."
+summary: "Students compare logged-in and anonymous responses to the same historical document, then investigate differences in emphasis."
 key-question: "Does the same prompt give everyone the same history?"
 thumbnail: "images/landing-of-columbus-vanderlyn.jpg"
 thumbnail-credit: 'John Vanderlyn, *Landing of Columbus*, 1847. U.S. Capitol Rotunda.'
@@ -19,9 +19,9 @@ tags:
   - source evaluation
   - historical thinking
 what-students-learn:
-  - how context shapes historical interpretation
-  - what filter bubbles look like in practice
-  - the difference between pronouncing and puzzling about sources
+  - "identify the historical context a response includes or omits"
+  - "distinguish an observed difference from an explanation for it"
+  - "compare judgments about the past with questions about its circumstances"
 card_order: 20
 ---
 
@@ -31,19 +31,25 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-Students ask ChatGPT for a historical analysis of an 1892 newspaper article announcing President Harrison's proclamation of Columbus Day as a national holiday. Then they ask again in an incognito window. The two histories don't match, and working out why is the lesson.
+I asked ChatGPT to analyze an 1892 newspaper article about President Harrison's Columbus Day proclamation, then repeated the prompt in an incognito window. The responses emphasized different things. That comparison suggested a classroom exercise: what counts as historical analysis in each answer, and what might explain the difference?
 
-{% include typography/pullquote.html text="Drop a little historical context and the whole story changes. Students watch it happen on their own screens instead of taking it on faith." %}
+## Where the comparison came from
 
-{% include typography/callout.html type="note" title="Inspired by" text="Sam Wineburg, *Why Learn History (When It's Already on Your Phone)*, Chapter 4, which gives the same 1892 document to a strong high school student and to history graduate students. **The core change:** the comparison runs between two AI responses, logged in and incognito, so students watch context reshape the history in real time." %}
+In Chapter 4 of *Why Learn History (When It's Already on Your Phone)*, Sam Wineburg describes giving the same document to a strong AP US History student and to history graduate students. The student focused on Columbus and whether he deserved the honor. The graduate students asked about the politics of the 1890s, including immigration, nativism, and the pressures on Harrison.
 
-## The Setup
+In my trial, the logged-in response resembled the graduate students' approach. The anonymous response included some context but also added two paragraphs about the morality of honoring Columbus, omitted Catholics, and left out a critique of assimilation. The difference was worth examining even though this trial couldn't establish its cause.
 
-Students work individually, so each can compare their own logged-in response with an incognito one, and then compare notes with classmates.
+## Preparation and submission
 
-Wineburg gave the same document — a short *New York Times* article from July 22, 1892 about Columbus Day — to a high-achieving AP US History student (Jacob) and to a group of history graduate students. Jacob talked about what Columbus did and whether he deserved the honor. The graduate students went straight to late nineteenth-century politics: immigration, nativism, the pressures on Harrison. Jacob issued pronouncements; the graduate students asked questions.
+Supply the proclamation below and enough background on the 1890s for students to assess contextual claims. Save paired responses before class as a fallback if anonymous access is unavailable or produces little contrast. Using saved responses changes the activity from generating a comparison to examining one.
 
-Responding to a logged-in account, ChatGPT sounded like the graduate students: contextual, alert to 1890s debates over immigration and national identity. Responding anonymously, it still offered some context, but it added two paragraphs on the morality of honoring Columbus, left out Catholics, and dropped any critique of assimilation. Different account, different history.
+**Suggested submission:** two saved responses, annotated passages, and a short explanation separating observed differences from possible causes. Repeating the prompt within each condition gives students another comparison before they attribute a difference to account status.
+
+## Trying it in class
+
+Students submit the same prompt in their own logged-in account and in an incognito window, save both responses, and compare them with classmates' results. Ask them to mark passages about Columbus separately from passages about the people proclaiming the holiday in 1892. Which questions does each response ask of the document? Which judgments does it take for granted?
+
+Record the model and other visible settings where possible. The two conditions may differ in more than account context, and repeated runs may differ too. If the responses are similar, that is also a result to discuss.
 
 ## The Prompt
 
@@ -53,10 +59,16 @@ Please write a historical analysis of the following article: New York Times pg.8
 
 {% include typography/callout.html type="prompt" title="Prompt" text=columbus_prompt %}
 
-## Why It Works
+## Describing a difference without explaining it away
 
-Students get a firsthand encounter with filter bubbles while practicing historical thinking. Wineburg's contrast gives the class a question to carry: are we pronouncing, or puzzling? AI makes that distinction visible in real time, and the incognito comparison adds a second layer: the same tool, in different contexts, writes different histories.
+**Constructed example — not quotations from the recorded trial.** One answer discusses whether Columbus deserves commemoration; another asks why Harrison promoted a holiday in 1892. Students can classify the first as a judgment about the commemoration and the second as a question about its circumstances, then check any contextual claims against course sources.
 
-## What to Watch For
+That difference supports a comparison of interpretations. It doesn't yet show that account personalization caused it. A fresh run could produce the same contrast within one condition.
 
-{% include typography/callout.html type="warning" text="As models absorb more material on historical thinking, they may leave out less context, which would shrink the gap between logged-in and incognito answers. Rerun the comparison yourself before class; the exercise may need updating as models improve." %}
+## Questions the comparison leaves open
+
+The exercise can raise questions about personalization and filter bubbles, but two responses don't establish that either caused the difference. Distinguish what the class observed from its possible explanations.
+
+Wineburg's comparison supplies a historical question that remains useful across these variations: is the response judging the commemoration, investigating the circumstances that produced it, or doing both? Students can answer that by pointing to the text in front of them.
+
+Rerun the prompt before class. Models change, and a contrast that appeared in one trial may not recur.

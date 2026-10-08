@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Design the AI Assignment
-summary: "Students design an AI-assisted learning exercise on a concept they once struggled with, then trade assignments and find out whether someone else actually learns from it."
+summary: "Students design an AI-assisted exercise on a difficult concept, then observe a classmate trying it."
 thumbnail: "images/johnston-classroom-1899.jpg"
 thumbnail-credit: "Frances Benjamin Johnston, classroom with students and teacher, Washington, D.C., 1899. Library of Congress."
 date: 2026-09-25
@@ -20,10 +20,9 @@ tags:
   - course design
 key-question: "What does an assignment look like that uses AI to learn, not just to get an answer?"
 what-students-learn:
-  - the difference between using AI to finish work and using AI to understand something
-  - that evidence of learning has to be designed in, not assumed
-  - how much a learning process depends on clear goals and iteration
-  - how to write instructions clear enough for someone else to follow
+  - "turn a broad learning goal into a task someone can attempt"
+  - "write and test instructions for another learner"
+  - "decide what evidence would show progress in understanding"
 card_order: 70
 ---
 
@@ -33,34 +32,32 @@ card_order: 70
 
 {% include typography/sketch-info.html %}
 
-Teaching something is the fastest way to find out what you don't understand about it. This assignment puts students in the instructor's seat. Each student picks a concept from another class that they really struggled with (a statistical idea, a chemistry procedure, a dense reading) and designs a short exercise that uses AI to help someone else learn it. Then a classmate tries it in class while the designer watches.
+Each student chooses something they struggled to understand in another class and designs an AI-assisted exercise to help a classmate learn it. The classmate then tries the exercise while the designer watches. The test is useful partly because instructions that seem obvious to their author may make much less sense to someone following them.
 
-{% include typography/pullquote.html text="Explaining a concept is easy for AI. Designing a process where someone can't skip the understanding is the hard part, and that's the part students have to build." %}
+The assignment adapts Ethan Mollick and Lilach Mollick's [“Assigning AI: Seven Approaches for Students, with Prompts”](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4475995) (2023). Here, students choose what role AI should play and take responsibility for designing the activity.
 
-{% include typography/callout.html type="note" title="Inspired by" text="Ethan Mollick and Lilach Mollick, [\"Assigning AI: Seven Approaches for Students, with Prompts\"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4475995) (2023), which gives instructors seven roles for AI, from tutor and coach to simulator and teammate. **The core change:** students do the assigning. They design the AI exercise themselves, then find out on each other whether it works." %}
+## Preparation and submission
 
-## The Setup
+Students need a difficult concept they can check against a course text, worked solution, or other reliable reference. Struggling with it identifies a problem to teach; it doesn't guarantee that their explanation is correct. Check the concepts and arrange peer pairings before class.
 
-**Read the frameworks first.** Before designing anything, students read a few approaches to AI-integrated assignments with a skeptical eye. Mollick and Mollick's "Assigning AI: Seven Approaches for Students" works well. Are the approaches really different, or one idea in seven costumes? Which would produce students who learned something, and which would produce students who know how to look like they did?
+The submission consists of the exercise and separate reflection. **Suggested addition:** include the tester's notes and one proposed revision so the designer can distinguish what the peer test showed from what they hoped it would show.
 
-**Pick a hard topic.** It has to come from a class the student found difficult. Easy topics make easy assignments, and those teach nothing about how AI helps in a real struggle to learn.
+## Designing the exercise
 
-**Design the exercise.** The assignment students write has four parts:
+Begin by reading approaches to AI-assisted learning, such as the Mollicks' examples. Ask students to consider what each asks the learner to do and how an instructor could tell whether it helped.
 
-1. A clear statement of what the learner should understand, and why it's worth understanding.
-2. Step-by-step instructions for how to use AI: sample prompts, general advice about prompting, and explicit instructions to iterate. Tutor, coach, role-play, practice questions, alternative explanations: whatever fits the concept.
-3. What the learner should produce along the way.
-4. How the learner shows that real learning happened.
+Students then pick a difficult concept from another course: a statistical idea, a chemistry procedure, or an argument in a dense reading. They design an exercise with four parts:
 
-**Build in evidence of learning.** Students find this part hardest, and it matters most. Good designs ask the learner to explain the concept in their own words, apply it to a new example, keep a record of key prompts and false starts, and show how they checked AI's explanations. The underlying test: can the learner now explain, apply, and question the idea better than they could at the start?
+1. A specific learning goal and a reason for learning it.
+2. Instructions for using AI, including sample prompts and opportunities to follow up when an explanation doesn't help.
+3. Work the learner produces along the way.
+4. A task that shows what the learner can now explain or do.
 
-**Write a separate reflection.** About 250 words, apart from the assignment itself, on what designing it taught the student about AI and learning. Which kinds of prompts helped? Where did AI explanations fall short?
+The fourth part needs particular attention. “Understand standard deviation” doesn't tell a tester what to submit. Explaining an example, applying the concept to a new case, or identifying an error gives the designer something to assess.
 
-**Peer test in class.** Students post their assignments before class, then trade and try to learn from someone else's. Testers document what worked, what was confusing, where AI helped, and where it distracted. Each group reports back, and the discussion keeps circling one question: how do you keep the AI from doing the student's thinking?
+Students also write a separate reflection of about 250 words on their design: which prompts helped, where AI explanations fell short, and what remains uncertain.
 
-## The Prompt
-
-Students write the prompts here. What you give them is the design question:
+## The assignment prompt
 
 {% capture design_prompt %}
 You are a teacher trying to help students learn with AI. Pick a concept or skill you struggled to understand in another class. Design a short exercise that uses AI to help a classmate actually learn it — not just get an answer. Explain what they should learn and why, how they should use AI (with sample prompts), what they should produce, and how they (and you) will know that they understood it.
@@ -68,30 +65,30 @@ You are a teacher trying to help students learn with AI. Pick a concept or skill
 
 {% include typography/callout.html type="prompt" title="assignment prompt" text=design_prompt %}
 
-## Why It Works
+## Making the learning task testable
 
-Students who use AI regularly mostly use it to *finish* things. Designing for someone else drags the difference between finishing and learning into the open: a design that lets the learner paste in the question and copy out the answer falls flat in peer testing, in front of everyone.
+**Constructed example — not a student design.** “Ask AI to explain standard deviation, then summarize it” mainly tests whether the learner can repeat an explanation.
 
-Students also see learning goals and assessment from the inside. "Understand the concept" isn't testable until they decide what understanding looks like, and with AI in the picture, the process (prompts, revisions, checks) becomes better evidence than the polished product.
+A stronger exercise asks the learner to compare two small datasets with the same mean but different spread, predict which has the larger standard deviation, and justify that prediction before requesting AI feedback. A new pair of datasets tests whether they can apply the distinction. The designer checks the examples against a trusted worked solution; the tester's explanation supplies evidence of understanding beyond agreement with AI.
 
-And their own struggle becomes expertise. The student who never quite got standard deviation knows exactly where the confusion lives, which is often more useful for designing a path through it than knowing the concept cold.
+## Testing it with a classmate
 
-## What to Grade
+Students post the exercises before class, then trade and try them. Testers record where they got confused, which AI responses helped, and what they could do by the end. Ask them to report on their own attempt before evaluating the design in general.
 
-Grade the design, not whether the tester ended up mastering the concept. A checklist gives students the target in advance:
+The class discussion compares the learning tasks. Did the exercise ask the tester to use an explanation, or mostly to read and repeat it? What evidence would justify the designer's claim that someone learned something?
 
-- **A clear learning goal and motivation:** a specific concept or skill, and why it's worth learning.
-- **A followable activity:** someone else could work through the instructions and attempt the same learning process.
-- **Thoughtful use of AI:** AI supports learning rather than producing answers, and the design shows awareness of AI's strengths and limits.
-- **Built-in evidence of learning:** the design asks the learner to show understanding changed — explanation in their own words, a transfer task, a record of the process.
+## What to grade
 
-The separate reflection counts too: strong reflections name specific kinds of prompts that helped or failed, rather than general impressions of AI.
+Grade the design and reflection, with attention to:
 
-## What to Watch For
+- a clear, worthwhile learning goal;
+- instructions someone else can follow;
+- a reason for the chosen use of AI;
+- an activity that lets the learner demonstrate understanding;
+- specific reflection on prompts, responses, and revisions.
 
-{% include typography/callout.html type="warning" text="Weak designs are really an explanation with extra steps: ask AI to explain X, then summarize it. Push students toward activities that make the learner do something with the explanation: apply it, test it, catch AI getting it wrong." %}
+A tester's difficulty is useful information for the designer. It needn't mean the assignment deserves a poor grade. What matters is whether the design gave them a reasonable task and whether its author can explain what needs changing.
 
-- Students choose easy topics because they're easier to explain. Insist on something that was truly difficult; the assignment is supposed to be hard to write.
-- The evaluation section gets vague ("the student will understand X"). Ask what, specifically, the designer would want to see.
-- Peer testing needs the assignments posted before class. A missing assignment leaves a tester with nothing to do.
-- Testers sometimes grade the assignment instead of trying to learn from it. Ask them to report on their own learning experience first, and critique the design second.
+## Before the peer test
+
+Check that topics were difficult for the designers themselves and that the exercises ask for more than an AI explanation followed by a summary. Make sure every tester has an assignment to try; a missing post otherwise costs someone else their class time.

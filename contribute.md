@@ -9,7 +9,7 @@ scrollspy: true
 
 {% include typography/section-accent.html %}
 
-If you've tried something with AI in a class or a research project and have something honest to say about how it went, this is the place for it. Rough drafts and partial experiments are welcome. We're not looking for polished success stories; the most useful sketches are often the ones where something went sideways.
+Share an experiment or a decision about AI in a class or research project. Tell us what you tried, what happened, and what you'd change. An account of abandoning a tool or keeping AI out of an assignment belongs here too. A few paragraphs is enough to start.
 {: .lede}
 
 Your sketch is published under your name and licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), like everything else here: others can share and adapt it for noncommercial purposes, with credit to you, under the same license.
@@ -18,16 +18,30 @@ Your sketch is published under your name and licensed [CC BY-NC-SA 4.0](https://
 
 [Send a draft to amaranth@unm.edu](mailto:amaranth@unm.edu). A few paragraphs is plenty. It helps if you touch on:
 
-- what you tried, and in what course or project
-- the prompt or prompts you used
-- what happened: what worked, what didn't, what surprised you
+- the task and the course or project it belonged to
+- what you tried or decided against, and why
+- the prompts you used, if any
+- what happened, including an example of the work or a difficulty you encountered
 - what you'd change next time
 
 We'll shape it into a sketch, handle the technical parts, and check the draft with you before it goes live.
 
+## Writing a useful teaching sketch
+
+Separate what you asked students to do, what you observed, and what you would change next time. Give a short example showing a judgment students need to make. Label constructed examples clearly; don't present them as student work. Include prior reading, preparation, and what students submit. A supported account of an unhelpful AI exchange belongs here too.
+
+### What the status labels mean
+
+- **Rough:** an initial proposal or account with important details or questions unresolved; it may have been tried.
+- **Lightly tested:** tried in a limited setting, with little documented follow-up.
+- **Tested:** enough experience is recorded to describe practical findings and limitations.
+- **Refined:** revised in response to use, with changes and remaining limitations documented.
+
+These labels describe experience and revision, not proof of learning or a guarantee that an activity fits another course. Use the label your account supports. The repository's [editorial guide](https://github.com/amaranth-unm/ai-sketchbook/blob/main/STYLE-GUIDE.md) gives the full standard.
+
 ## The hands-on way: submit through GitHub
 
-The sketchbook runs on GitHub, a free platform for sharing files and hosting websites. If you'd like to build your sketch yourself and see it as a live webpage before sending it to us, here's how. Completely optional, but give it a try!
+The sketchbook runs on GitHub, a free platform for sharing files and hosting websites. If you'd like to build your sketch yourself and see it as a live webpage before sending it to us, here's how. The email route above works just as well if you prefer it.
 
 ## 1. Create a GitHub account
 
@@ -43,7 +57,7 @@ Go to [github.com](https://github.com) and sign up. Any email works.
 - The page refreshes within 5–10 seconds
 - Check the URL! The page looks the same, but you're now looking at a repository **under your own account**
 
-{% include typography/callout.html type="tip" title="Contributing again later?" text="If you already have a fork from an earlier sketch, open it and click **Sync fork** before you start. Otherwise your copy is out of date, and your pull request could undo newer changes to the site." %}
+{% include typography/callout.html type="tip" title="Contributing again later?" text="If you already have a fork from an earlier sketch, open it and click **Sync fork** before you start. That brings the site's newer files into your copy before you edit." %}
 
 ## 2b. Turn on your preview website
 
@@ -65,7 +79,7 @@ Your fork holds the files that make the website. Now turn on your own copy of th
 
 From your fork's `Code` tab, press the **`.` (period) key**. A full text editor opens in your browser, with nothing to install.
 
-It looks intimidating because it can do a lot. You only need two parts: the list of files on the left and the editor on the right.
+For this task, you'll use the list of files on the left and the editor on the right.
 
 ## 4. Create your sketch file
 
