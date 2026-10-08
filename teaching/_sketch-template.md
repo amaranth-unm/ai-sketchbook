@@ -1,7 +1,7 @@
 ---
 layout: sketchbook                                          # required — always this value
 title: Your Sketch Title                                    # required
-summary: "One sentence: what students do, and why it's worth trying."   # required — drives the listing card and the "Basic idea" box below
+summary: "One sentence: what students do and what question the activity investigates."   # required — drives the listing card and the "Basic idea" box below
 thumbnail: "images/your-image.jpg"                          # optional — put the image file in teaching/images/; omit for a text-only card
 thumbnail-credit: "Creator, *Title*, date. Source."            # optional — caption and alt text for the image beside the summary box
 date: 2026-06-22                                            # optional — shown on the listing card
@@ -9,7 +9,7 @@ status: rough                                               # optional — rough
 type: activity                                              # optional — short label, e.g. "activity" or "assignment"
 effort: "30 min in class"                                   # optional — shown as "Format" in the summary box
 tools:                                                       # optional — AI tools used, if any
-  - any AI tool
+  - name the tool used, or the capabilities a proposed activity requires
 level: any                                                   # optional — who this is for, e.g. "any", "intro", "advanced"
 author: "Your Name, Department"                              # recommended — shown in the summary box; the citation uses the name before the comma
 context: "HIST 1105 Making History (intro survey), UNM"       # recommended — the course where you ran it: number, title, level
@@ -18,9 +18,9 @@ handout: "https://example.edu/your-assignment-page"           # optional — lin
 tags:                                                        # recommended — powers the /tags/ browsing page
   - your-tag
 key-question: "The question this activity helps answer."    # recommended — shown on the listing card
-what-students-learn:                                         # recommended — shown as "What students learn" in the summary box
-  - one concrete takeaway
-  - another concrete takeaway
+what-students-learn:                                         # recommended — shown as "Learning aims" in the summary box
+  - one action or skill students will practice
+  - another action or skill students will practice
 card_order: 99                                                # optional — sort position on the listing page; check sibling files and pick the next number
 ---
 
@@ -32,26 +32,30 @@ card_order: 99                                                # optional — sor
 
 {% include typography/sketch-info.html %}
 
-Open with a sentence or two: what you tried, and why.
+Start with the particular problem that prompted this sketch. Use the details you have: a reading, an output, an assignment that needed changing, or a task that took too long. If this is a proposal, say so. Don't turn an intended outcome into a claim about what happened.
 
-{% include typography/pullquote.html text="A short, quotable line that captures the core insight of this sketch." %}
+Use only the sections you need below. Rename or combine them to fit the account. A pull quote is optional; the sketch doesn't need a slogan or a concluding lesson. Keep prompts and practical details someone would need to try it. Don't invent an experience or student reaction to make the prose more personal.
 
-## The Setup
+## Preparation
 
-Walk through what you actually did, step by step — enough that someone else could run it themselves.
+State prior reading or subject knowledge, materials to prepare, and tool capabilities needed. Say what students submit. Label new requirements as suggested adaptations if they differ from the activity as run.
 
-## The Prompt
+## The activity
 
-{% include typography/sketch-prompt.html text="The exact prompt you gave students or the AI tool." %}
+Describe what students do, in what order, and what they submit. Explain what AI does in the assignment and what practice students gain or give up by using it. Include the course context and any preparation or timing that mattered. Keep the instructions separate from your interpretation of the results. Label changes you would try next so they aren't mistaken for the activity you ran.
 
-## Why It Works
+## The prompt
 
-Explain the pedagogical logic — why this surfaces something worth learning, not just a clever use of AI.
+{% include typography/sketch-prompt.html text="The exact prompt you gave students or the AI tool. Label a proposed prompt as proposed." %}
 
-## What to Grade
+## A worked example
 
-For graded assignments: what the grade rests on, and what separates strong work from weak. Name the part of the work that carries the learning (often the critique or the process, not the AI output). Delete this section for ungraded in-class activities.
+Show a short example of the judgment students make. Use actual work only when you have the record and can share it. Otherwise label it **Constructed example**, identify invented passages or records, and do not present it as an observed outcome. See [STYLE-GUIDE.md](../STYLE-GUIDE.md).
 
-## What to Watch For
+## What happened
 
-{% include typography/callout.html type="warning" text="A caveat, failure mode, or thing to double-check before you run this." %}
+If you ran the activity, describe a particular response, difficulty, or change. An example of what a student did or what the tool produced is more useful than a general claim that students learned. If you haven't run it, use this space to explain what you hope to find out, or omit it.
+
+## Assessment and adaptation
+
+For graded work, explain what you look for and what needs revision. Let a well-supported account of an unhelpful exchange satisfy the task; don't require students to find a benefit or an error. Include the practical advice a colleague would need: a confusing instruction, a source to check, whether a free account suffices, or an option to use a supplied response. End with an unresolved question if there is one; you don't need to summarize the lesson again.

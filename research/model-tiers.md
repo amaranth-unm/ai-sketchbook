@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
-title: Effect of Model Tiers on LLM Responses
-summary: "This sketch shows the difference in response quality baseed on the LLM model tier."
+title: Comparing Two Models on a Question About Huizinga
+summary: "The same question about a passage in Huizinga produced different answers from Gemini Flash Lite and Claude Opus 5."
 thumbnail: "images/istanbul-bridge.jpg"
 date: 2026-09-01
 status: tested
@@ -17,33 +17,30 @@ tags:
   - model tiers
   - hallucinations
 results:
-  - hallucinations occur far less frequently with higher tier models
+  - "Gemini returned a passage that did not address court ceremony"
+  - "Claude found relevant material without inventing page numbers"
 what-i-learned:
-  - the LLM model tier makes a significant difference in prompt response quality
-  - lower tier LLMs generate less reliable responses
+  - "the model and task matter when assessing an AI response"
+  - "this comparison does not isolate subscription tier as the cause"
 card_order: 20
 ---
 
-# The Effect of Model Tiers on LLM Responses
+# Comparing Two Models on a Question About Huizinga
 
 {% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
-Early reports of AI hallucinations made many people skeptical of LLMs. As of 2026, though, high-tier models hallucinate far less often. The catch: free tiers typically send your query to an older model. Pay for a higher tier and you'll see a dramatic drop in inaccurate responses. 
-
-{% include typography/pullquote.html text="Higher-performing models give noticeably better answers." %}
-
-## The Experiment
-Free-tier LLMs on default settings often struggle with prompts that ask for highly specific information: they answer without checking themselves. Paid-tier models check their work before responding. To show the difference, I gave the same specific prompt to the free tier of Gemini and a paid tier of Claude.
+I gave the free tier of Gemini and a paid tier of Claude the same question about court ceremony in Huizinga's *The Waning of the Middle Ages*. I wanted a passage I could check, with a page number. The responses differed considerably.
 
 ## The Prompt
 
 {% include typography/sketch-prompt.html label="prompt to give to the LLM" text="What did Huizinga say about court ceremony in The Waning of the Middle Ages? Quote the passage with page number." %}
 
+## Comparing the responses
 
-## Results
-Gemini Flash Lite gave an almost entirely useless response, below. Its quotation isn't about court ceremony at all; it's the opening sentence of the book.
+Gemini Flash Lite returned the opening sentence of the book. It was a quotation, but it didn't answer the question about court ceremony.
+
 {% include images/figure-wrap.html
   class="center"
   width="90%"
@@ -52,7 +49,7 @@ Gemini Flash Lite gave an almost entirely useless response, below. Its quotation
   text = text
 %}
 
-Claude Opus 5 found material in *The Waning of the Middle Ages* that genuinely connects to court ceremony, and it didn't fabricate page numbers.
+Claude Opus 5 found material relevant to court ceremony and didn't fabricate page numbers.
 
 {% include images/figure-wrap.html
   class="center"
@@ -62,5 +59,8 @@ Claude Opus 5 found material in *The Waning of the Middle Ages* that genuinely c
   text = text
 %}
 
-## What I Learned
-The quality gap between free, lower-tier models and paid, higher-tier ones is easy to demonstrate. As of 2026, the newest LLMs are trained with reinforcement learning as well as pattern recognition, so they work less like giant spell-checkers and more like pathfinders. That's part of why their output keeps getting more reliable. 
+## What this comparison tells me
+
+For this question, Claude gave me a more useful place to start. It also showed why an assessment of an AI answer needs to name the model and the task: these responses would lead to quite different impressions of how useful AI is for historical work.
+
+I compared two providers as well as two subscription tiers, so this trial doesn't isolate the effect of paying for access. It doesn't establish how often either model fabricates sources, either. More questions and repeated trials would be needed to make those claims. What I can report here is the difference between these two answers.

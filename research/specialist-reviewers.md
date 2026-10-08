@@ -1,14 +1,14 @@
 ---
 layout: sketchbook
-title: A Panel of Specialist Readers
-summary: "Ask AI to review a draft article separately as each of the specific readers it will actually face — subfield expert, adjacent specialist, volume editor, fellow contributor."
+title: Asking AI to Criticize a Draft
+summary: "Four prompts asked for objections to the same draft, each emphasizing a different part of its intended audience."
 thumbnail: "images/tacuinum-wine-appraisal.jpg"
 date: 2026-08-22
 status: tested
 type: writing feedback
-effort: "one prompt per reviewer; an afternoon to work through the responses"
+effort: "one prompt per role; an afternoon to work through the responses"
 tools:
-  - any AI tool
+  - chatbot that can accept a draft
 level: researcher
 author: "Fred Gibbs, History"
 tags:
@@ -16,55 +16,52 @@ tags:
   - peer review
   - prompting
 results:
-  - four distinct reviews of the same draft, each from a named vantage point
+  - four sets of comments on the same draft, using different role descriptions
   - insights from every perspective that I had not considered
   - substantive revisions to the article
 what-i-learned:
-  - naming a specific reader produces sharper feedback than asking for feedback
-  - every perspective mixed genuine insight with irrelevant suggestions
-  - sorting the useful from the irrelevant is the actual work
+  - "changing the role in the prompt changed which objections appeared"
+  - "each review mixed useful criticism with suggestions I set aside"
 card_order: 30
 ---
 
-# A Panel of Specialist Readers
+# Asking AI to Criticize a Draft
 
 {% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
-I had a draft article on medieval dietetics and the usual problem: the people best positioned to tell me what was wrong with it were busy, and I would not hear from them until the piece was already under review. So I simulated them. Instead of asking AI for feedback, I asked it to read the draft as four specific readers, one at a time.
+I had a draft article on medieval dietetics and the usual problem: the people best positioned to tell me what was wrong with it were busy, and I wouldn't hear from them until the piece was under review. I tried asking AI to read it from four perspectives, one at a time.
 
-{% include typography/pullquote.html text="Asking for feedback gets you feedback. Asking a named reader with a stake in the argument gets you an objection." %}
+Calling a model a historian doesn't give it that historian's knowledge of the sources. The role descriptions were a way to ask different questions of the draft. I still had to decide whether an objection made sense.
 
-## The Experiment
+## Choosing the roles
 
-The four readers were chosen to match the actual audience the article would meet:
+I chose roles that matched the audience the article would face:
 
-- a **historian of medieval diet and health:** the closest subfield expert, the one who would know the sources
-- a **historian of medicine with a modern focus:** an adjacent specialist who wouldn't share my period's assumptions
-- the **volume editor:** concerned with fit, framing, and the shape of the collection
-- **other chapter authors** in the volume: related topics, varied expertise, each with their own angle
+- a **historian of medieval diet and health**, familiar with the sources;
+- a **historian of medicine with a modern focus**, who might question my period's assumptions;
+- the **volume editor**, concerned with fit and framing;
+- **other chapter authors**, approaching related questions from their own areas of expertise.
 
-I ran each as a separate prompt instead of asking for all four at once, and that mattered. One prompt asking for four perspectives tends to produce four paragraphs in one voice with different labels. Separate prompts let each reader work through the whole draft on its own terms and end up somewhere the others didn't.
+I ran separate prompts for the roles. Asking for several perspectives at once can leave you with a series of short responses in much the same voice. Each prompt asked for comments on the whole draft.
 
 ## The Prompt
 
-{% include typography/sketch-prompt.html label="prompt to give to any AI tool" text="You are a historian of medieval diet and health, reading a draft chapter for an edited volume. Read the draft below and respond as that reader would: what claims would you question, what evidence would you want, what would you push back on, and what does the argument assume that a specialist in your area would not grant? [paste draft]" %}
+{% include typography/sketch-prompt.html label="prompt used for the medieval historian role" text="You are a historian of medieval diet and health, reading a draft chapter for an edited volume. Read the draft below and respond as that reader would: what claims would you question, what evidence would you want, what would you push back on, and what does the argument assume that a specialist in your area would not grant? [paste draft]" %}
 
-Then the same structure for each of the others, with the vantage point and its concerns swapped in: the volume editor asked about fit and framing, the modern historian of medicine about what the piece takes for granted on periodization and continuity.
+I used the same structure for the other roles. The editor prompt emphasized fit and framing; the modern historian prompt asked about assumptions concerning periodization and continuity.
 
-## Results
+## Working through the objections
 
-Every reader raised something I hadn't considered, and every reader also offered suggestions that didn't much matter for what I was doing. No reader was uniformly useful, and none was useless.
+Each response raised something I hadn't considered, along with suggestions that didn't matter much for this article. The irrelevant suggestions were useful to compare too. The response to the modern historian prompt questioned assumptions left alone in the medieval historian response. The editor prompt produced a different set of concerns.
 
-The payoff: the irrelevant suggestions were irrelevant in *different ways*, depending on who was supposedly speaking. The adjacent specialist pushed on things the subfield expert took for granted; the editor cared about matters neither historian raised. Reading the four sets against each other made it easier to see which objections were artifacts of the framing and which were real gaps.
+Reading the responses together helped me decide which objections reflected gaps in the draft and which followed mainly from the role I had assigned. I revised the article substantially. I think it's better defended at points where a reader outside my subfield might stop and object.
 
-I revised the draft substantially. I think it's stronger for it, better defended at exactly the spots where a reader outside my subfield would have stopped and objected.
+These responses gave me objections to consider. They couldn't tell me what my colleagues would think, or establish that a criticism reflected the scholarship in a field. Each objection still needed checking against my sources and the purpose of the article.
 
-## What I Learned
+Before uploading an unpublished draft, check what the service may do with the document under the terms of the account you're using.
 
-{% include typography/callout.html type="warning" text="This doesn't replace peer review, and the simulated readers aren't the people they name. It's a way to find weak points before real readers do. Take the objections seriously as objections, not as evidence of what any particular scholar thinks." %}
+## What I'd try next
 
-A specific reader gets a specific response. "Review this draft" yields generic feedback; "read this as the volume editor" yields a point of view and, usefully, an agenda.
-
-I haven't experimented enough to say how to do it better: how many readers is ideal, whether longer reader descriptions help, whether sharing the other reviews would sharpen or homogenize them. Those are the obvious next things to try.
+I haven't experimented enough to know how many role descriptions are useful, whether longer descriptions would improve the responses, or whether including the earlier comments in a new prompt would produce better objections or more repetition. Those are the next comparisons I'd like to make.

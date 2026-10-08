@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Photos to Map Pins
-summary: "Create an interactive map with pins for hundreds of photos, using GPS metadata already embedded in your phone's images — in under an hour."
+summary: "A folder of street-cat photographs became an interactive map using the location data recorded by a phone."
 thumbnail: "images/marrakech-thumbnail.jpg"
 date: 2026-04-09
 status: tested
@@ -17,13 +17,11 @@ tags:
   - maps
   - agentic AI
 results:
-  - extracted GPS metadata from image files
-  - built a map visualization with AI-assisted coding
-  - presented geolocated data in a public-facing format
+  - "extracted GPS coordinates from more than 200 photographs"
+  - "published a map with a clickable photograph at each pin"
 what-i-learned:
-  - how GPS metadata is embedded in image files
-  - what AI-assisted coding looks like in practice
-  - how to turn a personal collection into a public-facing dataset
+  - "existing location data and a familiar website template made the task quick"
+  - "map pins inherit the location errors in the photographs"
 card_order: 20
 ---
 
@@ -33,35 +31,22 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-Could an AI coding agent turn a folder of photos into a map from one plain-language prompt? It could: this workflow produced [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/), a live web map with a clickable pin for every photo.
+I came back from Marrakech in March 2026 with more than 200 photographs of street cats. My phone had recorded their locations, so I wanted a map where I could click a pin and see the cat. With Copilot's help, the folder became [Cats of Marrakech](https://jeseyfried.github.io/cats-of-marrakech/), a working map, in about half an hour. I already knew the website template, which gave me a head start.
 
-No coding knowledge required, and it works for any collection of geolocated images: field photographs, urban surveys, monuments, public art.
+## Making the map
 
-{% include typography/pullquote.html text="From download to interactive map in under an hour, without writing a line of code by hand." %}
+Location services were enabled in my phone's Camera app, so the photographs contained GPS coordinates. I copied the images into a GitHub repository built from the [Xanthan](https://xanthan-web.github.io/) portfolio template. That supplied the website's files and folders.
 
-## The Experiment
-During March 2026, I traveled to Marrakech and photographed street cats throughout the medina. With location services enabled in the phone's Camera app, GPS coordinates were embedded in the metadata of every image. By the end of the trip, I had over 200 photos of cats, and 200 precise locations.
-
-I used the [Xanthan](https://xanthan-web.github.io/) web framework, specifically the portfolio template, to start with a simple static website that I could easily update. The template gives you a clean GitHub repository with the files and folders needed for a small website.
-
-After copying the photos into the `images` folder in a GitHub repository, I described the goal to GitHub Copilot in plain language. Copilot wrote all the necessary code: a YAML data file extracting GPS coordinates from each image's metadata, and an updated `map.html` that reads that file and places a clickable pin for each photo. 
-
-No manual data entry, no looking up coordinates, no pasting in code I didn't understand.
+I asked GitHub Copilot to extract the coordinates into a YAML data file and update `map.html` to display them. Each pin opens its corresponding photograph. Copilot wrote the code; I didn't need to enter coordinates or make a separate record for each image.
 
 ## The Prompt
 
 {% include typography/sketch-prompt.html label="prompt to give to Copilot" text="Please create a new YML file in the _data folder that lists each of the images in assets/images. The YML file should include geographic location extracted from the metadata of each image. Then edit map.html so that the map uses the newly created YML file. The overall goal is to have a pin on the map for each of the photos, and when a user clicks on the pin, the image appears." %}
 
+## What this depended on
 
-## Results
-From the folder of photos to the finished site took about half an hour. I had a head start because I already knew the basics of the [Xanthan](https://xanthan-web.github.io/) templates, but those take only about 15 minutes to learn.
+The useful combination was a collection with location data already attached and a website I knew how to update. Those conditions explain much of the speed. Someone starting with unlocated images or an unfamiliar website would have more work to do.
 
-Phone geolocation varies in precision. Photos taken indoors may land across the street or several meters off. That's a limit of phone GPS, not the workflow, but it matters if spatial precision is central to your research question.
+Phone GPS also varies in precision. A photograph taken indoors may appear across the street or several meters from where it was taken. The map preserves those coordinates, including their errors. For field photographs or research where a few meters matter, I'd check the locations before treating the pins as evidence.
 
-## What I Learned
-
-{% include typography/callout.html type="warning" text="Before AI, even something as straightforward as putting pins on a map could take a full day without previous coding experience. Now it can take under an hour, and the AI assistant can explain how the code works along the way." %}
-
-AI coding agents are lowering the barrier to small digital scholarship projects. Even a quick map like this one can deepen our sense of human geography through dense, local image collections. Imagine reconstructing pilgrimage journeys or migration routes from photographic evidence.
-
-Mapping where documentation happens also opens up questions of point of view. Because the process is so easy, it can quickly capture histories of urban development, neighborhood change, or informal space.
+This was a small project, but it was enough to show me how an AI coding assistant could help publish a collection I would otherwise have left in a folder.

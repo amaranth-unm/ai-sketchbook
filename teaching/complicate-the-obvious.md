@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Complicate the Obvious
-summary: "Students ask AI a question with a boringly familiar answer — what is a healthy diet? — then use the course to explain why that answer is neither timeless nor neutral."
+summary: "Students use a semester of dietary history to examine the assumptions behind AI-generated advice about a healthy diet."
 thumbnail: "images/basic-seven-poster.jpg"
 thumbnail-credit: '"Eat the Basic Seven Every Day," U.S. government poster, 1941–45. National Archives.'
 date: 2026-08-21
@@ -22,9 +22,9 @@ tags:
   - online teaching
 key-question: "What does a confident, ordinary answer take for granted?"
 what-students-learn:
-  - that practical advice carries a history and a set of assumptions
-  - how authority gets constructed in a voice that sounds neutral
-  - what a well-designed follow-up prompt can surface that a first answer hides
+  - "use course readings to interpret contemporary dietary advice"
+  - "develop follow-up questions from historical arguments"
+  - "explain how an answer presents evidence and expertise"
 card_order: 40
 ---
 
@@ -34,25 +34,23 @@ card_order: 40
 
 {% include typography/sketch-info.html %}
 
-Ask AI what a healthy diet is and you get an answer nobody would argue with: balance, vegetables, whole grains, less sugar, plenty of water, check with a professional. The advice may well be good. It is also thoroughly historical, built on particular ideas about bodies, evidence, moderation, responsibility, and who counts as an expert. Students take that unremarkable answer and make it strange, using a semester's worth of history as the solvent.
+Ask AI what a healthy diet is and the answer will probably sound familiar: vegetables, whole grains, less sugar, moderation. At the end of my history of diet and health course, I asked students to explain how advice like this acquired its authority. They used course readings to examine assumptions that an ordinary request for dietary advice leaves largely unspoken.
 
-{% include typography/pullquote.html text="The task isn't to decide whether the advice is right. It's to explain why it sounds the way it does, and to notice what a confident answer makes invisible." %}
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
 
-{% include typography/callout.html type="note" title="Part of a course" text="One of several AI-first assignments in a remote, asynchronous course. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) explains how they fit together, alongside the assignments that ask for no AI." %}
+## Preparation and submission
 
-## The Setup
+Use this after students have studied historical dietary advice and arguments about expertise. Prepare examples of questions tied to particular course readings. The submission is the 600-word essay described below, including the follow-up prompts and comparison with a classmate.
 
-Run it at the end of the term, so students can bring the whole course to bear on a thoroughly ordinary question.
+The object of analysis is the authority claimed by the advice; students don't need to adopt it as personal dietary guidance.
 
-**Before opening AI**, students jot down three course themes they expect to matter: regimen, moderation, quantification, moral discipline, official guidance, common sense. Writing these first keeps the exercise from turning into a reaction to whatever the model says.
+## Building the investigation
 
-**Two required prompts** set the baseline: the advice, then its justification. The second is where it gets interesting. Asked to defend itself, the model lays out its warrants (evidence, authority, expert consensus) that the practical tone of the first answer kept out of sight.
+Before opening an AI tool, students note three course themes they expect to matter. Regimen, moderation, quantification, moral discipline, and official guidance are possibilities. These notes give them questions to bring to the response.
 
-**Three follow-ups of the students' own** carry the assignment. They can't just ask for more detail; they have to use course material to pressure-test the answer. What would a scholar of nutritional discourse notice? What would a historian of dietary morality ask? Prompts about hidden assumptions, moral framing, measurement and risk, or which people and eating practices count as normal tend to crack the answer open.
+Two required prompts establish the advice and its justification. Students then write at least three follow-ups drawing on the course. A question about the moral history of moderation asks something different from a request for more meal suggestions.
 
-**The write-up** runs about 600 words: the AI's answer in brief, the three follow-ups, at least one moment where a follow-up revealed something, several course readings used as interpretive tools, and an argument about what the answer says about modern expertise. Students also comment on the range across classmates' posts, which shows how much the "neutral" answer varies.
-
-## The Prompt
+## The Prompts
 
 {% capture obvious_prompt %}
 What is a healthy diet? Give me practical advice for an ordinary adult.
@@ -66,29 +64,30 @@ Why is this diet healthy? What evidence, assumptions, or expert knowledge suppor
 
 {% include typography/callout.html type="prompt" title="second required prompt" text=obvious_prompt2 %}
 
-Then at least three of their own, designed to reveal what the first answer hid. Good models to show the class: *What assumptions are you making about health, bodies, responsibility, culture, science, and food?* — *What parts of your answer reflect modern American assumptions rather than universal truths?* — *What kinds of foods, people, traditions, bodies, or economic realities are left out?*
+Students' follow-ups might ask which ideas about bodies and responsibility the advice assumes, whether it reflects modern American expectations, or which eating practices and economic constraints it overlooks. Have them explain which reading led them to each question.
 
-## Why It Works
+## The essay
 
-Historical context is easy to demonstrate on obviously strange material like humoral regimens, Victorian temperance diets, or wartime food charts. It's much harder on material that feels like plain fact. AI serves up plain fact on demand, in a voice of calm authority, which is exactly the hard case. Students practice treating today's consensus as a source with a history instead of the yardstick for measuring the past.
+The response is about 600 words. Students briefly describe the initial advice, include their three follow-up prompts, and analyze at least one revealing part of the exchange. They use several course readings to make an argument about the kind of expertise the answer claims. A short comparison with classmates' posts draws attention to differences between responses.
 
-The follow-ups double as a check on the semester. A student who absorbed the course can write a prompt that opens up the moral and quantitative assumptions buried in "everything in moderation." A student who didn't asks for more advice. You can see the difference in the transcript.
+The historical question needs to remain clear. Students can assess the advice's factual accuracy, but that alone won't explain why particular ideas about health, evidence, or responsibility sound persuasive now. The same source criticism they applied to humoral regimens or wartime food charts can be brought to a contemporary answer.
 
-And it leaves students with a useful way to think about AI: a compact, queryable specimen of contemporary common sense that will happily explain its own reasoning if you ask the right way.
+An AI explanation of its reasoning is itself another text to analyze. It may name evidence or assumptions worth following up, but students still need to check them against sources.
 
-## What to Grade
+## Turning a course theme into a question
 
-The grade rests on the historical analysis and the follow-up prompts, not on whether the student judged the AI's advice correct.
+**Constructed example — invented AI advice, not student work.** The response recommends “moderation” without defining it. A student uses an assigned historical source to ask whether moderation is being presented as a measurable intake, a moral virtue, or both.
 
-- **Strong:** original, specific analysis that uses several course readings to explain why the advice sounds the way it does; follow-ups that clearly surfaced something the first answer hid; close attention to expertise, assumptions, and what gets left out.
-- **Middling:** some specific course connections, but the historical perspective, prompt design, or discussion of expertise could go further.
-- **Weak:** describes the AI's answer without enough course material, or relies on general claims about diet culture.
+The essay quotes the relevant advice and the course passage, explains the comparison, and examines the follow-up. Merely noticing that the word occurs in both texts doesn't establish that its meaning or authority stayed the same.
 
-## What to Watch For
+## What to grade
 
-{% include typography/callout.html type="warning" text="The most common failure is the verdict essay: students grade the advice as accurate or inaccurate and stop there. Say more than once that rightness isn't the question." %}
+- **Strong work** uses specific readings to explain features of the advice, develops follow-ups from those readings, and examines what changed or remained unanswered in the exchange.
+- **Work needing development** makes relevant course connections but leaves them general or doesn't follow up on a promising question.
+- **Weak work** mainly summarizes the advice or delivers a verdict about its quality without historical analysis.
 
-- Follow-ups drift into requests for elaboration instead of interrogation. Put a few strong and weak examples side by side before students start.
-- Students gesture at course themes instead of citing readings. Requiring named sources keeps the essay from becoming a general critique of diet culture, which they could write without the course.
-- The AI's answer is a moving target. Models, guardrails, and hedging shift, and answers vary by account and phrasing. Treat that variation as evidence: the spread across a class is itself a finding.
-- Pasted transcripts crowd out analysis. Cap the quotation and grade the argument.
+## What to watch for
+
+Show examples of a request for elaboration and a question that draws on the course before students begin. Require named readings and keep quotations short enough to leave room for analysis.
+
+If students find different advice or different assumptions, have them document the variation. The assignment can accommodate those differences; it doesn't require one model answer that everyone learns to criticize.

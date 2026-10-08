@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Pipelines for Medieval Handwriting Recognition
-summary: "To create an AI agent to work with Gemini and Claude to bulk process 300 images of archival documents and enable full-text search of medieval handwriting."
+summary: "Gemini and Claude transcribe 300-page archival registers for full-text searching, with readings checked against the images."
 thumbnail: "images/apr-11-aca-cr-r2053-f4r-violant-img10.jpg"
 date: 2026-04-09
 status: tested
@@ -19,13 +19,12 @@ tags:
   - paleography
   - agentic AI
 results:
-  - built an agentic pipeline for bulk document processing
-  - combined multiple LLMs to improve transcription accuracy
-  - enabled full-text search of handwritten archival sources
+  - "processed entire handwritten registers into searchable text"
+  - "kept model outputs for comparison and error checking"
 what-i-learned:
-  - how to design a multi-model agentic pipeline
-  - the difference between usable and citable transcription quality
-  - trade-offs between cost, time, and accuracy at scale
+  - "a searchable transcription can still be too unreliable to cite"
+  - "dates needed checking even after revisions to the process"
+  - "processing a register took about 12 hours and $75 in API costs"
 card_order: 10
 ---
 
@@ -35,17 +34,16 @@ card_order: 10
 
 {% include typography/sketch-info.html %}
 
-Could LLMs read a notoriously difficult medieval script, the Gothic secretarial hand of the late fourteenth century? Spain's [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) website holds over a million digitized archival images, including much of the Archive of the Crown of Aragon. They've been digitized but never transcribed at scale.
+Could an LLM read the Gothic secretarial hand used in late fourteenth-century records? I had tried the specialized handwriting-recognition platform [Transkribus](https://www.transkribus.org/), including training a model with 60 transcribed documents. In February 2026, a PARES image uploaded to Gemini gave me a better result. That was enough reason to try a larger batch.
 
-{% include typography/pullquote.html text="Combining Gemini and Claude produced usable handwriting recognition for late fourteenth-century Gothic secretarial hand, at a scale that specialized HTR platforms had not handled reliably in this case." %}
+Spain's [PARES](https://pares.cultura.gob.es/pares/en/inicio.html) provides digitized images from the Archive of the Crown of Aragon. Being able to search those handwritten registers for names and places would change how I could work through them.
 
-## The Workflow
+## From one image to a register
 
 {% capture text %}
-In early February 2026, uploading a PARES image to Gemini produced a transcription of better quality than what I had gotten from the specialized HTR platform [Transkribus](https://www.transkribus.org/), even after training a model there with 60 documents of ground-truth transcriptions. Soon after, I started combining results from Gemini and Claude to increase transcription quality further.
+I began combining transcriptions from Gemini and Claude. By March, I was using Open Claw to download the images, send each to both models, merge their transcriptions, and save the result in a text file. A final instruction combined the files into a CSV.
 
-By March, I was using an AI agent, Open Claw, to get usable HTR and translations for entire registers. The pipeline runs as follows: Open Claw downloads images from PARES, passes each one to Gemini and Claude for parallel transcription, merges the outputs, and writes the result to a text file. A final instruction to Open Claw combines all image-level text files into a single CSV.
-
+[Register 1819](https://jonathanseyfried.net/aca-reg1819-transcriptions/) was the first complete register I processed. [Register 2053](https://jonathanseyfried.net/aca-reg2053-transcriptions), the third, looked noticeably better. I had refined the prompts, and the models had changed between February and March; this comparison didn't separate their contributions to the improvement.
 {% endcapture %}
 
 {% include images/figure-wrap.html
@@ -56,22 +54,10 @@ By March, I was using an AI agent, Open Claw, to get usable HTR and translations
   text = text
 %}
 
+## Results and limits
 
-[Register 1819](https://jonathanseyfried.net/aca-reg1819-transcriptions/) was the first complete register I processed. [Register 2053](https://jonathanseyfried.net/aca-reg2053-transcriptions), the third, came out noticeably better, which suggests that prompt refinement and model improvements between February and March made a measurable difference.
+A 300-page register takes about 12 hours to process, at approximately $75 in API costs. Keeping the two models' outputs made recurring errors easier to spot and left a record I could check when the combined transcription looked questionable.
 
-## Results
+The result is useful for full-text searches. It isn't reliable enough to cite without returning to the image. Dates remained inconsistent even after I revised the process, although I was surprised by how well the models read the script and expanded its abbreviations.
 
-The pipeline worked. Running two models side by side improved accuracy and created an audit trail, which gave me far more confidence in the results and made recurring errors easier to spot.
-
-It let me analyze an image archive at scale, and the same pipeline could work on other collections of historical images.
-
-It takes about 12 hours to generate transcriptions from a 300-page register, and API costs run approximately $75 per register. 
-
-The text supports discovery through full-text search but isn't reliable enough to cite. Dates in particular stayed inconsistent even after refining the pipeline.
-
-
-## What I Learned
-
-{% include typography/callout.html type="note" text="It is possible to use agentic AI to generate big data from handwritten documents previously unavailable for automated text recognition." %}
-
-That opens up full-text search for names and places across entire registers. Having multiple LLMs check and correct each other's work helps. The transcriptions and translations were far from perfect, but I was surprised by how well the models read the script and expanded its abbreviations.
+For my purposes, the immediate gain was being able to find a name or place across an entire register. The search gives me somewhere to look; the manuscript still has to supply the reading.

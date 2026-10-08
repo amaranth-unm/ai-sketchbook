@@ -21,9 +21,9 @@ tags:
   - interpretation
 key-question: "Can AI represent a school of thought, or only its vocabulary?"
 what-students-learn:
-  - how methodological assumptions produce different readings of the same evidence
-  - what a caricature of an intellectual position looks like next to the real thing
-  - that the quality of AI output depends on how well they already understand the material
+  - "describe how historical approaches differ in evidence and assumptions"
+  - "evaluate a generated character against course readings"
+  - "revise a representation that reduces an approach to a label"
 card_order: 30
 ---
 
@@ -33,23 +33,21 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-Three historians sit at a café table arguing about the same question — the fall of Rome, the causes of the Civil War, why nationalism took hold in the nineteenth century — and talk right past each other, because they disagree less about the facts than about what history is for. Students use AI to write that conversation. Then they decide whether AI understands the difference between a Marxist historian and a postcolonial one, or is just swapping labels.
+What would three historians from different schools of thought argue about over coffee? Students choose a question, define the historians' positions, and ask AI to write their conversation. They then evaluate whether the characters reason from those positions or merely use the expected vocabulary.
 
-{% include typography/pullquote.html text="The dialogue is not the assignment. The evaluation is. A polished conversation accepted uncritically is worth less than a mediocre one a student can take apart." %}
+## Preparation and submission
 
-## The Setup
+Assign readings that represent the chosen approaches before asking students to judge them. Prepare a comparison between a methodological disagreement and a change of vocabulary.
 
-Four moves, and the first three happen before anyone opens an AI tool.
+Students submit their question, character descriptions, original dialogue, quoted evaluation with course references, and revised dialogue. **Suggested adaptation:** allow a well-supported evaluation that finds no caricature; students can explain which exchanges they would retain and why.
 
-**Pick a question worth arguing about.** It has to be interpretive, with an answer that depends on what you think matters most about the past. Did Rome fall? What caused the French Revolution? Why did colonialism last as long as it did? Questions with settled answers produce three historians nodding at each other.
+## Before the prompt
 
-**Choose three approaches that would collide.** Marxist or economic structuralist, nationalist, history-from-below, cultural, postcolonial, great-man, environmental. Tie each to a historian the class has read, so the comparison has something to stand on.
+**Choose an interpretive question.** The fall of Rome, the causes of the French Revolution, or the persistence of colonialism can support different arguments. Ask students to explain why their question admits disagreement before they start.
 
-**Write the character descriptions by hand.** For each historian: what evidence do they trust, what do they think history is fundamentally for, and what would their core claim about this specific question be? Everything rests on this step. Students who can't answer those questions themselves get mush back, which is a useful discovery, but not one to make at the deadline.
+**Choose three approaches.** Marxist, nationalist, history-from-below, cultural, postcolonial, environmental, and great-man approaches are possibilities. Connect each to a historian the class has read so students have something specific against which to judge the result.
 
-**Then prompt, evaluate, revise.** For the evaluation, students quote one line that represents an approach faithfully and one that reads as caricature, and explain the difference. Revision prompts push the thin characters toward specific evidence: *make her argument specifically about how [mechanism] shaped the conditions that led to [event]*, or *ask me three questions, one at a time, to help me sharpen this historian's core claim.*
-
-Students post the final dialogue and the evaluation, then read two classmates' dialogues and come to class ready to say which historian made the most convincing argument and why.
+**Write the character descriptions by hand.** For each historian, students explain what evidence matters, what they think history should explain, and what claim they would make about this question. These descriptions are part of the submitted work.
 
 ## The Prompt
 
@@ -63,27 +61,32 @@ Write a 1000-word conversation in which all three historians debate this questio
 
 {% include typography/callout.html type="prompt" title="prompt to give students" text=cafe_prompt %}
 
-## Why It Works
+## Evaluating and revising
 
-Historiography usually arrives as a list of schools with adjectives attached, and students can recite the list without ever seeing a method work on evidence. Put the schools at one table, make them answer each other, and the question changes from *what does a Marxist historian believe?* to *what would she say next, after what the cultural historian just claimed?*
+The original task asks students to quote one line that represents an approach well and one that turns it into a caricature. They explain both judgments with reference to the historians they have read. A character can mention silencing or class conflict without making a convincing historical argument about either.
 
-The evaluation turns AI's signature weakness into course content. AI nails the register of a position and wobbles on its substance: you get a "postcolonial critic" who gestures at silencing without naming what was silenced, or a Marxist who says capitalism is bad. Catching that takes knowing the real thing, so the learning goal and the grading criterion are one and the same. No prompt trick can fake the evaluation.
+The next prompt addresses the problem they identified. Students might ask a character to explain how a particular economic change contributed to an event, or ask AI to question them about the character's assumptions before trying again. They retain the evaluation and the revised dialogue.
 
-Prompting also shows up as a knowledge problem, not a technique problem. The students who get good dialogues are the ones who wrote good character descriptions, and by the end they can see the connection.
+Before class, students post their work and read two classmates' dialogues. They arrive ready to discuss which arguments they found convincing and what evidence or assumptions made the difference.
 
-## What to Grade
+## Method or vocabulary?
 
-The grade rests on the character descriptions and the evaluation, not on how good the dialogue turned out. A polished dialogue accepted uncritically is worth less than a mediocre one with a sharp evaluation.
+**Constructed example — invented dialogue about a hypothetical strike.** “As a Marxist, I care about class” names a position without using it. “The wage cut and workers' dependence on the employer help explain why bargaining became a strike” proposes a causal account that needs evidence.
 
-- **Strong:** character descriptions show real understanding of how the approaches differ (what evidence each historian values and why, not just labels); the evaluation quotes specific lines and explains why each one succeeds or fails as a representation of a real intellectual position; revisions pushed back on what was thin.
-- **Middling:** solid descriptions and a mostly specific evaluation, but revisions only touched the thinnest parts.
-- **Weak:** characters are labeled rather than understood; the first draft was accepted as is; the evaluation is generic ("it seemed accurate").
+Another character might ask how workers described the dispute themselves and whether that changes the explanation. Students should connect each move to a particular assigned historian. The labels alone cannot establish whether either character represents that historian fairly.
 
-## What to Watch For
+## What to grade
 
-{% include typography/callout.html type="warning" text="Approve each question before students start. A question with an obvious answer gets three historians who agree, and the whole assignment collapses." %}
+Grade the character descriptions, evaluation, and decisions made during revision. A fluent dialogue isn't enough to show that the student understood its positions.
 
-- Tell students up front that the dialogue doesn't earn the grade. If they think it does, they'll polish the transcript and skip arguing with it.
-- Characters take turns giving speeches instead of arguing. That's what the revision prompts are for; without them, students accept the first draft because it looks finished.
-- Evaluations drift toward "it seemed accurate." Requiring one quoted line in each direction, faithful and caricature, keeps the step honest.
-- Formatting matters more than it should. A dialogue pasted as one unbroken block is useless for peer reading.
+- **Strong work** explains how the approaches differ, quotes lines from the dialogue, and uses course readings to justify the evaluation. Revisions respond to an identified problem.
+- **Work needing development** recognizes differences but explains them loosely, or identifies a weakness without addressing it.
+- **Weak work** supplies labels in place of positions and accepts the generated dialogue with a general assurance that it seems accurate.
+
+## What to watch for
+
+Approve the question before students spend time drafting. If their historians all agree, revisit the question and character descriptions.
+
+AI characters often take turns speaking instead of answering each other. Ask students to locate an exchange in which one character has to respond to another's evidence or objection. That is a more useful revision target than a request to make the conversation livelier.
+
+Keep the dialogue formatted for reading. An unbroken block of text makes it difficult for classmates to follow who is arguing what.

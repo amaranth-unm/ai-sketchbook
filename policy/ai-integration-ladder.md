@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
-title: AI Integration Ladder
-summary: "Try a course-wide vocabulary for AI use that becomes useful when each assignment names its level, boundaries, and evidence of learning."
+title: AI Roles on Assignments
+summary: "Label the role of AI on each assignment and explain what students may use it for and what they must submit."
 thumbnail: "images/ladder-stile.jpg"
 thumbnail-credit: 'Ladder stile in Gullmarsskogen, Sweden. Photo by W. Carter, 2017, public domain.'
 thumbnail-position: "center 72%"
@@ -16,84 +16,60 @@ author: "Fred Gibbs, History"
 tags:
   - course design
   - AI literacy
-key-question: "How can a course distinguish between different levels of acceptable AI use and make those levels usable on assignments?"
+key-question: "What may AI do on this assignment, and what must students do themselves?"
 what-students-learn:
-  - AI use is not binary, but depends on the task
-  - different levels of AI use require different forms of accountability
-  - assignment labels are clearest when they say what AI may do, what it may not replace, and what students should make visible
-  
+  - "the permitted role of AI on a particular assignment"
+  - "which parts of the task they need to complete themselves"
+  - "what documentation or evidence to include"
 card_order: 20
 ---
 
-# AI Integration Ladder
+# AI Roles on Assignments
 
 {% include typography/section-accent.html %}
 
 {% include typography/sketch-info.html %}
 
-One course policy usually has to cover wildly different work: reading notes, exams, discussion posts, essays, research proposals, presentations, revision exercises. A blanket rule flattens those differences.
+A course can ask students to read without AI on one assignment and analyze AI output on the next. These proposed labels describe what AI may do on a particular task. An instructor should choose the role that fits the work students need to practice.
 
-The integration ladder treats AI use as a set of levels. On its own it's just a vocabulary. It comes alive when each assignment names its level and says what that level means for the task at hand.
+The approach draws on the [AI Assessment Scale](https://aiassessmentscale.com/) by Perkins, Furze, and Roe. This version includes examining AI as an object of critique. It uses named roles so that broader permission to use AI doesn't appear to be a higher stage of learning.
 
-{% include typography/pullquote.html text="The real policy question is what role AI gets to play in this particular act of learning, including none." %}
-
-
-{% include typography/callout.html type="note" title="Inspired by" text="The [AI Assessment Scale](https://aiassessmentscale.com/) (Perkins, Furze, and Roe), which sorts assessment tasks into five levels, from No AI to AI Exploration. **The core change:** the ladder adds a level where AI is the object of critique, and it lives on each assignment as a three-part label (what AI may do, what it may not replace, what the work must show) instead of as a framework for redesigning assessment." %}
-
-## The Setup
-The ladder gives instructors and students a shared vocabulary for AI use across a course. Change the labels however you like; the core idea is to separate tasks where AI would undercut the learning goal from tasks where AI *is* the learning goal.
-
-The assignment label makes it concrete. For each task, students should see three things:
-
-- what AI may be used for
-- what AI may not replace
-- what the submission should still make visible
-
+## Proposed course language
 
 {% capture ladder_language %}
-AI use in this course varies by assignment. Each assignment will identify one of the following levels:
+Each assignment will specify a role for AI and explain what you need to submit:
 
-**Level 0: No AI.** Complete the work without AI assistance because the assignment is designed to assess your own memory, reading, drafting, or analysis.
+**No AI.** Complete the work without AI assistance. The assignment identifies the reading, drafting, recall, or analysis you need to practice yourself.
 
-**Level 1: AI for support.** You may use AI for brainstorming, outlining, vocabulary help, or revision suggestions, but the core claims, evidence, and structure must be your own.
+**Feedback on student work.** Develop the initial claim and outline yourself. You may ask AI to explain a term or comment on work you have already drafted. Keep the original and explain any revisions you make after the exchange.
 
-**Level 2: AI as collaborator.** You may use AI more substantially, but you must document how it shaped the work and explain what you accepted, rejected, or changed.
+**Drafting with AI.** You may ask AI to propose ideas, outlines, or passages where the assignment permits it. Keep the responses you use and explain what you retained, changed, or rejected. Check the claims and sources in anything you submit.
 
-**Level 3: AI as object of critique.** You will use AI in order to analyze its output, limits, assumptions, errors, or interpretive habits.
+**Examining AI output.** Analyze a response's claims, assumptions, omissions, or use of evidence. The assessment concerns the quality of your analysis. You may conclude that the response was useful, unhelpful, or difficult to judge, provided you explain why.
 
-**Level 4: AI as workflow tool.** AI use is expected because the assignment asks you to test a research, writing, coding, or media workflow that would be difficult to complete manually. This builds AI skills, but your submission should show what you are learning to do with AI, not just use it to produce an output.
+**Using AI to carry out a task.** Use the specified tool for a defined task, such as transcribing sources or preparing data for a map. Document the steps and check the result against the source material. Explain whether the result was useful enough to justify the work of producing and checking it.
 {% endcapture %}
 
 {% include typography/callout.html type="prompt" title="Possible policy language" text=ladder_language %}
 
-## Assignment Labels
-
-Put the ladder inside individual assignments, not just the syllabus. A short block makes the level concrete without turning every prompt into a policy document.
+## Put the role on the assignment
 
 {% capture assignment_label %}
-**AI level for this assignment: [Level 0-4]**
+**AI's role in this assignment: [choose a role above]**
 
-You may use AI to: [brainstorm possible topics / ask clarifying questions / generate revision suggestions / compare interpretations].
+You may use AI to: [explain an unfamiliar term / comment on a draft you have written / generate a response for analysis / transcribe a supplied source].
 
-You may not use AI to: [write the central analysis / choose evidence for you / fabricate sources / replace the required reading].
+You must do this work yourself: [form an initial interpretation / select and explain evidence / write the analysis / check the transcription against the image].
 
-Your submission should show: [specific engagement with course texts / your own interpretive claim / a revision memo / an AI use note / evidence checked against reliable sources].
+Submit: [initial notes and a final interpretation / the original draft and a revision memo / an analysis of specific passages / a checked result and an account of remaining errors].
 {% endcapture %}
 
 {% include typography/callout.html type="prompt" title="Reusable assignment label" text=assignment_label %}
 
+Choose the relevant examples and replace the brackets with the actual instructions. Identify the tool or capabilities students need, whether a free account is sufficient, and what material they should supply. If students can instead work from an instructor-provided response, say so.
 
-## Why It Works
-The ladder escapes the false clarity of "AI allowed" or "AI banned." Students learn that a tool's role depends on the learning situation. Brainstorming with AI before a thesis workshop is a different act from submitting an AI-written close reading. AI transcription in a research workflow is a different act from an AI-generated reflection on a reading you skipped.
+## Where the boundary needs explaining
 
-Instructors get more precise, too. Instead of a syllabus policy that tries to anticipate every case, the course sets up the vocabulary once and applies it assignment by assignment.
+An outline proposes a structure. A revision can change a claim. Calling these operations “support” doesn't settle how much of the intellectual work the student is doing. If the assignment assesses their ability to develop an argument, have them write it before asking for feedback. If it assesses their evaluation of a supplied argument, explain why that is the task.
 
-## What to Watch For
-
-{% include typography/callout.html type="warning" title="The ladder needs assignment labels" text="The framework only works when assignments name their level and students understand what each level means. If the syllabus introduces the ladder but assignments don't say how it applies, students are left guessing." %}
-
-Level 1 is usually the hardest. "AI for support" sounds intuitive, but students may not know where support ends and substitution begins. Give examples: asking AI for possible counterarguments is support; submitting an AI-generated interpretation as your own close reading is substitution.
-
-
-## What I Would Do Differently
-I'd have students classify two or three sample uses of AI in the first week. That turns the policy into a conversation about learning goals instead of a rule they skim once. I'd also keep the ladder short enough to remember. Past five levels it starts to feel like a compliance taxonomy; four might be the sweet spot.
+I'd ask students to classify a few sample uses in the first week and discuss where they disagree. The discussion should reveal which instructions need work. There is no need to use every role in a course.

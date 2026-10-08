@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: How Else Could This Look?
-summary: "Students read a long encyclopedia entry on fast food with AI, then spend class figuring out what the article decided to be about — and asking AI to draft the versions that were never written."
+summary: "Students compare an encyclopedia entry’s allocation of attention with alternative versions organized around different historical questions."
 thumbnail: "images/beef-burger-amarillo.jpg"
 thumbnail-credit: "John Margolies, Beef Burger, Amarillo, Texas, 1976. Library of Congress."
 date: 2026-09-12
@@ -9,7 +9,7 @@ status: lightly tested
 type: activity
 effort: "30–40 min in class"
 tools:
-  - any AI tool
+  - chatbot with access to the encyclopedia entry
 level: any
 author: "Fred Gibbs, History"
 context: "HIST 413 American Food (upper-division), UNM"
@@ -22,9 +22,9 @@ tags:
   - interpretation
 key-question: "What did this article decide to be about, and what did that decision cost?"
 what-students-learn:
-  - that a one-clause mention is how a text claims a subject without thinking about it
-  - how an article's organization is an argument about what the subject is
-  - that AI will name silences fluently and generically if you let it do the noticing
+  - "distinguish a passing mention from a developed explanation"
+  - "support a criticism of a text with specific passages"
+  - "explain the choices and omissions involved in reorganizing an article"
 card_order: 50
 ---
 
@@ -34,29 +34,31 @@ card_order: 50
 
 {% include typography/sketch-info.html %}
 
-The reading was a long encyclopedia entry on fast food: thousands of words, authoritative, effectively unsigned, the kind of piece nobody reads closely and everybody feels they've absorbed. Students read it with AI however they liked — summary, outline, explanation. Then we spent class taking that reading apart. We weren't checking the summaries. We were working out what the article had decided fast food was *about*, and what else it could have been.
+The reading was a long encyclopedia entry on fast food: thousands of words in a voice that made the subject seem settled. Students read it with AI however they liked, using summaries, outlines, or explanations. In class, we examined the article's organization: what received sustained attention, what appeared briefly, and what a different account might emphasize.
 
-{% include typography/pullquote.html text="A topic mentioned once and dropped isn't covered. The one-clause mention is how an article claims a subject without having to think about it." %}
+## Preparation and submission
 
-## The Setup
+Choose an entry students can access in full, identify its bibliographic details, and check that the tool receives the text. Students need practice distinguishing an article's topic from its argument. Prepare an example of a mention that doesn't develop an explanation.
 
-**Students arrive having read it with AI**, transcript in hand. Frame that as the assignment, not a confession. Nobody is getting caught, and a class that opens with suspicion gets defensive answers.
+**Suggested submission:** the pair's cited passage, alternative headings and opening paragraph, and a brief explanation of what they added and cut. Retain the prompts so the choices can be discussed.
 
-**The first five minutes run without AI.** From memory, the class rebuilds the article's skeleton on the board: what it covers, in what order, and roughly how much room each topic gets. Everything after depends on this baseline, and it's the version of the skill that survives when the tools are gone.
+## Reconstructing the article
 
-**Pairs each take an angle:** labor, race and immigration, gender and domestic work, money, geography, the sources the article rests on, the people doing the eating. Each pair sorts its angle into one of three grades: developed at length, mentioned in a clause and dropped, or absent. The middle grade is where the arguments start, so slow down there. Every claim has to point to the article itself, not to what the AI said about it.
+Students who used AI bring their transcripts. Those who read without it bring their notes or recollections. Comparing what each retained is part of the activity.
 
-**Then the pairs put AI back to work, twice.** First to expand: instead of *what's missing?*, they ask *tell me about this thing the article skipped*, which shows the class how big the gap is instead of just naming it. Then to speculate: they ask for the version of the article built around their angle, with section headings and an opening paragraph.
+For the first five minutes, put AI aside. Rebuild the article's structure on the board from memory: subjects, order, and approximate space given to each. That provides a shared starting point to check against the article.
 
-**The last ten minutes are the payoff.** Groups put their alternate articles side by side: fast food as labor history, as immigration history, as a story about roads and land, as a story about who cooks at home and who stopped. The question isn't which is best. It's what each version makes the subject *be*, and what each would have to cut to make room.
+Pairs then take an angle: labor, race and immigration, gender and domestic work, money, geography, sources, or the people doing the eating. They find where the article develops their subject, mentions it briefly, or leaves it out. The distinction between a mention and an explanation needs discussion. Ask pairs to show the passage behind their judgment.
 
-## The Prompt
+Next, they ask AI to expand on something the article passes over, then draft an alternative set of headings and opening paragraph organized around their angle. In the final ten minutes, the class compares the alternatives. A labor history and a history of roads and land may make different claims about what fast food is. Each also needs to leave things out.
 
-Start with the prompt that doesn't work, because it's the one everyone reaches for first.
+## Prompts to try
 
-{% include typography/sketch-prompt.html label="the prompt to argue with" text="What does this article leave out?" %}
+A general prompt is worth testing first:
 
-It answers instantly and plausibly (labor, race, gender, globalization) without requiring anyone to read anything. Say that out loud early.
+{% include typography/sketch-prompt.html label="a starting prompt to examine" text="What does this article leave out?" %}
+
+The answer may produce a plausible list without saying much about this article. Use it to explain why the pairs need to identify and support their own questions.
 
 {% capture expand_prompt %}
 The article mentions [X] only in passing. Explain what a historian working on [X] in this period would actually want to say about it — the evidence, the people involved, the arguments in the field.
@@ -76,23 +78,21 @@ What would this new version have to leave out to make room? Who or what becomes 
 
 {% include typography/callout.html type="prompt" title="the follow-up that keeps it honest" text=cost_prompt %}
 
-That last prompt matters most. Without it, students settle on the comfortable conclusion that the marginalized version is simply the better article. With it, they find that every way of organizing a subject has its own edges, a much harder insight to reach by being told.
+## When an omission matters
 
-## Why It Works
+**Constructed example — this is an invented passage, not a quotation from the assigned entry.** An article says “Expansion relied on low-paid workers,” then devotes several sections to brands and advertising. A pair proposes organizing it around shifts, wages, and recruitment.
 
-An encyclopedia entry makes an ideal target because it presents itself as settled, comprehensive, and authorless, a consensus instead of someone's argument about what matters. Once students see that somebody decided franchising deserved four paragraphs and the workforce one clause, they can see the same kind of choice in textbooks, museum labels, syllabi, and anything else that arrives looking finished.
+Their criticism needs more than “labor is missing.” They should explain how the brief mention leaves the role of labor in expansion undeveloped, then specify which brand histories they would shorten. The new organization proposes a historical argument; any added claims still need sources.
 
-Reading with AI helped, which surprised me. A summary keeps the claims and drops the proportions, so reconstructing emphasis becomes visible work instead of something students assume they did. The gap between summary and article becomes evidence about how compression works.
+## What surprised me
 
-The speculative rewrite gives the room its energy. Criticism from outside a text is cheap, and students know it. Building the alternative turns them from critics into authors. Deciding what an article *should* be about takes the same judgment as noticing what it *is* about, but it feels like a design problem instead of a grading exercise.
+A summary could retain the main claims while losing the proportions of the article. Reconstructing its emphasis gave students a reason to return to the reading and inspect something the summary hadn't preserved.
 
-The pairs matter more than the AI. Most of the useful noise in the room is two people arguing about what to ask next: whether the question is too broad, whether the answer dodged, how to make the model commit to something specific. The questions they invent along the way (what got mentioned and dropped, whose absence matters most, how else the subject could be organized) work on any text, with no AI in sight. The tool is scaffolding for a habit, and scaffolding is meant to come down.
+The alternative articles also gave the discussion somewhere to go. Students had to make choices about organization themselves, including what to cut. Much of the useful discussion happened in pairs as they worked out what to ask next and whether the response addressed it. AI supplied alternative arrangements to examine; students still had to justify the emphasis of each and check any added historical claims. A version to compare would have the pairs write the alternative outlines themselves.
 
-## What to Watch For
+## Where the activity can drift
 
-{% include typography/callout.html type="warning" text="The biggest trap is letting AI do the noticing. Ask a model what a text leaves out and you get a fluent, generic critique that sounds rigorous and requires no reading at all. Every silence a pair claims has to be shown in the article: the passage where the topic appears and stops, or the place it should have been and isn't." %}
-
-- Pairs stop at the first answer. Asking them to show their second and third prompts, not their best result, changes behavior more than any encouragement to "prompt better."
-- The speculative rewrites are confident, frictionless, and full of invented specifics: plausible statistics, tidy chronologies, scholars who may not exist. Treat each one as a proposal to check, never a finding.
-- Cynicism creeps in: everything is a silence, every text is complicit, discussion over. Push back by insisting on cost. An entry has a word limit, so what does *this* omission do to the account of fast food that remains?
-- Some students won't have used AI at all. They're the control group, and their sense of the article's emphasis is often sharper than anyone's. Say so.
+- **A generic list of omissions replaces reading.** Require the passage where a topic appears and stops, or an explanation of how its absence affects the argument.
+- **Pairs accept the first response.** Ask to see their second and third prompts and why they changed the question.
+- **Generated rewrites introduce unsupported details.** Treat statistics, quotations, and historical claims as proposals needing verification.
+- **Every omission becomes a fault.** Bring the word limit back into the discussion. What should make room for the proposed addition, and why?

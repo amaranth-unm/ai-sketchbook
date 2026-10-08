@@ -2,7 +2,7 @@
 layout: sketchbook
 title: What Does Cilantro Taste Like?
 description: "Students compare how small and large language models answer the same question, then experiment with model settings to see how parameters shape output."
-summary: "A hands-on demo to show how model size and settings change what AI says — using one simple, relatable question."
+summary: "Compare answers to a question about cilantro, then change model settings and examine the differences."
 thumbnail: "images/coriander-bunches.jpg"
 thumbnail-credit: 'Bunches of coriander. Photo by Kpsudeep, 2020. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons.'
 date: 2026-03-01
@@ -19,11 +19,11 @@ handout: "https://fredgibbs.net/courses/critical-thinking-with-ai/schedule#11-in
 tags:
   - AI literacy
   - prompting
-key-question: "How to introduce students to the basics of AI output differences?"
+key-question: "How do different models and settings change an answer to the same question?"
 what-students-learn:
-  - AI is a spectrum of models, not one fixed thing
-  - how temperature, token limits, and sampling shape output
-  - what training data has to do with what a model knows
+  - "compare specific features of model responses"
+  - "change one setting at a time and describe its effect"
+  - "distinguish differences between models from differences between settings"
 
 card_order: 5
 ---
@@ -34,39 +34,44 @@ card_order: 5
 
 {% include typography/sketch-info.html %}
 
-Open the [Allen AI Playground](https://playground.allenai.org/), pick the smallest model, and ask one question: *What does cilantro taste like?* Then pick the largest model and ask again. The gap between those two answers is a 20-minute lesson in how language models work.
+What does cilantro taste like? It's a question students can answer for themselves, and a useful one to put to several language models. In this activity, they compare answers in the Allen AI Playground, then change the settings and see what happens to the responses.
 
-{% include typography/pullquote.html text="'AI' isn't one thing. It's a spectrum of models, and the same question gets wildly different answers depending on which model, and which settings, you use." %}
+## Preparation and submission
 
-## The Setup
+No technical background is required. Check the playground before class and prepare saved answers if the relevant controls are unavailable. Choose two named models and record their visible settings; their parameter counts need not be the only difference.
 
-Students open [playground.allenai.org](https://playground.allenai.org/) on their own devices, or you run it as a demo on the projector.
+**Suggested submission:** a small comparison table recording model, changed setting, response, and one observation. Distinguish a truncated answer from an inaccurate one, and repeat a setting before treating one answer as typical.
 
-**Round 1: small model.**
-Pick an older, lower-parameter model from the dropdown and submit the prompt. Small models tend to come back short, repetitive, or circular: cilantro described in terms of cilantro, thin generic sentences, sometimes a loop.
+## Three rounds
 
-**Round 2: large model.**
-Switch to the largest model and submit the same prompt. The difference is usually striking. Larger models describe cilantro's fresh, citrusy, herbal taste, and often mention the genetic variation that makes it taste like soap to roughly 10% of people. That detail is a good marker of depth.
+Students open [playground.allenai.org](https://playground.allenai.org/) on their devices, or you run the comparison on a projector.
 
-**Round 3: settings.**
-With the large model selected, play with the parameters:
+**First, try a small model.** Choose an older, lower-parameter model and submit the question. Look for circular descriptions, repetition, and details that say little about the taste. Save the answer for comparison.
 
-- **Temperature.** Turn it up and responses get more varied and unpredictable; turn it down and they get focused and repetitive. Ask: what would "high temperature" writing look like in a student essay?
-- **Max tokens.** Cap the length and watch the model stop mid-thought. It's a vivid way to show that answers are generated one token at a time, not retrieved.
-- **Top-p.** This controls how the model samples possible next words. Lower values make it conservative; higher values add variety.
+**Then try a larger model.** Submit the same question. Larger models may offer a fuller description: citrus, herbs, or the soapy taste some people experience. Ask students which details are useful and which they would want to check. Mentioning the soap connection is a difference worth discussing, but it doesn't by itself demonstrate how well a model understands the subject.
+
+**Finally, change the settings.** Use the same model and prompt for this round, changing one setting at a time:
+
+- **Temperature:** compare the variation and repetition in responses at lower and higher settings.
+- **Max tokens:** limit the output and watch where the answer stops. Does it finish its thought?
+- **Top-p:** change the range of possible next tokens the model samples from and compare the wording.
 
 ## The Prompt
 
 {% include typography/sketch-prompt.html text="What does cilantro taste like?" %}
 
-## Why It Works
+## Comparing what actually changed
 
-Cilantro makes a perfect test question. Students can check the answer against their own taste buds, and the soap detail shows whether a model picked up real knowledge about the world or is producing plausible filler. It also opens a quick conversation about what "training data" means: the model knows cilantro can taste like soap because enough people wrote about it.
+**Constructed example — invented outputs, not a playground result.** With one model and unchanged sampling settings, a short output limit yields “Cilantro tastes fresh and”; a longer limit allows the sentence to finish. This supports an observation about truncation. It doesn't show that the longer answer is more knowledgeable.
 
-The settings round turns abstractions like temperature, tokens, and sampling into something students watch happen. Most arrive thinking AI is one fixed thing; they leave having seen otherwise in under half an hour.
+If a second model mentions a soapy taste, students can record that added detail. They cannot attribute it solely to size when training and other settings also differ.
 
-## What to Watch For
+## Discussing the differences
 
-{% include typography/callout.html type="warning" text="The models on the Allen AI Playground change over time. The contrast between small and large is the point, not any particular result. If the lineup or interface changes, just find the smallest and largest options." %}
+Ask students to point to a specific difference between two answers and identify what changed between the runs. Model size, training, and settings are different things; comparing two models doesn't isolate just one of them. The settings round gives the class a more controlled comparison.
 
-It works best when students generate their own responses, so the class can see the variation. Even the same prompt to the same model gives slightly different output each time, which is worth a moment of discussion: everyone talks about "AI output" as one thing, and students benefit from seeing how much variety hides inside that phrase.
+It also helps to compare responses across students. Even when they use the same model and question, the answers may vary. That gives the class something more precise to discuss than whether “AI” gives a good answer.
+
+## Before class
+
+Check which models and settings the playground currently offers, and run the comparison once yourself. The available models change, so the examples above may not be the ones your class sees. If two answers are similar, keep that result in the discussion rather than treating the contrast as guaranteed.

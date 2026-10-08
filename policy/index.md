@@ -15,12 +15,8 @@ wide: true
 
 # Policy Sketches
 
-Syllabus language, assignment rules, and course-level frameworks for thinking through how AI belongs in learning.
+Syllabus language, assignment rules, and accounts of course design. Adapt these to what you want students to practice and to your campus rules.
 {: .lede}
-
-These are not model university policies, and they are not meant to settle the question of AI in higher education. They are decision tools for making local choices visible: what AI is allowed to do, what students are being asked to demonstrate, and where a policy might fail.
-
-{% include typography/callout.html type="note" title="How to read these" text="Treat each policy sketch as a starting point. Adapt the language to your course, your students, your campus rules, and the expertise of people already working on AI literacy, research support, accessibility, academic integrity, and student success." %}
 
 </div>
 

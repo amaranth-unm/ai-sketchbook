@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Disruptive Expertise
-summary: "Each student researches one moment when a new technology upended how people made, shared, or trusted information — with heavy AI help and verified sources — and the class publishes the case studies together as a public website."
+summary: "Students research earlier disputes over information technologies and publish case studies that test comparisons with AI."
 thumbnail: "images/amman-printers-workshop-1568.jpg"
 thumbnail-credit: "Jost Amman, *Der Buchdrucker* (The Printer), woodcut from the *Ständebuch*, 1568. Deutsche Fotothek."
 date: 2026-09-25
@@ -21,12 +21,11 @@ tags:
   - source evaluation
   - expertise
   - historical thinking
-key-question: "What can earlier panics about new information technologies tell us about the debate over AI?"
+key-question: "What can earlier disputes over information technologies tell us about the debate over AI?"
 what-students-learn:
-  - how to orient quickly to an unfamiliar period, technology, and society
-  - that AI is a useful research assistant and an unreliable authority
-  - that arguments about new technologies repeat, with differences that matter
-  - how to write public-facing history for a general reader
+  - "find and verify sources for an unfamiliar historical topic"
+  - "evaluate a comparison between past technologies and AI"
+  - "write and revise a historical account for public readers"
 card_order: 90
 ---
 
@@ -36,33 +35,37 @@ card_order: 90
 
 {% include typography/sketch-info.html %}
 
-When printing arrived in Europe, critics worried about a flood of bad books. The telegraph raised fears about rumors spreading at the speed of wire; radio, about mass manipulation. Sound familiar? Each student takes one of those earlier moments and writes a short case study: what the technology was, what people hoped and feared, and what happened next. They research with plenty of AI help, but every claim gets checked against real sources. Together, the case studies become a public website that traces the pattern across centuries.
+Debates about AI prompted me to ask students to investigate earlier disputes over information technologies. Each student researched one case, from printing to social media, and wrote a short history for a shared public website. They used AI to get oriented and develop questions, then checked the account against historical sources.
 
-{% include typography/pullquote.html text="History won't hand us simple answers about AI, but it helps us ask better questions. And the research itself tests what AI can and can't do for historical work." %}
+## Preparation and submission
 
-## The Setup
+Students need practice finding primary sources and evaluating historical comparisons. Prepare a sources workshop and publishing demonstration, and check that each topic has accessible contemporary evidence. Twenty sources is a substantial research workload, not a requirement for a short classroom adaptation.
 
-**Assign technologies, not topics.** The printing press, the telegraph, photography, radio, television, photocopying, personal computers, search engines, social media. Students usually start knowing almost nothing about theirs, and that's useful: they learn how to get oriented in an unfamiliar period with AI's help, and where that help runs out.
+Students submit the draft page, research and AI-use documentation, peer review, and revised public page. An adaptation could use an ordinary document in place of a website while keeping the source work and comparison.
 
-**The page has five required parts:**
+## The case study
 
-1. **The technology:** what it was and when it emerged.
-2. **The moment of disruption:** why people believed it might change society, especially the authority of experts.
-3. **Contemporary reactions:** hopes *and* fears, with at least one historical primary source.
-4. **What actually happened:** did the predictions come true?
-5. **Connection to AI:** what this case helps us think about now.
+Assign a technology, such as the printing press, telegraph, photography, radio, television, photocopying, personal computers, search engines, or social media. Ask students to locate a particular episode in its adoption so the project doesn't become a history of everything the technology has done.
 
-**Then one more section: what might be lost.** Each page ends with an account of how the student used AI in research and writing, and what AI-assisted research tends to miss: which nuances, which sources, and how leaning on AI changed the process.
+Each page has five parts:
 
-**Scaffold the research in class.** In a sources workshop, students gather and filter about twenty relevant sources into a source-grounded tool like NotebookLM and use it to sketch a preliminary narrative. Then a general chatbot becomes a sounding board: support the thesis, challenge it, find counterevidence and missing perspectives. Point out the difference between the grounded tool and the general one.
+1. The technology and when it emerged.
+2. A moment when people expected it to change society, especially the authority of experts.
+3. Contemporary hopes and fears, using at least one primary source.
+4. What happened to those predictions.
+5. A specific comparison with AI, including a difference that limits the comparison.
 
-**Build in checkpoints.** Drafts go live on the site before a round of lightning presentations (topic, sources, how students steered AI, what's still uncertain). Each student then writes a short peer review of a classmate's page (coherence, sourcing, the AI connection, honest documentation of AI use) before submitting the final version.
+A final section describes the student's use of AI and considers what it may have missed or overemphasized. This should refer to the research they actually did.
 
-**Publish it.** In my version, students each fork a shared GitHub repository, build their page in their own copy, and submit it through a pull request, so nobody can break anyone else's work. Any shared publishing platform would do; the public audience is what matters.
+## Research and publication
 
-## The Prompt
+In a sources workshop, students gather and assess about twenty relevant sources. They add these to a tool such as NotebookLM to help develop an initial account, checking its claims against the supplied materials. A general chatbot can then suggest objections, counterevidence, or other perspectives to investigate.
 
-Research prompts vary by student. Paired with a set of gathered sources, these do the most work:
+Drafts go on the site before lightning presentations. Students explain their topic, sources, use of AI, and remaining questions. Each also reviews a classmate's page for coherence, evidence, the comparison with AI, and documentation of the research process.
+
+In my course, students forked a shared GitHub repository and submitted pages through pull requests. Other publishing platforms could serve the project. Whatever the platform, allow time to learn it so the mechanics don't consume the research work.
+
+## Questions for the sources workshop
 
 {% capture de_prompt %}
 What perspectives are missing from this account?
@@ -73,30 +76,28 @@ What do we NOT know about this topic, and why?
 
 {% include typography/callout.html type="prompt" title="prompts for the sources workshop" text=de_prompt %}
 
-## Why It Works
+## Limiting the analogy
 
-Students arrive with strong opinions about whether AI is making us dumber. The project sends them to find out how the same fear played out with print or television, and whether it came true. Readings arguing that trust in a new medium has to be built, like Adrian Johns on print, tell them what to look for.
+**Constructed example — no historical quotation or student result is implied.** A student finds a contemporary complaint that a new information technology lets unqualified people address a large audience. They compare that concern with AI-generated explanations.
 
-The research doubles as the lesson about AI. An unfamiliar technology is exactly where AI is most tempting and least trustworthy: quick at orientation, fluent about context, unreliable about specific evidence and quotations. The verified primary source and the closing section on what might be lost make students notice that in their own work.
+A useful account identifies who made the complaint, what authority they stood to lose, and evidence of what actually changed. It also asks whether broader distribution of human writing is equivalent to generating an answer without a traceable author. The similarity supplies a research question; it cannot settle whether today's objection is justified.
 
-The shared site gives each essay a reason to exist. Each page is small; together they reveal a pattern no single student could have found, which is a nice model of how knowledge gets built.
+## What to grade
 
-## What to Grade
+The peer review and final assessment use the same criteria:
 
-The peer review criteria double as a grading checklist, which means students have seen the standard twice before the final version.
+- A coherent account connecting the technology, reactions, and later developments.
+- Evidence for contemporary hopes and fears, including a traceable primary source.
+- A comparison with AI that follows from the historical case and acknowledges its limits.
+- Specific documentation of what AI contributed and what the student checked or changed.
+- A readable public page with relevant images and informative captions.
 
-- **A coherent story:** a clear through-line from the technology to its disruption, the reactions, what happened, and the connection to AI. The AI connection feels earned, not tacked on.
-- **All five parts,** including at least one real primary source and both hopes and fears in the contemporary reactions.
-- **Grounded in evidence:** significant claims are sourced, and the page doesn't read as though AI wrote it.
-- **An honest AI reflection:** the closing section engages seriously with what AI-assisted research missed, rather than offering a generic caution.
-- **A finished public page:** readable headings and relevant images with informative captions.
+Readings such as Adrian Johns's work on print can help students see why trust in a medium needs explaining. Ask which objections were justified and who benefited or lost out when the technology was adopted. The historical cases should leave room for different conclusions about AI, including reasons to oppose a particular use.
 
-## What to Watch For
+## Problems to anticipate
 
-{% include typography/callout.html type="warning" text="The AI connection section tends to be generic ('AI is also a disruptive technology that challenges expertise'). Ask for a specific parallel, and a specific difference, grounded in the case the student just researched." %}
+Ask where each historical quotation was found. An attributed quotation in an AI response still needs a source. Students may need help finding the primary material behind a frequently repeated anecdote.
 
-- Primary sources are where AI is weakest and students most need help. Invented or misattributed quotations from historical figures are common; ask where each quotation was found.
-- "Contemporary reactions" often captures only excitement or only fear. Ask for both.
-- "What actually happened" slides into more history. The question is whether the predictions came true.
-- The technical setup (forks, pull requests, page structure) takes real class time. Budget a demo and a help session, and don't let the site mechanics crowd out the research.
-- The reflection on AI use is easy to write vaguely. Having peer reviewers ask whether AI use is "honestly documented" helps.
+If the comparison with AI could be attached to any technology, ask for a closer connection to the case. If the section on outcomes merely continues the chronology, return to a particular prediction and ask what happened to it.
+
+Budget a publishing demonstration and a help session. Drafts and peer review are easier to manage when everyone can find and read the pages before class.

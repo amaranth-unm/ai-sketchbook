@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Initiate Research with an Annotated Bibliography
-summary: "This sketch demonstrates how to construct a prompt for a high quality annotated bibliography."
+summary: "A bibliography request about McCarthyism produced sources and an objection to the way the question was framed."
 thumbnail: "images/card-catalog.jpg"
 date: 2026-09-01
 status: tested
@@ -16,10 +16,11 @@ tags:
   - model tiers
   - citations
 results:
-  - a sophisticated and reliable annotated bibliography to initiate research
+  - "an initial bibliography and a longer research report"
+  - "a challenge to the assumption that pre-McCarthy norms were restored"
 what-i-learned:
-  - when prompted with specifications, higher tier LLMs will provide reliable citations
-  - the higher tier LLM will also notice and challenge assumptions in a prompt
+  - "a bibliography request can also prompt a useful disagreement over framing"
+  - "source identifiers make checking easier but do not establish the quality of an annotation"
 card_order: 20
 ---
 
@@ -29,25 +30,19 @@ card_order: 20
 
 {% include typography/sketch-info.html %}
 
-How good is a top-tier LLM at building an annotated bibliography for a brand-new research topic? I put one to the test.
+I asked Claude Fable 5.1 for an annotated bibliography on the decline of McCarthyism. Before giving me sources, it questioned my premise: had the United States actually restored the norms McCarthyism disrupted? That disagreement turned out to be part of the experiment.
 
-In his 2026 monograph, *Using Generative AI in Historical Practice*, Yaniv Fox discusses two terms that he sees as integral to sophisticated use of AI by historians: agency and taste.[^yf] *Agency* is conceiving and framing a new research question. *Taste* is judging the LLM's output for quality and reliability. Both require expertise. 
+In *Using Generative AI in Historical Practice*, Yaniv Fox uses two terms for the expertise involved in this work: *agency*, in framing a research question, and *taste*, in assessing what the model returns.[^yf] I wanted to try that distinction on a question where I could judge the response.
 
-[^yf]:Yaniv Fox, *Using Generative AI in Historical Practice* (Cambridge University Press, 2026), 16.
-
-
-{% include typography/pullquote.html text="Agency and taste: two names for what expertise does when working with generative AI." %}
-
-## The Experiment
-To try out Fox's ideas, I gave a high-tier LLM, Claude Fable 5.1, a research question about the decline of McCarthyism in the decades after the Red Scare, then used Claude's **Research** button to get an annotated bibliography. 
+[^yf]: Yaniv Fox, *Using Generative AI in Historical Practice* (Cambridge University Press, 2026), 16.
 
 ## The Prompt
 
 {% include typography/sketch-prompt.html label="prompt to give to Claude Fable 5.1" text="I'd like you to help me answer the question of how the USA's political and cultural leaders restored norms in the wake of McCarthyism. Please provide me with some specific examples that illustrate the history of the rolling back of McCarthyism from its peak during the Red Scare and through the following decades. I specifically want to know the names of key people in this history and also any popular culture products that were influential. In your response, please cite some scholarly monographs and journal articles, including ISBNs, DOIs, and full bibliographic citations." %}
 
+## The response
 
-## Results
-Claude Fable 5.1 opened by questioning my prompt. I had assumed a scholarly consensus that McCarthyism was rolled back, when some scholars argue that pre-McCarthy norms were never restored. Still, within twenty years of its rise, McCarthyism was over: the congressional committees disbanded, and blacklisted people regained their standing. My own knowledge of the period told me not to take Claude's challenge to my framing too literally. That judgment is what Fox calls *taste*.
+Claude questioned my assumption that the rollback of McCarthyism amounted to a restoration of earlier norms. My own knowledge of the period made me reluctant to accept that objection as the last word. I still wanted to investigate the retreat of McCarthyism, while judging Claude's framing against what I knew of the scholarship.
 
 {% include images/figure-wrap.html
   class="center"
@@ -57,7 +52,7 @@ Claude Fable 5.1 opened by questioning my prompt. I had assumed a scholarly cons
   text = text
 %}
 
-After that framing, Claude [answered](pdfs/mccarthyism-chat-claude-fable5.1-2026.pdf) with short summaries of the key people's roles and a three-part bibliography, with ISBNs for six books and DOIs for three journal articles. Then it offered a **Research** button. Clicking it produced a [separate report](pdfs/rolling-back-mccarthyism-claude-fable5.1-2026.pdf) with more than forty sources, each with a confirmed ISBN or DOI.  
+Claude's [initial answer](pdfs/mccarthyism-chat-claude-fable5.1-2026.pdf) summarized key people's roles and supplied a three-part bibliography, including ISBNs for six books and DOIs for three articles. Using its **Research** button produced a [longer report](pdfs/rolling-back-mccarthyism-claude-fable5.1-2026.pdf) with more than forty sources and their identifiers.
 
 {% include images/figure-wrap.html
   class="center"
@@ -67,7 +62,10 @@ After that framing, Claude [answered](pdfs/mccarthyism-chat-claude-fable5.1-2026
   text = text
 %}
 
-## What I Learned
-Asking for a synthesis of scholarship on the decline of McCarthyism was *agency*. Checking the citations and weighing Claude's challenge to my framing was *taste*.
+## What I took from it
 
-High-tier LLMs like Claude Fable 5.1 can give researchers a sophisticated starting point. LLM summaries can narrow how a researcher first sees a topic, but they can also point toward interpretive directions the researcher hadn't considered. Requiring ISBNs, DOIs, or the best available citation information in the prompt pushes the model toward reliable sources, and [hallucinated sources](model-tiers.md) are now rare in the higher-tier models.
+The bibliography gave me a starting point, and the response to my framing gave me something to argue with. In Fox's terms, both required expertise: I had to decide what question to ask and how much weight to give the answer.
+
+Checking the citations was part of that work. Asking for ISBNs and DOIs made the entries easier to follow up; the identifiers alone could not tell me whether the annotations represented the scholarship well. This result doesn't establish that higher-tier models reliably produce accurate bibliographies on other topics. It does suggest a way to begin exploring a topic while keeping the source checking in the researcher's hands.
+
+A separate sketch compares [two models answering a question about Huizinga](model-tiers.md).

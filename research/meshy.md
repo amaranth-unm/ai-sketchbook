@@ -2,7 +2,7 @@
 layout: sketchbook
 title: Generate 3D Prints from 2D Drawings
 description: "Creating a scale model of an IUD from the 1970s using AI-generated 3D files."
-summary: "AI can transform a historical line drawing into a 3D-printable file, adding a tactile dimension to research that images alone can't provide."
+summary: "We used historical drawings of IUDs to try making 3D-printable replicas with Meshy."
 thumbnail: "images/meshy-screenshot.jpg"
 thumbnail-position: "10% 50%"
 date: 2026-04-09
@@ -17,13 +17,11 @@ tags:
   - 3D printing
   - material culture
 results:
-  - generated 3D-printable files from 2D historical images
-  - reconstructed material culture objects for research
-  - incorporated tactile elements into research presentations
+  - "generated printable models from historical drawings"
+  - "found that Meshy could smooth away asymmetries in a source"
 what-i-learned:
-  - how AI interprets 2D drawings to generate 3D geometry
-  - where AI corrects vs. faithfully represents source material
-  - what tactile artifacts add to historical interpretation
+  - "line drawings gave closer-looking results than our earlier photograph experiments"
+  - "a printable model still needs comparison with the historical source"
 card_order: 30
 ---
 
@@ -33,15 +31,11 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-Even a plastic facsimile can reveal a lot about an object's physicality. Until recently, though, 3D printing required carefully scanned or digitally built models. Could AI turn a simple line drawing into something printable?
+History doctoral candidate Edrea Mendoza studies public health and sex education initiatives in 1970s Mexico. Her research turned up drawings of IUDs manufactured during that decade as part of a government push for population control. She wanted replicas she could hold. We tried turning the drawings into printable models with [Meshy.ai](https://www.meshy.ai/).
 
-{% include typography/pullquote.html text="It's one thing to see a line drawing. It's an entirely different experience to hold a replica in your palm and imagine its use." %}
+## From drawing to model
 
-History doctoral candidate Edrea Mendoza studies public health and sex education initiatives in 1970s Mexico. Her research turned up drawings of IUDs manufactured in Mexico during that decade, devices tied to a broader government push for population control. She wanted replicas she could hold.
-
-
-## The Workflow
-You upload an image. Meshy interprets the drawing, generates a 3D mesh, and exports a file ready for a standard 3D printer.
+Meshy takes an uploaded image, generates a 3D mesh, and exports a file for printing. That let us try the drawings without first building the models by hand.
 
 {% include images/figure.html
   width="100%"
@@ -50,15 +44,12 @@ You upload an image. Meshy interprets the drawing, generates a 3D mesh, and expo
   caption="A 2D IUD drawing uploaded to Meshy.ai."
 %}
 
+## What the tool changed
 
-## Results
-The free (for basic use) web app [Meshy.ai](https://www.meshy.ai/) uses AI to generate 3D-printable files from 2D images. 
-
-Previous Meshy experiments at [Amaranth](https://amaranth.unm.edu/) with high-resolution photographs of museum objects had produced distorted results, even when using the multi-image option. 
-
+Earlier Meshy experiments at [Amaranth](https://amaranth.unm.edu/) with high-resolution photographs of museum objects had produced distorted results, even with multiple views. The line drawings gave us models that appeared closer to the sources.
 
 {% capture text %}
-The tool sometimes "corrects" what it interprets as imperfections. When we uploaded a 2D drawing of a Middleton Cross, Meshy smoothed and regularized the asymmetries that were part of the original design. For objects where exact appearance matters, experimenting with Meshy settings may be necessary to avoid unwanted "corrections."
+One result showed why that comparison matters. When we uploaded a drawing of a Middleton Cross, Meshy smoothed and regularized asymmetries in the original. It treated features we wanted to preserve as imperfections to correct. A model can look convincing while losing exactly the details a researcher cares about.
 {% endcapture %}
 
 {% include images/figure-wrap.html
@@ -69,17 +60,8 @@ The tool sometimes "corrects" what it interprets as imperfections. When we uploa
   text=text
 %}
 
+## What the replicas are for
 
-Line drawings were a different story. With less visual noise to interpret, Meshy produced accurate models.
+Holding a replica offers a different way to discuss an object in a research presentation. It also makes the reconstruction's limits worth explaining. A printable file doesn't establish the accuracy of its dimensions or the parts of the object the drawing doesn't show.
 
-
-
-## What I Learned
-
-{% include typography/callout.html type="note" text="AI tools can reliably create printable 3D models from 2D drawings, at least for simple diagrams." %}
-
-Historians usually present findings through images: slides, reproductions, scans. Sometimes an image clearly supports the argument; sometimes the connection stays implicit.
-
-3D prints like these IUDs let touch stand alongside sight in a research presentation, and AI-assisted 3D generation dramatically lowers the barrier to doing it.
-
-The workflow extends to any material culture object that survives as a 2D record: architectural drawings, artifact illustrations, anatomical diagrams. As with many AI workflows, strengths and limitations sit side by side, so every drawing is its own experiment. But it's quick enough to try that the experiment itself can be revealing.
+These experiments make me interested in trying other artifact illustrations and diagrams. I'd assess each result against its source before deciding what claims the replica could help support.

@@ -30,7 +30,7 @@ Each sketch includes:
 - What worked and what didn't
 - Honest caveats
 
-Sketches are tagged by status: **rough** (early notes), **tested** (tried once, promising), or **refined** (iterated, classroom-ready).
+Sketches use four status labels: **rough** (initial account or proposal), **lightly tested** (limited use), **tested** (practical findings recorded), and **refined** (revised in response to use). These describe experience and revision, not demonstrated learning or guaranteed readiness for another course. See the [editorial guide](STYLE-GUIDE.md) for definitions and writing standards.
 
 ---
 
