@@ -4,8 +4,13 @@
 # url:     your GitHub Pages root, e.g. https://username.github.io
 #          optional — only needed for canonical links and OG metadata
 title: AI Sketchbook
-description: "Experiments with AI in teaching and research at UNM, with prompts, results, and questions to try next."
+description: "Classroom activities, assignments, and course policies for thinking critically with AI at UNM."
 baseurl: /ai-sketchbook
 url: https://amaranth.unm.edu
 
 search: true
+
+# Migration notes are not a public page.
+exclude:
+  - SITE-SPLIT.md
+  - ai-workbench-source.zip

@@ -351,4 +351,19 @@ p:has(> .section-accent) {
     border-top: 1px solid #999;
     padding: 0.5rem 0 0;
   }
+
+  /* The teaching index prints as cards, without an introductory cover sheet.
+     Block flow permits reliable page breaks between cards inside the grid. */
+  body.teaching-cards-page {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .teaching-cards-page .sketchbook-container {
+    display: block;
+  }
+
+  .teaching-cards-page .sketchbook-container > :not(.sketchbook-intro-cards) {
+    display: none;
+  }
 }

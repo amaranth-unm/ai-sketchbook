@@ -1,7 +1,7 @@
 {% comment %}
   Home Tag Cloud
 
-  Every tag in use across listed teaching and research sketches, rendered as
+  Every tag in use across listed sketches in the selected sections, rendered as
   badges that deep-link into the /tags/ browser. The point is range, not
   counts — it shows a reader at a glance what kinds of topics are here.
 
@@ -11,11 +11,13 @@
   Usage:
     {% include nav/home-tag-cloud.html %}
 
-  Parameters: none — tags are collected from site.pages.
+  Parameters:
+    - sections: comma-separated folder list; defaults to "/teaching/,/policy/".
+      Example: {% include nav/home-tag-cloud.html sections="/research/" %}
 {% endcomment %}
 
 {% comment %} Sections the cloud draws from — add a folder here to include it. {% endcomment %}
-{% assign tag_sections = "/teaching/,/research/" | split: "," %}
+{% assign tag_sections = include.sections | default: "/teaching/,/policy/" | split: "," %}
 
 {% assign tagged_pages = "" | split: "" %}
 {% for section_dir in tag_sections %}

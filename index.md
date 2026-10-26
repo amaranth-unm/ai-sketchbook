@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: AI Sketchbook
-description: "Experiments with AI in teaching and research at UNM, with prompts, results, and questions to try next."
+description: "Classroom activities, assignments, and course policies for thinking critically with AI at UNM."
 date: 2026-04-01
 wide: true
 container-class: "container sketchbook-container sketchbook-container--home"
@@ -10,20 +10,22 @@ home-cards:
     class: teach
     href: /teaching/
     text: "Classroom activities, assignments, and notes on how they went."
-  - title: Research
-    class: research
-    href: /research/
-    text: "Experiments with sources, research tools, and writing."
+  - title: Policy
+    class: policy
+    href: /policy/
+    text: "Course designs, syllabus language, and decisions about AI use."
 ---
 
 # AI Sketchbook
 
 <div class="home-intro" markdown="1">
 
-The AI Sketchbook collects experiments with AI in teaching and research at UNM. Some are classroom assignments; others start with a research nuisance, like getting chapter references into Zotero. We describe what we tried and what happened so colleagues can decide what might be worth trying themselves.
+The AI Sketchbook collects experiments with AI in teaching at UNM. We describe classroom activities, assignments, and course policies, with prompts and notes on what happened so colleagues can decide what might be worth trying themselves.
 {: .lede}
 
 There is plenty of general advice about AI. We want a place to compare notes with people who share our students, classrooms, and campus. An assignment that needs another try, an experiment we abandoned, or a decision to keep AI out of a task belongs here too.
+
+Research experiments now have their own home at [AI Workbench](https://amaranth.unm.edu/ai-workbench/).
 
 </div>
 
@@ -39,6 +41,6 @@ There is plenty of general advice about AI. We want a place to compare notes wit
 
 ## Share your experience
 
-[Email us a few paragraphs](mailto:amaranth@unm.edu) about an experiment or a decision about AI in a class or research project. Explain what you tried, changed, or decided against, and why. We'll help shape it into a sketch.
+[Email us a few paragraphs](mailto:amaranth@unm.edu) about an experiment or a decision about AI in a class. Explain what you tried, changed, or decided against, and why. We'll help shape it into a sketch.
 
 You can also [submit a sketch through GitHub](contribute).

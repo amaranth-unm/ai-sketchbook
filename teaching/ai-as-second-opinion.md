@@ -37,7 +37,7 @@ card_order: 100
 
 In my history of diet and health course, students sampled nineteenth- and early twentieth-century diet books, wrote an initial impression, and asked AI for an overview. They then returned to the books to see which parts of that overview held up. I wanted them to attend to how the authors addressed readers and established authority, as well as what dietary advice they offered.
 
-This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.html) describes the course design.
 
 ## Preparation and submission
 

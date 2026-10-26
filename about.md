@@ -6,7 +6,7 @@ description: "Why we compare AI experiments at UNM, what the sketches contain, a
 
 # About
 
-The AI Sketchbook is a place for colleagues at UNM to compare experiences with AI in teaching and research. We collect assignments, research experiments, and policy ideas with enough detail that someone else can try them, question them, or suggest a change.
+The AI Sketchbook is a place for colleagues at UNM to compare experiences with AI in teaching. We collect assignments, classroom activities, and course-policy ideas with enough detail that someone else can try them, question them, or suggest a change.
 {: .lede}
 
 {% include typography/section-accent.html %}
@@ -19,13 +19,11 @@ Writing a draft is often how students discover what they think. An assignment th
 
 Decisions about AI also involve training material, labor, resource use, and dependence on commercial providers. We welcome accounts of choosing not to use a tool for these reasons, as well as experiments that failed on their own terms.
 
-Research presents related questions. A transcription can be useful for finding a name and still be too unreliable to quote. A model can suggest a new interpretation while overlooking evidence that matters to it. These are the kinds of distinctions we want the sketches to describe through actual attempts.
+Our companion site, [AI Workbench](https://amaranth.unm.edu/ai-workbench/), collects experiments with AI in research, from transcription and bibliographic work to mapping, models, and writing.
 
 ## What you'll find
 
 **Teaching sketches** describe classroom activities and assignments, including prompts, course context, and advice for adapting them. Some record a change made after an earlier version fell short.
-
-**Research sketches** describe a particular task: processing archival images, mapping photographs, checking a draft, or making a physical model. They report what the tool produced and where the researcher still had work to do.
 
 **[Policy sketches]({{ '/policy/' | relative_url }})** offer syllabus language and ways to specify AI use on assignments. They are proposals to adapt to a course and its campus rules, rather than university policy.
 

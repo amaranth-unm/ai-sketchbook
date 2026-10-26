@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Contribute a Sketch
-description: "How to add your own teaching or research sketch to the AI Sketchbook."
+description: "How to add your own teaching or course-policy sketch to the AI Sketchbook."
 scrollspy: true
 ---
 
@@ -9,10 +9,12 @@ scrollspy: true
 
 {% include typography/section-accent.html %}
 
-Share an experiment or a decision about AI in a class or research project. Tell us what you tried, what happened, and what you'd change. An account of abandoning a tool or keeping AI out of an assignment belongs here too. A few paragraphs is enough to start.
+Share an experiment or a decision about AI in a class. Tell us what you tried, what happened, and what you'd change. An account of abandoning a tool or keeping AI out of an assignment belongs here too. A few paragraphs is enough to start.
 {: .lede}
 
 Your sketch is published under your name and licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), like everything else here: others can share and adapt it for noncommercial purposes, with credit to you, under the same license.
+
+For research workflows and experiments, contribute to [AI Workbench](https://amaranth.unm.edu/ai-workbench/contribute.html).
 
 ## The easy way: just email us
 
@@ -83,11 +85,11 @@ For this task, you'll use the list of files on the left and the editor on the ri
 
 ## 4. Create your sketch file
 
-Each section (`teaching`, `policy`, and `research`) has a `_sketch-template.md` file inside its folder, already set up with the right fields and comments marking what's required and what's optional. Don't edit the template itself; copy it.
+Each section (`teaching` and `policy`) has a `_sketch-template.md` file inside its folder, already set up with the right fields and comments marking what's required and what's optional. Don't edit the template itself; copy it.
 
-- In the file list, open the folder that fits your sketch: `teaching`, `policy`, or `research`
+- In the file list, open the folder that fits your sketch: `teaching` or `policy`
 - Right-click `_sketch-template.md` and choose **Copy**, then right-click the same folder and choose **Paste**
-- Rename the copy in lowercase with dashes and no leading underscore, like `citation-test.md` or `mapping-with-ai.md`. (A leading underscore tells the site not to publish a file, which is why the template never appears on the live site.)
+- Rename the copy in lowercase with dashes and no leading underscore, like `citation-test.md` or `my-course-policy.md`. (A leading underscore tells the site not to publish a file, which is why the template never appears on the live site.)
 - Open your new file and follow the instructions at the top: fill in the front matter, delete the "before you start" line, and write your sketch
 
 Put your name and department in the `author` field, like `"Jane Doe, Anthropology"`. That's how you're credited on the page and in its suggested citation. For teaching sketches, fill in `context` (the course where you ran it) and `last-run` (the term) too, and add a `handout` link if the student-facing assignment is online.

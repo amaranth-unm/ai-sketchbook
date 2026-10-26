@@ -372,17 +372,13 @@
   padding: 0.85rem 0.55rem 0.85rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.36rem;
+  gap: var(--spacing-sm);
   margin-right: 0.55rem;
 }
 
 .card-meta-item {
   display: block;
   min-width: 0;
-}
-
-.card-meta-item + .card-meta-item {
-  margin-top: 0.32rem;
 }
 
 .card-meta-label {
@@ -393,7 +389,7 @@
   letter-spacing: 0.12em;
   line-height: 1;
   color: var(--muted-gray);
-  margin-bottom: 0.18rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .card-meta-value {
@@ -402,7 +398,7 @@
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 1.18;
+  line-height: 1.4;
   color: var(--dark-gray);
   text-transform: none;
   overflow-wrap: anywhere;
@@ -853,4 +849,156 @@
   font-size: var(--text-sm);
   line-height: 1.4;
   color: var(--mid-gray);
+}
+
+/* Teaching index: one complete card per landscape US-letter sheet.
+   Named pages leave individual sketch handouts at their normal paper size.
+   Keep these after mobile rules: print preview can use a narrow viewport. */
+@media print {
+  @page teaching-card {
+    size: letter landscape;
+    margin: 0.35in;
+  }
+
+  html:has(body.teaching-cards-page),
+  body.teaching-cards-page {
+    page: teaching-card;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards {
+    margin: 0;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card {
+    margin: 0;
+    padding: 0.2in 0;
+    border-top: 2px solid var(--terra);
+    break-inside: avoid;
+    box-shadow: none;
+    cursor: auto;
+  }
+
+  .teaching-cards-page .card + .card {
+    break-before: page;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card::before,
+  .teaching-cards-page .sketchbook-intro-cards .card::after,
+  .teaching-cards-page .stretched-link::after {
+    display: none;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card .row {
+    display: grid;
+    grid-template-columns: 1.25in 3.15in minmax(0, 1fr);
+    gap: 0.25in;
+    min-height: 7.35in;
+  }
+
+  .teaching-cards-page .card-meta-col {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: var(--spacing-sm) 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 7.35in;
+    gap: var(--spacing-sm);
+    border: none;
+  }
+
+  .teaching-cards-page .card-meta-label {
+    color: var(--dark-gray);
+  }
+
+  .teaching-cards-page .card-meta-value {
+    font-size: var(--text-base);
+    color: var(--black);
+  }
+
+  .teaching-cards-page .card-meta-tags {
+    gap: var(--spacing-xs);
+  }
+
+  .teaching-cards-page .card-meta-tags .sketch-tag {
+    padding: 0;
+    border: none;
+    color: var(--dark-gray);
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card .col-sm-4,
+  .teaching-cards-page .sketchbook-intro-cards .card .col-sm-8,
+  .teaching-cards-page .sketchbook-intro-cards .card .col-sm-12 {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card .col-sm-12 {
+    grid-column: 2 / -1;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card .align-items-center {
+    align-items: flex-start !important;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card-image {
+    display: block;
+    width: 100%;
+    height: 7.35in;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: cover;
+    filter: none;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card-body {
+    min-height: 0;
+    padding: var(--spacing-sm) 0 0;
+    justify-content: flex-start;
+  }
+
+  .teaching-cards-page .sketchbook-intro-cards .card-title {
+    font-family: Caveat, cursive;
+    font-size: clamp(2.7rem, 4.5vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.12;
+    margin: 0 0 var(--spacing-xs);
+    transform: none;
+    text-shadow: none;
+    color: var(--black);
+  }
+
+  .teaching-cards-page .sketch-label {
+    color: var(--dark-gray);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .teaching-cards-page .sketch-section {
+    font-size: var(--text-xl);
+    line-height: 1.4;
+    color: var(--black);
+  }
+
+  .teaching-cards-page .sketch-section--key {
+    font-size: var(--text-2xl);
+    line-height: 1.25;
+  }
+
+  .teaching-cards-page .sketch-skills {
+    display: grid;
+    gap: var(--spacing-xs);
+    margin: 0;
+  }
+
+  .teaching-cards-page .sketch-skills li {
+    font-size: var(--text-lg);
+    line-height: 1.4;
+    color: var(--black);
+  }
 }

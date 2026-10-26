@@ -32,7 +32,7 @@ card_order: 30
 
 {% include typography/sketch-info.html %}
 
-The assignment-level guidance from this sketch is now part of [AI Roles on Assignments](ai-integration-ladder.md). That page combines course-wide categories with a short statement of what AI may do on each assignment.
+The assignment-level guidance from this sketch is now part of [AI Roles on Assignments](ai-integration-ladder.html). That page combines course-wide categories with a short statement of what AI may do on each assignment.
 
 The original idea drew on the acceptable-use matrix in the AHA's [Guiding Principles for Artificial Intelligence in History Education](https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/). It puts the instructions alongside the task students are starting.
 

@@ -33,7 +33,7 @@ card_order: 10
 
 “Differentiate yourself from AI” asks students to meet a moving and poorly defined standard. A generic response may need revision, but its resemblance to AI doesn't explain what's wrong with it. The instructor needs to identify the missing evidence, unsupported inference, or interpretive choice that needs explaining.
 
-This sketch proposes a revision to the approach described in [Start With the AI Answer](start-with-the-ai-answer.md), with wording to try in a future course.
+This sketch proposes a revision to the approach described in [Start With the AI Answer](start-with-the-ai-answer.html), with wording to try in a future course.
 
 ## Making the expectation assessable
 

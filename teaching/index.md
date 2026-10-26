@@ -3,6 +3,7 @@ layout: sketchbook
 title: Teaching Sketches
 date: 2026-04-01
 wide: true
+body-class: teaching-cards-page
 ---
 
 {% assign section_pages = site.pages
@@ -19,6 +20,8 @@ Classroom activities and assignments, with prompts, course context, and notes fo
 {: .lede}
 
 </div>
+
+<button type="button" class="sketch-print-button" data-print>Print teaching cards · one per landscape page</button>
 
 {% include nav/sketchbook-card-list.html pages=section_pages %}
 

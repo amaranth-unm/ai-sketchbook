@@ -36,7 +36,7 @@ card_order: 40
 
 Ask AI what a healthy diet is and the answer will probably sound familiar: vegetables, whole grains, less sugar, moderation. At the end of my history of diet and health course, I asked students to explain how advice like this acquired its authority. They used course readings to examine assumptions that an ordinary request for dietary advice leaves largely unspoken.
 
-This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.html) describes the course design.
 
 ## Preparation and submission
 

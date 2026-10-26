@@ -55,6 +55,6 @@ This course takes a **[choose one]** posture toward AI:
 
 A course may combine several of these approaches: independent reading responses, an activity that critiques AI, and a final project using AI for a defined task. Explain the reasons for each in the assignment instructions.
 
-[AI Roles on Assignments](ai-integration-ladder.md) supplies labels for assignments, while this sketch is a way to think through the course's overall purpose. Either approach still needs to tell students what they may do on the task in front of them.
+[AI Roles on Assignments](ai-integration-ladder.html) supplies labels for assignments, while this sketch is a way to think through the course's overall purpose. Either approach still needs to tell students what they may do on the task in front of them.
 
 I'd revisit the description midway through a course. Do the assignments ask students to practice what the syllabus says matters? Where do the AI permissions make that practice harder to assess? Those questions seem more useful than expecting one rule to cover every kind of work.

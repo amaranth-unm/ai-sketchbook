@@ -36,7 +36,7 @@ card_order: 110
 
 For a day without an assigned reading in my history of diet and health course, I gave students a deck of historical images without added captions or narration. They asked AI for one sentence per slide, linking each image to the next. Then they went back through the deck to examine details that the resulting story had passed over.
 
-This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.html) describes the course design.
 
 ## Preparation and submission
 

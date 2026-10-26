@@ -36,7 +36,7 @@ card_order: 80
 
 In my history of diet and health course, students read Steven Shapin's “Trusting George Cheyne.” I wanted them to consider why people trusted Cheyne and what that trust tells us about expertise. I gave them a sequence of AI prompts to help investigate the article, followed by a short post explaining what they checked in the text.
 
-This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.md) describes the course design.
+This is part of a remote, asynchronous course on the history of diet and health. [Start With the AI Answer](../policy/start-with-the-ai-answer.html) describes the course design.
 
 ## Preparation and submission
 

@@ -41,11 +41,11 @@ I'm not sure the assignments are great yet. The approach seemed worth recording,
 
 Several assignments made AI output part of the material to examine:
 
-- **[AI Reading Investigation](../teaching/ai-reading-investigation.md):** a prompt sequence for a dense article, followed by an account of what students checked and corrected.
-- **[AI as Second Opinion](../teaching/ai-as-second-opinion.md):** students first sampled old diet books, then compared an AI overview with the originals. We did this twice, with more independent prompting the second time.
-- **[Narrate the Slides](../teaching/narrate-the-slides.md):** AI supplied captions for historical images; students examined details the captions missed.
+- **[AI Reading Investigation](../teaching/ai-reading-investigation.html):** a prompt sequence for a dense article, followed by an account of what students checked and corrected.
+- **[AI as Second Opinion](../teaching/ai-as-second-opinion.html):** students first sampled old diet books, then compared an AI overview with the originals. We did this twice, with more independent prompting the second time.
+- **[Narrate the Slides](../teaching/narrate-the-slides.html):** AI supplied captions for historical images; students examined details the captions missed.
 - **A secondary article on low-fat diets:** students could use AI to help read it, then explain the history using the course.
-- **[Complicate the Obvious](../teaching/complicate-the-obvious.md):** the final essay used course readings to examine the assumptions behind AI dietary advice.
+- **[Complicate the Obvious](../teaching/complicate-the-obvious.html):** the final essay used course readings to examine the assumptions behind AI dietary advice.
 
 For **reading reflections**, students drafted their reactions first. AI could help with grammar or suggest another question after they had developed an idea. For the **final reflection**, they supplied the account of their experience of the course; AI editing was allowed only after an outline or draft existed.
 
@@ -73,7 +73,7 @@ Each assignment explains what AI use is permitted and what work you must do your
 
 {% include typography/callout.html type="prompt" title="Proposed replacement" text=revised_policy %}
 
-The [separate policy sketch](differentiate-yourself-from-ai.md) develops this revision.
+The [separate policy sketch](differentiate-yourself-from-ai.html) develops this revision.
 
 ## What I wanted to assess
 
