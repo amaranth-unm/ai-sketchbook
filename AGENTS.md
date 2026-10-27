@@ -10,7 +10,8 @@ Guidance for AI coding assistants (and contributors using one) working in this r
 - `_includes/images/` and `_includes/layout/` — figures, page headers, feature rows.
 - `assets/css/` is split by concern: `vars.css` (custom properties only), `base.css` (grid/reset), `typography.css`, `nav.css`, `cards.css`, `components.css`, `layout.css`, plus `page-header.css`/`search.css` loaded conditionally.
 - `assets/js/nav.js` and `assets/js/search.js` are small hand-written vanilla JS — no bundler, no framework.
-- Content lives in `teaching/`, `policy/`, `research/`. Each has a `_sketch-template.md` — the leading underscore excludes it from the Jekyll build, so it's safe to duplicate and never gets published itself.
+- Content lives in `teaching/` and `policy/`. Each has a `_sketch-template.md` — the leading underscore excludes it from the Jekyll build, so it's safe to duplicate and never gets published itself.
+- Research sketches moved to the companion AI Workbench site (see `SITE-SPLIT.md`). `research/` now holds only redirect stubs (`layout: redirect`) plus old images and PDFs kept so existing external links still work. Don't add content there.
 
 ## Bootstrap-shaped classes are not Bootstrap
 
@@ -21,7 +22,7 @@ Markup throughout uses Bootstrap-style class names — `navbar`, `navbar-toggler
 - Follow [STYLE-GUIDE.md](STYLE-GUIDE.md) for editorial standards, examples, evidence, and status labels. Preserve the distinction between classroom experience and suggested adaptations.
 
 - Sketch bodies should be **plain Markdown plus the existing typography includes** — not raw HTML, not inline `style="..."` attributes. If you need a visual element a current include doesn't support, extend the include (and its CSS rule) rather than hand-coding it inline in a content file.
-- Front matter fields are standardized per section. Don't invent new keys — copy the relevant `_sketch-template.md` (`teaching/`, `policy/`, `research/`) and use its field set as-is. If a field doesn't already render somewhere (check `_includes/typography/sketch-info.html` and `_includes/nav/card-list.html`), adding it silently does nothing.
+- Front matter fields are standardized per section. Don't invent new keys — copy the relevant `_sketch-template.md` (`teaching/` or `policy/`) and use its field set as-is. If a field doesn't already render somewhere (check `_includes/typography/sketch-info.html` and `_includes/nav/card-list.html`), adding it silently does nothing.
 
 ## CSS
 

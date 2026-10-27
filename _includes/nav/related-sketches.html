@@ -2,8 +2,7 @@
   Related sketches — up to two teaching/policy sketches that share the most
   tags with the current page, shown as small cards: type and status, title,
   and the sketch's key question (falling back to a truncated summary). Renders only on
-  individual teaching/ and policy/ sketch pages that have tags. Research
-  sketches are neither shown here nor given related cards.
+  individual teaching/ and policy/ sketch pages that have tags.
 
   Ranking: most shared tags first; ties go to sketches in the same section,
   then to lower card_order.
@@ -27,7 +26,6 @@
     | where_exp: "item", "item.name != 'index.md'"
     | where_exp: "item", "item.listed != false"
     | where_exp: "item", "item.url != page.url"
-    | where_exp: "item", "item.dir != '/research/'"
     | sort: "card_order" %}
 
   {% assign related = "" | split: "" %}

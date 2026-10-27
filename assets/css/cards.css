@@ -1,9 +1,9 @@
 /* ─── Home section cards ─────────────────────────────────────────────────── */
 /*
-  Teaching / Research cards under the home page intro. Rendered by
+  Section card(s) under the home page intro. Rendered by
   nav/home-card-links.html. They run the full content width, side by side, so
-  the two places a reader can go next are the largest thing on the page after
-  the intro itself.
+  where a reader can go next is the largest thing on the page after the intro
+  itself.
 */
 .home-sections {
   display: grid;
@@ -40,9 +40,7 @@
   transform: translateY(-2px);
 }
 
-.home-section-box.teach    { border-top-color: var(--terra); }
-.home-section-box.policy   { border-top-color: var(--indigo); }
-.home-section-box.research { border-top-color: var(--turquoise); }
+.home-section-box.teach { border-top-color: var(--terra); }
 
 .home-section-box__head {
   display: flex;
@@ -61,9 +59,7 @@
   transform-origin: left center;
 }
 
-.home-section-box.teach    .home-section-box__title { color: var(--terra); }
-.home-section-box.policy   .home-section-box__title { color: var(--indigo); }
-.home-section-box.research .home-section-box__title { color: var(--turquoise); }
+.home-section-box.teach .home-section-box__title { color: var(--terra); }
 
 .home-section-box__count {
   font-family: var(--font-mono);
@@ -93,9 +89,7 @@
   transition: color 0.15s ease;
 }
 
-.home-section-box.teach:hover    .home-section-box__go { color: var(--terra); }
-.home-section-box.policy:hover   .home-section-box__go { color: var(--indigo); }
-.home-section-box.research:hover .home-section-box__go { color: var(--turquoise); }
+.home-section-box.teach:hover .home-section-box__go { color: var(--terra); }
 
 
 /* ─── Home tag cloud ──────────────────────────────────────────────────────── */
@@ -130,8 +124,7 @@
 
 .home-index__group:first-child { margin-top: 0.4rem; }
 
-.home-index__group.research { --home-index-accent: var(--turquoise); }
-.home-index__group.policy   { --home-index-accent: var(--indigo); }
+.home-index__group.policy { --home-index-accent: var(--indigo); }
 
 .home-index__head {
   display: flex;
@@ -421,9 +414,6 @@
 .card-meta-type.assignment { color: var(--sunset); }
 .card-meta-type.policy     { color: var(--mesa); }
 .card-meta-type.policy-sketch { color: var(--indigo); }
-.card-meta-type.research   { color: var(--turquoise); }
-.card-meta-type.data-work,
-.card-meta-type.processing-sources { color: var(--turquoise); }
 
 /* Topic tags stacked in the narrow meta column; above the card's stretched link so they stay clickable */
 .card-meta-tags {
@@ -607,10 +597,6 @@
   content: "✓ ";
   color: var(--terra);
   font-size: var(--text-label);
-}
-
-.sketch-skills--research li::before {
-  color: var(--turquoise);
 }
 
 /* Section label & section text */

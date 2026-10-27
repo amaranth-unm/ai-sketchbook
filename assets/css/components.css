@@ -20,9 +20,8 @@
   width: min(64rem, 100% - 3rem);
 }
 
-.sketch-info--teach    { border-left-color: var(--terra);     background: var(--teach-soft);    --sketch-info-rule: var(--teach-mid); }
-.sketch-info--policy   { border-left-color: var(--indigo);    background: var(--policy-soft);   --sketch-info-rule: var(--policy-mid); }
-.sketch-info--research { border-left-color: var(--turquoise); background: var(--research-soft); --sketch-info-rule: var(--research-mid); }
+.sketch-info--teach  { border-left-color: var(--terra);  background: var(--teach-soft);  --sketch-info-rule: var(--teach-mid); }
+.sketch-info--policy { border-left-color: var(--indigo); background: var(--policy-soft); --sketch-info-rule: var(--policy-mid); }
 
 .sketch-info-col {
   margin: 0;
@@ -59,9 +58,8 @@
 }
 
 /* Labels take a deeper shade of the section accent so they read clearly on the tint */
-.sketch-info--teach dt    { color: var(--terra-dark); }
-.sketch-info--policy dt   { color: var(--indigo); }
-.sketch-info--research dt { color: var(--turquoise); }
+.sketch-info--teach dt  { color: var(--terra-dark); }
+.sketch-info--policy dt { color: var(--indigo); }
 
 @media (max-width: 640px) {
   .sketch-info {
@@ -394,8 +392,6 @@ figure.left img {
 
 .sketch-info--policy .sketch-status-dot            { border-color: var(--indigo); }
 .sketch-info--policy .sketch-status-dot.is-filled  { background: var(--indigo); }
-.sketch-info--research .sketch-status-dot           { border-color: var(--turquoise); }
-.sketch-info--research .sketch-status-dot.is-filled { background: var(--turquoise); }
 
 /* Same type as .sketch-tag (cards.css), minus the box */
 .sketch-status-text {
@@ -425,13 +421,6 @@ figure.left img {
   color: var(--mid-gray);
 }
 
-.sketch-license-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
-}
-
 .sketch-aside-heading {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -440,24 +429,6 @@ figure.left img {
   letter-spacing: 0.1em;
   color: var(--dark-gray);
   margin: 0 0 0.6rem;
-}
-
-.sketch-print-button {
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 2px 10px;
-  background: transparent;
-  color: var(--mid-gray);
-  border: 1px solid var(--rule-gray);
-  cursor: pointer;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
-}
-
-.sketch-print-button:hover {
-  color: var(--terra);
-  border-color: var(--terra);
 }
 
 .sketch-license p {

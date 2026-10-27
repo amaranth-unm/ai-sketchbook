@@ -1,28 +1,20 @@
 {% comment %}
   Sketch info box — at-a-glance summary drawn from front matter.
   Place after <span class="section-accent"> and before the first paragraph.
-  Reads: page.summary, page['what-i-learned'], page['what-students-learn'], page.results, page.author, page.context, page['last-run'], page.handout, page.tools, page.effort, page.status, page.tags
+  Reads: page.summary, page['what-i-learned'], page['what-students-learn'], page.author, page.context, page['last-run'], page.handout, page.tools, page.effort, page.status, page.tags
   Status renders as a 3-dot maturity meter: rough (0) · lightly tested (1) · tested (2) · refined (3).
 
   Two columns, divided by a thin rule: what the sketch is and what it takes
-  (summary, learning aims / what I learned, results, tools, format) on
+  (summary, learning aims / what I learned, tools, format) on
   the left; provenance and status (author, context, last run, handout, status,
   topics) on the right. Labels sit above their values. On narrow screens the columns stack.
 {% endcomment %}
 
-{% if page.url contains '/teaching/' %}
-  {% assign sketch_info_class = 'sketch-info sketch-info--teach' %}
-{% elsif page.url contains '/policy/' %}
-  {% assign sketch_info_class = 'sketch-info sketch-info--policy' %}
-{% else %}
-  {% assign sketch_info_class = 'sketch-info sketch-info--research' %}
-{% endif %}
-
 {% if page.url contains '/policy/' %}
+  {% assign sketch_info_class = 'sketch-info sketch-info--policy' %}
   {% assign summary_label = 'Policy aim' %}
-{% elsif page.url contains '/research/' %}
-  {% assign summary_label = 'Experiment' %}
 {% else %}
+  {% assign sketch_info_class = 'sketch-info sketch-info--teach' %}
   {% assign summary_label = 'Basic idea' %}
 {% endif %}
 
@@ -39,10 +31,6 @@
     {% if page['what-students-learn'] %}
     <dt>{% if page.url contains '/policy/' %}What it clarifies{% else %}Learning aims{% endif %}</dt>
     <dd><ul class="sketch-info-list">{% for item in page['what-students-learn'] %}<li>{{ item }}</li>{% endfor %}</ul></dd>
-    {% endif %}
-    {% if page.results %}
-    <dt>Results</dt>
-    <dd><ul class="sketch-info-list">{% for item in page.results %}<li>{{ item }}</li>{% endfor %}</ul></dd>
     {% endif %}
     {% if page.tools %}
     <dt>You'll need</dt>
@@ -71,7 +59,6 @@
     <dt>Handout</dt>
     <dd><a href="{{ page.handout }}">Assignment as students saw it ↗</a></dd>
     {% endif %}
-    {% unless page.dir == "/research/" %}
     {% if page.status %}
     <dt>Status</dt>
     {% case page.status %}
@@ -89,6 +76,5 @@
     <dt>Topics</dt>
     <dd class="sketchbook-post-meta">{% for tag in page.tags %}<a class="sketch-tag topic" href="{{ '/tags/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>{% endfor %}</dd>
     {% endif %}
-    {% endunless %}
   </dl>
 </div>

@@ -10,10 +10,6 @@ home-cards:
     class: teach
     href: /teaching/
     text: "Classroom activities, assignments, and notes on how they went."
-  - title: Policy
-    class: policy
-    href: /policy/
-    text: "Course designs, syllabus language, and decisions about AI use."
 ---
 
 # AI Sketchbook

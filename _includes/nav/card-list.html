@@ -12,8 +12,7 @@
   {% assign card_classes = card_classes | append: " sketch-tag-card" %}
 {% endif %}
 {% assign joined_tags = item.tags | join: '|' | downcase %}
-{% if item.url contains '/research/' %}{% assign card_section = "research" %}
-{% elsif item.url contains '/policy/' %}{% assign card_section = "policy" %}
+{% if item.url contains '/policy/' %}{% assign card_section = "policy" %}
 {% else %}{% assign card_section = nil %}{% endif %}
 <div class="{{ card_classes }}" data-href="{{ card_href }}"{% if include.tag-data and item.tags %} data-tags="{{ joined_tags }}"{% endif %}>
   <div class="row g-0 align-items-stretch">
@@ -75,17 +74,7 @@
     {% endif %}
       <div class="card-body">
           <h3 class="card-title"><a class="card-main-link stretched-link" href="{{ card_href }}">{{ item.title }}</a></h3>
-          {% if card_section == "research" %}
-            {% if item.summary %}
-            <p class="sketch-section"><span class="sketch-label">Experiment</span>{{ item.summary }}</p>
-            {% endif %}
-            {% if item.results %}
-            <span class="sketch-label">Results</span>
-            <ul class="sketch-skills sketch-skills--research">
-              {% for r in item.results %}<li>{{ r }}</li>{% endfor %}
-            </ul>
-            {% endif %}
-          {% elsif card_section == "policy" %}
+          {% if card_section == "policy" %}
             {% assign key_q = item['key-question'] | default: card_summary %}
             {% if key_q %}
             <p class="sketch-section sketch-section--key"><span class="sketch-label">Key question</span>{{ key_q }}</p>

@@ -21,8 +21,6 @@ Classroom activities and assignments, with prompts, course context, and notes fo
 
 </div>
 
-<button type="button" class="sketch-print-button" data-print>Print teaching cards · one per landscape page</button>
-
 {% include nav/sketchbook-card-list.html pages=section_pages %}
 
 [Browse all sketchbook tags →]({{ '/tags/' | relative_url }}){: .tag-browse-button}
