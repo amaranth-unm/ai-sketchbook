@@ -1,22 +1,17 @@
 ---
 layout: sketchbook
 title: AI Sketchbook
-description: "Classroom activities, assignments, and course policies for thinking critically with AI at UNM."
+description: "Classroom activities and assignments for thinking critically with AI at UNM."
 date: 2026-04-01
 wide: true
 container-class: "container sketchbook-container sketchbook-container--home"
-home-cards:
-  - title: Teaching
-    class: teach
-    href: /teaching/
-    text: "Classroom activities, assignments, and notes on how they went."
 ---
 
 # AI Sketchbook
 
 <div class="home-intro" markdown="1">
 
-The AI Sketchbook collects experiments with AI in teaching at UNM. We describe classroom activities, assignments, and course policies, with prompts and notes on what happened so colleagues can decide what might be worth trying themselves.
+The AI Sketchbook collects experiments with AI in teaching at UNM. We describe classroom activities and assignments, with prompts and notes on what happened so colleagues can decide what might be worth trying themselves.
 {: .lede}
 
 There is plenty of general advice about AI. We want a place to compare notes with people who share our students, classrooms, and campus. An assignment that needs another try, an experiment we abandoned, or a decision to keep AI out of a task belongs here too.
@@ -24,8 +19,6 @@ There is plenty of general advice about AI. We want a place to compare notes wit
 Research experiments now have their own home at [AI Workbench](https://amaranth.unm.edu/ai-workbench/).
 
 </div>
-
-{% include nav/home-card-links.html cards=page.home-cards %}
 
 ## Browse by topic
 

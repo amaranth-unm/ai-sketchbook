@@ -6,7 +6,7 @@ description: "Why we compare AI experiments at UNM, what the sketches contain, a
 
 # About
 
-The AI Sketchbook is a place for colleagues at UNM to compare experiences with AI in teaching. We collect assignments, classroom activities, and course-policy ideas with enough detail that someone else can try them, question them, or suggest a change.
+The AI Sketchbook is a place for colleagues at UNM to compare experiences with AI in teaching. We collect assignments and classroom activities with enough detail that someone else can try them, question them, or suggest a change.
 {: .lede}
 
 {% include typography/section-accent.html %}
@@ -24,8 +24,6 @@ Our companion site, [AI Workbench](https://amaranth.unm.edu/ai-workbench/), coll
 ## What you'll find
 
 **Teaching sketches** describe classroom activities and assignments, including prompts, course context, and advice for adapting them. Some record a change made after an earlier version fell short.
-
-**[Policy sketches]({{ '/policy/' | relative_url }})** offer syllabus language and ways to specify AI use on assignments. They are proposals to adapt to a course and its campus rules, rather than university policy.
 
 The status labels—**rough**, **lightly tested**, **tested**, and **refined**—describe how much an author has tried and revised a sketch. **Tested** means used in practice. It doesn't establish that students learned more or that another class will get the same result. Read the account for what the author actually observed.
 

@@ -22,7 +22,7 @@ permalink: /tags/
 
 # Sketchbook Tags
 
-Browse teaching and course-policy sketches by subject.
+Browse teaching sketches by subject.
 {: .lede}
 
 {% include typography/section-accent.html %}

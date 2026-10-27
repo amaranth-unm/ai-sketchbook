@@ -4,13 +4,18 @@
 # url:     your GitHub Pages root, e.g. https://username.github.io
 #          optional — only needed for canonical links and OG metadata
 title: AI Sketchbook
-description: "Classroom activities, assignments, and course policies for thinking critically with AI at UNM."
+description: "Classroom activities and assignments for thinking critically with AI at UNM."
 baseurl: /ai-sketchbook
 url: https://amaranth.unm.edu
 
 search: true
 
-# Migration notes are not a public page.
+# Migration notes, agent notes, and the editorial guide are internal, not public pages.
+# Policy sketches are unpublished but kept in the repo in case they return;
+# remove the policy line (and restore its nav-top.yml entry) to bring them back.
 exclude:
   - SITE-SPLIT.md
+  - AGENTS.md
+  - STYLE-GUIDE.md
   - ai-workbench-source.zip
+  - policy

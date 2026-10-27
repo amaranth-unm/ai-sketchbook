@@ -1,7 +1,7 @@
 ---
 layout: sketchbook
 title: Contribute a Sketch
-description: "How to add your own teaching or course-policy sketch to the AI Sketchbook."
+description: "How to add your own teaching sketch to the AI Sketchbook."
 scrollspy: true
 ---
 
@@ -85,16 +85,16 @@ For this task, you'll use the list of files on the left and the editor on the ri
 
 ## 4. Create your sketch file
 
-Each section (`teaching` and `policy`) has a `_sketch-template.md` file inside its folder, already set up with the right fields and comments marking what's required and what's optional. Don't edit the template itself; copy it.
+The `teaching` folder has a `_sketch-template.md` file, already set up with the right fields and comments marking what's required and what's optional. Don't edit the template itself; copy it.
 
-- In the file list, open the folder that fits your sketch: `teaching` or `policy`
+- In the file list, open the `teaching` folder
 - Right-click `_sketch-template.md` and choose **Copy**, then right-click the same folder and choose **Paste**
-- Rename the copy in lowercase with dashes and no leading underscore, like `citation-test.md` or `my-course-policy.md`. (A leading underscore tells the site not to publish a file, which is why the template never appears on the live site.)
+- Rename the copy in lowercase with dashes and no leading underscore, like `citation-test.md` or `my-activity.md`. (A leading underscore tells the site not to publish a file, which is why the template never appears on the live site.)
 - Open your new file and follow the instructions at the top: fill in the front matter, delete the "before you start" line, and write your sketch
 
-Put your name and department in the `author` field, like `"Jane Doe, Anthropology"`. That's how you're credited on the page and in its suggested citation. For teaching sketches, fill in `context` (the course where you ran it) and `last-run` (the term) too, and add a `handout` link if the student-facing assignment is online.
+Put your name and department in the `author` field, like `"Jane Doe, Anthropology"`. That's how you're credited on the page and in its suggested citation. Fill in `context` (the course where you ran it) and `last-run` (the term) too, and add a `handout` link if the student-facing assignment is online.
 
-**Adding images:** drag image files from your computer into the section's `images` folder in the file list. Then refer to them as `images/your-file.jpg`, for example in the `thumbnail` field.
+**Adding images:** drag image files from your computer into the `teaching/images` folder in the file list. Then refer to them as `images/your-file.jpg`, for example in the `thumbnail` field.
 
 ## 5. Commit your changes
 

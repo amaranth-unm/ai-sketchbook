@@ -3,7 +3,8 @@
   Section card(s) under the home page intro. Rendered by
   nav/home-card-links.html. They run the full content width, side by side, so
   where a reader can go next is the largest thing on the page after the intro
-  itself.
+  itself. Not on the home page right now; kept so the cards can come back by
+  restoring the include call and its home-cards front matter in index.md.
 */
 .home-sections {
   display: grid;
@@ -374,15 +375,16 @@
   min-width: 0;
 }
 
+/* Label sits tight to its value; the column's larger gap separates the pairs */
 .card-meta-label {
   display: block;
   font-family: var(--font-mono);
-  font-size: var(--text-label);
+  font-size: var(--text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   line-height: 1;
   color: var(--muted-gray);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.2rem;
 }
 
 .card-meta-value {
@@ -421,7 +423,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.25rem;
-  margin-top: 0.15rem;
   position: relative;
   z-index: 2;
 }
