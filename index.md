@@ -5,6 +5,12 @@ description: "Classroom activities and assignments for thinking critically with 
 date: 2026-04-01
 wide: true
 container-class: "container sketchbook-container sketchbook-container--home"
+home-cards:
+  - title: Browse the sketches
+    class: teach
+    href: /teaching/
+    text: "Classroom activities, assignments, and notes on how they went."
+    go: "See every sketch →"
 ---
 
 # AI Sketchbook
@@ -19,6 +25,8 @@ There is plenty of general advice about AI. We want a place to compare notes wit
 Research experiments now have their own home at [AI Workbench](https://amaranth.unm.edu/ai-workbench/).
 
 </div>
+
+{% include nav/home-card-links.html cards=page.home-cards %}
 
 ## Browse by topic
 

@@ -3,22 +3,13 @@
   Section card(s) under the home page intro. Rendered by
   nav/home-card-links.html. They run the full content width, side by side, so
   where a reader can go next is the largest thing on the page after the intro
-  itself. Not on the home page right now; kept so the cards can come back by
-  restoring the include call and its home-cards front matter in index.md.
+  itself.
 */
 .home-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   gap: 1.5rem;
   margin: 1.75rem 0 1rem;   /* + the next h2's 2rem top margin (grid margins don't collapse) */
-}
-
-/* The section cards are the home page's main doorway, so they break out of
-   the reading column (centered, up to 68rem) to give them more presence. */
-.container > .home-sections {
-  grid-column: full-start / full-end;
-  justify-self: center;
-  width: min(68rem, 100% - 3rem);
 }
 
 .home-section-box {
@@ -61,15 +52,6 @@
 }
 
 .home-section-box.teach .home-section-box__title { color: var(--terra); }
-
-.home-section-box__count {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-gray);
-  white-space: nowrap;
-}
 
 .home-section-box__text {
   display: block;

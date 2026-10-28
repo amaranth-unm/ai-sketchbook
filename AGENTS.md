@@ -12,7 +12,6 @@ Guidance for AI coding assistants (and contributors using one) working in this r
 - `assets/js/nav.js` and `assets/js/search.js` are small hand-written vanilla JS — no bundler, no framework.
 - Content lives in `teaching/`. It has a `_sketch-template.md` — the leading underscore excludes it from the Jekyll build, so it's safe to duplicate and never gets published itself.
 - `policy/` is excluded from the build in `_config.yml`: the policy sketches are unpublished but kept in case they return. Their styling (indigo accents, `--policy` classes) and the `/policy/` branches in the includes are intentionally dormant. Don't delete them as dead code, and don't link to policy pages.
-- The home page section cards (`_includes/nav/home-card-links.html`, `.home-section-box` in `cards.css`) are not on the home page right now but are kept for reuse. Don't delete them either.
 - Research sketches moved to the companion AI Workbench site (see `SITE-SPLIT.md`). `research/` now holds only redirect stubs (`layout: redirect`) plus old images and PDFs kept so existing external links still work. Don't add content there.
 
 ## Bootstrap-shaped classes are not Bootstrap

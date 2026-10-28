@@ -1,6 +1,6 @@
 ---
 layout: sketchbook
-title: Teaching Sketches
+title: Sketches
 date: 2026-04-01
 wide: true
 body-class: teaching-cards-page
@@ -14,7 +14,7 @@ body-class: teaching-cards-page
 
 <div class="section-intro" markdown="1">
 
-# Teaching Sketches
+# Sketches
 
 Classroom activities and assignments, with prompts, course context, and notes for trying them yourself. Check each sketch's status and handout to see how much has been tried and what students were asked to do.
 {: .lede}
